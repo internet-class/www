@@ -1,7 +1,7 @@
 all: build | silent
 
 build:
-	@node static/index.js $(DEPLOY) $(CHECK)
+	@node lib/index.js $(DEPLOY) $(CHECK)
 	@while [ -n "$(find .build -depth -type d -empty -print -exec rmdir {} +)" ]; do :; done
 	@if [ -d ".build" ]; then \
 		rsync -rlpgoDc --delete .build/ build 2>/dev/null; \
