@@ -1,5 +1,6 @@
 var metalsmith = require('metalsmith'),
-		ignore = require('metalsmith-ignore');
+		ignore = require('metalsmith-ignore'),
+    asciidoc = require('./asciidoc.js');
 
 var ignorePatterns = [
 	'.gitignore',
@@ -11,6 +12,7 @@ var ignorePatterns = [
 metalsmith('.')
   .destination('.build')
 	.use(ignore(ignorePatterns))
+  .use(asciidoc())
   .clean(true)
   .build(function throwErr (err) {
     if (err) {
