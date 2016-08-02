@@ -1,0 +1,32 @@
+{
+  "name": "www.internet-class.org",
+  "version": "0.0.1",
+  "description": "www.internet-class.org website. metalsmith static build pipeline and dynamic components.",
+  "readmeFilename": "README.adoc",
+  "bugs": {
+    "url": "https://github.com/internet-class/www/issues"
+  },
+  "homepage": "https://github.com/internet-class/www",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:internet-class/www.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "internet",
+    "internet-class.org"
+  ],
+  "author": {
+    "name": "Geoffrey Challen",
+    "email": "challen@buffalo.edu"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-ignore": "^0.1.2"
+  }
+}
