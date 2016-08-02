@@ -42,15 +42,17 @@ best work.
 //
 It integrates contributions from every
 //
-https://en.wikipedia.org/wiki/Outline_of_computer_science[subfield of computer science]:
+https://en.wikipedia.org/wiki/Outline_of_computer_science[subfield of computer
+science]:
 //
 networking (duh), algorithms, coding theory, artificial intelligence, language
 processing, data mining, scientific computing, and literally everything else.
 //
 It's all there, and it all plays a role in making the internet what it is.
+//
 
-And if you plan on building software in the future, a lot of your best work
-will be online too.
+If you plan on building software in the future, a lot of your best work will
+be online too.
 //
 How else can you deploy a new idea instantly to 3 billion people?
 //
@@ -63,3 +65,14 @@ That's incredible.
 And as the world of software continues to collapse into the web browser, more
 of the apps that you build will be web apps and more of the interfaces will be
 web interfaces.
+
+And if that wasn't enough, the internet also embodies a lot of deep computer
+science design principles.
+//
+Some decisions that made the internet so successful were the result of luck.
+//
+Others were great design.
+//
+But the fact that the internet works as well as it does and has served as such
+an effective driver of innovation is testament to the effectiveness of core
+internet design principles.
