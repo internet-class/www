@@ -1,0 +1,78 @@
+---
+title: "Why discuss the internet?"
+---
+
+Because the internet is awesome!
+//
+It is the most transformative technology of our age.
+//
+It is changing every aspect of our lives--how we communicate, date, shop,
+learn, play, love, commute, and insert any other action verb here.
+//
+Like other transformative technologies like
+https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans[fire],
+http://www.newyorker.com/magazine/2013/10/21/head-count-3[chemical
+fertilizer], and https://en.wikipedia.org/wiki/Printing_press[the printing
+press], the internet is even changing _how we think_.
+//
+It will probably shape human evolution.
+//
+And we've only connected
+//
+http://www.internetlivestats.com/internet-users/[40% of the world's population],
+//
+with arguably the more interesting 4 billion users left to go.
+//
+But the internet already allows you to communicate with 3 billion people.
+//
+Think about that for a second.
+//
+How else can you write something that 3 billion people could read?
+//
+When historians look back on our time, I believe that they will refer to it as
+the "Internet Era".
+
+So the internet matters to everyone.
+//
+But if you are a computer scientist or curious about computer science, you
+care about the internet even more.
+//
+The internet is our proudest accomplishment and puts on display some of our
+best work.
+//
+It integrates contributions from every
+//
+https://en.wikipedia.org/wiki/Outline_of_computer_science[subfield of computer
+science]:
+//
+networking (duh), algorithms, coding theory, artificial intelligence, language
+processing, data mining, scientific computing, and literally everything else.
+//
+It's all there, and it all plays a role in making the internet what it is.
+//
+
+If you plan on building software in the future, a lot of your best work will
+be online too.
+//
+How else can you deploy a new idea instantly to 3 billion people?
+//
+Think about that for a second.
+//
+You can write software that 3 billion people will be able to use, instantly.
+//
+That's incredible.
+//
+And as the world of software continues to collapse into the web browser, more
+of the apps that you build will be web apps and more of the interfaces will be
+web interfaces.
+
+And if that wasn't enough, the internet also embodies a lot of deep computer
+science design principles.
+//
+Some decisions that made the internet so successful were the result of luck.
+//
+Others were great design.
+//
+But the fact that the internet works as well as it does and has served as such
+an effective driver of innovation is testament to the effectiveness of core
+internet design principles.
