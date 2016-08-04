@@ -1,4 +1,4 @@
-= Content Directory Layout
+== Content Directory Layout
 
 The contents of this directory are used to build static site components.
 //
@@ -15,6 +15,68 @@ contributor, with a few constraints.
 The build process will find all `lesson.adoc` files and attach the metadata
 and summary they contain to all files in the same subdirectory and below.
 //
-As a result, each `lesson.adoc` file must be in its own subdirectory.
+Obviously a single subdirectory cannot contain two `lesson.adoc` files, but
+this also means that lesson subdirectories cannot contain other lesson files.
 //
-The build process will check for this and complain if needed.
+For example, the following directory layout is invalid:
+//
+[source,bash]
+----
+$ find -name "lesson.adoc"
+src/content/challen@buffalo.edu/basics/lesson.adoc
+src/content/challen@buffalo.edu/basics/alternate/lesson.adoc
+----
+//
+The build process will identify such problems and complain.
+
+== `.uuid.json` Files
+
+We want to name lessons in a way that's insensitive to certain changes, such
+as their name, location in the filesystem, etc.
+//
+We do this by creating a hidden `.uuid.json` file in each new lesson directory
+containing a UUID the first time the lesson is present during the build.
+//
+At that point the lesson subdirectory can move around and it's name can change
+without affecting its identity.
+//
+(Resolution when building plans can use shortcuts but always resolves to and
+saves UUIDs.)
+
+These files need to be handled carefully when creating, modifying, and
+destroying lessons.
+//
+Specifically:
+
+* *When creating a new lesson* _do not reuse_ an existing UUID.
+//
+This can happen easily if you copy over an entire lesson directory as a
+starting point.
+//
+The build process will notice this and complain, requiring you to figure out
+which lesson is new and remove its `.uuid.json` file before continuing.
+
+* *When moving a lesson* move the `.uuid.json` file along with the
+`lesson.adoc` file.
+
+* *When modifying a lesson* you should leave the `.uuid.json`
+file alone.
+//
+Small changes like altering titles, changing abstracts, adding new content or
+videos, etc. do not necessitate changes to the `.uuid.json` file.
+//
+If you need to make more drastic changes, create a new lesson with the
+existing content and let it be registered it under a different UUID.
+//
+If there is something so wrong with the lesson that you need to destroy it,
+see below.
+
+* *When destroying a lesson* you should delete it and it's `.uuid.json` file.
+//
+_Destroying a lesson is a drastic step._
+//
+It will break any plans--yours and others--that use this lesson.
+//
+So think carefully about what you are doing.
+
+// vim: syntax=asciidoc
