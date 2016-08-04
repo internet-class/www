@@ -33,7 +33,6 @@ describe('lessons.js', function() {
 	it('should fail on nested lessons', function (done) {
 		var src = path.join(__dirname, 'fixtures/nested');
 		var previousFiles = common.walkSync(path.join(src, 'src'));
-		console.log(previousFiles);
 		
 		metalsmith(src)
 			.use(lessons())
@@ -41,6 +40,22 @@ describe('lessons.js', function() {
 				if (!err) {
 					return done(new Error("should fail"));
 				}
+				assert(err.message.startsWith("Nested lessons."));
+				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+				done();
+			});
+	});
+	it('should fail on new duplicate UUIDs', function (done) {
+		var src = path.join(__dirname, 'fixtures/newduplicate');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (!err) {
+					return done(new Error("should fail"));
+				}
+				assert(err.message.startsWith("Duplicate UUIDs."));
 				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
 				done();
 			});
