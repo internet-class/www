@@ -1,0 +1,20 @@
+= Content Directory Layout
+
+The contents of this directory are used to build static site components.
+//
+The directory is organized by contributor email address.
+//
+Contributions will be automatically tagged using this email address.
+//
+So the contents of `content/challen@buffalo.edu/basics/` will be listed as
+contributed by challen@buffalo.edu.
+
+Directory layout below the email address subdirectory is mostly up to the
+contributor, with a few constraints.
+//
+The build process will find all `lesson.adoc` files and attach the metadata
+and summary they contain to all files in the same subdirectory and below.
+//
+As a result, each `lesson.adoc` file must be in its own subdirectory.
+//
+The build process will check for this and complain if needed.
