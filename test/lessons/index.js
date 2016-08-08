@@ -175,6 +175,7 @@ describe('lessons.js', function() {
 	it('should fail on duplicate UUIDs', function (done) {
 		var src = metalsmithTempDir();
 		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		copyFixture('authors/included.yaml', src, 'lessons/authors.yaml');
 		var previousFiles = common.walkSync(path.join(src, 'src'));
 		
 		var previousLessonHash;	
@@ -233,9 +234,86 @@ describe('lessons.js', function() {
 				done();
 			});
 	});
+	it('should fail on missing contributors', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		copyFixture('authors/missing.yaml', src, 'lessons/authors.yaml');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (!err) {
+					return done(new Error("should fail"));
+				}
+				assert(err.message.startsWith("Missing author."));
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
+				
+				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+				done();
+			});
+	});
+	it('should fail on malformed contributors', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		copyFixture('authors/missingemail.yaml', src, 'lessons/authors.yaml');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (!err) {
+					return done(new Error("should fail"));
+				}
+				assert(err.message.startsWith("Missing author email."));
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
+				
+				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+				done();
+			});
+	});
+	it('should fail on duplicate contributors', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		copyFixture('authors/duplicate.yaml', src, 'lessons/authors.yaml');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (!err) {
+					return done(new Error("should fail"));
+				}
+				assert(err.message.startsWith("Duplicate author email."));
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
+				
+				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+				done();
+			});
+	});
 	it('should work properly with existing lessons', function (done) {
 		var src = metalsmithTempDir();
 		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		copyFixture('authors/included.yaml', src, 'lessons/authors.yaml');
+
 		var previousFiles = common.walkSync(path.join(src, 'src'));
 		
 		metalsmith(src)
