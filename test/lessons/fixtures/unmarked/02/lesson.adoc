@@ -1,0 +1,24 @@
+---
+title: "What is the Internet?"
+---
+
+The internet is multiple things.
+//
+It is a network of computers that are _connected_ together, mainly with wires
+but also with wireless connections--particularly at the edge.
+//
+The word "internet" is short for an inter-network, or a network of networks.
+//
+It is also a set of _protocols_ that define how these connected computers
+communicate with each other.
+//
+Without agreements such as the Internet Protocol (IP), it would be impossible
+for the connected computers on the internet to work together.
+//
+Finally, the internet is a _transformative_ technology.
+//
+It is changing every aspects of our lives and even altering the way that we
+think.
+//
+We will approach the internet on all three levels: physical, protocol, and
+phenomenon.

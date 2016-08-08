@@ -1,6 +1,7 @@
 var metalsmith = require('metalsmith'),
     async = require('async'),
 		fs = require('fs-extra'),
+    jsonfile = require('jsonfile'),
     path = require('path'),
     _ = require('underscore'),
     chai = require('chai'),
@@ -31,7 +32,7 @@ var copyFixture = function(src, base, dest) {
 var sameFile = function(base, src, prevHash) {
 	newHash = md5(fs.readFileSync(path.join(base, 'src', src)));
 	if (prevHash !== undefined) {
-		assert(newHash == prevHash, path.join(base, 'src', src) + ' has changed')
+		return newHash == prevHash;
 	} else {
 		return newHash;
 	}
@@ -226,7 +227,7 @@ describe('lessons.js', function() {
 						assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
 
 						powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
-						sameFile(src, lessons.lessonIDsFilename, lessonHash);
+						assert(sameFile(src, lessons.lessonIDsFilename, lessonHash));
 						callback();
 					});
 			}],
@@ -332,9 +333,90 @@ describe('lessons.js', function() {
 
 				assert(files['lessons/i@i.me/01/lesson.adoc'].is_lesson);
 				assert(files['lessons/i@i.me/01/lesson.adoc'].owner = 'i@i.me');
-				
+
 				assert(afterFiles.length + 2, previousFiles.length);
 
+				lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.lessonIDsFilename));
+				assert((files['lessons/i@i.me/01/lesson.adoc'].uuid in lessonHash));
+				assert(lessonHash[files['lessons/i@i.me/01/lesson.adoc'].uuid] == 'lessons/i@i.me/01/lesson.adoc');
+
+				done();
+			});
+	});
+	it('should work properly with adding lessons', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		copyFixture('authors/included.yaml', src, 'lessons/authors.yaml');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		var previousLessonHash;	
+		async.series([
+			function(callback) {
+				metalsmith(src)
+					.use(lessons())
+					.build(function (err, files) {
+						if (err) {
+							return done(err);
+						}
+						assert.pathExists(path.join(src, 'src', lessons.lessonIDsFilename));
+						lessonHash = sameFile(src, lessons.lessonIDsFilename);
+
+						assert(fileSearch(files, '.uuid.json') == 0);
+						assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+
+						var afterFiles = common.walkSync(path.join(src, 'src'));
+						assert(fileSearch(afterFiles, '.uuid.json') == 1);
+						assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
+				
+						assert(files['lessons/i@i.me/01/lesson.adoc'].is_lesson);
+						assert(files['lessons/i@i.me/01/lesson.adoc'].author.email == 'i@i.me');
+
+						assert(afterFiles.length + 1, previousFiles.length);
+				
+						lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.lessonIDsFilename));
+						assert((files['lessons/i@i.me/01/lesson.adoc'].uuid in lessonHash));
+						assert(lessonHash[files['lessons/i@i.me/01/lesson.adoc'].uuid] == 'lessons/i@i.me/01/lesson.adoc');
+
+						callback();
+					});
+			},
+			function(callback) {
+				copyFixture('unmarked/02', src, 'lessons/challen@buffalo.edu/02');
+				var previousFiles = common.walkSync(path.join(src, 'src'));
+
+				metalsmith(src)
+					.use(lessons())
+					.build(function (err, files) {
+						if (err) {
+							return done(err);
+						}
+						assert.pathExists(path.join(src, 'src', lessons.lessonIDsFilename));
+					
+						assert(fileSearch(files, '.uuid.json') == 0);
+						assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+
+						var afterFiles = common.walkSync(path.join(src, 'src'));
+						assert(fileSearch(afterFiles, '.uuid.json') == 2);
+						assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
+				
+						assert(files['lessons/i@i.me/01/lesson.adoc'].is_lesson);
+						assert(files['lessons/i@i.me/01/lesson.adoc'].author.email == 'i@i.me');
+						assert(files['lessons/challen@buffalo.edu/02/lesson.adoc'].is_lesson);
+						assert(files['lessons/challen@buffalo.edu/02/lesson.adoc'].author.email == 'challen@buffalo.edu');
+				
+						assert(afterFiles.length + 1, previousFiles.length);
+						assert(!(sameFile(src, lessons.lessonIDsFilename, lessonHash)));
+						
+						lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.lessonIDsFilename));
+						assert((files['lessons/i@i.me/01/lesson.adoc'].uuid in lessonHash));
+						assert(lessonHash[files['lessons/i@i.me/01/lesson.adoc'].uuid] == 'lessons/i@i.me/01/lesson.adoc');
+						assert((files['lessons/challen@buffalo.edu/02/lesson.adoc'].uuid in lessonHash));
+						assert(lessonHash[files['lessons/challen@buffalo.edu/02/lesson.adoc'].uuid] == 'lessons/challen@buffalo.edu/02/lesson.adoc');
+
+						callback();
+					});
+			}],
+			function () {
 				done();
 			});
 	});
