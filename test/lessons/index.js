@@ -37,6 +37,18 @@ var sameFile = function(base, src, prevHash) {
 	}
 }
 
+var fileSearch = function(files, pathEnd) {
+	if (Array.isArray(files)) {
+		return _.filter(files, function (filename) {
+			return filename.endsWith(pathEnd);
+		}).length;
+	} else {
+		return _.filter(files, function (file, filename) {
+			return filename.endsWith(pathEnd);
+		}).length;
+	}
+}
+
 describe('lessons.js', function() {
 	it('should do nothing when there is nothing to do', function (done) {
 		var src = metalsmithTempDir();
@@ -50,12 +62,61 @@ describe('lessons.js', function() {
 				if (err) {
 					return done(err);
 				}
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
 
-				assert(_.filter(files, function (file, filename) {
-					return (path.basename(filename) == '.uuid.json');
-				}).length == 0);
-				assert(!('lessons/.lessons.json' in files));
 				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+
+				done();
+			});
+	});
+	it('should do nothing when a lesson file is in the lessons directory', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01/lesson.adoc', src, 'lesson.adoc');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
+
+				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+
+				done();
+			});
+	});
+	it('should do nothing when lessons are not in email subdirectories', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01', src, 'lessons/not_email/01');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
 
 				done();
 			});
@@ -73,7 +134,16 @@ describe('lessons.js', function() {
 					return done(new Error("should fail"));
 				}
 				assert(err.message.startsWith("Nested lessons."));
+
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 0);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
+				
 				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+
 				done();
 			});
 	});
@@ -90,6 +160,14 @@ describe('lessons.js', function() {
 					return done(new Error("should fail"));
 				}
 				assert(err.message.startsWith("Duplicate UUIDs."));
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 2);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 0);
+				
 				powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
 				done();
 			});
@@ -110,6 +188,19 @@ describe('lessons.js', function() {
 						}
 						assert.pathExists(path.join(src, 'src', lessons.lessonIDsFilename));
 						lessonHash = sameFile(src, lessons.lessonIDsFilename);
+
+						assert(fileSearch(files, '.uuid.json') == 0);
+						assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+
+						var afterFiles = common.walkSync(path.join(src, 'src'));
+						assert(fileSearch(afterFiles, '.uuid.json') == 1);
+						assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
+				
+						assert(files['lessons/i@i.me/01/lesson.adoc'].is_lesson);
+						assert(files['lessons/i@i.me/01/lesson.adoc'].owner = 'i@i.me');
+				
+						assert(afterFiles.length + 1, previousFiles.length);
+
 						callback();
 					});
 			},
@@ -125,12 +216,47 @@ describe('lessons.js', function() {
 							return done(new Error("should fail"));
 						}
 						assert(err.message.startsWith("Duplicate UUIDs."));
+						
+						assert(fileSearch(files, '.uuid.json') == 0);
+						assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+						
+						var afterFiles = common.walkSync(path.join(src, 'src'));
+						assert(fileSearch(afterFiles, '.uuid.json') == 2);
+						assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
+
 						powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
 						sameFile(src, lessons.lessonIDsFilename, lessonHash);
 						callback();
 					});
 			}],
 			function () {
+				done();
+			});
+	});
+	it('should work properly with existing lessons', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('unmarked/01', src, 'lessons/i@i.me/01');
+		var previousFiles = common.walkSync(path.join(src, 'src'));
+		
+		metalsmith(src)
+			.use(lessons())
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+				
+				assert(fileSearch(files, '.uuid.json') == 0);
+				assert(fileSearch(files, 'lessons/.lessons.json') == 0);
+				
+				var afterFiles = common.walkSync(path.join(src, 'src'));
+				assert(fileSearch(afterFiles, '.uuid.json') == 1);
+				assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
+
+				assert(files['lessons/i@i.me/01/lesson.adoc'].is_lesson);
+				assert(files['lessons/i@i.me/01/lesson.adoc'].owner = 'i@i.me');
+				
+				assert(afterFiles.length + 2, previousFiles.length);
+
 				done();
 			});
 	});
