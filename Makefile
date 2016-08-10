@@ -1,5 +1,8 @@
 all: build | silent
 
+videos:
+	@node lib/videos.js
+
 build:
 	@node lib/index.js $(DEPLOY) $(CHECK)
 	@while [ -n "$(find .build -depth -type d -empty -print -exec rmdir {} +)" ]; do :; done
