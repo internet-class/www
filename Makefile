@@ -1,7 +1,7 @@
 all: build | silent
 
 videos:
-	@node lib/videos.js
+	@node lib/dovideos.js
 
 build:
 	@node lib/index.js $(DEPLOY) $(CHECK)
