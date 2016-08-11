@@ -55,4 +55,33 @@ describe('videos.js', function() {
 				done();
 			});
 	});
+	it('should ignore videos that fail to match the pattern', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('videos/fake.MTS', src, 'video.MTS');
+		copyFixture('videos/videos.yaml', src, 'videos.yaml');
+
+		metalsmith(src)
+			.use(videos({ videos: '**/lessons/**/videos.yaml' }))
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+				assert(Object.keys(files).length == 2);
+				done();
+			});
+	});
+	it('should fail on bogus videos', function (done) {
+		var src = metalsmithTempDir();
+		copyFixture('videos/fake.MTS', src, 'lessons/i@i.me/01/video.MTS');
+		copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
+
+		metalsmith(src)
+			.use(videos())
+			.build(function (err, files) {
+				if (!err) {
+					return done(new Error("Should fail"));
+				}
+				done();
+			});
+	});
 });
