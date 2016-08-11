@@ -1,5 +1,12 @@
 all: build | silent
 
+import:
+	@mkdir -p videos/backup
+	@chmod u+w videos/backup/
+	@node lib/grab.js /media/$(USER)/CANON/AVCHD videos/backup videos
+	@chmod a-w videos/backup/*
+	@chmod a-w videos/backup/
+
 videos:
 	@node lib/dovideos.js
 
