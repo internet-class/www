@@ -43,6 +43,10 @@ var fileSearch = function(files, pathEnd) {
   }
 }
 
+beforeEach(function() {
+  noShortVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/short.MTS')));
+});
+
 describe('videos.js', function() {
   it('should do nothing when there is nothing to do', function (done) {
     metalsmith(metalsmithTempDir())
@@ -73,6 +77,25 @@ describe('videos.js', function() {
   it('should fail on bogus videos', function (done) {
     var src = metalsmithTempDir();
     copyFixture('videos/fake.MTS', src, 'lessons/i@i.me/01/video.MTS');
+    copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
+
+    metalsmith(src)
+      .use(videos())
+      .build(function (err, files) {
+        if (!err) {
+          return done(new Error("Should fail"));
+        }
+        done();
+      });
+  });
+  it('should transcode real videos', function (done) {
+    if (noShortVideo) {
+      console.log("SKIP: skipping this test because short input missing");
+      done();
+      return;
+    }
+    var src = metalsmithTempDir();
+    copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/video.MTS');
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
 
     metalsmith(src)
