@@ -2,15 +2,15 @@ var metalsmith = require('metalsmith'),
     fs = require('fs-extra'),
     path = require('path'),
     chai = require('chai'),
-    temp = require('temp'),
+    tmp = require('tmp'),
     videos = require('../../lib/videos.js');
 
 chai.use(require('chai-fs'));
-temp.track();
+tmp.setGracefulCleanup();
 var assert = chai.assert;
 
 var metalsmithTempDir = function() {
-  var src = temp.mkdirSync();
+  var src = tmp.dirSync().name;
   fs.mkdirsSync(path.join(src, 'src'));
   return src;
 }
@@ -74,7 +74,7 @@ describe('videos.js', function() {
         done();
       });
   });
-  it('should fail on bogus videos', function (done) {
+  it('should not transcode bogus videos', function (done) {
     var src = metalsmithTempDir();
     copyFixture('videos/fake.MTS', src, 'lessons/i@i.me/01/video.MTS');
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
@@ -91,18 +91,17 @@ describe('videos.js', function() {
   it('should transcode real videos', function (done) {
     if (noShortVideo) {
       console.log("SKIP: skipping this test because short input missing");
-      done();
-      return;
+      return done();
     }
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/video.MTS');
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
-
+    
     metalsmith(src)
       .use(videos())
       .build(function (err, files) {
-        if (!err) {
-          return done(new Error("Should fail"));
+        if (err) {
+          return done(err);
         }
         done();
       });
