@@ -8,16 +8,16 @@ var metalsmith = require('metalsmith'),
     powerAssert = require('power-assert'),
     md5 = require('md5'),
     deepcopy = require('deepcopy'),
-    temp = require('temp'),
+    tmp = require('tmp'),
     common = require('../../lib/common.js'),
     lessons = require('../../lib/lessons.js');
 
 chai.use(require('chai-fs'));
-temp.track();
+tmp.setGracefulCleanup();
 var assert = chai.assert;
 
 var metalsmithTempDir = function() {
-  var src = temp.mkdirSync();
+  var src = tmp.dirSync().name;
   fs.mkdirsSync(path.join(src, 'src'));
   return src;
 }
