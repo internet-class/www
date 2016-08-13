@@ -88,6 +88,13 @@ describe('videos.js', function() {
           return done(new Error("Should fail"));
         }
         assert(!(fs.existsSync(path.join(src, 'src', 'lessons/i@i.me/01/01.mp4'))));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/lessons/i@i.me/01/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(!('inputHash' in videoData));
+        assert(!('output' in videoData));
+        assert(!('durationSec' in videoData));
+        assert(!('tmp' in videoData));
         done();
       });
   });
