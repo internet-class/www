@@ -103,6 +103,7 @@ describe('videos.js', function() {
       console.log("SKIP: skipping this test because short input missing");
       return done();
     }
+    this.slow(2000);
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/video.MTS');
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');

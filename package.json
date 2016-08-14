@@ -13,7 +13,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec test/lessons --slow 2000 test/videos"
+    "test": "node_modules/.bin/mocha --reporter spec test/lessons test/videos test/youtube"
   },
   "keywords": [
     "internet",
