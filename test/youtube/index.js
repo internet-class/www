@@ -109,7 +109,14 @@ describe('youtube.js', function () {
           youtube.uploadVideo(oauth2Client, {
             title: 'Test Video',
             description: 'Test Description',
+            defaultLanguage: 'en',
             privacyStatus: 'private',
+            embeddable: true,
+            license: 'creativeCommon',
+            categoryId: '27',
+            notifySubscribers: false,
+            autoLevels: true,
+            stabilize: true,
             output: path.join(outputDir, 'videos/test.mp4')
           }, function (err, data) {
             assert(!err);
@@ -121,7 +128,7 @@ describe('youtube.js', function () {
         function (callback) {
           youtubeClient = googleapis.youtube({ version: 'v3', auth: oauth2Client });
           youtubeClient.videos.list({
-            part: 'contentDetails',
+            part: 'contentDetails, snippet, status',
             id: videoData.id
           }, function (err, data) {
             assert(!err);
