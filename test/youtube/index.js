@@ -1,7 +1,9 @@
 var chai = require('chai'),
     fs = require('fs-extra'),
+    async = require('async'),
     path = require('path'),
     tmp = require('tmp'),
+    googleapis = require('googleapis'),
     youtube = require('../../lib/youtube.js');
 
 chai.use(require('chai-fs'));
@@ -81,6 +83,74 @@ describe('youtube.js', function () {
      assert(oauth2Client);
      done();
    });
+	});
+  it('should upload videos', function (done) {
+    var outputDir = tmp.dirSync().name;
+    this.slow(30000);
+    this.timeout(30000);
+    fs.copySync(path.join(__dirname, 'fixtures'), outputDir);
+    var oauth2Client;
+    var videoData;
+    var youtubeClient;
+    async.series([
+        function (callback) {
+          youtube.getCredentials({
+            credentialsFile: path.join(outputDir, 'credentials/good.json'),
+            tokenFile: path.join(outputDir, 'credentials/good_tokens.json'),
+            test: false
+          }, function (err, client) {
+            assert(!err);
+            assert(client);
+            oauth2Client = client;
+            callback();
+          });
+        },
+        function (callback) {
+          youtube.uploadVideo(oauth2Client, {
+            title: 'Test Video',
+            description: 'Test Description',
+            privacyStatus: 'private',
+            output: path.join(outputDir, 'videos/test.mp4')
+          }, function (err, data) {
+            assert(!err);
+            assert(data);
+            videoData = data;
+            callback();
+          });
+        },
+        function (callback) {
+          youtubeClient = googleapis.youtube({ version: 'v3', auth: oauth2Client });
+          youtubeClient.videos.list({
+            part: 'contentDetails',
+            id: videoData.id
+          }, function (err, data) {
+            assert(!err);
+            assert(data.items.length == 1);
+            assert(data.items[0].id == videoData.id);
+            callback();
+          });
+        },
+        function (callback) {
+          youtubeClient.videos.delete({
+            id: videoData.id
+          }, function (err) {
+            assert(!err);
+            callback();
+          });
+        },
+        function (callback) {
+          youtubeClient.videos.list({
+            part: 'contentDetails',
+            id: videoData.id
+          }, function (err, data) {
+            assert(!err);
+            assert(data.items.length == 0);
+            callback();
+          });
+        }
+    ], function () {
+      done();
+    });
 	});
 });
 
