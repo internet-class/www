@@ -188,8 +188,8 @@ describe('lessons.js', function() {
             if (err) {
               return done(err);
             }
-            assert.pathExists(path.join(src, 'src', lessons.lessonIDsFilename));
-            lessonHash = sameFile(src, lessons.lessonIDsFilename);
+            assert.pathExists(path.join(src, 'src', lessons.defaults.lessonIDsFilename));
+            lessonHash = sameFile(src, lessons.defaults.lessonIDsFilename);
 
             assert(fileSearch(files, '.uuid.json') == 0);
             assert(fileSearch(files, 'lessons/.lessons.json') == 0);
@@ -227,7 +227,7 @@ describe('lessons.js', function() {
             assert(fileSearch(afterFiles, 'lessons/.lessons.json') == 1);
 
             powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
-            assert(sameFile(src, lessons.lessonIDsFilename, lessonHash));
+            assert(sameFile(src, lessons.defaults.lessonIDsFilename, lessonHash));
             callback();
           });
       }],
@@ -336,7 +336,7 @@ describe('lessons.js', function() {
 
         assert(afterFiles.length + 2, previousFiles.length);
 
-        lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.lessonIDsFilename));
+        lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.defaults.lessonIDsFilename));
         assert((files['lessons/i@i.me/01/lesson.adoc'].uuid in lessonHash));
         assert(lessonHash[files['lessons/i@i.me/01/lesson.adoc'].uuid] == 'lessons/i@i.me/01/lesson.adoc');
 
@@ -358,8 +358,8 @@ describe('lessons.js', function() {
             if (err) {
               return done(err);
             }
-            assert.pathExists(path.join(src, 'src', lessons.lessonIDsFilename));
-            lessonHash = sameFile(src, lessons.lessonIDsFilename);
+            assert.pathExists(path.join(src, 'src', lessons.defaults.lessonIDsFilename));
+            lessonHash = sameFile(src, lessons.defaults.lessonIDsFilename);
 
             assert(fileSearch(files, '.uuid.json') == 0);
             assert(fileSearch(files, 'lessons/.lessons.json') == 0);
@@ -373,7 +373,7 @@ describe('lessons.js', function() {
 
             assert(afterFiles.length + 1, previousFiles.length);
 
-            lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.lessonIDsFilename));
+            lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.defaults.lessonIDsFilename));
             assert((files['lessons/i@i.me/01/lesson.adoc'].uuid in lessonHash));
             assert(lessonHash[files['lessons/i@i.me/01/lesson.adoc'].uuid] == 'lessons/i@i.me/01/lesson.adoc');
 
@@ -390,7 +390,7 @@ describe('lessons.js', function() {
             if (err) {
               return done(err);
             }
-            assert.pathExists(path.join(src, 'src', lessons.lessonIDsFilename));
+            assert.pathExists(path.join(src, 'src', lessons.defaults.lessonIDsFilename));
 
             assert(fileSearch(files, '.uuid.json') == 0);
             assert(fileSearch(files, 'lessons/.lessons.json') == 0);
@@ -405,9 +405,9 @@ describe('lessons.js', function() {
             assert(files['lessons/challen@buffalo.edu/02/lesson.adoc'].author.email == 'challen@buffalo.edu');
 
             assert(afterFiles.length + 1, previousFiles.length);
-            assert(!(sameFile(src, lessons.lessonIDsFilename, lessonHash)));
+            assert(!(sameFile(src, lessons.defaults.lessonIDsFilename, lessonHash)));
 
-            lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.lessonIDsFilename));
+            lessonHash = jsonfile.readFileSync(path.join(src, 'src', lessons.defaults.lessonIDsFilename));
             assert((files['lessons/i@i.me/01/lesson.adoc'].uuid in lessonHash));
             assert(lessonHash[files['lessons/i@i.me/01/lesson.adoc'].uuid] == 'lessons/i@i.me/01/lesson.adoc');
             assert((files['lessons/challen@buffalo.edu/02/lesson.adoc'].uuid in lessonHash));
