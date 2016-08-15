@@ -105,7 +105,8 @@ describe('videos.js', function() {
       console.log("SKIP: skipping this test because short input missing");
       return done();
     }
-    this.slow(2000);
+    this.slow(10000);
+    this.timeout(20000);
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/video.MTS');
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
@@ -125,7 +126,7 @@ describe('videos.js', function() {
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/lessons/i@i.me/01/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        chai.expect(videoData.durationSec).to.be.within(1.518177, 1.518179);
+        chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
         assert(!('tmp' in videoData));
         done();
       });
