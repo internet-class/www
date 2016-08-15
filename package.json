@@ -13,7 +13,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec test/lessons test/videos test/youtube"
+    "test": "node_modules/.bin/mocha --reporter spec test/lessons test/videos test/youtube_credentials"
   },
   "keywords": [
     "internet",
