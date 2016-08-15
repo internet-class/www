@@ -67,12 +67,13 @@ describe('videos.js', function() {
     copyFixture('videos/videos.yaml', src, 'videos.yaml');
 
     metalsmith(src)
+      .ignore(['*.MTS'])
       .use(videos({ videos: '**/lessons/**/videos.yaml' }))
       .build(function (err, files) {
         if (err) {
           return done(err);
         }
-        assert(Object.keys(files).length == 2);
+        assert(Object.keys(files).length == 1);
         done();
       });
   });
@@ -82,6 +83,7 @@ describe('videos.js', function() {
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
 
     metalsmith(src)
+      .ignore(['*.MTS'])
       .use(videos())
       .build(function (err, files) {
         if (!err) {
@@ -109,11 +111,13 @@ describe('videos.js', function() {
     copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
 
     metalsmith(src)
+      .ignore(['*.MTS'])
       .use(videos())
       .build(function (err, files) {
         if (err) {
           return done(err);
         }
+        assert(Object.keys(files).length == 1);
         assert(fs.existsSync(path.join(src, 'src/lessons/i@i.me/01/cb79677deb19909949665c9151fa446e.mp4')));
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/lessons/i@i.me/01/videos.yaml')).toString());
         assert(videosData.length == 1);
