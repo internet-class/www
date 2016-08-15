@@ -118,13 +118,13 @@ describe('videos.js', function() {
           return done(err);
         }
         assert(Object.keys(files).length == 1);
-        assert(fs.existsSync(path.join(src, 'src/lessons/i@i.me/01/cb79677deb19909949665c9151fa446e.mp4')));
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/lessons/i@i.me/01/videos.yaml')).toString());
         assert(videosData.length == 1);
         var videoData = videosData[0];
         assert(videoData.present);
+        assert(videoData.output);
+        assert(fs.existsSync(path.join(src, 'src/lessons/i@i.me/01/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        assert(videoData.output == 'cb79677deb19909949665c9151fa446e.mp4');
         chai.expect(videoData.durationSec).to.be.within(1.518177, 1.518179);
         assert(!('tmp' in videoData));
         done();
