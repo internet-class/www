@@ -122,7 +122,7 @@ describe('videos.js', function() {
 
     metalsmith(src)
       .ignore(['*.MTS'])
-      .use(videos({ verbose: true, veryVerbose: true }))
+      .use(videos())
       .build(function (err, files) {
         if (err) {
           return done(err);
@@ -157,8 +157,6 @@ describe('videos.js', function() {
     metalsmith(src)
       .ignore(['*.MTS'])
       .use(videos({
-        verbose: true,
-        veryVerbose: true,
         credits: path.join(src, 'src/credits')
       }))
       .build(function (err, files) {
@@ -173,7 +171,7 @@ describe('videos.js', function() {
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
+        chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
         assert(!('tmp' in videoData));
         done();
       });
