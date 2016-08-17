@@ -64,8 +64,8 @@ describe('videos.js', function() {
   });
   it('should ignore videos that fail to match the pattern', function (done) {
     var src = metalsmithTempDir();
-    copyFixture('videos/fake.MTS', src, 'video.MTS');
-    copyFixture('videos/videos.yaml', src, 'videos.yaml');
+    copyFixture('videos/fake.MTS', src, 'short.MTS');
+    copyFixture('videos/short.yaml', src, 'videos.yaml');
 
     metalsmith(src)
       .ignore(['*.MTS'])
@@ -80,8 +80,8 @@ describe('videos.js', function() {
   });
   it('should not transcode bogus videos', function (done) {
     var src = metalsmithTempDir();
-    copyFixture('videos/fake.MTS', src, 'lessons/i@i.me/01/video.MTS');
-    copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
+    copyFixture('videos/fake.MTS', src, 'lessons/i@i.me/01/short.MTS');
+    copyFixture('videos/short.yaml', src, 'lessons/i@i.me/01/videos.yaml');
 
     metalsmith(src)
       .ignore(['*.MTS'])
