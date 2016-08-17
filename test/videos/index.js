@@ -2,17 +2,17 @@ var metalsmith = require('metalsmith'),
     fs = require('fs-extra'),
     path = require('path'),
     chai = require('chai'),
-    tmp = require('tmp'),
+    temp = require('temp'),
     yamljs = require('yamljs'),
     common = require('../../lib/common.js'),
     videos = require('../../lib/videos.js');
 
 chai.use(require('chai-fs'));
-tmp.setGracefulCleanup();
+temp.track();
 var assert = chai.assert;
 
 var metalsmithTempDir = function() {
-  var src = tmp.dirSync().name;
+  var src = temp.mkdirSync();
   fs.mkdirsSync(path.join(src, 'src'));
   return src;
 }
@@ -52,6 +52,7 @@ beforeEach(function() {
 describe('videos.js', function() {
   it('should do nothing when there is nothing to do', function (done) {
     metalsmith(metalsmithTempDir())
+      .ignore(['*.MTS'])
       .use(videos())
       .build(function (err, files) {
         if (err) {
@@ -108,8 +109,8 @@ describe('videos.js', function() {
     this.slow(10000);
     this.timeout(20000);
     var src = metalsmithTempDir();
-    copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/video.MTS');
-    copyFixture('videos/videos.yaml', src, 'lessons/i@i.me/01/videos.yaml');
+    copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/short.MTS');
+    copyFixture('videos/short.yaml', src, 'lessons/i@i.me/01/videos.yaml');
 
     metalsmith(src)
       .ignore(['*.MTS'])

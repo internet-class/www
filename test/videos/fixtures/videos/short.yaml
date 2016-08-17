@@ -1,3 +1,4 @@
-- files: ['video.MTS']
+- files: ['short.MTS']
   title: "Test Video"
   authors: ["Geoffrey Challen", "Greg Bunyea"]
+  titleLength: 1
