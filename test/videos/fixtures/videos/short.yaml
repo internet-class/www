@@ -1,4 +1,6 @@
 - files: ['short.MTS']
   title: "Test Video"
-  authors: ["Geoffrey Challen", "Greg Bunyea"]
+  authors:
+    - { name: "Geoffrey Challen", credits: "Assistant Professor, Department of Computer Science and Engineering, University at Buffalo" }
+    - { name: "Ryan Standish", credits: "Network Engineer, University at Buffalo"}
   titleLength: 1

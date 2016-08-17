@@ -4,6 +4,7 @@ var metalsmith = require('metalsmith'),
     chai = require('chai'),
     temp = require('temp'),
     yamljs = require('yamljs'),
+    powerAssert = require('power-assert'),
     common = require('../../lib/common.js'),
     videos = require('../../lib/videos.js');
 
@@ -79,9 +80,13 @@ describe('videos.js', function() {
       });
   });
   it('should not transcode bogus videos', function (done) {
+    this.slow(500);
+    this.timeout(1000);
+
     var src = metalsmithTempDir();
-    copyFixture('videos/fake.MTS', src, 'lessons/i@i.me/01/short.MTS');
-    copyFixture('videos/short.yaml', src, 'lessons/i@i.me/01/videos.yaml');
+    copyFixture('videos/fake.MTS', src, 'in/short.MTS');
+    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
+    var previousFiles = common.walkSync(path.join(src, 'src'));
 
     metalsmith(src)
       .ignore(['*.MTS'])
@@ -90,8 +95,9 @@ describe('videos.js', function() {
         if (!err) {
           return done(new Error("Should fail"));
         }
-        assert(!(fs.existsSync(path.join(src, 'src', 'lessons/i@i.me/01/01.mp4'))));
-        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/lessons/i@i.me/01/videos.yaml')).toString());
+        assert(err.message.startsWith("bogus input"));
+        powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
         assert(videosData.length == 1);
         var videoData = videosData[0];
         assert(!('inputHash' in videoData));
@@ -106,26 +112,66 @@ describe('videos.js', function() {
       console.log("SKIP: skipping this test because short input missing");
       return done();
     }
+
     this.slow(10000);
     this.timeout(20000);
+    
     var src = metalsmithTempDir();
-    copyFixture('videos/short.MTS', src, 'lessons/i@i.me/01/short.MTS');
-    copyFixture('videos/short.yaml', src, 'lessons/i@i.me/01/videos.yaml');
+    copyFixture('videos/short.MTS', src, 'in/short.MTS');
+    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
 
     metalsmith(src)
       .ignore(['*.MTS'])
-      .use(videos())
+      .use(videos({ verbose: true, veryVerbose: true }))
       .build(function (err, files) {
         if (err) {
           return done(err);
         }
         assert(Object.keys(files).length == 1);
-        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/lessons/i@i.me/01/videos.yaml')).toString());
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
         assert(videosData.length == 1);
         var videoData = videosData[0];
         assert(videoData.present);
         assert(videoData.output);
-        assert(fs.existsSync(path.join(src, 'src/lessons/i@i.me/01/' + videoData.output)));
+        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
+        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
+        chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
+        assert(!('tmp' in videoData));
+        done();
+      });
+  });
+  it('should add credits properly', function (done) {
+    if (noShortVideo) {
+      console.log("SKIP: skipping this test because short input missing");
+      return done();
+    }
+
+    this.slow(10000);
+    this.timeout(20000);
+
+    var src = metalsmithTempDir();
+    copyFixture('videos/short.MTS', src, 'in/short.MTS');
+    copyFixture('videos/short.MTS', src, 'credits/credits.MTS');
+    copyFixture('videos/with_credits.yaml', src, 'in/videos.yaml');
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos({
+        verbose: true,
+        veryVerbose: true,
+        credits: path.join(src, 'src/credits')
+      }))
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(Object.keys(files).length == 1);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.present);
+        assert(videoData.output);
+        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
         chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
         assert(!('tmp' in videoData));
