@@ -1,4 +1,5 @@
-var metalsmith = require('metalsmith'),
+var _ = require('underscore'),
+    metalsmith = require('metalsmith'),
     fs = require('fs-extra'),
     path = require('path'),
     chai = require('chai'),
@@ -88,6 +89,15 @@ describe('videos.js', function() {
     metalsmith(src)
       .ignore(['*.MTS'])
       .use(videos.find({ videoExtensions: ['**/*.MTS'] }))
+      .use(function (files, metalsmith, done) {
+        var videos = metalsmith.metadata().videos;
+        assert(Object.keys(videos.byDirectory).length == 1);
+        _.each(videos.videoDataByDirectory, function (videoData) {
+          assert(videoData.find);
+          assert(videoData.find.inputsPresent);
+        });
+        done();
+      })
       .use(videos.save())
       .build(function (err, files) {
         if (err) {
@@ -101,6 +111,59 @@ describe('videos.js', function() {
         assert(videoData.files[0] == 'short.MTS');
         assert(videoData.transcode == false);
         assert(Object.keys(files).length == 0);
+        done();
+      });
+  });
+  it('should ignore existing videos that fail to match the pattern', function (done) {
+    var src = metalsmithTempDir();
+    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
+    var previousHash = common.md5sum(path.join(src, 'src/in/videos.yaml'));
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find({ videoMetadata: 'videos.yaml' }))
+      .use(function (file, metalsmith, done) {
+        var metadata = metalsmith.metadata();
+        assert(Object.keys(metadata.videos.byDirectory).length == 0);
+        done();
+      })
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        assert(previousHash == common.md5sum(path.join(src, 'src/in/videos.yaml')));
+        assert(Object.keys(files).length == 1);
+        done();
+      });
+  });
+  it('should find existing videos that match the pattern', function (done) {
+    var src = metalsmithTempDir();
+    copyFixture('videos/fake.MTS', src, 'short.MTS');
+    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
+    var previousHash = common.md5sum(path.join(src, 'src/in/videos.yaml'));
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find())
+      .use(function (file, metalsmith, done) {
+        var metadata = metalsmith.metadata();
+        assert(Object.keys(metadata.videos.byDirectory).length == 1);
+        done();
+      })
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.files.length == 1);
+        assert(videoData.files[0] == 'short.MTS');
+        assert(Object.keys(files).length == 1);
         done();
       });
   });
