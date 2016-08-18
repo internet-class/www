@@ -64,20 +64,43 @@ describe('videos.js', function() {
         done();
       });
   });
-  it('should ignore videos that fail to match the pattern', function (done) {
+  it('should ignore new videos that fail to match the pattern', function (done) {
     var src = metalsmithTempDir();
     copyFixture('videos/fake.MTS', src, 'short.MTS');
-    copyFixture('videos/short.yaml', src, 'videos.yaml');
 
     metalsmith(src)
       .ignore(['*.MTS'])
-      .use(videos.find({ videos: '**/lessons/**/videos.yaml' }))
+      .use(videos.find({ videoExtensions: ['**/*.mp4'] }))
       .use(videos.save())
       .build(function (err, files) {
         if (err) {
           return done(err);
         }
-        assert(Object.keys(files).length == 1);
+        assert(!(fs.existsSync(path.join(src, 'src/videos.yaml'))));
+        assert(Object.keys(files).length == 0);
+        done();
+      });
+  });
+  it('should find new videos that match the pattern', function (done) {
+    var src = metalsmithTempDir();
+    copyFixture('videos/fake.MTS', src, 'short.MTS');
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find({ videoExtensions: ['**/*.MTS'] }))
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(fs.existsSync(path.join(src, 'src/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.files.length == 1);
+        assert(videoData.files[0] == 'short.MTS');
+        assert(videoData.transcode == false);
+        assert(Object.keys(files).length == 0);
         done();
       });
   });
