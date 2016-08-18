@@ -64,22 +64,23 @@ describe('videos.js', function() {
         done();
       });
   });
-//  it('should ignore videos that fail to match the pattern', function (done) {
-//    var src = metalsmithTempDir();
-//    copyFixture('videos/fake.MTS', src, 'short.MTS');
-//    copyFixture('videos/short.yaml', src, 'videos.yaml');
-//
-//    metalsmith(src)
-//      .ignore(['*.MTS'])
-//      .use(videos({ videos: '**/lessons/**/videos.yaml' }))
-//      .build(function (err, files) {
-//        if (err) {
-//          return done(err);
-//        }
-//        assert(Object.keys(files).length == 1);
-//        done();
-//      });
-//  });
+  it('should ignore videos that fail to match the pattern', function (done) {
+    var src = metalsmithTempDir();
+    copyFixture('videos/fake.MTS', src, 'short.MTS');
+    copyFixture('videos/short.yaml', src, 'videos.yaml');
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find({ videos: '**/lessons/**/videos.yaml' }))
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(Object.keys(files).length == 1);
+        done();
+      });
+  });
 //  it('should not transcode bogus videos', function (done) {
 //    this.slow(500);
 //    this.timeout(1000);
