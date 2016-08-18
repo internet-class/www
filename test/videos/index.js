@@ -197,75 +197,77 @@ describe('videos.js', function() {
         done();
       });
   });
-//  it('should transcode real videos', function (done) {
-//    if (noShortVideo) {
-//      console.log("SKIP: skipping this test because short input missing");
-//      return done();
-//    }
-//
-//    this.slow(10000);
-//    this.timeout(20000);
-//    
-//    var src = metalsmithTempDir();
-//    copyFixture('videos/short.MTS', src, 'in/short.MTS');
-//    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
-//
-//    metalsmith(src)
-//      .ignore(['*.MTS'])
-//      .use(videos())
-//      .build(function (err, files) {
-//        if (err) {
-//          return done(err);
-//        }
-//        assert(Object.keys(files).length == 1);
-//        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
-//        assert(videosData.length == 1);
-//        var videoData = videosData[0];
-//        assert(videoData.present);
-//        assert(videoData.output);
-//        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-//        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-//        chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
-//        assert(!('tmp' in videoData));
-//        done();
-//      });
-//  });
-//  it('should add credits properly', function (done) {
-//    if (noShortVideo) {
-//      console.log("SKIP: skipping this test because short input missing");
-//      return done();
-//    }
-//
-//    this.slow(10000);
-//    this.timeout(20000);
-//
-//    var src = metalsmithTempDir();
-//    copyFixture('videos/short.MTS', src, 'in/short.MTS');
-//    copyFixture('videos/short.MTS', src, 'credits/credits.MTS');
-//    copyFixture('videos/with_credits.yaml', src, 'in/videos.yaml');
-//
-//    metalsmith(src)
-//      .ignore(['*.MTS'])
-//      .use(videos({
-//        credits: path.join(src, 'src/credits')
-//      }))
-//      .build(function (err, files) {
-//        if (err) {
-//          return done(err);
-//        }
-//        assert(Object.keys(files).length == 1);
-//        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
-//        assert(videosData.length == 1);
-//        var videoData = videosData[0];
-//        assert(videoData.present);
-//        assert(videoData.output);
-//        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-//        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-//        chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
-//        assert(!('tmp' in videoData));
-//        done();
-//      });
-//  });
+  it('should transcode real videos', function (done) {
+    if (noShortVideo) {
+      console.log("SKIP: skipping this test because short input missing");
+      return done();
+    }
+
+    this.slow(10000);
+    this.timeout(20000);
+    
+    var src = metalsmithTempDir();
+    copyFixture('videos/short.MTS', src, 'in/short.MTS');
+    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find())
+      .use(videos.transcode())
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(Object.keys(files).length == 1);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.output);
+        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
+        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
+        chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
+        assert(!('tmp' in videoData));
+        done();
+      });
+  });
+  it('should add credits properly', function (done) {
+    if (noShortVideo) {
+      console.log("SKIP: skipping this test because short input missing");
+      return done();
+    }
+
+    this.slow(10000);
+    this.timeout(20000);
+
+    var src = metalsmithTempDir();
+    copyFixture('videos/short.MTS', src, 'in/short.MTS');
+    copyFixture('videos/short.MTS', src, 'credits/credits.MTS');
+    copyFixture('videos/with_credits.yaml', src, 'in/videos.yaml');
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find())
+      .use(videos.transcode({
+        credits: path.join(src, 'src/credits')
+      }))
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(Object.keys(files).length == 1);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.output);
+        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
+        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
+        chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
+        assert(!('tmp' in videoData));
+        done();
+      });
+  });
 });
 
 // vim: ts=2:sw=2:et
