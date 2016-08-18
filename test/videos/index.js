@@ -167,34 +167,36 @@ describe('videos.js', function() {
         done();
       });
   });
-//  it('should not transcode bogus videos', function (done) {
-//    this.slow(500);
-//    this.timeout(1000);
-//
-//    var src = metalsmithTempDir();
-//    copyFixture('videos/fake.MTS', src, 'in/short.MTS');
-//    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
-//    var previousFiles = common.walkSync(path.join(src, 'src'));
-//
-//    metalsmith(src)
-//      .ignore(['*.MTS'])
-//      .use(videos())
-//      .build(function (err, files) {
-//        if (!err) {
-//          return done(new Error("Should fail"));
-//        }
-//        assert(err.message.startsWith("bogus input"));
-//        powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
-//        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
-//        assert(videosData.length == 1);
-//        var videoData = videosData[0];
-//        assert(!('inputHash' in videoData));
-//        assert(!('output' in videoData));
-//        assert(!('durationSec' in videoData));
-//        assert(!('tmp' in videoData));
-//        done();
-//      });
-//  });
+  it('should not transcode bogus videos', function (done) {
+    this.slow(500);
+    this.timeout(1000);
+
+    var src = metalsmithTempDir();
+    copyFixture('videos/fake.MTS', src, 'in/short.MTS');
+    copyFixture('videos/short.yaml', src, 'in/videos.yaml');
+    var previousFiles = common.walkSync(path.join(src, 'src'));
+
+    metalsmith(src)
+      .ignore(['*.MTS'])
+      .use(videos.find())
+      .use(videos.transcode())
+      .use(videos.save())
+      .build(function (err, files) {
+        if (!err) {
+          return done(new Error("Should fail"));
+        }
+        assert(err.message.startsWith("bogus input"));
+        powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(!('inputHash' in videoData));
+        assert(!('output' in videoData));
+        assert(!('durationSec' in videoData));
+        assert(!('tmp' in videoData));
+        done();
+      });
+  });
 //  it('should transcode real videos', function (done) {
 //    if (noShortVideo) {
 //      console.log("SKIP: skipping this test because short input missing");
