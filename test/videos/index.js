@@ -26,6 +26,13 @@ var copyFixture = function(src, base, dest) {
   return;
 }
 
+var copyFile = function(src, base, dest) {
+  fs.mkdirsSync(path.dirname(path.join(base, dest)));
+  fs.copySync(path.join(__dirname, 'fixtures', src),
+      path.join(base,  dest), { preserveTimestamps: true });
+  return;
+}
+
 var sameFile = function(base, src, prevHash) {
   newHash = md5(fs.readFileSync(path.join(base, 'src', src)));
   if (prevHash !== undefined) {
@@ -54,7 +61,7 @@ beforeEach(function() {
 describe('videos.js', function() {
   it('should do nothing when there is nothing to do', function (done) {
     metalsmith(metalsmithTempDir())
-      .ignore(['*.MTS'])
+      .ignore(['**/*.MTS'])
       .use(videos.find())
       .use(videos.save())
       .build(function (err, files) {
@@ -70,7 +77,11 @@ describe('videos.js', function() {
     copyFixture('videos/fake.MTS', src, 'short.MTS');
 
     metalsmith(src)
-      .ignore(['*.MTS'])
+      .ignore(['**/*.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 0);
+        done();
+      })
       .use(videos.find({ videoExtensions: ['**/*.mp4'] }))
       .use(videos.save())
       .build(function (err, files) {
@@ -87,7 +98,11 @@ describe('videos.js', function() {
     copyFixture('videos/fake.MTS', src, 'short.MTS');
 
     metalsmith(src)
-      .ignore(['*.MTS'])
+      .ignore(['**/*.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 0);
+        done();
+      })
       .use(videos.find({ videoExtensions: ['**/*.MTS'] }))
       .use(function (files, metalsmith, done) {
         var videos = metalsmith.metadata().videos;
@@ -120,7 +135,11 @@ describe('videos.js', function() {
     var previousHash = common.md5sum(path.join(src, 'src/in/videos.yaml'));
 
     metalsmith(src)
-      .ignore(['*.MTS'])
+      .ignore(['**/.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        done();
+      })
       .use(videos.find({ videoMetadata: 'videos.yaml' }))
       .use(function (file, metalsmith, done) {
         var metadata = metalsmith.metadata();
@@ -140,12 +159,16 @@ describe('videos.js', function() {
   });
   it('should find existing videos that match the pattern', function (done) {
     var src = metalsmithTempDir();
-    copyFixture('videos/fake.MTS', src, 'short.MTS');
+    copyFixture('videos/fake.MTS', src, 'in/short.MTS');
     copyFixture('videos/short.yaml', src, 'in/videos.yaml');
     var previousHash = common.md5sum(path.join(src, 'src/in/videos.yaml'));
 
     metalsmith(src)
-      .ignore(['*.MTS'])
+      .ignore(['**/*.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        done();
+      })
       .use(videos.find())
       .use(function (file, metalsmith, done) {
         var metadata = metalsmith.metadata();
@@ -177,7 +200,11 @@ describe('videos.js', function() {
     var previousFiles = common.walkSync(path.join(src, 'src'));
 
     metalsmith(src)
-      .ignore(['*.MTS'])
+      .ignore(['**/*.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        done();
+      })
       .use(videos.find())
       .use(videos.transcode())
       .use(videos.save())
@@ -185,7 +212,7 @@ describe('videos.js', function() {
         if (!err) {
           return done(new Error("Should fail"));
         }
-        assert(err.message.startsWith("bogus input"));
+        assert(err.message.startsWith("bogus input"), err.message);
         powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
         assert(videosData.length == 1);
@@ -193,7 +220,7 @@ describe('videos.js', function() {
         assert(!('inputHash' in videoData));
         assert(!('output' in videoData));
         assert(!('durationSec' in videoData));
-        assert(!('tmp' in videoData));
+        assert(!('find' in videoData));
         done();
       });
   });
@@ -211,7 +238,11 @@ describe('videos.js', function() {
     copyFixture('videos/short.yaml', src, 'in/videos.yaml');
 
     metalsmith(src)
-      .ignore(['*.MTS'])
+      .ignore(['**/*.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        done();
+      })
       .use(videos.find())
       .use(videos.transcode())
       .use(videos.save())
@@ -227,7 +258,7 @@ describe('videos.js', function() {
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
         chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
-        assert(!('tmp' in videoData));
+        assert(!('find' in videoData));
         done();
       });
   });
@@ -246,8 +277,14 @@ describe('videos.js', function() {
     copyFixture('videos/with_credits.yaml', src, 'in/videos.yaml');
 
     metalsmith(src)
-      .ignore(['*.MTS'])
-      .use(videos.find())
+      .ignore(['**/*.MTS'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        done();
+      })
+      .use(videos.find({
+        videoExtensions: ['in/**/*.MTS']
+      }))
       .use(videos.transcode({
         credits: path.join(src, 'src/credits')
       }))
@@ -264,10 +301,22 @@ describe('videos.js', function() {
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
         chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
-        assert(!('tmp' in videoData));
+        assert(!('find' in videoData));
+        assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
         done();
       });
   });
+  /*
+  it('should complete the typical video workflow', function (done) {
+    if (noShortVideo) {
+      console.log("SKIP: skipping this test because short input missing");
+      return done();
+    }
+
+    this.slow(10000);
+    this.timeout(20000);
+  });
+  */
 });
 
 // vim: ts=2:sw=2:et
