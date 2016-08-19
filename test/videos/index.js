@@ -1,5 +1,6 @@
 var _ = require('underscore'),
     metalsmith = require('metalsmith'),
+    async = require('async'),
     fs = require('fs-extra'),
     path = require('path'),
     chai = require('chai'),
@@ -19,21 +20,21 @@ var metalsmithTempDir = function() {
   return src;
 }
 
-var copyFixture = function(src, base, dest) {
+var copyFixture = function (src, base, dest) {
   fs.mkdirsSync(path.dirname(path.join(base, 'src', dest)));
   fs.copySync(path.join(__dirname, 'fixtures', src),
       path.join(base, 'src', dest), { preserveTimestamps: true });
   return;
 }
 
-var copyFile = function(src, base, dest) {
+var copyFile = function (src, base, dest) {
   fs.mkdirsSync(path.dirname(path.join(base, dest)));
   fs.copySync(path.join(__dirname, 'fixtures', src),
       path.join(base,  dest), { preserveTimestamps: true });
   return;
 }
 
-var sameFile = function(base, src, prevHash) {
+var sameFile = function (base, src, prevHash) {
   newHash = md5(fs.readFileSync(path.join(base, 'src', src)));
   if (prevHash !== undefined) {
     return newHash == prevHash;
@@ -42,7 +43,7 @@ var sameFile = function(base, src, prevHash) {
   }
 }
 
-var fileSearch = function(files, pathEnd) {
+var fileSearch = function (files, pathEnd) {
   if (Array.isArray(files)) {
     return _.filter(files, function (filename) {
       return filename.endsWith(pathEnd);
@@ -69,7 +70,7 @@ describe('videos.js', function() {
           return done(err);
         }
         assert(Object.keys(files).length == 0);
-        done();
+        return done();
       });
   });
   it('should ignore new videos that fail to match the pattern', function (done) {
@@ -80,7 +81,7 @@ describe('videos.js', function() {
       .ignore(['**/*.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 0);
-        done();
+        return done();
       })
       .use(videos.find({ videoExtensions: ['**/*.mp4'] }))
       .use(videos.save())
@@ -90,7 +91,7 @@ describe('videos.js', function() {
         }
         assert(!(fs.existsSync(path.join(src, 'src/videos.yaml'))));
         assert(Object.keys(files).length == 0);
-        done();
+        return done();
       });
   });
   it('should find new videos that match the pattern', function (done) {
@@ -101,7 +102,7 @@ describe('videos.js', function() {
       .ignore(['**/*.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 0);
-        done();
+        return done();
       })
       .use(videos.find({ videoExtensions: ['**/*.MTS'] }))
       .use(function (files, metalsmith, done) {
@@ -111,7 +112,7 @@ describe('videos.js', function() {
           assert(videoData.find);
           assert(videoData.find.inputsPresent);
         });
-        done();
+        return done();
       })
       .use(videos.save())
       .build(function (err, files) {
@@ -126,7 +127,7 @@ describe('videos.js', function() {
         assert(videoData.files[0] == 'short.MTS');
         assert(videoData.transcode == false);
         assert(Object.keys(files).length == 0);
-        done();
+        return done();
       });
   });
   it('should ignore existing videos that fail to match the pattern', function (done) {
@@ -138,13 +139,13 @@ describe('videos.js', function() {
       .ignore(['**/.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       })
       .use(videos.find({ videoMetadata: 'videos.yaml' }))
       .use(function (file, metalsmith, done) {
         var metadata = metalsmith.metadata();
         assert(Object.keys(metadata.videos.byDirectory).length == 0);
-        done();
+        return done();
       })
       .use(videos.save())
       .build(function (err, files) {
@@ -154,7 +155,7 @@ describe('videos.js', function() {
         assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
         assert(previousHash == common.md5sum(path.join(src, 'src/in/videos.yaml')));
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       });
   });
   it('should find existing videos that match the pattern', function (done) {
@@ -167,13 +168,13 @@ describe('videos.js', function() {
       .ignore(['**/*.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       })
       .use(videos.find())
       .use(function (file, metalsmith, done) {
         var metadata = metalsmith.metadata();
         assert(Object.keys(metadata.videos.byDirectory).length == 1);
-        done();
+        return done();
       })
       .use(videos.save())
       .build(function (err, files) {
@@ -187,7 +188,7 @@ describe('videos.js', function() {
         assert(videoData.files.length == 1);
         assert(videoData.files[0] == 'short.MTS');
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       });
   });
   it('should not transcode bogus videos', function (done) {
@@ -203,7 +204,7 @@ describe('videos.js', function() {
       .ignore(['**/*.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       })
       .use(videos.find())
       .use(videos.transcode())
@@ -221,7 +222,7 @@ describe('videos.js', function() {
         assert(!('output' in videoData));
         assert(!('durationSec' in videoData));
         assert(!('find' in videoData));
-        done();
+        return done();
       });
   });
   it('should transcode real videos', function (done) {
@@ -230,8 +231,8 @@ describe('videos.js', function() {
       return done();
     }
 
-    this.slow(10000);
-    this.timeout(20000);
+    this.slow(20000);
+    this.timeout(30000);
     
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'in/short.MTS');
@@ -241,7 +242,7 @@ describe('videos.js', function() {
       .ignore(['**/*.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       })
       .use(videos.find())
       .use(videos.transcode())
@@ -259,7 +260,7 @@ describe('videos.js', function() {
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
         chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
         assert(!('find' in videoData));
-        done();
+        return done();
       });
   });
   it('should add credits properly', function (done) {
@@ -268,8 +269,8 @@ describe('videos.js', function() {
       return done();
     }
 
-    this.slow(10000);
-    this.timeout(20000);
+    this.slow(25000);
+    this.timeout(40000);
 
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'in/short.MTS');
@@ -280,7 +281,7 @@ describe('videos.js', function() {
       .ignore(['**/*.MTS'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
-        done();
+        return done();
       })
       .use(videos.find({
         videoExtensions: ['in/**/*.MTS']
@@ -303,20 +304,63 @@ describe('videos.js', function() {
         chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
         assert(!('find' in videoData));
         assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
-        done();
+        return done();
       });
   });
-  /*
-  it('should complete the typical video workflow', function (done) {
+  it('should complete the typical video workflow', function (outerDone) {
     if (noShortVideo) {
       console.log("SKIP: skipping this test because short input missing");
-      return done();
+      return outerDone();
     }
-
+    
+    var src = metalsmithTempDir();
     this.slow(10000);
     this.timeout(20000);
+
+    async.series([
+      function (callback) {
+        metalsmith(src)
+          .ignore(['**/*.MTS'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 0);
+            return done();
+          })
+          .use(videos.find())
+          .use(videos.transcode())
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            assert(Object.keys(files).length == 0);
+            callback();
+          })
+      },
+      function (callback) {
+        copyFixture('videos/short.MTS', src, 'in/short.MTS');
+        var previousFiles = common.walkSync(path.join(src, 'src'));
+        assert(previousFiles.length == 1);
+        metalsmith(src)
+          .ignore(['**/*.MTS'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 0);
+            return done();
+          })
+          .use(videos.find())
+          .use(videos.transcode())
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            assert(Object.keys(files).length == 0);
+            assert(common.walkSync(path.join(src, 'src')).length == 2);
+            callback();
+          })
+    }], function () {
+      return outerDone();
+    });
   });
-  */
 });
 
 // vim: ts=2:sw=2:et
