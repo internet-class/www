@@ -354,10 +354,42 @@ describe('videos.js', function() {
               return outerDone(err);
             }
             assert(Object.keys(files).length == 0);
+            assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
             assert(common.walkSync(path.join(src, 'src')).length == 2);
             callback();
           })
-    }], function () {
+      },
+      function (callback) {
+        var previousFiles = common.walkSync(path.join(src, 'src'));
+        assert(previousFiles.length == 2);
+
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.transcode === false);
+        delete(videoData.transcode);
+        fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
+        metalsmith(src)
+          .ignore(['**/*.MTS'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(videos.find())
+          .use(videos.transcode())
+          .use(videos.save())
+          .build(function (err, files) {
+            if (!err) {
+              return outerDone(new Error("Should fail"));
+            }
+            assert(err.message.startsWith('video missing transcode'));
+            assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+            assert(common.walkSync(path.join(src, 'src')).length == 2);
+            callback();
+          })
+      }
+    ], function () {
       return outerDone();
     });
   });
