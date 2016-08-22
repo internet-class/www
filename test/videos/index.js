@@ -8,6 +8,7 @@ var _ = require('underscore'),
     yamljs = require('yamljs'),
     powerAssert = require('power-assert'),
     youtube_credentials = require('../../lib/youtube_credentials.js'),
+    html_to_text = require('html-to-text'),
     common = require('../../lib/common.js'),
     videos = require('../../lib/videos.js');
 
@@ -348,7 +349,26 @@ describe('videos.js', function() {
         assert(metalsmith.metadata().transcode.count == 0);
         return done();
       })
-      //.use(videos.upload())
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        _.each(metalsmith.metadata().videos.allVideos, function (videoData) {
+          console.log(videoData.description);
+          videoData.description = html_to_text.fromString(videoData.description, {
+            wordwrap: false,
+            ignoreHref: true,
+            ignoreImage: true,
+            uppercaseHeadings: false
+          });
+          console.log(videoData.description);
+        });
+        done();
+      })
+      .use(videos.upload({ verbose: true }))
+      .use(function (files, metalsmith, done) {
+        assert(metalsmith.metadata().upload.count == 1);
+        assert(metalsmith.metadata().upload.errors.length == 0);
+        return done();
+      })
       .use(videos.save())
       .build(function (err, files) {
         if (err) {

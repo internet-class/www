@@ -5,3 +5,4 @@
   producers:
     - { name: "Greg Bunyea", credits: "Undergraduate, University at Buffalo" }
   output: 'cb79677deb19909949665c9151fa446e.mp4'
+  description: "Let's test some <b>HTML</b> and see if it works. <a href='www.google.com'>Here's a link.</a>"
