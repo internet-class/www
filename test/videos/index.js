@@ -329,6 +329,9 @@ describe('videos.js', function() {
 
     var src = metalsmithTempDir();
     copyFixture('upload/credentials.json', src, '../youtube/credentials.json');
+    try {
+      copyFixture('upload/tokens.json', src, '../youtube/tokens.json');
+    } catch (err) { };
     copyFixture('videos/test.mp4', src, 'in/cb79677deb19909949665c9151fa446e.mp4');
     copyFixture('videos/to_upload.yaml', src, 'in/videos.yaml');
 
