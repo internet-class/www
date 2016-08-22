@@ -57,12 +57,13 @@ var fileSearch = function (files, pathEnd) {
 
 beforeEach(function() {
   noShortVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/short.MTS')));
+  noUploadVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/test.mp4')));
 });
 
 describe('videos.js', function() {
   it('should do nothing when there is nothing to do', function (done) {
     metalsmith(metalsmithTempDir())
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(videos.find())
       .use(videos.save())
       .build(function (err, files) {
@@ -78,7 +79,7 @@ describe('videos.js', function() {
     copyFixture('videos/fake.MTS', src, 'short.MTS');
 
     metalsmith(src)
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 0);
         return done();
@@ -99,7 +100,7 @@ describe('videos.js', function() {
     copyFixture('videos/fake.MTS', src, 'short.MTS');
 
     metalsmith(src)
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 0);
         return done();
@@ -136,7 +137,7 @@ describe('videos.js', function() {
     var previousHash = common.md5sum(path.join(src, 'src/in/videos.yaml'));
 
     metalsmith(src)
-      .ignore(['**/.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
         return done();
@@ -165,7 +166,7 @@ describe('videos.js', function() {
     var previousHash = common.md5sum(path.join(src, 'src/in/videos.yaml'));
 
     metalsmith(src)
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
         return done();
@@ -201,7 +202,7 @@ describe('videos.js', function() {
     var previousFiles = common.walkSync(path.join(src, 'src'));
 
     metalsmith(src)
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
         return done();
@@ -243,7 +244,7 @@ describe('videos.js', function() {
     copyFixture('videos/short.yaml', src, 'in/videos.yaml');
 
     metalsmith(src)
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
         return done();
@@ -282,7 +283,7 @@ describe('videos.js', function() {
     copyFixture('videos/with_credits.yaml', src, 'in/videos.yaml');
 
     metalsmith(src)
-      .ignore(['**/*.MTS'])
+      .ignore(['**/*.MTS', '**/*.mp4'])
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
         return done();
@@ -293,6 +294,47 @@ describe('videos.js', function() {
       .use(videos.transcode({
         credits: path.join(src, 'src/credits')
       }))
+      .use(videos.save())
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        assert(Object.keys(files).length == 1);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.output);
+        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
+        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
+        chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
+        assert(!('find' in videoData));
+        assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
+        return done();
+      });
+  });
+  it('should upload videos', function (done) {
+    if (noUploadVideo) {
+      console.log("SKIP: skipping this test because upload input missing");
+      return done();
+    }
+
+    this.slow(30000);
+    this.timeout(50000);
+
+    var src = metalsmithTempDir();
+    copyFixture('videos/test.mp4', src, 'in/cb79677deb19909949665c9151fa446e.mp4');
+    copyFixture('videos/to_upload.yaml', src, 'in/videos.yaml');
+
+    metalsmith(src)
+      .ignore(['**/*.MTS', '**/*.mp4'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        return done();
+      })
+      .use(videos.find({
+        videoExtensions: ['in/**/*.MTS']
+      }))
+      .use(videos.upload())
       .use(videos.save())
       .build(function (err, files) {
         if (err) {
@@ -416,7 +458,7 @@ describe('videos.js', function() {
         ];
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
         metalsmith(src)
-          .ignore(['**/*.MTS'])
+          .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
             assert(Object.keys(files).length == 1);
             return done();

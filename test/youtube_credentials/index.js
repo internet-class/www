@@ -1,14 +1,28 @@
 var chai = require('chai'),
+    metalsmith = require('metalsmith'),
     fs = require('fs-extra'),
     async = require('async'),
     path = require('path'),
-    tmp = require('tmp'),
+    temp = require('temp'),
     googleapis = require('googleapis'),
     youtube_credentials = require('../../lib/youtube_credentials.js');
 
 chai.use(require('chai-fs'));
-tmp.setGracefulCleanup();
+temp.track();
 var assert = chai.assert;
+
+var metalsmithTempDir = function() {
+  var src = temp.mkdirSync();
+  fs.mkdirsSync(path.join(src, 'src'));
+  return src;
+}
+
+var copyFixture = function (src, base, dest) {
+  fs.mkdirsSync(path.dirname(path.join(base, 'src', dest)));
+  fs.copySync(path.join(__dirname, 'fixtures', src),
+      path.join(base, 'src', dest), { preserveTimestamps: true });
+  return;
+}
 
 describe('youtube_credentials.js', function () {
   it('should work with good credentials', function (done) {
@@ -19,7 +33,7 @@ describe('youtube_credentials.js', function () {
     }
     this.slow(30000);
     this.timeout(30000);
-    var outputDir = tmp.dirSync().name;
+    var outputDir = temp.mkdirSync();
     fs.copySync(path.join(__dirname, 'fixtures/credentials'), outputDir);
     youtube_credentials.retrieve({
       credentialsFile: path.join(outputDir, 'good.json'),
@@ -31,6 +45,29 @@ describe('youtube_credentials.js', function () {
      done();
    });
 	});
+  it('should work in a metalsmith pipeline', function (done) {
+    if (!(fs.existsSync(path.join(__dirname, 'fixtures/credentials/good.json')))) {
+      console.log('SKIP: please place good credentials in ' + path.join(__dirname, 'fixtures/credentials/good.json'));
+      done();
+      return;
+    }
+    this.slow(30000);
+    this.timeout(30000);
+    var src = metalsmithTempDir();
+    copyFixture('credentials/good.json', src, '../youtube/credentials.json');
+
+    metalsmith(src)
+      .use(youtube_credentials({
+        credentialsFile: '../youtube/credentials.json',
+        tokenFile: '../youtube/token.json'
+      }))
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        return done();
+      });
+	});
   it('should fail with bad credentials', function (done) {
     if (!(fs.existsSync(path.join(__dirname, 'fixtures/credentials/bad.json')))) {
       console.log('SKIP: please place bad credentials in ' + path.join(__dirname, 'fixtures/credentials/bad.json'));
@@ -39,7 +76,7 @@ describe('youtube_credentials.js', function () {
     }
     this.slow(30000);
     this.timeout(30000);
-    var outputDir = tmp.dirSync().name;
+    var outputDir = temp.mkdirSync();
     fs.copySync(path.join(__dirname, 'fixtures/credentials'), outputDir);
     youtube_credentials.retrieve({
       credentialsFile: path.join(outputDir, 'bad.json'),
@@ -62,7 +99,7 @@ describe('youtube_credentials.js', function () {
       done();
       return;
     }
-    var outputDir = tmp.dirSync().name;
+    var outputDir = temp.mkdirSync();
     fs.copySync(path.join(__dirname, 'fixtures/credentials'), outputDir);
     this.slow(2000);
     youtube_credentials.retrieve({
@@ -86,7 +123,7 @@ describe('youtube_credentials.js', function () {
       done();
       return;
     }
-    var outputDir = tmp.dirSync().name;
+    var outputDir = temp.mkdirSync();
     fs.copySync(path.join(__dirname, 'fixtures/credentials'), outputDir);
     this.slow(2000);
     youtube_credentials.retrieve({
@@ -110,7 +147,7 @@ describe('youtube_credentials.js', function () {
       done();
       return;
     }
-    var outputDir = tmp.dirSync().name;
+    var outputDir = temp.mkdirSync();
     this.slow(2000);
     fs.copySync(path.join(__dirname, 'fixtures/credentials'), outputDir);
     youtube_credentials.retrieve({
@@ -129,7 +166,7 @@ describe('youtube_credentials.js', function () {
     done();
     return;
 
-    var outputDir = tmp.dirSync().name;
+    var outputDir = temp.mkdirSync();
     this.slow(30000);
     this.timeout(30000);
     fs.copySync(path.join(__dirname, 'fixtures'), outputDir);
