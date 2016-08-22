@@ -9,6 +9,7 @@ var _ = require('underscore'),
     powerAssert = require('power-assert'),
     youtube_credentials = require('../../lib/youtube_credentials.js'),
     html_to_text = require('html-to-text'),
+    googleapis = require('googleapis'),
     common = require('../../lib/common.js'),
     videos = require('../../lib/videos.js');
 
@@ -315,14 +316,14 @@ describe('videos.js', function() {
         return done();
       });
   });
-  it('should upload videos', function (done) {
+  it('should upload videos', function (outerDone) {
     if (noUploadVideo) {
       console.log("SKIP: skipping this test because upload input missing");
-      return done();
+      return outerDone();
     }
     if (noCredentials) {
       console.log("SKIP: skipping this test because upload credentials missing");
-      return done();
+      return outerDone();
     }
 
     this.slow(30000);
@@ -335,47 +336,120 @@ describe('videos.js', function() {
     } catch (err) { };
     copyFixture('videos/test.mp4', src, 'in/cb79677deb19909949665c9151fa446e.mp4');
     copyFixture('videos/to_upload.yaml', src, 'in/videos.yaml');
-
-    metalsmith(src)
-      .ignore(['**/*.MTS', '**/*.mp4'])
-      .use(function (files, metalsmith, done) {
-        assert(Object.keys(files).length == 1);
-        return done();
-      })
-      .use(youtube_credentials())
-      .use(videos.find())
-      .use(videos.transcode())
-      .use(function (files, metalsmith, done) {
-        assert(metalsmith.metadata().transcode.count == 0);
-        return done();
-      })
-      .use(function (files, metalsmith, done) {
-        assert(Object.keys(files).length == 1);
-        _.each(metalsmith.metadata().videos.allVideos, function (videoData) {
-          videoData.description = html_to_text.fromString(videoData.description, {
-            wordwrap: false,
-            ignoreHref: true,
-            ignoreImage: true,
-            uppercaseHeadings: false
+    
+    async.series([
+      function (callback) {
+        metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(youtube_credentials())
+          .use(videos.find())
+          .use(videos.transcode())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            return done();
+          })
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            _.each(metalsmith.metadata().videos.allVideos, function (videoData) {
+              videoData.description = html_to_text.fromString(videoData.description, {
+                wordwrap: false,
+                ignoreHref: true,
+                ignoreImage: true,
+                uppercaseHeadings: false
+              });
+            });
+            return done();
+          })
+          .use(videos.upload({
+            verbose: true,
+            extraTags: ['internet', 'internet-class.org']
+          }))
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().upload.count == 1);
+            assert(metalsmith.metadata().upload.errors.length == 0);
+            return done();
+          })
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            return callback();
           });
-        });
-        done();
-      })
-      .use(videos.upload({
-        verbose: true,
-        extraTags: ['internet', 'internet-class.org']
-      }))
-      .use(function (files, metalsmith, done) {
-        assert(metalsmith.metadata().upload.count == 1);
-        assert(metalsmith.metadata().upload.errors.length == 0);
-        return done();
-      })
-      .use(videos.save())
-      .build(function (err, files) {
-        if (err) {
-          return done(err);
-        }
-        return done();
+      },
+      function (callback) {
+        metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(youtube_credentials())
+          .use(videos.find())
+          .use(videos.transcode())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            return done();
+          })
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().upload.count == 0);
+            var videoData = metalsmith.metadata().videos.allVideos[0];
+            var youtubeClient = googleapis.youtube({
+              version: 'v3',
+              auth: metalsmith.metadata().youtube_credentials
+            });
+            youtubeClient.videos.list({
+              part: 'contentDetails, snippet, status',
+              id: videoData.youtube
+            }, function (err, data) {
+              assert(!err);
+              assert(data.items.length == 1);
+              assert(data.items[0].id == videoData.youtube);
+              return done();
+            });
+          })
+          .use(function (files, metalsmith, done) {
+            var videoData = metalsmith.metadata().videos.allVideos[0];
+            var youtubeClient = googleapis.youtube({
+              version: 'v3',
+              auth: metalsmith.metadata().youtube_credentials
+            });
+            youtubeClient.videos.delete({
+              id: videoData.youtube
+            }, function (err) {
+              assert(!err);
+              return done();
+            });
+          })
+          .use(function (files, metalsmith, done) {
+            var videoData = metalsmith.metadata().videos.allVideos[0];
+            var youtubeClient = googleapis.youtube({
+              version: 'v3',
+              auth: metalsmith.metadata().youtube_credentials
+            });
+            youtubeClient.videos.list({
+              part: 'contentDetails',
+              id: videoData.youtube
+            }, function (err, data) {
+              assert(!err);
+              assert(data.items.length == 0);
+              return done();
+            });
+          })
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            return callback();
+          });
+      }],
+      function () {
+        return outerDone();
       });
   });
   it('should complete the typical video workflow', function (outerDone) {
