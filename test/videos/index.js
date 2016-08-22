@@ -314,10 +314,9 @@ describe('videos.js', function() {
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        // chai.expect(videoData.durationSec).to.be.within(8.7, 8.8);
+        chai.expect(videoData.durationSec).to.be.within(10, 11);
         assert(!('find' in videoData));
         assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
-        fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
         return done();
       });
   });
