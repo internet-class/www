@@ -209,11 +209,15 @@ describe('videos.js', function() {
       .use(videos.find())
       .use(videos.transcode())
       .use(videos.save())
+      .use(function (files, metalsmith, done) {
+        assert(metalsmith.metadata().transcode.errors.length == 1);
+        assert(metalsmith.metadata().transcode.errors[0].message.startsWith('bogus input'));
+        done();
+      })
       .build(function (err, files) {
-        if (!err) {
-          return done(new Error("Should fail"));
+        if (err) {
+          return done(err);
         }
-        assert(err.message.startsWith("bogus input"), err.message);
         powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
         assert(videosData.length == 1);
@@ -269,8 +273,8 @@ describe('videos.js', function() {
       return done();
     }
 
-    this.slow(25000);
-    this.timeout(40000);
+    this.slow(30000);
+    this.timeout(50000);
 
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'in/short.MTS');
@@ -314,18 +318,18 @@ describe('videos.js', function() {
     }
     
     var src = metalsmithTempDir();
-    this.slow(10000);
-    this.timeout(20000);
+    this.slow(30000);
+    this.timeout(50000);
 
     async.series([
       function (callback) {
         metalsmith(src)
-          .ignore(['**/*.MTS'])
+          .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
             assert(Object.keys(files).length == 0);
             return done();
           })
-          .use(videos.find())
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
           .use(videos.save())
           .build(function (err, files) {
@@ -338,15 +342,16 @@ describe('videos.js', function() {
       },
       function (callback) {
         copyFixture('videos/short.MTS', src, 'in/short.MTS');
+        copyFixture('videos/short.MTS', src, 'credits/credits.MTS');
         var previousFiles = common.walkSync(path.join(src, 'src'));
-        assert(previousFiles.length == 1);
+        assert(previousFiles.length == 2);
         metalsmith(src)
-          .ignore(['**/*.MTS'])
+          .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
             assert(Object.keys(files).length == 0);
             return done();
           })
-          .use(videos.find())
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
           .use(videos.save())
           .build(function (err, files) {
@@ -355,13 +360,13 @@ describe('videos.js', function() {
             }
             assert(Object.keys(files).length == 0);
             assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
-            assert(common.walkSync(path.join(src, 'src')).length == 2);
+            assert(common.walkSync(path.join(src, 'src')).length == 3);
             callback();
           })
       },
       function (callback) {
         var previousFiles = common.walkSync(path.join(src, 'src'));
-        assert(previousFiles.length == 2);
+        assert(previousFiles.length == 3);
 
         assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
@@ -371,21 +376,89 @@ describe('videos.js', function() {
         delete(videoData.transcode);
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
         metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
+          .use(videos.transcode())
+          .use(videos.save())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.errors.length == 1);
+            assert(metalsmith.metadata().transcode.errors[0].message.startsWith('video missing transcode'));
+            return done();
+          })
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+            assert(common.walkSync(path.join(src, 'src')).length == 3);
+            callback();
+          })
+      },
+      function (callback) {
+        var previousFiles = common.walkSync(path.join(src, 'src'));
+        assert(previousFiles.length == 3);
+
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.transcode === false);
+        delete(videoData.transcode);
+        videoData.title = 'Test Title';
+        videoData.titleLength = 1
+        videoData.authors = [
+          { name: "Test Me", credits: "My Credit Info" },
+          { name: "Another Test Author", credits: "Long String" }
+        ];
+        fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
+        metalsmith(src)
           .ignore(['**/*.MTS'])
           .use(function (files, metalsmith, done) {
             assert(Object.keys(files).length == 1);
             return done();
           })
-          .use(videos.find())
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
           .use(videos.save())
           .build(function (err, files) {
-            if (!err) {
-              return outerDone(new Error("Should fail"));
+            if (err) {
+              return outerDone(err);
             }
-            assert(err.message.startsWith('video missing transcode'));
             assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
-            assert(common.walkSync(path.join(src, 'src')).length == 2);
+            var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+            assert(videosData.length == 1);
+            var videoData = videosData[0];
+            chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
+            assert(videoData.upload === false);
+            assert(common.walkSync(path.join(src, 'src')).length == 4);
+            callback();
+          })
+      },
+      function (callback) {
+        var previousFiles = common.walkSync(path.join(src, 'src'));
+        assert(previousFiles.length == 4);
+        metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
+          .use(videos.transcode())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            return done();
+          })
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            assert(common.walkSync(path.join(src, 'src')).length == 4);
             callback();
           })
       }
