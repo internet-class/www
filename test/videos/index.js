@@ -10,6 +10,7 @@ var _ = require('underscore'),
     youtube_credentials = require('../../lib/youtube_credentials.js'),
     html_to_text = require('html-to-text'),
     googleapis = require('googleapis'),
+    uuid = require('node-uuid'),
     common = require('../../lib/common.js'),
     videos = require('../../lib/videos.js');
 
@@ -469,8 +470,8 @@ describe('videos.js', function() {
       copyFixture('upload/tokens.json', src, '../youtube/tokens.json');
     } catch (err) { };
 
-    this.slow(30000);
-    this.timeout(50000);
+    this.slow(50000);
+    this.timeout(100000);
 
     async.series([
       function (callback) {
@@ -576,7 +577,7 @@ describe('videos.js', function() {
         var videoData = videosData[0];
         assert(videoData.transcode === false);
         delete(videoData.transcode);
-        videoData.title = 'A Third Test Title';
+        videoData.title = 'Test ' + uuid.v4();
         videoData.titleLength = 1
         videoData.authors = [
           { name: "Test Me", credits: "My Credit Info" },
@@ -770,10 +771,10 @@ describe('videos.js', function() {
             youtubeClient.videos.delete({
               id: videoData.youtube
             }, function (err) {
+              console.log("Here");
               assert(!err);
               return done();
             });
-            return done();
           })
           .use(videos.save())
           .build(function (err, files) {
