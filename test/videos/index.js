@@ -702,7 +702,6 @@ describe('videos.js', function() {
           .use(youtube_credentials())
           .use(videos.upload({
             verbose: true,
-            veryVerbose: true,
             locationDescription: "Davis Hall, University at Buffalo",
             locationLatitude: 43.0026512146,
             locationLongitude: -78.7873077393,
@@ -743,7 +742,6 @@ describe('videos.js', function() {
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
         assert(videosData.length == 1);
         var videoData = videosData[0];
-        fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
         assert(videoData.upload === false);
         assert(videoData.youtube);
 
@@ -771,7 +769,6 @@ describe('videos.js', function() {
             youtubeClient.videos.delete({
               id: videoData.youtube
             }, function (err) {
-              console.log("Here");
               assert(!err);
               return done();
             });
