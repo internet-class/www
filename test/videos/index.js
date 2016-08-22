@@ -767,14 +767,12 @@ describe('videos.js', function() {
               version: 'v3',
               auth: metalsmith.metadata().youtube_credentials
             });
-            /*
             youtubeClient.videos.delete({
               id: videoData.youtube
             }, function (err) {
               assert(!err);
               return done();
             });
-            */
             return done();
           })
           .use(videos.save())
