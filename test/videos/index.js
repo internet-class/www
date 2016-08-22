@@ -352,18 +352,19 @@ describe('videos.js', function() {
       .use(function (files, metalsmith, done) {
         assert(Object.keys(files).length == 1);
         _.each(metalsmith.metadata().videos.allVideos, function (videoData) {
-          console.log(videoData.description);
           videoData.description = html_to_text.fromString(videoData.description, {
             wordwrap: false,
             ignoreHref: true,
             ignoreImage: true,
             uppercaseHeadings: false
           });
-          console.log(videoData.description);
         });
         done();
       })
-      .use(videos.upload({ verbose: true }))
+      .use(videos.upload({
+        verbose: true,
+        extraTags: ['internet', 'internet-class.org']
+      }))
       .use(function (files, metalsmith, done) {
         assert(metalsmith.metadata().upload.count == 1);
         assert(metalsmith.metadata().upload.errors.length == 0);
