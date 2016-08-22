@@ -7,6 +7,7 @@ var _ = require('underscore'),
     temp = require('temp'),
     yamljs = require('yamljs'),
     powerAssert = require('power-assert'),
+    youtube_credentials = require('../../lib/youtube_credentials.js'),
     common = require('../../lib/common.js'),
     videos = require('../../lib/videos.js');
 
@@ -58,6 +59,7 @@ var fileSearch = function (files, pathEnd) {
 beforeEach(function() {
   noShortVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/short.MTS')));
   noUploadVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/test.mp4')));
+  noCredentials = !(fs.existsSync(path.join(__dirname, 'fixtures/upload/credentials.json')));
 });
 
 describe('videos.js', function() {
@@ -317,11 +319,16 @@ describe('videos.js', function() {
       console.log("SKIP: skipping this test because upload input missing");
       return done();
     }
+    if (noCredentials) {
+      console.log("SKIP: skipping this test because upload credentials missing");
+      return done();
+    }
 
     this.slow(30000);
     this.timeout(50000);
 
     var src = metalsmithTempDir();
+    copyFixture('upload/credentials.json', src, '../youtube/credentials.json');
     copyFixture('videos/test.mp4', src, 'in/cb79677deb19909949665c9151fa446e.mp4');
     copyFixture('videos/to_upload.yaml', src, 'in/videos.yaml');
 
@@ -331,25 +338,19 @@ describe('videos.js', function() {
         assert(Object.keys(files).length == 1);
         return done();
       })
-      .use(videos.find({
-        videoExtensions: ['in/**/*.MTS']
-      }))
-      .use(videos.upload())
+      .use(youtube_credentials())
+      .use(videos.find())
+      .use(videos.transcode())
+      .use(function (files, metalsmith, done) {
+        assert(metalsmith.metadata().transcode.count == 0);
+        return done();
+      })
+      //.use(videos.upload())
       .use(videos.save())
       .build(function (err, files) {
         if (err) {
           return done(err);
         }
-        assert(Object.keys(files).length == 1);
-        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
-        assert(videosData.length == 1);
-        var videoData = videosData[0];
-        assert(videoData.output);
-        assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
-        assert(!('find' in videoData));
-        assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
         return done();
       });
   });
