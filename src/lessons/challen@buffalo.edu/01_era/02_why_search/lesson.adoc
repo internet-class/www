@@ -1,0 +1,22 @@
+---
+title: "Why discuss a single internet search?"
+---
+
+Something as quick and commonplace as a single internet touches many
+different parts of the internet.
+//
+Search requires a connection with other computers, protocols to structure
+many types of communication, routing and transport layers to move information
+from place to place, naming conventions, document markup, crawling the entire
+web to find and rank results, and JavaScript to provide an interactive web
+experience.
+//
+Search also touches on issues of authority (who gets to rank the web?),
+security and privacy (who knows about my web search activity?), and identify
+(should Google tailor my results to me?).
+//
+Search is also typically performed using free search engines and leads us to
+free web content, raising both economic and participation issues.
+//
+So a single internet search provides an ideal way to organize our journey.
+
