@@ -12,7 +12,6 @@ doimport:
 		echo "/media/$(USER)/CANON/AVCHD does not exist."; \
 	fi
 
-
 backup:
 	@if [ -d /media/$(USER)/internet-class/backup ]; then \
 		echo "Backing up to /media/$(USER)/internet-class/"; \
