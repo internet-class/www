@@ -457,8 +457,17 @@ describe('videos.js', function() {
       console.log("SKIP: skipping this test because short input missing");
       return outerDone();
     }
-    
+    if (noCredentials) {
+      console.log("SKIP: skipping this test because upload credentials missing");
+      return outerDone();
+    }
+
     var src = metalsmithTempDir();
+    copyFixture('upload/credentials.json', src, '../youtube/credentials.json');
+    try {
+      copyFixture('upload/tokens.json', src, '../youtube/tokens.json');
+    } catch (err) { };
+
     this.slow(30000);
     this.timeout(50000);
 
@@ -472,6 +481,13 @@ describe('videos.js', function() {
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            assert(metalsmith.metadata().upload.count == 0);
+            return done();
+          })
           .use(videos.save())
           .build(function (err, files) {
             if (err) {
@@ -494,6 +510,13 @@ describe('videos.js', function() {
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            assert(metalsmith.metadata().upload.count == 0);
+            return done();
+          })
           .use(videos.save())
           .build(function (err, files) {
             if (err) {
@@ -524,10 +547,13 @@ describe('videos.js', function() {
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
           .use(videos.save())
           .use(function (files, metalsmith, done) {
             assert(metalsmith.metadata().transcode.errors.length == 1);
             assert(metalsmith.metadata().transcode.errors[0].message.startsWith('video missing transcode'));
+            assert(metalsmith.metadata().upload.count == 0);
             return done();
           })
           .build(function (err, files) {
@@ -564,6 +590,13 @@ describe('videos.js', function() {
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 1);
+            assert(metalsmith.metadata().upload.count == 0);
+            return done();
+          })
           .use(videos.save())
           .build(function (err, files) {
             if (err) {
@@ -590,8 +623,11 @@ describe('videos.js', function() {
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
           .use(function (files, metalsmith, done) {
             assert(metalsmith.metadata().transcode.count == 0);
+            assert(metalsmith.metadata().upload.count == 0);
             return done();
           })
           .use(videos.save())
