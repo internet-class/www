@@ -1,6 +1,6 @@
 all: build | silent
 
-import:
+doimport:
 	@mkdir -p videos/backup
 	@if [ -d /media/$(USER)/CANON/AVCHD/ ]; then \
 		chmod u+w videos/backup/; \
@@ -11,6 +11,7 @@ import:
 		echo "/media/$(USER)/CANON/AVCHD does not exist."; \
 	fi
 
+
 backup:
 	@if [ -d /media/$(USER)/internet-class/backup ]; then \
 		echo "Backing up to /media/$(USER)/internet-class/"; \
@@ -20,6 +21,11 @@ backup:
 		echo "Backing up to /mnt/storage/internet-class/"; \
 		rsync -av videos/backup /mnt/storage/internet-class/ ; \
 	fi
+
+previews:
+	cd videos ; for f in *.MTS; do echo "${f%.*}"; done | xargs -t -P 16 -I FILE bash -c "ffmpeg -n -i FILE.MTS -s qvga -c:v libx264 -crf 18 -pix_fmt yuv420p -preset ultrafast FILE.mp4 2>/dev/null"
+
+import: doimport previews
 
 credentials:
 	@node lib/youtube_credentials.js youtube/credentials.json youtube/tokens.json
