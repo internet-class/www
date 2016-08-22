@@ -21,6 +21,9 @@ backup:
 		rsync -av videos/backup /mnt/storage/internet-class/ ; \
 	fi
 
+credentials:
+	@node lib/youtube_credentials.js youtube/credentials.json youtube/tokens.json
+
 videos:
 	@node lib/dovideos.js
 
@@ -49,4 +52,4 @@ run:
 clean:
 	@rm -rf build deploy
 
-.PHONY: run clean silent build
+.PHONY: run clean silent build credentials videos import backup
