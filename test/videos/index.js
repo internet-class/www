@@ -366,6 +366,7 @@ describe('videos.js', function() {
           })
           .use(videos.upload({
             verbose: true,
+            addCredits: false,
             extraTags: ['internet', 'internet-class.org']
           }))
           .use(function (files, metalsmith, done) {
@@ -581,6 +582,12 @@ describe('videos.js', function() {
           { name: "Test Me", credits: "My Credit Info" },
           { name: "Another Test Author", credits: "Long String" }
         ];
+        videoData.producers = [
+          { name: "Best Producer", credits: "So Great" },
+        ];
+        videoData.creditsFile = 'credits.MTS';
+        videoData.creditsLength = 1;
+
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
         metalsmith(src)
           .ignore(['**/*.MTS', '**/*.mp4'])
@@ -589,12 +596,13 @@ describe('videos.js', function() {
             return done();
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
-          .use(videos.transcode())
+          .use(videos.transcode({ credits: 'credits' }))
           .use(youtube_credentials())
           .use(videos.upload())
           .use(function (files, metalsmith, done) {
             assert(metalsmith.metadata().transcode.count == 1);
             assert(metalsmith.metadata().upload.count == 0);
+            assert(metalsmith.metadata().transcode.errors.length == 0);
             return done();
           })
           .use(videos.save())
@@ -606,7 +614,7 @@ describe('videos.js', function() {
             var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
             assert(videosData.length == 1);
             var videoData = videosData[0];
-            chai.expect(videoData.durationSec).to.be.within(2.05, 2.07);
+            chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
             assert(videoData.upload === false);
             assert(common.walkSync(path.join(src, 'src')).length == 4);
             callback();
@@ -636,6 +644,136 @@ describe('videos.js', function() {
               return outerDone(err);
             }
             assert(common.walkSync(path.join(src, 'src')).length == 4);
+            callback();
+          })
+      },
+      function (callback) {
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.upload === false);
+        delete(videoData.upload);
+        fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
+        
+        metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
+          .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            assert(metalsmith.metadata().upload.count == 1);
+            assert(metalsmith.metadata().upload.errors.length == 1);
+            return done();
+          })
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            callback();
+          })
+      },
+      function (callback) {
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.upload === false);
+        delete(videoData.upload);
+        videoData.description = 'Test me.';
+        fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
+        
+        metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
+          .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            assert(metalsmith.metadata().upload.count == 1);
+            assert(metalsmith.metadata().upload.errors.length == 0);
+            return done();
+          })
+          .use(function (files, metalsmith, done) {
+            var videoData = metalsmith.metadata().videos.allVideos[0];
+            var youtubeClient = googleapis.youtube({
+              version: 'v3',
+              auth: metalsmith.metadata().youtube_credentials
+            });
+            youtubeClient.videos.list({
+              part: 'contentDetails, snippet, status',
+              id: videoData.youtube
+            }, function (err, data) {
+              assert(!err);
+              assert(data.items.length == 1);
+              assert(data.items[0].id == videoData.youtube);
+              return done();
+            });
+          })
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
+            callback();
+          })
+      },
+      function (callback) {
+        assert(fs.existsSync(path.join(src, 'src/in/videos.yaml')));
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(videoData.upload === false);
+        assert(videoData.youtube);
+        
+        metalsmith(src)
+          .ignore(['**/*.MTS', '**/*.mp4'])
+          .use(function (files, metalsmith, done) {
+            assert(Object.keys(files).length == 1);
+            return done();
+          })
+          .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
+          .use(videos.transcode())
+          .use(youtube_credentials())
+          .use(videos.upload())
+          .use(function (files, metalsmith, done) {
+            assert(metalsmith.metadata().transcode.count == 0);
+            assert(metalsmith.metadata().upload.count == 0);
+            return done();
+          })
+          .use(function (files, metalsmith, done) {
+            var videoData = metalsmith.metadata().videos.allVideos[0];
+            var youtubeClient = googleapis.youtube({
+              version: 'v3',
+              auth: metalsmith.metadata().youtube_credentials
+            });
+            /*
+            youtubeClient.videos.delete({
+              id: videoData.youtube
+            }, function (err) {
+              assert(!err);
+              return done();
+            });
+            */
+            return done();
+          })
+          .use(videos.save())
+          .build(function (err, files) {
+            if (err) {
+              return outerDone(err);
+            }
             callback();
           })
       }
