@@ -1,4 +1,5 @@
 all: build | silent
+SHELL := /usr/bin/env bash
 
 doimport:
 	@mkdir -p videos/backup
@@ -23,7 +24,8 @@ backup:
 	fi
 
 previews:
-	cd videos ; for f in *.MTS; do echo "${f%.*}"; done | xargs -t -P 16 -I FILE bash -c "ffmpeg -n -i FILE.MTS -s qvga -c:v libx264 -crf 18 -pix_fmt yuv420p -preset ultrafast FILE.mp4 2>/dev/null"
+	@mkdir -p videos/previews
+	shopt -s nullglob ; cd videos ; for f in *.{MTS,mp4}; do echo "$${f%.*}"; done | xargs -t -P 16 -I FILE bash -c "ffmpeg -n -i FILE.* -s qvga -c:v libx264 -crf 18 -pix_fmt yuv420p -preset ultrafast previews/FILE.preview.mp4 2>/dev/null || true"
 
 import: doimport previews
 
