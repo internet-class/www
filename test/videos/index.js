@@ -242,7 +242,7 @@ describe('videos.js', function() {
 
     this.slow(20000);
     this.timeout(30000);
-    
+
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'in/short.MTS');
     copyFixture('videos/short.yaml', src, 'in/videos.yaml');
@@ -296,7 +296,7 @@ describe('videos.js', function() {
         videoExtensions: ['in/**/*.MTS']
       }))
       .use(videos.transcode({
-        credits: path.join(src, 'src/credits')
+        credits: 'credits'
       }))
       .use(videos.save())
       .build(function (err, files) {
@@ -336,7 +336,7 @@ describe('videos.js', function() {
     } catch (err) { };
     copyFixture('videos/test.mp4', src, 'in/cb79677deb19909949665c9151fa446e.mp4');
     copyFixture('videos/to_upload.yaml', src, 'in/videos.yaml');
-    
+
     async.series([
       function (callback) {
         metalsmith(src)
@@ -576,7 +576,7 @@ describe('videos.js', function() {
         var videoData = videosData[0];
         assert(videoData.transcode === false);
         delete(videoData.transcode);
-        videoData.title = 'Test Title';
+        videoData.title = 'A Third Test Title';
         videoData.titleLength = 1
         videoData.authors = [
           { name: "Test Me", credits: "My Credit Info" },
@@ -587,8 +587,8 @@ describe('videos.js', function() {
         ];
         videoData.creditsFile = 'credits.MTS';
         videoData.creditsLength = 1;
-
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
+
         metalsmith(src)
           .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
@@ -655,7 +655,7 @@ describe('videos.js', function() {
         assert(videoData.upload === false);
         delete(videoData.upload);
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
-        
+
         metalsmith(src)
           .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
@@ -689,7 +689,7 @@ describe('videos.js', function() {
         delete(videoData.upload);
         videoData.description = 'Test me.';
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
-        
+
         metalsmith(src)
           .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
@@ -699,7 +699,14 @@ describe('videos.js', function() {
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
           .use(videos.transcode())
           .use(youtube_credentials())
-          .use(videos.upload())
+          .use(videos.upload({
+            verbose: true,
+            veryVerbose: true,
+            locationDescription: "Davis Hall, University at Buffalo",
+            locationLatitude: 43.0026512146,
+            locationLongitude: -78.7873077393,
+            extraTags: ['internet', 'internet-class.org']
+          }))
           .use(function (files, metalsmith, done) {
             assert(metalsmith.metadata().transcode.count == 0);
             assert(metalsmith.metadata().upload.count == 1);
@@ -735,9 +742,10 @@ describe('videos.js', function() {
         var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
         assert(videosData.length == 1);
         var videoData = videosData[0];
+        fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
         assert(videoData.upload === false);
         assert(videoData.youtube);
-        
+
         metalsmith(src)
           .ignore(['**/*.MTS', '**/*.mp4'])
           .use(function (files, metalsmith, done) {
