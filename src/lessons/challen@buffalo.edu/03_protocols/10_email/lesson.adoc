@@ -1,0 +1,10 @@
+---
+title: "How does email work?"
+---
+
+A great way to understand how multiple protocols work together to power the
+internet is to examine a common and popular internet service: email.
+//
+Sending and receiving email requires multiple protocols, including protocols
+used by mail servers to exchange email (SMTP) and between mail clients and
+servers to retrieve and send email (IMAP, POP).
