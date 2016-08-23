@@ -1,0 +1,18 @@
+---
+title: "Connected at home: my next hop."
+---
+
+As we continue following the cables that bring internet to my home, we
+quickly enter the world of shadowy residential internet infrastructure.
+//
+Like the core internet infrastructure, a lot of these facilities are kept
+semi-secret for security purposes.
+//
+But they aren't that hard to spot.
+//
+Tell-tale signs include oversided building where nobody seems to work,
+windows covered over or bricked in, and cooling infrastructure visible on the
+roof (perhaps using Google Maps) to cool the computers inside.
+//
+Find something like this and you may be looking at bit of your own
+neighborhood internet infrastructure.
