@@ -15,6 +15,7 @@ doimport:
 backup:
 	@node lib/dosync.js
 	@node lib/backup.js videos/backup .sync.json
+	@node lib/dosync.js
 
 previews:
 	@mkdir -p videos/previews
