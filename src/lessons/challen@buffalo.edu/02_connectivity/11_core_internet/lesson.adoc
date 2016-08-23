@@ -1,0 +1,15 @@
+---
+title: "Mapping the core internet."
+---
+
+At some point once you get across the wireless connections, past the last
+miles and the second-to-last miles, you get into the core internet.
+//
+The internet's core consists of extremely high-speed high-bandwidth fiber
+optic cables that crisscross the country and slip unnoticed beneath the
+oceans.
+//
+A lot of this internet infrastructure is hidden, and for good reason--it's
+mission-critical and so somewhat sensitive.
+//
+But you can still see a bit of it if you know where to look.
