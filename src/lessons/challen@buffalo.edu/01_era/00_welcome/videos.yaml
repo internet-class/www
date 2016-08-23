@@ -1,7 +1,8 @@
 -
   files:
     - ede52b512ca56cf90d8770d55c077796.MTS
-  created: 'Mon Aug 22 2016 21:54:34 GMT-0400'
+  created: 'Tue Aug 09 2016 10:51:52 GMT-0400'
   featuring:
-    - name: 'Grace Hopper'
+    -
+      name: 'Grace Hopper'
       credits: 'Computer Science Pioneer'

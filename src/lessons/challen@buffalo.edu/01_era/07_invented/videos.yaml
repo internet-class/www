@@ -4,21 +4,29 @@
   created: 'Tue Aug 23 2016 13:49:04 GMT-0400'
   transcode: false
   authors:
-    - name: 'Greg Bunyea'
+    -
+      name: 'Greg Bunyea'
       credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
   producers:
-    - name: 'Geoffrey Challen'
+    -
+      name: 'Geoffrey Challen'
       credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'
   featuring:
-    - name: 'Jessica Seabury'
+    -
+      name: 'Jessica Seabury'
       credits: 'Senior Administrative Director, Honors College, University at Buffalo'
-    - name: 'Tim Matthews'
+    -
+      name: 'Tim Matthews'
       credits: 'Assistant Director, Honors College, University at Buffalo'
-    - name: '(Poster of) Al Gore'
+    -
+      name: '(Poster of) Al Gore'
       credits: 'Former Vice President, the United States of America'
-    - name: 'Jennifer Wojcik'
+    -
+      name: 'Jennifer Wojcik'
       credits: 'Business Manager, Computer Science and Engineering, University at Buffalo'
-    - name: 'Diane VanNatter'
+    -
+      name: 'Diane VanNatter'
       credits: 'Secretary to the Chair, Computer Science and Engineering, University at Buffalo'
-    - name: 'Carl Nuessle'
+    -
+      name: 'Carl Nuessle'
       credits: 'Graduate Student, Computer Science and Engineering, University at Buffalo'
