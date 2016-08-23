@@ -1,0 +1,13 @@
+---
+title: "Connected at work: my first hop."
+---
+
+One of the most fun ways to learn about the physical internet is to play
+"follow that cable."
+//
+Let's do that starting in my office.
+//
+We'll see how my wired connection exits through the wall via a standard CAT5
+jack, and then find out what happens next.
+//
+Doesn't that sound exciting?
