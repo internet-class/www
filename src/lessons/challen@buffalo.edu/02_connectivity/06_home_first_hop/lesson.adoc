@@ -1,0 +1,15 @@
+---
+title: "Connected at home: my first hop."
+---
+
+One of the most fun ways to learn about the physical internet is to play
+"follow that cable."
+//
+Let's do that starting at my house.
+//
+Home internet connections are frequently quite different than what you find
+at work at at a university.
+//
+The internet snuck into our houses along cables that were meant for other
+things--what once carried a voice or a television data connection now carries
+the internet.
