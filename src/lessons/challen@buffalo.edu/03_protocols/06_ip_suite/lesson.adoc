@@ -1,0 +1,16 @@
+---
+title: "What is an internet protocol (IP) address?"
+---
+
+Keeping the internet protocol simple is an important part of the design of
+the internet.
+//
+But the core internet protocol doesn't do quite enough to enable more
+complicated protocols to build on top of it.
+//
+Instead, we talk about the internet protocol _suite_, typically referred to a
+TCP/IP.
+//
+TCP/IP combines the internet protocol (IP) with a pair of transport protocols
+that provide reliability and ordered delivery (if needed) as well as extra
+naming.
