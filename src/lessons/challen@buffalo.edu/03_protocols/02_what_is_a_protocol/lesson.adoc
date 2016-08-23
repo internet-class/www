@@ -1,0 +1,8 @@
+---
+title: "What is a protocol?"
+---
+
+Protocols are how networked computers communicate.
+//
+But unlike human speech, computer communication has to be highly structured
+and extremely well-specified.
