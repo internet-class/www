@@ -1,0 +1,13 @@
+---
+title: "What is a client? What is a server?"
+---
+
+Many (but not all) online interactions can be described as being between a
+_client_ and a _server_.
+//
+And although internet-connected computers can play both roles, many function
+either largely as a client (like your smartphone) or a server (like a
+computer in a data center).
+//
+Let's explore this terminology a bit and nail down exactly what's expected of
+servers and clients online.
