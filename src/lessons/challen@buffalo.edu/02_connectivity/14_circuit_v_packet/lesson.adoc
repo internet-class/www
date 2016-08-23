@@ -2,11 +2,11 @@
 title: "Circuit switching v. packet switching."
 ---
 
-Packet switching provides a number of different benefits when compared to
-circuit switching.
+Circuit switching and packet switching represent two fundamentally different
+ways of making use of network resources.
 //
-This is one of the reasons that is has pretty much taken over at this point.
+In a circuit-switched network a single reliable connection is established and
+maintained between communicating parties for the life of their exchange.
 //
-In particular, circuit switching makes better use of available network
-resources and deal more effectively with the bursty traffic produced by many
-online activities.
+In contrast, packet-switched networks divide data into packets, each of which
+can flow down many different network paths.
