@@ -255,7 +255,7 @@ describe('videos.js', function() {
         return done();
       })
       .use(videos.find())
-      .use(videos.transcode())
+      .use(videos.transcode({ verbose: true, veryVerbose: true }))
       .use(videos.save())
       .build(function (err, files) {
         if (err) {
