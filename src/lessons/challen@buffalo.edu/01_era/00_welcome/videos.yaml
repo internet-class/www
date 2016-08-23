@@ -6,3 +6,8 @@
     -
       name: 'Grace Hopper'
       credits: 'Computer Science Pioneer'
+  durationSec: 168.736
+  inputHash: 3b52bb1e6ffbe0f6027e76c8bc0bd1ae
+  output: dcb6ea9892de813d5db878c67649256a.mp4
+  transcode: false
+  upload: false

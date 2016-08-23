@@ -6,3 +6,8 @@
     -
       name: 'Radio Tower'
       credits: 'NPR WBFO Buffalo'
+  durationSec: 342.943
+  inputHash: 5033dba464e656b3f4a58f28819d0b63
+  output: f7c3b666e3f5906b7e96e1f29980eac9.mp4
+  transcode: false
+  upload: false
