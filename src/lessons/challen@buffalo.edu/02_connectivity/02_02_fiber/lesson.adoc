@@ -1,0 +1,12 @@
+---
+title: "What is fiber optic cable?"
+---
+
+Twisted pair CAT5 may be exciting enough.
+//
+That is, until you meet some fiber optic cable.
+//
+The real workhorse of the internet, fiber optic cable carries signals
+farther, faster, and more reliably than copper.
+//
+And it's just plain cool.
