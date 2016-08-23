@@ -1,0 +1,24 @@
+---
+title: "What is a flipped classroom and why are we trying it?"
+---
+
+We're trying a little something different with how this course is structured
+at UB.
+//
+The traditional model is that you come to some lecture hall, someone drones on
+for a while, and then you do activities outside of class (also known as
+homework).
+//
+But lectures are pretty boring, and hard to improve incrementally.
+//
+So we're trying what is known as a _flipped classroom_ model.
+//
+You are responsible for watching the videos on your own before class, and
+we'll make sure you know exactly which ones.
+//
+Then in class we're going to do a series of interesting (we hope!) activities
+to allow you to engage with the material.
+//
+That's the plan at least.
+//
+We'll see how it goes.
