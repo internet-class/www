@@ -253,7 +253,6 @@ describe('videos.js', function() {
       .use(videos.save())
       .use(function (files, metalsmith, done) {
         assert(metalsmith.metadata().transcode.errors.length == 1);
-        console.log(metalsmith.metadata().transcode.errors[0]);
         assert(metalsmith.metadata().transcode.errors[0].message.startsWith('bogus input'));
         done();
       })
@@ -287,7 +286,7 @@ describe('videos.js', function() {
         return done();
       })
       .use(videos.find())
-      .use(videos.transcode({ verbose: true, veryVerbose: true }))
+      .use(videos.transcode())
       .use(videos.save())
       .build(function (err, files) {
         if (err) {
@@ -327,7 +326,7 @@ describe('videos.js', function() {
       .use(videos.transcode({
         credits: 'credits',
         preroll: 'preroll',
-        prerollFile: 'preroll.mp4',
+        prerollFile: 'preroll.mp4'
       }))
       .use(videos.save())
       .build(function (err, files) {
@@ -340,9 +339,7 @@ describe('videos.js', function() {
         var videoData = videosData[0];
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-        // fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
-        assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        chai.expect(videoData.durationSec).to.be.within(11, 12);
+        chai.expect(videoData.durationSec).to.be.within(13, 14);
         assert(!('find' in videoData));
         assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
         return done();
@@ -393,7 +390,6 @@ describe('videos.js', function() {
             return done();
           })
           .use(videos.upload({
-            verbose: true,
             addCredits: false,
             extraTags: ['internet', 'internet-class.org']
           }))
@@ -724,7 +720,6 @@ describe('videos.js', function() {
           .use(videos.transcode())
           .use(youtube_credentials())
           .use(videos.upload({
-            verbose: true,
             locationDescription: "Davis Hall, University at Buffalo",
             locationLatitude: 43.0026512146,
             locationLongitude: -78.7873077393,
