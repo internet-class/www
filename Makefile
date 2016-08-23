@@ -13,13 +13,14 @@ doimport:
 	fi
 
 backup:
+	@node lib/dosync.js
 	@if [ -d /media/$(USER)/internet-class/backup ]; then \
 		echo "Backing up to /media/$(USER)/internet-class/"; \
-		rsync -av videos/backup /media/$(USER)/internet-class/ ; \
+		unison videos/backup/ /media/challen/internet-class/backup/ -auto -batch -fastcheck true -silent -times ; \
 	fi
 	@if [ -d /mnt/storage/internet-class/backup ]; then \
 		echo "Backing up to /mnt/storage/internet-class/"; \
-		rsync -av videos/backup /mnt/storage/internet-class/ ; \
+		unison videos/backup/ /mnt/storage/internet-class/backup/ -auto -batch -fastcheck true -silent -times ; \
 	fi
 
 previews:
