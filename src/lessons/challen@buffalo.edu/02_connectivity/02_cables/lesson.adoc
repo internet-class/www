@@ -1,0 +1,18 @@
+---
+title: "What is a twisted pair cable?"
+---
+
+Ahh, cables.
+//
+Not the most glamorous of things.
+//
+Usually taken for granted.
+//
+Frequently unnoticed.
+//
+And yet, fairly interesting if you stop and give them a look.
+//
+And--more importantly--exactly what holds most of the internet together.
+//
+Let's take a look at a twisted pair copper cable sometimes known as a
+category 5 or CAT5 table.
