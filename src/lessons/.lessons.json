@@ -8,5 +8,22 @@
   "2a5165a2-1d80-4fb1-b909-6ec9eea896b7": "lessons/challen@buffalo.edu/01_era/06_internet_v_www/lesson.adoc",
   "2d21f8d4-c172-494c-b4a7-1793680c150f": "lessons/challen@buffalo.edu/01_era/08_standards/lesson.adoc",
   "560d5034-6f97-4a28-8014-0b6bf42474e3": "lessons/challen@buffalo.edu/01_era/09_find_out_more/lesson.adoc",
-  "d784b86e-c85a-4303-a76f-381528889669": "lessons/challen@buffalo.edu/02_connectivity/01_introduction/lesson.adoc"
+  "d784b86e-c85a-4303-a76f-381528889669": "lessons/challen@buffalo.edu/02_connectivity/01_introduction/lesson.adoc",
+  "a0942055-6122-4b1c-bcd0-eececc676d2b": "lessons/challen@buffalo.edu/02_connectivity/02_01_twisted_pair/lesson.adoc",
+  "09ec4c5d-e2e4-4ed4-9077-07461743f6f4": "lessons/challen@buffalo.edu/02_connectivity/02_02_fiber/lesson.adoc",
+  "16eda01a-b8be-4204-83ec-a50cc7ad116e": "lessons/challen@buffalo.edu/02_connectivity/03_office_first_hop/lesson.adoc",
+  "bebfbc29-afdd-49a8-9495-a888c2f3ba38": "lessons/challen@buffalo.edu/02_connectivity/04_office_next_hop/lesson.adoc",
+  "13937846-1541-462d-a326-0620cb6a9511": "lessons/challen@buffalo.edu/02_connectivity/05_01_davis_hop/lesson.adoc",
+  "db79ef48-1c63-4d3d-bd7c-c80b652c222a": "lessons/challen@buffalo.edu/02_connectivity/05_02_ub_hop/lesson.adoc",
+  "5e4f3233-affd-488d-b4fc-c46feb2c7222": "lessons/challen@buffalo.edu/02_connectivity/06_home_first_hop/lesson.adoc",
+  "39d98c4e-badf-4fba-8036-3e2788149693": "lessons/challen@buffalo.edu/02_connectivity/07_last_mile_problem/lesson.adoc",
+  "4a94f809-5cda-4a9d-8366-1c10991f0542": "lessons/challen@buffalo.edu/02_connectivity/08_home_next_hop/lesson.adoc",
+  "ffbc00bb-f3d1-460b-8b2d-d1efa47eb26b": "lessons/challen@buffalo.edu/02_connectivity/09_cellular_wireless/lesson.adoc",
+  "15c98f9a-4081-42e7-b12f-473f6768fe63": "lessons/challen@buffalo.edu/02_connectivity/10_unconnected/lesson.adoc",
+  "4c9fb692-ac70-4a3b-a549-7dec62c8fa39": "lessons/challen@buffalo.edu/02_connectivity/11_core_internet/lesson.adoc",
+  "c02926ff-af3a-4598-94df-a28f2e8ccee3": "lessons/challen@buffalo.edu/02_connectivity/12_what_is_a_packet/lesson.adoc",
+  "c5db2109-4f93-45cd-a8a5-95b3bb2e32f0": "lessons/challen@buffalo.edu/02_connectivity/13_circuit_switching/lesson.adoc",
+  "4ab813ff-2d8f-4d43-b35b-2c00e4d17ad9": "lessons/challen@buffalo.edu/02_connectivity/14_circuit_v_packet/lesson.adoc",
+  "8fe7612f-5614-4ce9-ad42-afddd82aa3c4": "lessons/challen@buffalo.edu/02_connectivity/15_past_v_future/lesson.adoc",
+  "4c386840-7c77-4057-9d82-6897aefe7f3c": "lessons/challen@buffalo.edu/02_connectivity/16_benefits_of_packets/lesson.adoc"
 }
