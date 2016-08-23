@@ -1,0 +1,14 @@
+---
+title: "Can you still deploy new transport protocols?"
+---
+
+The core internet transport protocols including TCP and UDP are fairly baked
+in to the design and implementation of the internet.
+//
+Changing them, or changing IP itself, requires updating billions of
+computers.
+//
+Happily, UDP adds so little on top of IP that building on top of UDP is
+almost equivalent to building on top of IP.
+//
+Innovators are using that ability today to deploy new transport protocols.
