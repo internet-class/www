@@ -1,0 +1,13 @@
+---
+title: "What is the end to end principle?"
+---
+
+The internet protocol is simple.
+//
+And keeping it simple keeps the core internet simple.
+//
+But it also reflects a deeper design principles where complexity is
+intentionally pushed out to the network edge.
+//
+This is called the "end to end principle", and it is one of the key internet
+design principles.
