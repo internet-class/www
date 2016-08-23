@@ -1,0 +1,16 @@
+---
+title: "Why is the internet?"
+---
+
+So what exactly _is_ the internet?
+//
+As you might expect for something so important and transformative, there's no
+single answer to that question.
+//
+Instead, there are three.
+//
+The internet is a physical network, governed by protocols, that is used by
+billions of people all over the world.
+//
+When you combine physical connections, protocol cooperation, and
+people-generated content, you produce a global phenomenon.
