@@ -1,0 +1,22 @@
+---
+title: "What is the last mile problem?"
+---
+
+Although the core of the internet is extremely fast, there are bottlenecks at
+the edges.
+//
+This is what is sometimes referred to as the _last mile problem_.
+//
+Even if the core internet backbone is blazing fast, it doesn't do you any
+good if your last mile connection to the internet is slow.
+//
+And, in many cases, it is--primarily because it wasn't designed to carry
+internet traffic.
+//
+Old voice and TV data lines were designed around the needs of the traffic
+that they were hung to carry.
+//
+At some point we'll get around to running fast fiber optic cable to every
+home on earth, but it's not going to happen overnight.
+//
+There are a lot of last miles to cover, and new infrastructure is expensive.
