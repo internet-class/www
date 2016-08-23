@@ -1,0 +1,18 @@
+---
+title: "What is a packet?"
+---
+
+The internet unites a lot of different computer networks.
+//
+In many ways, those networks are free to do a lot of things their own way as
+long as they agree on a few things.
+//
+But central the the idea of a modern computer network itself, and to all of
+the internet's networks, in the idea of a _packet_.
+//
+A packet is a single, fixed-size, indivisible unit of information.
+//
+While Paul Baran and Donald Davies came up with the idea of dividing data
+into packets independently, Davies gets credit for the catchy name.
+//
+(Baran called them message blocks or something equally less catchy.)
