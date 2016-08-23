@@ -60,8 +60,6 @@ var fileSearch = function (files, pathEnd) {
 }
 
 beforeEach(function() {
-  noShortVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/short.MTS')));
-  noUploadVideo = !(fs.existsSync(path.join(__dirname, 'fixtures/videos/test.mp4')));
   noCredentials = !(fs.existsSync(path.join(__dirname, 'fixtures/upload/credentials.json')));
 });
 
@@ -235,12 +233,46 @@ describe('videos.js', function() {
         return done();
       });
   });
-  it('should transcode real videos', function (done) {
-    if (noShortVideo) {
-      console.log("SKIP: skipping this test because short input missing");
-      return done();
-    }
+  it('should fail fast with bad inputs', function (done) {
+    this.slow(500);
+    this.timeout(1000);
 
+    var src = metalsmithTempDir();
+    copyFixture('videos/short.MTS', src, 'in/short.MTS');
+    copyFixture('videos/bad_credits.yaml', src, 'in/videos.yaml');
+    var previousFiles = common.walkSync(path.join(src, 'src'));
+
+    metalsmith(src)
+      .ignore(['**/*.MTS', '**/*.mp4'])
+      .use(function (files, metalsmith, done) {
+        assert(Object.keys(files).length == 1);
+        return done();
+      })
+      .use(videos.find())
+      .use(videos.transcode({ credits: 'credits' }))
+      .use(videos.save())
+      .use(function (files, metalsmith, done) {
+        assert(metalsmith.metadata().transcode.errors.length == 1);
+        console.log(metalsmith.metadata().transcode.errors[0]);
+        assert(metalsmith.metadata().transcode.errors[0].message.startsWith('bogus input'));
+        done();
+      })
+      .build(function (err, files) {
+        if (err) {
+          return done(err);
+        }
+        powerAssert.deepEqual(common.walkSync(path.join(src, 'src')), previousFiles);
+        var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
+        assert(videosData.length == 1);
+        var videoData = videosData[0];
+        assert(!('inputHash' in videoData));
+        assert(!('output' in videoData));
+        assert(!('durationSec' in videoData));
+        assert(!('find' in videoData));
+        return done();
+      });
+  });
+  it('should transcode real videos', function (done) {
     this.slow(20000);
     this.timeout(30000);
 
@@ -274,11 +306,6 @@ describe('videos.js', function() {
       });
   });
   it('should add credits and preroll properly', function (done) {
-    if (noShortVideo) {
-      console.log("SKIP: skipping this test because short input missing");
-      return done();
-    }
-
     this.slow(30000);
     this.timeout(50000);
 
@@ -322,10 +349,6 @@ describe('videos.js', function() {
       });
   });
   it('should upload videos', function (outerDone) {
-    if (noUploadVideo) {
-      console.log("SKIP: skipping this test because upload input missing");
-      return outerDone();
-    }
     if (noCredentials) {
       console.log("SKIP: skipping this test because upload credentials missing");
       return outerDone();
@@ -459,10 +482,6 @@ describe('videos.js', function() {
       });
   });
   it('should complete the typical video workflow', function (outerDone) {
-    if (noShortVideo) {
-      console.log("SKIP: skipping this test because short input missing");
-      return outerDone();
-    }
     if (noCredentials) {
       console.log("SKIP: skipping this test because upload credentials missing");
       return outerDone();
