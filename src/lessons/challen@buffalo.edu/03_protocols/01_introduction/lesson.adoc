@@ -1,0 +1,12 @@
+---
+title: "Introduction to the protocol internet."
+---
+
+From a computer scientist's perspective, protocols are the most important
+part of the internet.
+//
+Without them, the billions of machines connected by the internet wouldn't be
+able to accomplish anything!
+//
+And that huge and transformative computer network would be utterly useless to
+the people that connect to it and use it to connect to each other.
