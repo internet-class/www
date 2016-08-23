@@ -25,5 +25,19 @@
   "c5db2109-4f93-45cd-a8a5-95b3bb2e32f0": "lessons/challen@buffalo.edu/02_connectivity/13_circuit_switching/lesson.adoc",
   "4ab813ff-2d8f-4d43-b35b-2c00e4d17ad9": "lessons/challen@buffalo.edu/02_connectivity/14_circuit_v_packet/lesson.adoc",
   "8fe7612f-5614-4ce9-ad42-afddd82aa3c4": "lessons/challen@buffalo.edu/02_connectivity/15_past_v_future/lesson.adoc",
-  "4c386840-7c77-4057-9d82-6897aefe7f3c": "lessons/challen@buffalo.edu/02_connectivity/16_benefits_of_packets/lesson.adoc"
+  "4c386840-7c77-4057-9d82-6897aefe7f3c": "lessons/challen@buffalo.edu/02_connectivity/16_benefits_of_packets/lesson.adoc",
+  "580467f5-c18d-4c84-858f-4fcb1968ca58": "lessons/challen@buffalo.edu/03_protocols/01_introduction/lesson.adoc",
+  "c9a46227-b2fc-44b0-b8de-ff5c36dc4f1a": "lessons/challen@buffalo.edu/03_protocols/02_01_protocol_structure/lesson.adoc",
+  "b2add6b2-3c00-4ed0-9244-cbe555b905bd": "lessons/challen@buffalo.edu/03_protocols/02_what_is_a_protocol/lesson.adoc",
+  "fdab2123-34e4-41c5-9775-db4d2f516688": "lessons/challen@buffalo.edu/03_protocols/03_client_server/lesson.adoc",
+  "511a3ae8-2156-41fc-8046-f4c67fec5e9e": "lessons/challen@buffalo.edu/03_protocols/04_ip/lesson.adoc",
+  "e9a98e82-55cb-4df8-b31e-38eb0a1042d9": "lessons/challen@buffalo.edu/03_protocols/05_ip_address/lesson.adoc",
+  "04bea591-ea29-4fa9-be76-992d49ab0ae4": "lessons/challen@buffalo.edu/03_protocols/06_ip_suite/lesson.adoc",
+  "e4094339-fe3c-404d-806a-d9844da5e831": "lessons/challen@buffalo.edu/03_protocols/07_end_to_end/lesson.adoc",
+  "45e0d6a8-7ea4-4734-9640-3b60d4f92e1b": "lessons/challen@buffalo.edu/03_protocols/08_protocol_stack/lesson.adoc",
+  "3cff5141-c26b-44b9-813e-82e955037d63": "lessons/challen@buffalo.edu/03_protocols/09_encapsulation/lesson.adoc",
+  "6961a500-7065-47fc-84e1-d4827c035832": "lessons/challen@buffalo.edu/03_protocols/10_email/lesson.adoc",
+  "d3705161-ce54-4806-b863-59abbabf14d9": "lessons/challen@buffalo.edu/03_protocols/11_other_protocols/lesson.adoc",
+  "5df2ecb2-778c-40c3-8897-4bea901ee77d": "lessons/challen@buffalo.edu/03_protocols/12_new_transport/lesson.adoc",
+  "c1d9f530-6c04-4dd0-847d-7ba6c5d17d37": "lessons/challen@buffalo.edu/03_protocols/13_p2p/lesson.adoc"
 }

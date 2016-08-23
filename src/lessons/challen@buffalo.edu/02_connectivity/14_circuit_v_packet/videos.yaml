@@ -6,3 +6,9 @@
   output: 7cba3fed32d04755bf32fe93075e9c84.mp4
   transcode: false
   upload: false
+-
+  files: [be439b860c89be94ebc6bcf881fe1c29.MTS]
+  created: 'Tue Aug 23 2016 06:50:18 GMT-0400'
+  authors:
+    - name: Chunming Qiao
+      credits: "Professor and Chair, Computer Science and Engineering, University at Buffalo"
