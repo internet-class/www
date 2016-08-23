@@ -2,8 +2,6 @@
   files:
     - ede52b512ca56cf90d8770d55c077796.MTS
   created: 'Mon Aug 22 2016 21:54:34 GMT-0400'
-  durationSec: 168.736
-  inputHash: ede52b512ca56cf90d8770d55c077796
-  output: 0d6cba84ceb8b4dcc0ccea79e1118eca.mp4
-  transcode: false
-  upload: false
+  featuring:
+    - name: 'Grace Hopper'
+      credits: 'Computer Science Pioneer'
