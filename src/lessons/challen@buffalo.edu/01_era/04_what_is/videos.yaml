@@ -1,5 +1,6 @@
 -
-  files: [9d17e5c49c40008890de568af3117208.MTS]
+  files:
+    - 9d17e5c49c40008890de568af3117208.MTS
   created: 'Mon Aug 22 2016 21:51:27 GMT-0400'
   creditsFile: forgetit.mp4
   durationSec: 250.36
@@ -8,7 +9,8 @@
   transcode: false
   upload: false
 -
-  files: [70efef7a75db9dc2f84507726410bd6b.MTS]
+  files:
+    - 70efef7a75db9dc2f84507726410bd6b.MTS
   created: 'Tue Aug 23 2016 08:16:37 GMT-0400'
   creditsFile: serverroom.mp4
   durationSec: 172.301

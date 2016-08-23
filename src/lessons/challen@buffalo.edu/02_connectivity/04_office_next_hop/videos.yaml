@@ -1,7 +1,15 @@
 -
-  files: [19771ec16fdffc4a239089bbe6f39aac.MTS, db4f9e29ba400ed8a575574b78fe0a4b.MTS]
+  files:
+    - 19771ec16fdffc4a239089bbe6f39aac.MTS
+    - db4f9e29ba400ed8a575574b78fe0a4b.MTS
   created: 'Mon Aug 22 2016 23:49:19 GMT-0400'
-  authors: [{name: 'Christian Miller', credits: 'CSE IT Directory, University at Buffalo'}, {name: 'Geoffrey Challen', credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'}]
+  authors:
+    -
+      name: 'Christian Miller'
+      credits: 'CSE IT Directory, University at Buffalo'
+    -
+      name: 'Geoffrey Challen'
+      credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'
   durationSec: 347.448
   inputHash: 1f9f5e567975f7d1b51c111807b34db1
   output: 33c14ac4c73a2b2db90c25e126adda64.mp4
