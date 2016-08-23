@@ -1,4 +1,9 @@
 -
   files: [4c136eea38c9a63bf15009616339efe3.MTS]
   created: 'Mon Aug 22 2016 21:56:21 GMT-0400'
-  creditsFile: 'awesome.mp4'
+  creditsFile: awesome.mp4
+  durationSec: 320.44
+  inputHash: 4c136eea38c9a63bf15009616339efe3
+  output: 938936d3d9351ebb1aef3c9850f1e3e3.mp4
+  transcode: false
+  upload: false

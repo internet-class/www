@@ -1,4 +1,9 @@
 -
   files: [9d17e5c49c40008890de568af3117208.MTS]
   created: 'Mon Aug 22 2016 21:51:27 GMT-0400'
-  creditsFile: 'forgetit.mp4'
+  creditsFile: forgetit.mp4
+  durationSec: 250.36
+  inputHash: 9d17e5c49c40008890de568af3117208
+  output: afdacd45476d87fcfd504a8165eee253.mp4
+  transcode: false
+  upload: false
