@@ -1,0 +1,16 @@
+---
+title: "What are protocols so highly structured?"
+---
+
+Computers are good at a lot of things, but dealing with the complexities and
+ambiguities of language is not one of them.
+//
+It might make you feel proud to realize that human ability with language is
+one of the capabilities that sets us apart from both the beasts and the
+machines.
+//
+And although computer scientists have made great strides in helping computers
+learn to _transcribe_ human speech, we are still a long way from
+teaching them to _understand_ human speech.
+//
+So when computers talk to each other, there have to be a lot of rules.
