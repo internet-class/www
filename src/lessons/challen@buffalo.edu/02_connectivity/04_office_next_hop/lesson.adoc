@@ -1,0 +1,9 @@
+---
+title: "Connected at work: my next hop."
+---
+
+Following the twisted-pair copper cable out of my office, we know it needs to
+terminate quickly given its limited range.
+//
+Sure enough, right around the corner is the magical closet where copper
+becomes fiber, and my bits begin their journey on glass.
