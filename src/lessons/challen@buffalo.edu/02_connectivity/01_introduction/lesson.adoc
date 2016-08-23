@@ -1,0 +1,19 @@
+---
+title: "Introduction to the physical internet."
+---
+
+The physical internet is fun.
+//
+It's all around us--the wires and tubes and tunnels and cables and antenna
+that provide a _physical_ link between billions of computers worldwide.
+//
+While wireless connections have proliferated at the network edge, the core is
+still a wired system composed of computers that are touching each other.
+//
+The physical internet also draws on and harnesses many previous technologies,
+frequently running over cables designed to carry other kinds of signals.
+//
+Data follows in the footsteps of earlier technologies as it moves between us.
+//
+So even as the internet defines its own reality--cyberspace--that space still
+maps down directly to physical space.

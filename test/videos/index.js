@@ -315,7 +315,7 @@ describe('videos.js', function() {
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         // fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
-        chai.expect(videoData.durationSec).to.be.within(10, 11);
+        chai.expect(videoData.durationSec).to.be.within(11, 12);
         assert(!('find' in videoData));
         assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
         return done();
@@ -619,7 +619,7 @@ describe('videos.js', function() {
             var videosData = yamljs.parse(fs.readFileSync(path.join(src, 'src/in/videos.yaml')).toString());
             assert(videosData.length == 1);
             var videoData = videosData[0];
-            chai.expect(videoData.durationSec).to.be.within(3.10, 3.12);
+            chai.expect(videoData.durationSec).to.be.within(4.10, 4.15);
             assert(videoData.upload === false);
             assert(common.walkSync(path.join(src, 'src')).length == 4);
             callback();
