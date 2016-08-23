@@ -1,4 +1,9 @@
 -
   files: [8adb8468e9f6c110decebe9e371402dc.MTS]
   created: 'Mon Aug 22 2016 23:14:26 GMT-0400'
+  creditsFile: fyou.mp4
+  durationSec: 223.842
+  inputHash: 8adb8468e9f6c110decebe9e371402dc
+  output: f3b5b0d586527018da6ac15e48318e16.mp4
   transcode: false
+  upload: false

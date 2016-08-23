@@ -1,4 +1,9 @@
 -
   files: [b0e1e6401f40f91a122ec842d01287df.MTS]
   created: 'Mon Aug 22 2016 23:54:47 GMT-0400'
+  authors: [{name: 'Ryan Standish', credits: 'Network Engineer, University at Buffalo'}, {name: 'Geoffrey Challen', credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'}]
+  durationSec: 228.829
+  inputHash: b0e1e6401f40f91a122ec842d01287df
+  output: 61094724491a8a466870ed0d35e80a97.mp4
   transcode: false
+  upload: false

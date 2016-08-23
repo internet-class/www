@@ -1,4 +1,9 @@
 -
   files: [19672bb1283350e22754a1fc3cad98d9.MTS]
   created: 'Mon Aug 22 2016 23:24:05 GMT-0400'
+  creditsFile: chuchu_1.mp4
+  durationSec: 270.904
+  inputHash: 19672bb1283350e22754a1fc3cad98d9
+  output: 610dd6fc6fef2d9a0be8f51cd36c874a.mp4
   transcode: false
+  upload: false
