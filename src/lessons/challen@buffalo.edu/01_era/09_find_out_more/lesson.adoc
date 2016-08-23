@@ -1,0 +1,19 @@
+---
+title: "How do you find out more about the internet?"
+---
+
+The internet is probably the easiest thing on earth to find out more about.
+//
+A lot of information on the internet is directly related to... the internet!
+//
+(And to computer science in general.)
+//
+In addition, if you are interested in web protocols the full contents of
+every web page and the code it runs are delivered to your browser each time
+you load a page and available for inspection.
+//
+Google around, poke around, try Wikipedia, and you'll find out that you can
+easily find out a lot more.
+//
+Also there are a few good books out there as well that explore topics in more
+depth.

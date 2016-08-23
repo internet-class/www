@@ -1,0 +1,22 @@
+---
+title: "What is the difference between the World Wide Web and the internet?"
+---
+
+Another frequent source of confusion is the difference between the World Wide
+Web and the internet.
+//
+Confusion here is understable, given that so much of what we do online is
+done on the web--even when we are using other internet services.
+//
+Briefly, the World Wide Web is just one of many services that run on the
+internet.
+//
+It defined its own naming conventions (uniform resource locators, or URLs),
+protocols (the hypertext transfer protocol, or HTTP), and markup (hypertext
+markup language, or HTML).
+//
+However, the naming, protocols, and markup defined by the WWW are all subsets
+of the conventions using on the internet.
+//
+The easiest way to see the difference is to compare the WWW with another
+popular internet service... like email.

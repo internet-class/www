@@ -1,0 +1,13 @@
+---
+title: "How is the internet standardized and documented?"
+---
+
+The open spirit of the internet comes through clearly in the way that it is
+documented.
+//
+Internet standards have been distributed through a series of RFC, or
+"Requests for Comment".
+//
+Rather than being a dictate, or mandate, RFCs engage the community in a
+constructive discussion about how things should work and invite comment and
+collaboration.

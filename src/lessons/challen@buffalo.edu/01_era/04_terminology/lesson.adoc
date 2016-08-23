@@ -1,0 +1,15 @@
+---
+title: "What is the difference between the internet, a network, and an intranet?"
+---
+
+Three terms come up often when discussing the internet: the internet (of
+course), networks, and intranets.
+//
+Let's get them straight so we don't get confused.
+//
+An internet is a network of networks.
+//
+A network is a set of connected computers.
+//
+And an intranet refers to networked resources that are not exposed to the
+public internet.
