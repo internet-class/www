@@ -9,6 +9,9 @@
 -
   files: [be439b860c89be94ebc6bcf881fe1c29.MTS]
   created: 'Tue Aug 23 2016 06:50:18 GMT-0400'
-  authors:
-    - name: Chunming Qiao
-      credits: "Professor and Chair, Computer Science and Engineering, University at Buffalo"
+  authors: [{name: 'Chunming Qiao', credits: 'Professor and Chair, Computer Science and Engineering, University at Buffalo'}]
+  durationSec: 244.812
+  inputHash: be439b860c89be94ebc6bcf881fe1c29
+  output: b7aacec29f4ed653b2d1f5c3310c39cc.mp4
+  transcode: false
+  upload: false
