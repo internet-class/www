@@ -1,0 +1,17 @@
+---
+title: "What is a peer to peer system?"
+---
+
+The distinction between clients and servers is useful and common in many
+internet interactions.
+//
+But the client-server model creates problems, particularly given the
+importance of the servers themselves.
+//
+If the servers go down, clients cannot obtain service.
+//
+As a result, other systems are built using what is called a _peer to peer_
+model.
+//
+In a peer-to-peer (P2P) system, all participants act as both clients and
+servers, increasing the resiliency of the system.
