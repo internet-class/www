@@ -1,0 +1,9 @@
+---
+title: "What is encapsulation?"
+---
+
+Stacking protocols relies on the notion of _encapsulation_.
+//
+Encapsulation allows higher-level protocols to utilize lower-level protocols
+while still allowing protocols at every level of the stack to add their own
+protocol-specific data to each packet.

@@ -1,0 +1,13 @@
+---
+title: "What is the internet protocol stack?"
+---
+
+There are many different protocols that run on the internet, given that
+protocols power every internet service.
+//
+By arranging protocols hierarchically, or into a _protocol stack_, this
+allows us to separate concerns and ensure that protocols can focus on doing a
+specific job well.
+//
+Higher-level protocols can rely on functionality from lower-layer protocols
+and use them as needed to build interesting services.
