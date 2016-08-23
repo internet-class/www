@@ -1,0 +1,14 @@
+---
+title: "What is the internet protocol?"
+---
+
+What unites the different computer networks that make up the internet is an
+agreement to communicate using the _internet protocol_.
+//
+Given that the internet protocol is named after and defines the internet, you
+might think that it was somewhat important.
+//
+And it is.
+//
+But just as interesting as the internet protocol itself is what the internet
+protocol _does not_ do.

@@ -1,0 +1,11 @@
+---
+title: "What is an internet protocol (IP) address?"
+---
+
+To exchange data, the billions of computers on the internet clearly need some
+way to identify themselves.
+//
+Host addressing is built in to the internet protocol itself in the form of
+internet protocol addresses.
+//
+Or, as they are much more commonly known, IP addresses.
