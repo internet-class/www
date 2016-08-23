@@ -1,0 +1,14 @@
+---
+title: "Connected an the go: wide-area wireless internet."
+---
+
+For many of us today our first connection to the internet is a wireless
+one--either to a nearby Wifi router or through the cellular data network.
+//
+Wireless networking is one of the most exciting developments in the evolution
+of the internet.
+//
+Today, most of us have internet access all the time and almost anywhere.
+//
+As you probably expect, the infrastructure required to accomplish that is
+both impressive and quite interesting.
