@@ -301,8 +301,6 @@ describe('videos.js', function() {
         credits: 'credits',
         preroll: 'preroll',
         prerollFile: 'preroll.mp4',
-        verbose: true,
-        veryVerbose: true
       }))
       .use(videos.save())
       .build(function (err, files) {
@@ -315,7 +313,7 @@ describe('videos.js', function() {
         var videoData = videosData[0];
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-        fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
+        // fs.copySync(path.join(src, 'src/in/' + videoData.output), '/tmp/out.mp4');
         assert(videoData.inputHash == '6bcfa870d3fa94798b3f3a2ead8e303f');
         chai.expect(videoData.durationSec).to.be.within(10, 11);
         assert(!('find' in videoData));
