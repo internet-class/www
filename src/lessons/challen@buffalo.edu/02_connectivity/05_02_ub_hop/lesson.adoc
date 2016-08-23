@@ -1,0 +1,13 @@
+---
+title: "Connected at work: my last hop."
+---
+
+And finally--we've arrived at the capital-i internet.
+//
+Believe it or not, all of the University at Buffalo's internet traffic is
+carried by two very slender fiber optic cables.
+//
+Two, because of course there is redundancy in the system.
+//
+They head downtown to peer with our two ISPs and then off into the broader
+reaches of cyberspace.
