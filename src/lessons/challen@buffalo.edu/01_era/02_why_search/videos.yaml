@@ -1,8 +1,4 @@
 -
   files: [a04c93feeee0323e87784185c32a9ea5.MTS]
   created: 'Tue Aug 09 2016 09:19:56 GMT-0400'
-  durationSec: 279.416
-  inputHash: a04c93feeee0323e87784185c32a9ea5
-  output: bcc93221f88b706d36832d21bd68071b.mp4
-  transcode: false
-  upload: false
+  creditsFile: 'twochanneltest.mp4'
