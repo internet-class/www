@@ -606,7 +606,6 @@ describe('videos.js', function() {
           { name: "Best Producer", credits: "So Great" },
         ];
         videoData.creditsFile = 'credits.MTS';
-        videoData.creditsLength = 1;
         fs.writeFileSync(path.join(src, 'src/in/videos.yaml'), yamljs.stringify(videosData, 2, 2));
 
         metalsmith(src)
