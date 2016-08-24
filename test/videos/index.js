@@ -326,7 +326,10 @@ describe('videos.js', function() {
       .use(videos.transcode({
         credits: 'credits',
         preroll: 'preroll',
-        prerollFile: 'preroll.mp4'
+        prerollFile: 'preroll.mp4',
+        verbose: true,
+        veryVerbose: true,
+        saveTemp: true
       }))
       .use(videos.save())
       .build(function (err, files) {
