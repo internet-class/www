@@ -4,7 +4,7 @@ title: "What are some examples of other internet protocols?"
 
 The internet is full of protocols!
 //
-TCP, UDP, DNS, BGP, NTP, HTTP, FTP, SSH and SCP, NFS, Bittorrent... it's a
+TCP, UDP, DNS, BGP, NTP, HTTP, FTP, SSH and SCP, NFS, BitTorrent... it's a
 veritable alphabet soup of names that mostly end in P.
 //
 We'll present a few just to give you an idea of the richness of this space.

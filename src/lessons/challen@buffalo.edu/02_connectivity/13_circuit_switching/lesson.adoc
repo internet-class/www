@@ -4,7 +4,7 @@ title: "An introduction to old circuit-switched telephone networks."
 
 Before there were packets, there were circuits.
 //
-And before there was automatical dialing, there was a human operator who
+And before there was automatic dialing, there was a human operator who
 _literally_ connected your call.
 //
 Connected as in moved a wire across their desk from one terminal to another

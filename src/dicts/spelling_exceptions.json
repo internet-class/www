@@ -1,0 +1,23 @@
+{
+	"BGP": true,
+	"bursty": true,
+	"BitTorrent": true,
+	"CAT5": true,
+	"DNS": true,
+	"IMAP": true,
+	"IP": true,
+	"/ISPs?/": true,
+	"NFS": true,
+	"NTP": true,
+	"P2P": true,
+	"Paul Baran": true,
+  "SCP": true,
+	"/smartphones?/i": true,
+	"SMTP": true,
+	"snuck": true,
+	"TCP": true,
+	"transformative": true,
+	"UB": true,
+	"UDP": true,
+	"Wifi": true
+}

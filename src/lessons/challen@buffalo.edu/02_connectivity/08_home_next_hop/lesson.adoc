@@ -10,7 +10,7 @@ semi-secret for security purposes.
 //
 But they aren't that hard to spot.
 //
-Tell-tale signs include oversided building where nobody seems to work,
+Tell-tale signs include large buildings where nobody seems to work,
 windows covered over or bricked in, and cooling infrastructure visible on the
 roof (perhaps using Google Maps) to cool the computers inside.
 //

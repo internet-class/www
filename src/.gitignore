@@ -1,2 +1,5 @@
 *.MTS
 *.mp4
+/.updated.json
+/*_checked.json
+/*_failed.json
