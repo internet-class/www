@@ -27,8 +27,11 @@ credentials:
 	@node lib/youtube_credentials.js youtube/credentials.json youtube/tokens.json
 	@cp youtube/credentials.json youtube/tokens.json test/videos/fixtures/upload/
 
-videos:
-	@node lib/dovideos.js
+transcode:
+	@node lib/dovideos --transcode
+
+upload:
+	@node lib/dovideos --upload
 
 build:
 	@node lib/index.js $(DEPLOY) $(CHECK)
