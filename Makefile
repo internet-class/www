@@ -4,17 +4,15 @@ SHELL := /usr/bin/env bash
 doimport:
 	@mkdir -p videos/backup
 	@if [ -d /media/$(USER)/CANON/AVCHD/ ]; then \
-		chmod u+w videos/backup/; \
 		node lib/grab.js /media/$(USER)/CANON/AVCHD videos/backup videos; \
 		chmod a-w videos/backup/*; \
-		chmod a-w videos/backup/; \
 	else \
 		echo "/media/$(USER)/CANON/AVCHD does not exist."; \
 	fi
 
 backup:
 	@node lib/dosync.js
-	@node lib/backup.js videos/backup .sync.json
+	@./bin/backup videos/backup .sync.json
 	@node lib/dosync.js
 
 previews:

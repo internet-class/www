@@ -327,9 +327,6 @@ describe('videos.js', function() {
         credits: 'credits',
         preroll: 'preroll',
         prerollFile: 'preroll.mp4',
-        verbose: true,
-        veryVerbose: true,
-        saveTemp: true
       }))
       .use(videos.save())
       .build(function (err, files) {
@@ -342,7 +339,7 @@ describe('videos.js', function() {
         var videoData = videosData[0];
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-        chai.expect(videoData.durationSec).to.be.within(13, 14);
+        chai.expect(videoData.durationSec).to.be.within(11, 12);
         assert(!('find' in videoData));
         assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
         return done();

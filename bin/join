@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+'use strict'
+
+var argv = require('minimist')(process.argv.slice(2)),
+    path = require('path'),
+    assert = require('assert'),
+    child_process = require('child_process'),
+    common = require('../lib/common.js');
+
+assert(argv['output'], "usage: join [inputs] --output output");
+
+var command = common.transcodeCommand({
+  content:  argv._,
+  title: argv['title'],
+  font: path.join(__dirname, "../lib/fonts/Consolas.ttf"),
+  preroll: argv['preroll'],
+  postroll: argv['postroll'],
+  output: argv['output']
+});
+
+if (argv['verbose']) {
+  console.log(command);
+}
+child_process.execSync(command);
+
+// vim: ts=2:sw=2:et:ft=javascript
