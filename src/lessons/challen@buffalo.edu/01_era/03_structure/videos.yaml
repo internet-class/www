@@ -3,5 +3,6 @@
     - 0dbbd06fbf4f8925d887d2f55d8d6778.mp4
   created: 'Tue Aug 09 2016 10:21:12 GMT-0400'
   featuring:
-    name: 'Small Lego People'
-    credits: 'Courtesy of Marlon'
+    - name: 'Small Lego People'
+      credits: 'Courtesy of Marlon'
+  transcode: false
