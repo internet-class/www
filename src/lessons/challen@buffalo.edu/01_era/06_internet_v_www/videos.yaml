@@ -1,13 +1,3 @@
--
-  files:
-    - fa7a4bd0d641311819770f2c22f0efe0.MTS
-  created: 'Tue Aug 09 2016 09:42:06 GMT-0400'
-  durationSec: 288.356
-  inputHash: fa7a4bd0d641311819770f2c22f0efe0
-  output: 944ef4642be50d8b81a91f971c2f4cce.mp4
-  transcode: false
-  upload: false
--
   files:
     - 3da1124dd651f1829cbd0a46b68b9205.MTS
   created: 'Mon Aug 15 2016 14:44:58 GMT-0400'
@@ -23,7 +13,6 @@
   inputHash: 3da1124dd651f1829cbd0a46b68b9205
   output: 69e186728febe768b9957e40de7ad095.mp4
   transcode: false
-  upload: false
 -
   files:
     - 48ec488a46c57c37033404cb9a4e6f1c.MTS
@@ -32,4 +21,3 @@
   inputHash: 48ec488a46c57c37033404cb9a4e6f1c
   output: 3d77f97d499ece3b4633bc669a62e700.mp4
   transcode: false
-  upload: false
