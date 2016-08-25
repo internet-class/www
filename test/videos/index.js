@@ -249,7 +249,7 @@ describe('videos.js', function() {
         return done();
       })
       .use(videos.find())
-      .use(videos.transcode({ credits: 'credits' }))
+      .use(videos.transcode({ extras: 'extras' }))
       .use(videos.save())
       .use(function (files, metalsmith, done) {
         assert(metalsmith.metadata().transcode.errors.length == 1);
@@ -304,14 +304,15 @@ describe('videos.js', function() {
         return done();
       });
   });
-  it('should add credits and preroll properly', function (done) {
+  it('should add credits, preroll, and postroll properly', function (done) {
     this.slow(30000);
     this.timeout(50000);
 
     var src = metalsmithTempDir();
     copyFixture('videos/short.MTS', src, 'in/short.MTS');
-    copyFixture('videos/short.MTS', src, 'credits/credits.MTS');
-    copyFixture('videos/preroll.mp4', src, 'preroll/preroll.mp4');
+    copyFixture('videos/short.MTS', src, 'extras/credits.MTS');
+    copyFixture('videos/preroll.mp4', src, 'extras/preroll.mp4');
+    copyFixture('videos/preroll.mp4', src, 'extras/postroll.mp4');
     copyFixture('videos/with_credits.yaml', src, 'in/videos.yaml');
 
     metalsmith(src)
@@ -324,9 +325,9 @@ describe('videos.js', function() {
         videoExtensions: ['in/**/*.MTS']
       }))
       .use(videos.transcode({
-        credits: 'credits',
-        preroll: 'preroll',
+        extras: 'extras',
         prerollFile: 'preroll.mp4',
+        postrollFile: 'postroll.mp4'
       }))
       .use(videos.save())
       .build(function (err, files) {
@@ -339,9 +340,9 @@ describe('videos.js', function() {
         var videoData = videosData[0];
         assert(videoData.output);
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
-        chai.expect(videoData.durationSec).to.be.within(11, 12);
+        chai.expect(videoData.durationSec).to.be.within(18, 19);
         assert(!('find' in videoData));
-        assert(!(fs.existsSync(path.join(src, 'src/credits/videos.yaml'))));
+        assert(!(fs.existsSync(path.join(src, 'src/extras/videos.yaml'))));
         return done();
       });
   });
@@ -520,7 +521,7 @@ describe('videos.js', function() {
       },
       function (callback) {
         copyFixture('videos/short.MTS', src, 'in/short.MTS');
-        copyFixture('videos/short.MTS', src, 'credits/credits.MTS');
+        copyFixture('videos/short.MTS', src, 'extras/credits.MTS');
         var previousFiles = common.walkSync(path.join(src, 'src'));
         assert(previousFiles.length == 2);
         metalsmith(src)
@@ -615,7 +616,7 @@ describe('videos.js', function() {
             return done();
           })
           .use(videos.find({ videoExtensions: ['in/**/*.MTS'] }))
-          .use(videos.transcode({ credits: 'credits' }))
+          .use(videos.transcode({ extras: 'extras' }))
           .use(youtube_credentials())
           .use(videos.upload())
           .use(function (files, metalsmith, done) {
