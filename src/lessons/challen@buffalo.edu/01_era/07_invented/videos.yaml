@@ -1,5 +1,11 @@
 -
-  transcode: false
+  files:
+    - f7ae574cf9f118d53d389b7ca5f9a2e1.MTS
+    - bd9f24ec5abaff3eac9c3651fd671e25.MTS
+    - 75d40e5f6c89d7211ac52662fc51bf90.MTS
+    - ca156d8cec45a8974a70bc68c875dde9.MTS
+    - 4a2c23766f212be586770276efc89afb.MTS
+  created: 'Wed Aug 10 2016 14:05:32 GMT-0400'
   authors:
     -
       name: 'Greg Bunyea'
