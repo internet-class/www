@@ -1,3 +1,18 @@
+-
+  files:
+    - 3447f592f79013a03ddb995a19b1fb6c.MTS
+  created: 'Tue Aug 16 2016 12:37:58 GMT-0400'
+  durationSec: 331.932
+  inputHash: 3447f592f79013a03ddb995a19b1fb6c
+  output: dc60818c2ec2e69134dbdf90be1445ac.mp4
+  transcode: false
+  upload: false
+-
   files:
     - 5207ef3c8d9afa4e897cdf0c22ea659a.MTS
   created: 'Tue Aug 16 2016 13:37:02 GMT-0400'
+  durationSec: 297.898
+  inputHash: 5207ef3c8d9afa4e897cdf0c22ea659a
+  output: 968897e762625260431c6dee9ef0dd4b.mp4
+  transcode: false
+  upload: false

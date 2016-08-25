@@ -2,6 +2,11 @@
   files:
     - 287fae7c0de23e9e470f33a70a350422.MTS
   created: 'Thu Aug 11 2016 13:35:34 GMT-0400'
+  durationSec: 352.888
+  inputHash: 287fae7c0de23e9e470f33a70a350422
+  output: 91df3720dbb62fb8b0cfaa4f82516465.mp4
+  transcode: false
+  upload: false
 -
   files:
     - be439b860c89be94ebc6bcf881fe1c29.MTS
@@ -10,3 +15,8 @@
     -
       name: 'Chunming Qiao'
       credits: 'Professor and Chair, Computer Science and Engineering, University at Buffalo'
+  durationSec: 245.784
+  inputHash: be439b860c89be94ebc6bcf881fe1c29
+  output: 33b9f8ec970f9a7ed867f36afc21abca.mp4
+  transcode: false
+  upload: false

@@ -2,3 +2,8 @@
   files:
     - e51e0f408339d597a54a7fca96873b7a.MTS
   created: 'Tue Aug 16 2016 13:21:08 GMT-0400'
+  durationSec: 300.901
+  inputHash: e51e0f408339d597a54a7fca96873b7a
+  output: 1036c944174b8a2deadfe92da7c16957.mp4
+  transcode: false
+  upload: false
