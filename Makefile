@@ -2,9 +2,9 @@ all: build | silent
 SHELL := /usr/bin/env bash
 
 backup:
-	@node lib/dosync.js
 	@./bin/backup videos/backup .sync.json
 	@node lib/dosync.js
+	@./bin/backup videos/backup .sync.json
 
 previews:
 	@mkdir -p videos/previews
