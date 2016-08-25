@@ -22,8 +22,3 @@
   inputHash: 48ec488a46c57c37033404cb9a4e6f1c
   output: 3d77f97d499ece3b4633bc669a62e700.mp4
   transcode: false
--
-  files:
-    - fa7a4bd0d641311819770f2c22f0efe0.MTS
-  created: 'Tue Aug 09 2016 09:42:06 GMT-0400'
-  transcode: false
