@@ -1,3 +1,5 @@
 <div id="content">
+	<h1>{{{ title }}}</h1>
+	
 	{{{ contents }}}
 </div>

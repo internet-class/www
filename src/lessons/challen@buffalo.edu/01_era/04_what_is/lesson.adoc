@@ -1,5 +1,5 @@
 ---
-title: "Why is the internet?"
+title: "What is the internet?"
 ---
 
 So what exactly _is_ the internet?
