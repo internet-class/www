@@ -14,8 +14,6 @@
   inputHash: 3da1124dd651f1829cbd0a46b68b9205
   output: 9a716a6564712e09b66e0838c3a56a07.mp4
   transcode: false
-  upload: false
-  youtube: WtmYvhcFVbw
 -
   files:
     - 48ec488a46c57c37033404cb9a4e6f1c.MTS
@@ -24,5 +22,3 @@
   inputHash: 48ec488a46c57c37033404cb9a4e6f1c
   output: 588b7f95e8477210cf1fd10bd115edca.mp4
   transcode: false
-  upload: false
-  youtube: RfRIZf6VxBE
