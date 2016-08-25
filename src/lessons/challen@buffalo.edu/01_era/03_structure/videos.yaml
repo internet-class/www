@@ -6,4 +6,8 @@
     -
       name: 'Small Lego People'
       credits: 'Courtesy of Marlon'
+  durationSec: 311.864
+  inputHash: 0a4a2123bfc63adcf7b70f1e8435f155
+  output: e310d6eb84b98f66842e7e6a30783699.mp4
   transcode: false
+  upload: false
