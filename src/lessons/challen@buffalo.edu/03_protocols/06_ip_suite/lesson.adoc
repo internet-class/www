@@ -1,5 +1,5 @@
 ---
-title: "What is an internet protocol (IP) address?"
+title: "What is the internet protocol suite?"
 ---
 
 Keeping the internet protocol simple is an important part of the design of
