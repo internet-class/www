@@ -1,5 +1,5 @@
 ---
-title: "What are protocols so highly structured?"
+title: "Why are protocols so highly structured?"
 ---
 
 Computers are good at a lot of things, but dealing with the complexities and

@@ -4,6 +4,7 @@
     - 45b0245d8365d3b6871b56e38381ad6a.MTS
     - 72ae3d255add7b24eacd2c622c64c560.MTS
     - fb6478a77cb105ccd997a82609adf635.MTS
+  creditsFile: dimitrios_1.MTS
   created: 'Fri Aug 26 2016 13:00:36 GMT-0400'
   authors:
     -
@@ -13,3 +14,7 @@
     -
       name: 'Geoffrey Challen'
       credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'
+  durationSec: 314.934
+  inputHash: 461acc76cdc2b7e1222addb1cc5e9125
+  output: c5f6b73fc769f87be8238ef8e19962e4.mp4
+  transcode: false
