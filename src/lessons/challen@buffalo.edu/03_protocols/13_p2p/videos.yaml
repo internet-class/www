@@ -12,9 +12,8 @@
   files:
     - b6b405e64f5b784fb9c3ede0ff6bf784.MTS
   created: 'Wed Aug 24 2016 12:47:10 GMT-0400'
+  authors:
+    -
+      name: 'Murat Demarbis'
+      credits: 'Associate Professor, Computer Science and Engineering, University at Buffalo'
   durationSec: 346.392
-  inputHash: b6b405e64f5b784fb9c3ede0ff6bf784
-  output: c91622e3e2a4b865f874d3a946d05c48.mp4
-  transcode: false
-  upload: false
-  youtube: X-dS4CN_NQs
