@@ -27,4 +27,4 @@ _.each(dests, function (dest) {
 	}
 });
 
-
+// vim: ts=2:sw=2:et:ft=javascript

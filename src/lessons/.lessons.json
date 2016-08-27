@@ -1,174 +1,174 @@
 [
-    {
-        "id": "04bea591-ea29-4fa9-be76-992d49ab0ae4",
-        "file": "lessons/challen@buffalo.edu/03_protocols/06_ip_suite/lesson.adoc"
-    },
-    {
-        "id": "09ec4c5d-e2e4-4ed4-9077-07461743f6f4",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/02_02_fiber/lesson.adoc"
-    },
-    {
-        "id": "13937846-1541-462d-a326-0620cb6a9511",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/05_01_davis_hop/lesson.adoc"
-    },
-    {
-        "id": "15c98f9a-4081-42e7-b12f-473f6768fe63",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/10_unconnected/lesson.adoc"
-    },
-    {
-        "id": "16eda01a-b8be-4204-83ec-a50cc7ad116e",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/03_office_first_hop/lesson.adoc"
-    },
-    {
-        "id": "1f477cb9-4dde-48d4-95d1-5c020d00536c",
-        "file": "lessons/challen@buffalo.edu/01_era/03_structure/lesson.adoc"
-    },
-    {
-        "id": "1fa89e8c-005c-458f-ac8c-662940f11afc",
-        "file": "lessons/challen@buffalo.edu/01_era/00_welcome/lesson.adoc"
-    },
-    {
-        "id": "2a5165a2-1d80-4fb1-b909-6ec9eea896b7",
-        "file": "lessons/challen@buffalo.edu/01_era/06_internet_v_www/lesson.adoc"
-    },
-    {
-        "id": "2d21f8d4-c172-494c-b4a7-1793680c150f",
-        "file": "lessons/challen@buffalo.edu/01_era/08_standards/lesson.adoc"
-    },
-    {
-        "id": "39d98c4e-badf-4fba-8036-3e2788149693",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/07_last_mile_problem/lesson.adoc"
-    },
-    {
-        "id": "3cff5141-c26b-44b9-813e-82e955037d63",
-        "file": "lessons/challen@buffalo.edu/03_protocols/09_encapsulation/lesson.adoc"
-    },
-    {
-        "id": "4271ecbc-ef2e-439f-93a6-e66e318aa537",
-        "file": "lessons/challen@buffalo.edu/01_era/04_what_is/lesson.adoc"
-    },
-    {
-        "id": "45e0d6a8-7ea4-4734-9640-3b60d4f92e1b",
-        "file": "lessons/challen@buffalo.edu/03_protocols/08_protocol_stack/lesson.adoc"
-    },
-    {
-        "id": "4a94f809-5cda-4a9d-8366-1c10991f0542",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/08_home_next_hop/lesson.adoc"
-    },
-    {
-        "id": "4ab813ff-2d8f-4d43-b35b-2c00e4d17ad9",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/14_circuit_v_packet/lesson.adoc"
-    },
-    {
-        "id": "4c386840-7c77-4057-9d82-6897aefe7f3c",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/16_benefits_of_packets/lesson.adoc"
-    },
-    {
-        "id": "4c9fb692-ac70-4a3b-a549-7dec62c8fa39",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/11_core_internet/lesson.adoc"
-    },
-    {
-        "id": "511a3ae8-2156-41fc-8046-f4c67fec5e9e",
-        "file": "lessons/challen@buffalo.edu/03_protocols/04_ip/lesson.adoc"
-    },
-    {
-        "id": "560d5034-6f97-4a28-8014-0b6bf42474e3",
-        "file": "lessons/challen@buffalo.edu/01_era/09_find_out_more/lesson.adoc"
-    },
-    {
-        "id": "580467f5-c18d-4c84-858f-4fcb1968ca58",
-        "file": "lessons/challen@buffalo.edu/03_protocols/01_introduction/lesson.adoc"
-    },
-    {
-        "id": "5df2ecb2-778c-40c3-8897-4bea901ee77d",
-        "file": "lessons/challen@buffalo.edu/03_protocols/12_new_transport/lesson.adoc"
-    },
-    {
-        "id": "5e4f3233-affd-488d-b4fc-c46feb2c7222",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/06_home_first_hop/lesson.adoc"
-    },
-    {
-        "id": "6961a500-7065-47fc-84e1-d4827c035832",
-        "file": "lessons/challen@buffalo.edu/03_protocols/10_email/lesson.adoc"
-    },
-    {
-        "id": "8fe7612f-5614-4ce9-ad42-afddd82aa3c4",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/15_past_v_future/lesson.adoc"
-    },
-    {
-        "id": "a0942055-6122-4b1c-bcd0-eececc676d2b",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/02_01_twisted_pair/lesson.adoc"
-    },
-    {
-        "id": "a8994bf3-897a-47d8-9d84-d93cafc0cbfb",
-        "file": "lessons/challen@buffalo.edu/01_era/00_staff/lesson.adoc"
-    },
-    {
-        "id": "a8aa59d9-729a-4f86-9f6f-fdc8232ee76d",
-        "file": "lessons/challen@buffalo.edu/01_era/02_why_search/lesson.adoc"
-    },
-    {
-        "id": "b2add6b2-3c00-4ed0-9244-cbe555b905bd",
-        "file": "lessons/challen@buffalo.edu/03_protocols/02_what_is_a_protocol/lesson.adoc"
-    },
-    {
-        "id": "bebfbc29-afdd-49a8-9495-a888c2f3ba38",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/04_office_next_hop/lesson.adoc"
-    },
-    {
-        "id": "c02926ff-af3a-4598-94df-a28f2e8ccee3",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/12_what_is_a_packet/lesson.adoc"
-    },
-    {
-        "id": "c1d9f530-6c04-4dd0-847d-7ba6c5d17d37",
-        "file": "lessons/challen@buffalo.edu/03_protocols/13_p2p/lesson.adoc"
-    },
-    {
-        "id": "c5db2109-4f93-45cd-a8a5-95b3bb2e32f0",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/13_circuit_switching/lesson.adoc"
-    },
-    {
-        "id": "c9a46227-b2fc-44b0-b8de-ff5c36dc4f1a",
-        "file": "lessons/challen@buffalo.edu/03_protocols/02_01_protocol_structure/lesson.adoc"
-    },
-    {
-        "id": "d3705161-ce54-4806-b863-59abbabf14d9",
-        "file": "lessons/challen@buffalo.edu/03_protocols/11_other_protocols/lesson.adoc"
-    },
-    {
-        "id": "d784b86e-c85a-4303-a76f-381528889669",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/01_introduction/lesson.adoc"
-    },
-    {
-        "id": "db79ef48-1c63-4d3d-bd7c-c80b652c222a",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/05_02_ub_hop/lesson.adoc"
-    },
-    {
-        "id": "e16f5e59-bee2-49f2-bb64-905fd1544d18",
-        "file": "lessons/challen@buffalo.edu/01_era/05_terminology/lesson.adoc"
-    },
-    {
-        "id": "e4094339-fe3c-404d-806a-d9844da5e831",
-        "file": "lessons/challen@buffalo.edu/03_protocols/07_end_to_end/lesson.adoc"
-    },
-    {
-        "id": "e9a98e82-55cb-4df8-b31e-38eb0a1042d9",
-        "file": "lessons/challen@buffalo.edu/03_protocols/05_ip_address/lesson.adoc"
-    },
-    {
-        "id": "ee10ca9f-6293-4a57-83d7-c7702848ab47",
-        "file": "lessons/challen@buffalo.edu/01_era/01_why_internet/lesson.adoc"
-    },
-    {
-        "id": "f0b3bc20-f4ad-4eec-905b-106eb1bfb902",
-        "file": "lessons/challen@buffalo.edu/01_era/07_invented/lesson.adoc"
-    },
-    {
-        "id": "fdab2123-34e4-41c5-9775-db4d2f516688",
-        "file": "lessons/challen@buffalo.edu/03_protocols/03_client_server/lesson.adoc"
-    },
-    {
-        "id": "ffbc00bb-f3d1-460b-8b2d-d1efa47eb26b",
-        "file": "lessons/challen@buffalo.edu/02_connectivity/09_cellular_wireless/lesson.adoc"
-    }
+  {
+    "id": "04bea591-ea29-4fa9-be76-992d49ab0ae4",
+    "file": "lessons/challen@buffalo.edu/03_protocols/06_ip_suite/lesson.adoc"
+  },
+  {
+    "id": "09ec4c5d-e2e4-4ed4-9077-07461743f6f4",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/02_02_fiber/lesson.adoc"
+  },
+  {
+    "id": "13937846-1541-462d-a326-0620cb6a9511",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/05_01_davis_hop/lesson.adoc"
+  },
+  {
+    "id": "15c98f9a-4081-42e7-b12f-473f6768fe63",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/10_unconnected/lesson.adoc"
+  },
+  {
+    "id": "16eda01a-b8be-4204-83ec-a50cc7ad116e",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/03_office_first_hop/lesson.adoc"
+  },
+  {
+    "id": "1f477cb9-4dde-48d4-95d1-5c020d00536c",
+    "file": "lessons/challen@buffalo.edu/01_era/03_structure/lesson.adoc"
+  },
+  {
+    "id": "1fa89e8c-005c-458f-ac8c-662940f11afc",
+    "file": "lessons/challen@buffalo.edu/01_era/00_welcome/lesson.adoc"
+  },
+  {
+    "id": "2a5165a2-1d80-4fb1-b909-6ec9eea896b7",
+    "file": "lessons/challen@buffalo.edu/01_era/06_internet_v_www/lesson.adoc"
+  },
+  {
+    "id": "2d21f8d4-c172-494c-b4a7-1793680c150f",
+    "file": "lessons/challen@buffalo.edu/01_era/08_standards/lesson.adoc"
+  },
+  {
+    "id": "39d98c4e-badf-4fba-8036-3e2788149693",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/07_last_mile_problem/lesson.adoc"
+  },
+  {
+    "id": "3cff5141-c26b-44b9-813e-82e955037d63",
+    "file": "lessons/challen@buffalo.edu/03_protocols/09_encapsulation/lesson.adoc"
+  },
+  {
+    "id": "4271ecbc-ef2e-439f-93a6-e66e318aa537",
+    "file": "lessons/challen@buffalo.edu/01_era/04_what_is/lesson.adoc"
+  },
+  {
+    "id": "45e0d6a8-7ea4-4734-9640-3b60d4f92e1b",
+    "file": "lessons/challen@buffalo.edu/03_protocols/08_protocol_stack/lesson.adoc"
+  },
+  {
+    "id": "4a94f809-5cda-4a9d-8366-1c10991f0542",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/08_home_next_hop/lesson.adoc"
+  },
+  {
+    "id": "4ab813ff-2d8f-4d43-b35b-2c00e4d17ad9",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/14_circuit_v_packet/lesson.adoc"
+  },
+  {
+    "id": "4c386840-7c77-4057-9d82-6897aefe7f3c",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/16_benefits_of_packets/lesson.adoc"
+  },
+  {
+    "id": "4c9fb692-ac70-4a3b-a549-7dec62c8fa39",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/11_core_internet/lesson.adoc"
+  },
+  {
+    "id": "511a3ae8-2156-41fc-8046-f4c67fec5e9e",
+    "file": "lessons/challen@buffalo.edu/03_protocols/04_ip/lesson.adoc"
+  },
+  {
+    "id": "560d5034-6f97-4a28-8014-0b6bf42474e3",
+    "file": "lessons/challen@buffalo.edu/01_era/09_find_out_more/lesson.adoc"
+  },
+  {
+    "id": "580467f5-c18d-4c84-858f-4fcb1968ca58",
+    "file": "lessons/challen@buffalo.edu/03_protocols/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "5df2ecb2-778c-40c3-8897-4bea901ee77d",
+    "file": "lessons/challen@buffalo.edu/03_protocols/12_new_transport/lesson.adoc"
+  },
+  {
+    "id": "5e4f3233-affd-488d-b4fc-c46feb2c7222",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/06_home_first_hop/lesson.adoc"
+  },
+  {
+    "id": "6961a500-7065-47fc-84e1-d4827c035832",
+    "file": "lessons/challen@buffalo.edu/03_protocols/10_email/lesson.adoc"
+  },
+  {
+    "id": "8fe7612f-5614-4ce9-ad42-afddd82aa3c4",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/15_past_v_future/lesson.adoc"
+  },
+  {
+    "id": "a0942055-6122-4b1c-bcd0-eececc676d2b",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/02_01_twisted_pair/lesson.adoc"
+  },
+  {
+    "id": "a8994bf3-897a-47d8-9d84-d93cafc0cbfb",
+    "file": "lessons/challen@buffalo.edu/01_era/00_staff/lesson.adoc"
+  },
+  {
+    "id": "a8aa59d9-729a-4f86-9f6f-fdc8232ee76d",
+    "file": "lessons/challen@buffalo.edu/01_era/02_why_search/lesson.adoc"
+  },
+  {
+    "id": "b2add6b2-3c00-4ed0-9244-cbe555b905bd",
+    "file": "lessons/challen@buffalo.edu/03_protocols/02_what_is_a_protocol/lesson.adoc"
+  },
+  {
+    "id": "bebfbc29-afdd-49a8-9495-a888c2f3ba38",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/04_office_next_hop/lesson.adoc"
+  },
+  {
+    "id": "c02926ff-af3a-4598-94df-a28f2e8ccee3",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/12_what_is_a_packet/lesson.adoc"
+  },
+  {
+    "id": "c1d9f530-6c04-4dd0-847d-7ba6c5d17d37",
+    "file": "lessons/challen@buffalo.edu/03_protocols/13_p2p/lesson.adoc"
+  },
+  {
+    "id": "c5db2109-4f93-45cd-a8a5-95b3bb2e32f0",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/13_circuit_switching/lesson.adoc"
+  },
+  {
+    "id": "c9a46227-b2fc-44b0-b8de-ff5c36dc4f1a",
+    "file": "lessons/challen@buffalo.edu/03_protocols/02_01_protocol_structure/lesson.adoc"
+  },
+  {
+    "id": "d3705161-ce54-4806-b863-59abbabf14d9",
+    "file": "lessons/challen@buffalo.edu/03_protocols/11_other_protocols/lesson.adoc"
+  },
+  {
+    "id": "d784b86e-c85a-4303-a76f-381528889669",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "db79ef48-1c63-4d3d-bd7c-c80b652c222a",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/05_02_ub_hop/lesson.adoc"
+  },
+  {
+    "id": "e16f5e59-bee2-49f2-bb64-905fd1544d18",
+    "file": "lessons/challen@buffalo.edu/01_era/05_terminology/lesson.adoc"
+  },
+  {
+    "id": "e4094339-fe3c-404d-806a-d9844da5e831",
+    "file": "lessons/challen@buffalo.edu/03_protocols/07_end_to_end/lesson.adoc"
+  },
+  {
+    "id": "e9a98e82-55cb-4df8-b31e-38eb0a1042d9",
+    "file": "lessons/challen@buffalo.edu/03_protocols/05_ip_address/lesson.adoc"
+  },
+  {
+    "id": "ee10ca9f-6293-4a57-83d7-c7702848ab47",
+    "file": "lessons/challen@buffalo.edu/01_era/01_why_internet/lesson.adoc"
+  },
+  {
+    "id": "f0b3bc20-f4ad-4eec-905b-106eb1bfb902",
+    "file": "lessons/challen@buffalo.edu/01_era/07_invented/lesson.adoc"
+  },
+  {
+    "id": "fdab2123-34e4-41c5-9775-db4d2f516688",
+    "file": "lessons/challen@buffalo.edu/03_protocols/03_client_server/lesson.adoc"
+  },
+  {
+    "id": "ffbc00bb-f3d1-460b-8b2d-d1efa47eb26b",
+    "file": "lessons/challen@buffalo.edu/02_connectivity/09_cellular_wireless/lesson.adoc"
+  }
 ]
