@@ -1,0 +1,559 @@
+---
+title: "CSE 421/521 Spring 2016"
+spelling_exceptions:
+  - Geoff
+  - GWA
+  - MWF
+  - exo
+  - "/ASST3\\.\\d/"
+description: >
+  Course materials for CSE 421/521 at the University at Buffalo in Spring
+  2016.
+priority: 0.8
+changefreq: monthly
+---
+:sectnums:
+:linkattrs:
+
+[.visible-print]
+--
+WARNING: This syllabus is available online at +
+link:https://www.ops-class.org/courses/buffalo/CSE421_Spring2016/[`https://www.ops-class.org/courses/buffalo/CSE421_Spring2016/`, role='hidden_print'].
+//
+The online version is easier to read and includes helpful links, embedded
+videos, and other useful resources.
+--
+
+[.hidden-print]
+--
+This web page serves as the syllabus for the course.
+--
+
+== Overview
+
+[.lead]
+This course is an introduction to operating system design and implementation.
+We study operating systems because they are examples of mature and elegant
+solutions to a difficult design problem: how to safely and efficiently share
+system resources and provide abstractions useful to applications.
+
+For the processor, memory, and disks, we discuss how the operating system
+allocates each resource and explore the design and implementation of related
+abstractions. We also establish techniques for testing and improving system
+performance and introduce the idea of hardware virtualization. Programming
+assignments provide hands-on experience with implementing core operating
+system components in a realistic development environment.
+
+[[calendar]]
+== Calendar
+
+We suggest that you add our https://goo.gl/9KR1PT[shared calendar] to your
+calendaring program. If you are not using a calendaring program, we suggest
+that you start using a calendaring program.
+
+++++
+<div class="hidden-xs hidden-sm embed-responsive embed-responsive-4by3">
+	<div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;mode=WEEK&amp;height=1200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5psetkcpgh152b9a8qd052831c%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York"></div>
+</div>
+<div class="hidden-md hidden-lg embed-responsive embed-responsive-4by3">
+	<div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;mode=AGENDA&amp;height=1200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5psetkcpgh152b9a8qd052831c%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York"></div>
+</div>
+++++
+
+== Information
+
+=== Course Staff
+
+. *Instructor*: Geoffrey Challen. I go by "Geoff", "Geoffrey", or
+"GWA"&mdash;not "Dr", "Professor, or "Sir". Please use
+mailto:prof@ops-class.org[`prof@ops-class.org`] to aid my email filtering.
+However, you should rarely contact me directly. Instead, 99% of the time use
+the https://discourse.ops-class.org[Discourse forum] or 1% of the time contact
+the entire staff at mailto:staff@ops-class.org[`staff@ops-class.org`].
+
+. *Teaching Assistants*: Ali Ben Ali and Xu Zhen are your
+fantastic and hard-working teaching assistants this semester. They will be
+teaching recitation, holding office hours, and grading exams.  Please do not
+email them directly--instead, use https://discourse.ops-class.org[Discourse]
+or email mailto:staff@ops-class.org[`staff@ops-class.org`] for a faster
+reply.
+
+. *Ninjas*: In addition to the official TAs, we have a number of volunteers
+from my research group https://blue.cse.buffalo.edu[blue] as well as returning
+421 Spring 2015 students. This year's ninjas are Yihong Chen, Dan Conway,
+Scott Haseley, Carl Nuessle, Gela Malek Pour, Guru Prasad, Isaac Reath,
+Benjamin Rueda, Jinghao Shi, Mark Simpson, and Yousuf Zubairi. Ninjas will
+hold office hours but do not do any grading.
+
+=== Times and Locations
+
+The <<calendar,online calendar>> contains up-to-date information about all
+course meetings and activities. Please check it regularly--changes do happen.
+
+. *Lecture*: MWF 2:00--2:50PM, Knox 104.
+
+. *Recitations*: T 4:00--4:50PM, NSC 222; and F 8:00--8:50AM, Knox 04.
+Recitations will be taught by Ali. Attendance is not mandatory, and
+you can attend either or both depending on what fits your schedule. *Graduate
+students may only attend recitations if there is space* footnote:[I suspect
+that there will regularly be space in the 8AM recitation...].
+
+. *Office Hours*: We have 20 total and 41 person-hours of office hours
+scheduled this semester. Please come and join us in Davis 301B! Office hours
+are a fun place to do the assignments and just hang out with each other and
+the course staff. Don't wait until you have a problem to come!
+
+=== Exams
+
+An ungraded pre-term exam will be given in class on Wednesday 1/27/2016. The
+50-minute midterm will be given in class Wednesday 3/23/2016. A 3-hour final
+exam will be Monday 5/9/2016 from 3:30--6:30PM in Knox 104. All dates are on
+the <<calendar>>. *Please contact the course staff as soon as possible if you
+cannot attend a scheduled exam for any reason.*
+
+=== Undergraduate Prerequisites
+
+http://www.cse.buffalo.edu/shared/course.php?e=CSE&n=250&t=DATA+STRUCTURES[CSE
+250: Data Structures, role='hidden_print'].
+
+[.hidden-print]
+--
+=== Other Important Dates
+
+(Also on the <<calendar>>.)
+
+* *Last Day to Drop Add*: 2/1/2016
+* *Last Day to Resign*: 4/15/2016
+* *Last Day of Class*: 5/9/2016
+--
+
+== Description
+
+Operating systems are the masterworks of the programming world: beautiful and
+sophisticated solutions to difficult design problems that have emerged from
+years of effort by thousands of skilled programmers. Just like budding
+artists study the works of the great masters for inspiration, we programmers
+study operating systems. While most of you will never contribute a single
+line of code to a production operating system, we hope that by the end of the
+course you will have learned something from their elegance and maturity.
+
+Understanding operating system design will make you a better software
+engineer, and struggling with operating system programming will make you a
+better programmer. This course gives you a chance to do both. We establish a
+_conceptual_ track through lectures and exams, where we discuss the concepts
+and design principles of modern operating systems and how hardware devices
+such as the CPU, memory, and disks are multiplexed and abstracted. Equally
+important, however, is the _programming_ track which proceeds through four
+assignments that give you the chance to implement core operating system
+functionality in a simplified development environment. After studying
+synchronization, you will implement synchronization primitives. After
+studying the system call interface, you will implement it. After studying
+virtual memory and address translation, you will design and implement a
+virtual memory subsystem.
+
+Designing and implementing operating system concepts is not easy, and neither
+is this course. But we are here to help and committed to providing you with
+the support you need to succeed. Our online grading tools provide helpful
+feedback and allow you to repeatedly test and submit your assignments until
+you earn the grade you desire. And our TAs are experienced and will be
+available for many hours each week to provide individual help. We expect that
+you will find this course difficult, but we hope you will also learn a large
+amount, have fun, and develop a passion for computer systems.
+
+=== Learning Objectives
+
+==== Conceptual Objectives
+
+When you finish this course, you will be able to:
+
+[cols=2,options='header']
+|===
+
+| Outcome
+| Assessment
+
+
+| *Understand the abstractions* supported by modern operating systems.
+.3+| Class and recitation participation, midterm, final exam. 70%
+correctly identified marks outcome achieved.
+
+| *Describe how operating systems safely and efficiently multiplex
+hardware resources* through effective policies and mechanisms.
+
+| *Analyze the designs and features* of historical, current, and
+emerging operating systems.
+
+|===
+
+==== Programming Objectives
+
+When you finish this course, you will be able to:
+
+[cols=2,options='header']
+|===
+
+| Outcome
+| Assessment
+
+| *Design and implement* working systems software.
+.3+| Office hours attendance, homework and programming assignments. 70%
+correctly identified marks outcome achieved.
+
+| *Identify and correct bugs* in complex, multithreaded systems.
+
+| *Formulate and test* performance hypotheses.
+
+|===
+
+=== ABET Outcomes
+
+The http://www.abet.org[Accreditation Board for Engineering and Technology
+(ABET)] helps guide curriculum by defining common outcomes that coursework
+should help students achieve by the time they graduate. This course should
+assist you in four of the nine University at Buffalo outcomes:
+
+. *(c)* An ability to design, implement and evaluate a computer-based system,
+process, component, or program to meet desired needs.
+. *(d)* An ability to function effectively on teams to accomplish a common
+goal.
+. *(f)* An ability to communicate effectively with a range of audiences.
+. *(i)* An ability to use current techniques, skills, and tools necessary for
+computing practice.
+. *(k)* An ability to apply design and development principles in the
+construction of software systems of varying complexity.
+
+The table below describes how each outcome above is incorporated into this
+course:
+
+[cols="^2,8",options='header']
+|===
+
+| ABET a--k
+| Description
+
+| *c*
+| All four assignments challenge your ability to _"design, implement, and
+evaluate"_ components of an operating system.
+
+| *d*
+| All four programming assignments are performed in pairs, helping you
+_"function effectively on teams to accomplish a common goal"_.
+
+| *f*
+| Preparing design documents is an integral part of the two large
+assignments, providing practice at effective technical communication, part of
+the ability to _"communicate effectively with a range of audiences"_.
+
+| *i*
+| This course requires students to develop in a virtual machine, use
+http://git-scm.com/[Git] for collaborative development, and use modern
+debugging and code editing tools, all preparing you to _"use current
+techniques, skills, and tools necessary for computing practice"_.
+
+| *k*
+| The course assignments increase in complexity as the semester goes on,
+allowing students to _"apply design and development principles in the
+construction of software systems of varying complexity"_.
+
+|===
+
+=== Outline
+
+I reserve the right to alter this rough outline as needed to the keep the
+class current, and our completion of the material will depend on the pace
+that we are able to establish and your understanding of the material.
+
+. *Processes and the system call interface*
+. *Abstracting and multiplexing the CPU*
+.. Interrupts.
+.. Context switches.
+.. The thread abstraction.
+.. Synchronization.
+... Atomicity and concurrency.
+... Critical sections.
+... Synchronization primitives: locks, semaphores, and condition variables.
+... Solving synchronization problems.
+.. Thread scheduling.
+. *Abstracting and multiplexing memory*
+.. The address space abstraction.
+.. Virtual addresses.
+.. Efficient address translation.
+.. Segmentation and paging.
+.. Swapping.
+.. Page replacement policies.
+. *Abstracting and multiplexing disks*
+.. Basics of disk operation.
+.. The file abstraction.
+.. File system basics.
+.. File system structures.
+.. File system operations.
+.. File system caching.
+.. The Berkeley Fast File Systems (FFS).
+.. Log-structured file systems.
+. *Operating system structure: micro, macro, exo and multikernels.*
+. *Performance improvement.*
+.. Measurement.
+.. Benchmarking.
+.. Analysis.
+.. Improvement and Amdahl's Law.
+. *Hardware virtualization.*
+.. Intro to virtualization.
+.. Types of virtualization.
+.. Full hardware virtualization.
+.. Binary translation and paravirtualization.
+. *Special topics (time permitting.*
+
+=== Programming Assignments
+
+The course includes four programming assignments of increasing difficulty.
+The assignments themselves are hosted on this website.  You also use the
+website to submit your answers and view your grades. The programming portions
+of the assignment are graded automatically and you may submit them as often as
+you like, using the autograder output to improve your submission. Questions
+that are graded by the course staff may be submitted twice, since they must be
+graded each time. Each question also has a rubric which indicates exactly how
+each portion of the question was evaluated and points assigned.
+
+All programming assignments are done in pairs. *Both students in each pair
+receive the same grade for each programming assignment.* Each programming
+assignment also has specific collaboration guidelines that you must indicate
+you have followed each time you submit answers.
+
+A description of each assignment along with due dates are listed below. This
+year we expect these to be firm and *no extensions will be given.*
+
+==== link:/asst/0/[`ASST0`: Introduction to OS/161]
+
+Introduces you to the programming environment you will be working in this
+semester, including the OS/161 operating system, the `sys161` simulator, the
+GNU debugger (GDB), and the Git revision control system.  Consists of code
+reading questions, a few simple scripting tasks, and a very simple
+implementation task.
+
+==== link:/asst/1/[`ASST1`: Synchronization]
+
+*Deadline*: Monday 2/22/2016 @ 5PM.
+
+Your first real taste of kernel programming. After completing a set of code
+reading questions, you implement locks, condition variables and reader-writer
+locks. Next, you use them to solve a few simple toy synchronization problems.
+
+==== link:/asst/2/[`ASST2`: System Calls and Process Support]
+
+*Deadline*: Friday 3/11/2016 @ 11:59PM.
+
+The first big and complex assignment. Start by completing a design that
+indicates you understand all of the moving pieces and what to do. Next,
+implement the system call interface. When you are finished, your kernel should
+be able to run user programs.
+
+==== link:/asst/3/[`ASST3`: Virtual Memory]
+
+The mountain top. A large amount of code to implement and many internal
+interfaces to design. As always, start with a careful design. Then implement
+virtual memory, including address translation, TLB management, page
+replacement and swapping. When you are finished, your kernel should be able to
+run forever without running out of memory, and you will have completed the
+course.
+
+This year we are splitting the link:/asst/3/[ASST3,role='hidden_print'] deadlines into three parts:
+
+. *ASST3.1*: working core map. *Deadline*: Friday 4/8/2016 @ 5PM.
+. *ASST3.2*: user paging. *Deadline*: Friday 4/22/2016 @ 5PM.
+. *ASST3.3*: swapping. *Deadline*: Friday 5/6/2016 @ 5PM.
+
+=== Textbook
+
+[.spelling_exception]
+--
+There is no required textbook for this course. You can consider
+//
+http://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X/["Modern Operating Systems" by Andrew Tannenbaum",role='hidden_print']
+//
+to be a supplemental reference for those interested in learning more.
+//
+http://www.amazon.com/C-Programming-Language-2nd/dp/0131103628/["The C Programming Language",role='hidden_print']
+//
+by Kernighan and Ritchie may be a helpful reference
+when completing the assignments, particularly if you are new to C.
+--
+
+== Policies
+
+=== Grading
+
+Grading is evenly divided between conceptual material and programming
+assignments.
+
+* *50% Conceptual*
+** 5% Preterm Exam. If you take the preterm exam, you receive
+5%. If you do not, your midterm and final exam scores are scaled to fill in
+the missing 5%.
+** 15% Midterm Exam, 30% Final Exam
+* 50% Programming
+** 5% link:/asst/1/[ASST1,role='hidden_print'], 15%
+link:/asst/2/[ASST2,role='hidden_print'], 30% link:/asst/3/[ASST3,role='hidden_print']
+
+[.hidden-print]
+--
+==== Extra credit
+
+This year we will provide up to 5% extra credit to students that help us
+improve our course materials. All the assignments and lecture slides, as well
+as other resources including our Vagrant virtual machine configuration and the
+`test161` OS/161 testing tool, are online at our
+https://github.com/ops-class[`ops-class.org` GitHub repository]. The amount of
+extra credit that will be provided will be commensurate with your contribution
+and completely at the discretion of the course staff.
+
+To take advantage of this offer you must also present your updates to the
+course staff in a way that makes them straightforward to incorporate. Do not
+email us, or post in the forum. Clone our repository, fix the problem, and send
+us a pull request. If you are curious about how much credit a particular change
+will earn you, post it as an issue on GitHub first and we'll discuss.
+--
+
+=== Incomplete Grades
+
+Please refer to the
+http://undergrad-catalog.buffalo.edu/policies/grading/explanation.shtml#incomplete[undergraduate]
+or
+http://grad.buffalo.edu/Academics/Policies-Procedures/Grading-Procedures.html#incomplete[graduate]
+incomplete policy as appropriate. Of particular importance is this language
+from the undergraduate incomplete policy (the graduate language is similar):
+
+[quote]
+Students may only be given an *I* grade if they have a passing average in
+coursework that has been completed and have well-defined parameters to
+complete the course requirements that could result in a grade better than the
+default grade. _An *I* grade may not be assigned to a student who
+  did not attend the course._
+
+Note that for graduate students, "the default grade accompanying an interim
+grade of *I* shall be *U* and will be displayed on the UB record as
+[.spelling_exception]*IU*."
+
+=== Academic Integrity
+
+Please review the http://www.cse.buffalo.edu/shared/policies/academic.php[CSE
+Department academic integrity policy] and the UB
+http://undergrad-catalog.buffalo.edu/policies/course/integrity.shtml[undergraduate]
+or http://grad.buffalo.edu/study/progress/policies.html#preamble[graduate]
+academic integrity policy as appropriate to familiarize yourself with the
+relevant academic integrity policies and procedures. In general, the rule of
+thumb is that talking _about_ code in English is OK, but talking _in_ or
+_exchanging_ code is cheating. Each assignment has specific guidelines about
+what types of collaboration are encouraged, discouraged, and forbidden. We
+will use automated plagiarism detection software to check every submission
+against solutions submitted in prior years as well as all publicly-available
+solutions online.
+
+*Students that submit plagiarized work will receive a grade of F for the
+course.*
+
+=== Disabilities
+
+Please register and coordinate with the Office of Disability Services. Let
+the course staff know when accommodations need to be made. We are committed
+to helping you learn.
+
+== Getting Help
+
+The operating systems programming assignments are difficult and most students
+require a fair amount of help during the semester. Here's how to--and how
+not to--get help.
+
+=== Great Ways to Get Help
+
+* *Use the https://discourse.ops-class.org[the forum].* This is by far your
+best resource because it allows you to get help from anyone--not just a TA or
+Ninja--at any time--not just during office hours. Please use and contribute
+to this valuable shared resource.
+
+* *Come to office hours.* We don't hold them for our health and
+the staff gets bored when there isn't anyone to help! So please don't
+hesitate to come in. Office hours are also a great time to work on your
+assignments, since if (when) you get stuck help is already nearby.
+
+=== Bad Ways to Get Help
+
+* *Emailing any staff member using their `@buffalo.edu` email address.* I
+instruct the staff to ignore these emails and I will as well.
+
+* Emailing mailto:staff@ops-class.org[`staff@ops-class.org`].
+This address is only for administrative uses, not for getting help on
+assignments.
+
+* Emailing mailto:prof@ops-class.org[`prof@ops-class.org`].
+This address is only for highly-sensitive administrative uses, not for
+getting help on assignments.
+
+== Online Resources
+
+This website is the source for all information about the class: the syllabus
+(which you are reading) lecture slides, assignments, previous exams, lecture
+videos, and other useful information.
+
+=== Videos
+
+We try to tape all
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp-kbEcVR2W3vfx0Pdca0BD3[lectures,role='hidden_print']
+and
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp_YJn8wu9aJTPOgeWqiaJDF[recitation,role='hidden_print'].
+A playlist of the music played before class is also
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp_hjJpG9tqicpEgI6C3aaAE[available,role='hidden_print'].
+Finally, we are experimenting with screencasts which are embedded into the
+assignments and also available in a
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp9PC8fyzc2meL4XvrVSyP8O[playlist,role='hidden_print'].
+
+[.hidden-print]
+--
+Previous years have also been recorded:
+
+* *2015*:
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp8U4xVODdQtgJ945HeMwosQ[Lectures],
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp9DnLcZFyX2f_JnUsmeS7vL[recitations].
+
+* *2014*:
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp_Dugcm7mBsEahZS5Xr-zWe[Lectures],
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp9POq3yWUBM3XLsW2il8U32[recitations].
+
+* *2013*:
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp-qxcxaYtTf5zQXdcfzrW_r[Lectures].
+
+* *2012*:
+https://www.youtube.com/playlist?list=PLE6LEE8y2Jp8tllE40n3tHfWXqxFeyFuY[Lectures].
+--
+
+=== Forum
+
+We are using a https://discourse.ops-class.org[Discourse forum] this semester
+for all class-related communications. Please update your profile on it and use
+it for all lecture- and assignment-related Q&A.
+
+Before we got tired of it and it's strange approach to pedagogy we used
+Piazza in past years. Unfortunately, there seems to be no way to make the
+previous forums contents public footnote:[Yet another thing to dislike about
+Piazza...].
+
+=== Mailing List
+
+All enrolled students will be added to a mailing list which we will use for
+course communication. *You are responsible for email messages sent to this
+list.* If you are not enrolled and would like to be added to the list, you can
+sign up https://www.ops-class.org/mailman/listinfo/ub[here].
+
+[.hidden-print]
+== Videos
+
+++++
+<h3>Lectures</h3>
+<div class="embed-responsive embed-responsive-16by9">
+	<div class="lazy-iframe" data-src="//www.youtube.com/embed/videoseries?list=PLE6LEE8y2Jp-kbEcVR2W3vfx0Pdca0BD3&amp;showinfo=1"></div>
+</div>
+
+<h3>Recitations</h3>
+<div class="embed-responsive embed-responsive-16by9">
+	<div class="lazy-iframe" data-src="//www.youtube.com/embed/videoseries?list=PLE6LEE8y2Jp_YJn8wu9aJTPOgeWqiaJDF&amp;showinfo=1"></div>
+</div>
+++++
