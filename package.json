@@ -41,6 +41,7 @@
     "metalsmith-concat-convention": "^1.0.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-if": "^0.1.1",
+    "metalsmith-ignore": "^0.1.2",
     "metalsmith-layouts": "^1.6.5",
     "metalsmith-rename": "^1.0.0",
     "metalsmith-spellcheck": "^0.2.3",
