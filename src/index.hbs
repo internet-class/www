@@ -1,11 +1,46 @@
 ---
 title: Learn the Internet on the Internet
-layout: index.hbt
 description: >
   Learn about the internet online through short, fun videos.
 priority: 1.0
+override_js: /js/index.js
+extra_css:
+  - /css/index.css
 ---
-<h1>Learn the Internet Using the Internet</h1>
+{{> header }}
+
+<nav>
+	<div class="nav-wrapper container">
+		<a href="/" class="brand-logo">
+      <img src="/img/logos/logo.png" alt="internet-class.org" style="height:64px;">
+    </a>
+		<ul class="right">
+			<li><a href="#">Login</a></li>
+		</ul>
+	</div>
+</nav>
+<main>
+<div id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="title">
+          <h1 class="font-scale" data-font="64" data-font-min="24">
+            <strong>Learn about the internet</strong><br>on the internet.
+          </h1>
+          <h4 class="font-scale" data-font="40" data-font-min="14">(Makes sense, right?)</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="center-align">
+          <a href="#" class="btn btn-large">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--
   vim: ts=2:sw=2:et:ft=html

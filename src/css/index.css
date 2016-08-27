@@ -1,0 +1,18 @@
+nav {
+	background-color: transparent !important;
+	box-shadow: none;
+}
+#hero #title {
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width:70%;
+	min-width: 300px;
+}
+#title h1 {
+	font-size: 64px;
+}
+#title h4 {
+	font-size: 32px;
+	font-weight: 300;
+}

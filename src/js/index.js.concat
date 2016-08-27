@@ -1,0 +1,7 @@
+---
+files:
+- js/site/jquery-2.1.1.js
+- materialize/js/bin/materialize.js
+- js/index/onload.js
+output: js/index.js
+---

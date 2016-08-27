@@ -36,8 +36,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta name="msapplication-config" content="none"/>
-
+    
+    {{#if override_js }}
+		<script src="{{ override_js }}" async></script>
+    {{else}}
 		<script src="/js/site.js" async></script>
+    {{/if}} 
 	</head>
 
   <body>
