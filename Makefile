@@ -32,7 +32,7 @@ upload:
 	@node lib/dovideos --upload
 
 courses:
-	@node lib/courses
+	@node lib/docourses
 
 build:
 	@node lib/index.js $(DEPLOY) $(CHECK)
