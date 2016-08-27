@@ -1,6 +1,7 @@
 {{> header }}
 
 <div id="content">
+	{{{ contents }}}
 </div>
 
 {{> footer }}
