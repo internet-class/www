@@ -13,9 +13,9 @@
 
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="/css/site.css"  media="screen"/>
-		{{#each extra_css}}
-		<link rel="stylesheet" type="text/css" href="{{this}}">
-		{{/each}}
+    {{#if template_css}}
+    <link rel="stylesheet" type="text/css" href="{{ template_css }}">
+    {{/if}}
 
     <link rel="apple-touch-icon" sizes="57x57" href="/img/logos/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/logos/favicon/apple-icon-60x60.png">

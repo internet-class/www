@@ -1,0 +1,13 @@
+#logo {
+	width: 268px;
+}
+#logo-container {
+	height: 112px;
+	padding: 0 16px;
+}
+.side-nav.fixed a {
+	padding: 0 30px;
+}
+.side-nav.fixed li a {
+	font-size: 18px;
+}

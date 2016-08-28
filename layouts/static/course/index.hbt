@@ -1,2 +1,22 @@
-{{> header }}
+{{> header template_css="/css/course.css" }}
 
+<header>
+	<div class="container">
+		<a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+			<i class="material-icons">menu</i>
+		</a>
+	</div>
+	<ul id="nav-mobile" class="side-nav fixed">
+		<li class="logo">
+			<a id="logo-container" href="/" class="brand-logo">
+				<img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
+			</a>
+			<li class="bold"><a href="syllabus/" class="waves-effect waves-blue">Syllabus</a></li>
+			<li class="bold"><a class="waves-effect waves-blue">Learn</a></li>
+		</li>
+	</ul>
+</header>
+<main>
+</main>
+
+{{> footer }}
