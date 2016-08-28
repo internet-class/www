@@ -36,6 +36,7 @@
     "jsonfile": "^2.3.1",
     "lien": "^1.0.4",
     "metalsmith": "^2.1.0",
+    "metalsmith-asciidoc": "^1.1.0",
     "metalsmith-branch": "0.0.4",
     "metalsmith-clean-css": "^5.0.0",
     "metalsmith-concat-convention": "^1.0.0",

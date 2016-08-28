@@ -9,21 +9,8 @@ priority: 0.8
 changefreq: monthly
 layout: course/syllabus.hbt
 ---
-:sectnums:
 :linkattrs:
 
-[.visible-print]
---
-WARNING: This syllabus is available online at +
-link:https://www.internet-class.org/courses/UB/CSE199/2016/[`https://www.internet-class.org/courses/UB/CSE199/2016/`, role='hidden_print'].
-//
-The online version is easier to read and includes helpful links, embedded
-videos, and other useful resources.
---
-
-[.hidden-print]
---
-This web page serves as the syllabus for the course.
---
-
 == Overview
+
+Let's test a paragraph of text.
