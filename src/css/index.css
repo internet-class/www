@@ -1,43 +1,91 @@
 nav {
-	background-color: transparent !important;
-	box-shadow: none;
+  background-color: rgba(255,255,255,0.5) !important;
+  box-shadow: none;
 }
-#hero #title {
-	margin-top: 10%;
-	margin-left: auto;
-	margin-right: auto;
-	width:70%;
-	min-width: 300px;
+nav .brand-logo {
+  left: auto !important;
+  transform: none !important;
+}
+@media (max-width: 600px) {
+  #logo {
+    height: 56px;
+  }
+}
+@media (min-width: 601px) {
+  #logo {
+    height: 64px;
+  }
+}
+#pause_button {
+  display: inline;
+  visibility: hidden;
+}
+#play_button {
+  display: none;
+  visibility: hidden;
+}
+.video-controls i {
+  line-height: inherit !important;
+}
+#fullscreen {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index:-1;
+  overflow: hidden;
+}
+#bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+#button {
+  margin-bottom: 10px;
+}
+#title {
+  background-color: rgba(255,255,255,0.5) !important;
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+#title_box {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
 }
 #title h1 {
-	font-size: 64px;
+  font-size: 64px;
+  margin: 0;
 }
 #title h4 {
-	font-size: 32px;
-	font-weight: 300;
-}
-#container {
-	position: absolute;
-	z-index: -1;
-	top: 0px;
-	left: 0px;
-	overflow: hidden;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
 }
 #background {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	margin: auto;
-	z-index: -1;
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	background: url("/img/background/2.png");
-	background-size: cover;
-	background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+  z-index: -1;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("/img/background/1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+video {
+  display: block;
+}
+
+/* vim: ts=2:sw=2:et
+*/

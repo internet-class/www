@@ -12,46 +12,51 @@ extra_css:
 <nav>
 	<div class="nav-wrapper container">
 		<a href="/" class="brand-logo">
-      <img src="/img/logos/logo.png" alt="internet-class.org" style="height:64px;">
+      <img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
     </a>
 		<ul class="right">
 			<li><a href="#">Login</a></li>
+      <li id="pause_button" class="video-controls hidden">
+        <a id="pause" class="btn-floating waves-effect waves-light btn">
+          <i class="material-icons">pause_circle_outline</i>
+        </a>
+      </li>
+      <li id="play_button" class="video-controls">
+        <a id="play" class="btn-floating waves-effect waves-light btn">
+          <i class="material-icons">play_circle_filled</i>
+        </a>
+      </li>
 		</ul>
 	</div>
 </nav>
 <main>
-<div id="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <div id="title">
-          <h1 class="font-scale" data-font="64" data-font-min="24">
-            <strong>Learn about the internet</strong><br>on the internet.
-          </h1>
-          <h4 class="font-scale" data-font="40" data-font-min="14">(Makes sense, right?)</h4>
-        </div>
-      </div>
+<div id="fullscreen">
+  <div id="bottom">
+    <div id="button" class="center-align">
+      <a href="#" class="btn btn-large">Get Started</a>
     </div>
-    <div class="row">
-      <div class="col s12">
-        <div class="center-align">
-          <a href="#" class="btn btn-large">Get Started</a>
-        </div>
+    <div id="title">
+      <div id="title_box">
+        <h1 class="font-scale" data-font="64" data-font-min="24">
+          <strong>Learn about the internet</strong><br>on the internet.
+        </h1>
+        <h4 class="font-scale" data-font="40" data-font-min="14">(Makes sense, right?)</h4>
       </div>
     </div>
   </div>
-  <div id="container">
-    <video playsinline autoplay muted loop id="background">
-      <source src="/img/background/large.webm" type="video/webm" media="screen and (min-width:800px)">
-      <source src="/img/background/large.mp4" type="video/mp4" media="screen and (min-width:800px)">
-      <source src="/img/background/small.webm" type="video/webm" media="screen and (max-width:799px)">
-      <source src="/img/background/small.mp4" type="video/mp4" media="screen and (max-width:799px)">
-    </video>
-  </div>
+  <video playsinline muted autoplay poster="/img/background/1.png" id="background">
+    <source src="/img/background/large.webm" type="video/webm" media="screen and (min-width:800px)">
+    <source src="/img/background/large.mp4" type="video/mp4" media="screen and (min-width:800px)">
+    <source src="/img/background/small.webm" type="video/webm" media="screen and (max-width:799px)">
+    <source src="/img/background/small.mp4" type="video/mp4" media="screen and (max-width:799px)">
+  </video>
 </div>
-<div style="padding-top:100px;">
-  Test some other content.
-</div>
+
+<!--[if lt IE 9]>
+<script>
+  document.createElement('video');
+</script>
+<![endif]-->
 
 <!--
   vim: ts=2:sw=2:et:ft=html

@@ -39,6 +39,7 @@ build:
 	@while [ -n "$(find .build -depth -type d -empty -print -exec rmdir {} +)" ]; do :; done
 	@if [ -d ".build" ]; then \
 		rsync -rlpgoDc --delete .build/ build 2>/dev/null; \
+		rsync -rlpgoDc src/img/background/ build/img/background; \
 		rm -rf .build; \
 	else \
 		rm -rf build; \
