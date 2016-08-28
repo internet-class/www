@@ -16,6 +16,17 @@ nav .brand-logo {
     height: 64px;
   }
 }
+nav ul a.btn {
+  margin-right: inherit;
+}
+#unmute_button {
+  display: inline;
+  visibility: hidden;
+}
+#mute_button {
+  display: none;
+  visibility: hidden;
+}
 #pause_button {
   display: inline;
   visibility: hidden;

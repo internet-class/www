@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+rm -f large.mp4 small.mp4 large.webm small.webm
+rm -f ffmpeg*
+ffmpeg -f concat -i concat -c:v libx264 -preset faster -b:v 500k -movflags +faststart -deinterlace -s hd720 -pass 1 -c:a aac -ac 1 -b:a 64k -f mp4 -y /dev/null
+ffmpeg -f concat -i concat -c:v libx264 -preset faster -b:v 500k -movflags +faststart -deinterlace -s hd720 -pass 2 -c:a aac -ac 1 -b:a 64k -y large.mp4
+rm -f ffmpeg*
+ffmpeg -f concat -i concat -c:v libx264 -preset faster -b:v 100k -movflags +faststart -deinterlace -s 640x360 -pass 1 -c:a aac -ac 1 -b:a 32k -f mp4 -y /dev/null
+ffmpeg -f concat -i concat -c:v libx264 -preset faster -b:v 100k -movflags +faststart -deinterlace -s 640x360 -pass 2 -c:a aac -ac 1 -b:a 32k -y small.mp4
+rm -f ffmpeg*
+ffmpeg -f concat -i concat -c:v libvpx -minrate 250k -maxrate 250k -b:v 250k -deinterlace -s hd720 -c:a libvorbis -b:a 64k -ac 1 -y large.webm
+ffmpeg -f concat -i concat -c:v libvpx -minrate 50k -maxrate 50k -b:v 50k -deinterlace -s 640x360 -c:a libvorbis -b:a 32k -ac 1 -y small.webm
+
+# vim: tw=0

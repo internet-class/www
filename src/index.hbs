@@ -15,7 +15,16 @@ extra_css:
       <img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
     </a>
 		<ul class="right">
-			<li><a href="#">Login</a></li>
+      <li id="unmute_button" class="video-controls">
+        <a id="unmute" class="btn-floating waves-effect waves-light btn">
+          <i class="material-icons">volume_up</i>
+        </a>
+      </li>
+      <li id="mute_button" class="video-controls hidden">
+        <a id="mute" class="btn-floating waves-effect waves-light btn">
+          <i class="material-icons">volume_off</i>
+        </a>
+      </li>
       <li id="pause_button" class="video-controls hidden">
         <a id="pause" class="btn-floating waves-effect waves-light btn">
           <i class="material-icons">pause_circle_outline</i>
@@ -44,7 +53,7 @@ extra_css:
       </div>
     </div>
   </div>
-  <video playsinline muted autoplay poster="/img/background/1.png" id="background">
+  <video playsinline muted loop autoplay poster="/img/background/1.png" id="background">
     <source src="/img/background/large.webm" type="video/webm" media="screen and (min-width:800px)">
     <source src="/img/background/large.mp4" type="video/mp4" media="screen and (min-width:800px)">
     <source src="/img/background/small.webm" type="video/webm" media="screen and (max-width:799px)">
