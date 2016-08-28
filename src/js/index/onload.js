@@ -4,6 +4,10 @@ $(function () {
       width: $(window).width(),
       height: $(window).height() - $("nav").height()
     });
+    $("#container").css({
+      width: $(window).width(),
+      height: $(window).height()
+    });
     var boxWidth = $("#hero .container").width();
     $("#title .font-scale").each(function () {
       var textSize = parseInt($(this).data('font')) * (boxWidth / 1024);
