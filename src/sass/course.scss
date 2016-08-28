@@ -26,3 +26,7 @@ main {
 .side-nav.fixed li a {
 	font-size: 1.4em;
 }
+#index-banner {
+	color: color("grey", "lighten-4");
+	background-color: color("blue", "darken-1");
+}

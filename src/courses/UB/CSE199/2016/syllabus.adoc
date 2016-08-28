@@ -7,6 +7,7 @@ description: >
   Syllabus for CSE 199 at the University at Buffalo in Fall 2016.
 priority: 0.8
 changefreq: monthly
+layout: course/syllabus.hbt
 ---
 :sectnums:
 :linkattrs:

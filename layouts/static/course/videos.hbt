@@ -1,0 +1,7 @@
+{{> header css="/css/course.css" }}
+{{> course/sidenav }}
+
+<main>
+</main>
+
+{{> footer }}

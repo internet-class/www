@@ -1,4 +1,4 @@
 ---
 title: "CSE 199 Spring 2016"
-layout: course/index.hbt
+layout: course/videos.hbt
 ---

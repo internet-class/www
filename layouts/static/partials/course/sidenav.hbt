@@ -1,0 +1,12 @@
+<header>
+	<ul id="nav-mobile" class="side-nav fixed">
+		<li class="logo">
+			<a id="logo-container" href="/" class="brand-logo">
+				<img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
+			</a>
+			<li class="center-align"><a id="index" href="/{{ course.path }}">{{ title }}</a></li>
+			<li class="bold"><a href="/{{ course.path }}/syllabus/" class="waves-effect waves-blue">Syllabus</a></li>
+			<li class="bold"><a href="/{{ course.path }}" class="waves-effect waves-blue">Learn</a></li>
+		</li>
+	</ul>
+</header>
