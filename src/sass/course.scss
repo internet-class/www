@@ -17,6 +17,11 @@
 main {
 	padding-left: 300px;
 }
+@media #{$medium-and-down} {
+	main {
+		padding-left: 0;
+	}
+}
 #index {
 	font-size: 1em;
 	font-weight: 300;
