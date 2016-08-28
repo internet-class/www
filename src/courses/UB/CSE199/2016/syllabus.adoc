@@ -1,10 +1,10 @@
 ---
-title: "CSE 199 Spring 2016"
+title: "CSE 199 Fall 2016"
 spelling_exceptions:
   - Geoff
   - GWA
 description: >
-  Syllabus for CSE 199 at the University at Buffalo in Fall 2016.
+  Syllabus for CSE 199: How the Internet Works
 priority: 0.8
 changefreq: monthly
 layout: course/syllabus.hbt
@@ -14,4 +14,44 @@ flowtext: true
 
 == Overview
 
-Let's test a paragraph of text.
+The internet is changing every aspect of our lives, including how we
+communicate, learn, navigate, organize, work, play, and love.
+//
+The internet also represents a crowning achievement of computing: a single
+system uniting hardware and software, theory and implementation, standards
+and innovation, engineering and science, protests that topple governments and
+stupid cat videos.
+//
+This course provides an overview of how the internet works by describing
+everything required to answer a single search query.
+//
+Along with its technologies, we will delve into the internet’s past and
+future, policy challenges, and societal implications.
+//
+The course is targeted at a general audience, but because the internet
+reflects contributions from many areas of computer science and computer
+engineering, it also provides a good overview for potential majors.
+//
+Familiarity with the web and access to a personal computer are assumed, but
+no technical background is required.
+
+// vim: ts=2:et:ft=asciidoc
+
+== Information
+
+=== Course Staff
+
+==== Instructors
+
+link:https://blue.cse.buffalo.edu[Geoffrey Challen] is providing most of the
+content for the class in the form of short videos.
+//
+But you will notice contributions from others--including other course staff,
+other UB CSE faculty members, and hopefully eventually alumni and external
+experts footnote:[You will also have a chance to contribute your own videos
+as a course assignment.]
+
+++++
+<a class="btn tooltipped" data-position="bottom" data-delay="50"
+data-tooltip="I am tooltip">Hover me!</a>
+++++
