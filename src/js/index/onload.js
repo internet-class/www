@@ -58,6 +58,25 @@ $(function () {
   $("#play, #pause").click(playPause);
   $("#mute, #unmute").click(muteUnmute);
 
+  var chooseVideo = function() {
+    var video = $("video#background");
+    var webm = document.createElement('source');
+    webm.type = 'video/webm';
+    var mp4 = document.createElement('mp4');
+    mp4.type = 'video/mp4';
+    if ($(window).width() > 800) {
+      webm.src = '/img/background/large.webm';
+      mp4.src = '/img/background/large.mp4';
+    } else {
+      webm.src = '/img/background/small.webm';
+      mp4.src = '/img/background/small.mp4';
+    }
+    video.append(webm);
+    video.append(mp4);
+    video.load();
+  };
+  chooseVideo();
+
   window.setTimeout(function () {
     var video = $("video#background").get(0);
     setPaused(video.paused);
