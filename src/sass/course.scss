@@ -1,0 +1,28 @@
+@import 'materialize';
+
+#logo {
+	width: 268px;
+}
+#logo-container {
+	height: 112px;
+	padding: 0 16px;
+	background: transparent;
+}
+@media #{$large-and-up} {
+	.container {
+		width: 85%;
+	}
+}
+main {
+	padding-left: 300px;
+}
+#index {
+	font-size: 1em;
+	font-weight: 300;
+}
+.side-nav.fixed a {
+	padding: 0 30px;
+}
+.side-nav.fixed li a {
+	font-size: 1.4em;
+}
