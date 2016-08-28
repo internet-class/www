@@ -1,6 +1,0 @@
----
-files:
-- materialize/css/materialize.css
-- css/site/override.css
-output: css/site.css
----
