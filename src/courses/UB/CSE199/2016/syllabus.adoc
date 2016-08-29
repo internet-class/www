@@ -9,6 +9,7 @@ priority: 0.8
 changefreq: monthly
 layout: course/syllabus.hbt
 flowtext: true
+doSections: true
 ---
 :linkattrs:
 
@@ -49,9 +50,46 @@ content for the class in the form of short videos.
 But you will notice contributions from others--including other course staff,
 other UB CSE faculty members, and hopefully eventually alumni and external
 experts footnote:[You will also have a chance to contribute your own videos
-as a course assignment.]
+as a course assignment.].
 
-++++
-<a class="btn tooltipped" data-position="bottom" data-delay="50"
-data-tooltip="I am tooltip">Hover me!</a>
-++++
+The four fantastic faculty leading activity sections are:
+
+. link:http://www.cse.buffalo.edu/~hartloff/index.html[*Jesse
+Hartloff*]&mdash;CSE 199A, MW 4PM, Hochstetter 114
+//
+. http://www.cse.buffalo.edu/people/?u=mhertz[*Matthew Hertz*]&mdash;CSE 199B, MW
+4PM, Knox 110
+//
+. http://www.cse.buffalo.edu/people/?u=jwinikus[*Jennifer Winikus*]&mdash;CSE
+199C, MW 4PM, NSC 210
+//
+. http://www.cse.buffalo.edu/people/?u=ahughes6[*Andrew Hughes*]&mdash;CSE 199D,
+MW 9AM, Alumni 97
+
+==== Teaching Assistants
+
+We have a great group of undergraduate and graduate teaching assistants to
+help you learn about the internet.
+//
+https://blue.cse.buffalo.edu/people/gjbunyea/[Greg Bunyea] is serving as the
+head undergraduate teaching assistant.
+//
+https://blue.cse.buffalo.edu/people/carlnues[Carl Nuessle] is serving as the
+head (and only) graduate teaching assistant.
+//
+The other teaching assistants by activity section are:
+
+. 199A: Junjie Chen, Richard Hanulewicz, Valencia Kaplinsky, Rachel Roberts,
+Kyle Schoener, and Grant Wrazen
+//
+. 199B: David Dobmeier, Harshita Girase, Patrick Jones, Angus Lam, Lakshmi
+Ethiraj, Brijesh Rakholia, and Evan Walley
+//
+. 199C: Liam Gensel, Heeba Kariappe, Lawreen Latif, Ian Ngumi, Parth Shah, Dan Starner
+//
+. 199D: Aishani Bhalla, Isabelle Caneda, Michael Drewitt, Mohit Bhatia,
+Wesley Csendom, Greg Bunyea, Geoffrey Challen
+
+== Section-Specific Information
+
+=== 199A

@@ -2,5 +2,6 @@
 files:
 - js/site/jquery-2.1.1.js
 - js/site/materialize.js
+- js/site/onload.js
 output: js/site.js
 ---

@@ -1,4 +1,4 @@
-<header>
+<header class="no-flow-text">
 	<ul id="nav-mobile" class="side-nav fixed">
 		<li class="logo">
 			<a id="logo-container" href="/" class="brand-logo">

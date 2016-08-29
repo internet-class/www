@@ -1,4 +1,3 @@
-@import 'materialize';
 @import 'common';
 
 #logo {
@@ -35,4 +34,10 @@ main {
 #index-banner {
 	color: color("grey", "lighten-4");
 	background-color: color("blue", "darken-1");
+	.row {
+		margin-bottom:0px;
+	}
+}
+.table-of-contents a.active {
+	border-left: 2px solid color("blue", "darken-1");
 }

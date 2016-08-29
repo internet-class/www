@@ -1,8 +1,107 @@
+@import 'materialize';
+
 .visible-print {
   display: none !important;
 }
 @media print {
   .hidden-print {
     display: none !important;
+  }
+}
+.badge.footnote {
+	border-radius:10px;
+  font-size: 0.6em;
+  background-color: color("blue", "base");
+  color: white;
+  vertical-align: middle;
+  padding: 2px 6px;
+  line-height: inherit;
+}
+.material-tooltip {
+	color: color("blue", "darken-4");
+	.backdrop {
+		border-radius: 0 !important;
+		background-color: color("blue-grey", "lighten-5");
+		opacity: 0.9 !important;
+	}
+	max-width: 20%;
+}
+
+.table-of-contents li a.active {
+	font-weight: bold;
+}
+
+.pin-top {
+	position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+	position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+	position: fixed !important;
+}
+
+h1.flow-text{
+  font-weight: 400;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: $h1-fontsize * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 4.2rem;
+  }
+}
+h2.flow-text{
+  font-weight: 400;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: $h2-fontsize * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 4.2rem;
+  }
+}
+h3.flow-text{
+  font-weight: 400;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: $h3-fontsize * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 4.2rem;
+  }
+}
+h4.flow-text{
+  font-weight: 400;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: $h4-fontsize * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 4.2rem;
   }
 }
