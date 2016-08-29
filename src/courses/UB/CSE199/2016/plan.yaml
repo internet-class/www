@@ -1,2 +1,3 @@
 picker:
-  path: "challen@buffalo.edu/**/"
+  path:
+    - "lessons/challen@buffalo.edu/01_era/**/lesson.adoc"
