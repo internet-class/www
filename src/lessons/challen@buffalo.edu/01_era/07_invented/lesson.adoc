@@ -2,4 +2,16 @@
 title: "Who owns the internet? Who invented it?"
 ---
 
-Test text.
+So who invented the internet?
+//
+Was it really Al Gore?
+//
+And who owns or controls it?
+//
+As it turns out, the answer is complicated.
+//
+The internet emerged as a result of many different technologies and is
+administered in a largely-distributed manner.
+//
+As they say, success has many mothers, and the internet is certainly a
+success.

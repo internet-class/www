@@ -2,9 +2,11 @@ $(function () {
 	$('.scrollspy').scrollSpy({
     scrollOffset: '200'
   });
-  $('.toc-wrapper').pushpin({
-    top: $('.toc-wrapper').offset().top
-  });
+  if ($('.toc-wrapper').length > 0) {
+    $('.toc-wrapper').pushpin({
+      top: $('.toc-wrapper').offset().top
+    });
+  }
   
   var footnotesActive = {};
   var activateFootnote = function (elem) {
