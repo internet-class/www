@@ -15,7 +15,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col s12 m9 l10">
+    <div id="main-content" class="col s12 m9 l10">
       {{{ contents }}}
     </div>
     <div class="no-flow-text col hide-on-small-only m3 l2">

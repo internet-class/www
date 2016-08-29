@@ -36,13 +36,112 @@ engineering, it also provides a good overview for potential majors.
 Familiarity with the web and access to a personal computer are assumed, but
 no technical background is required.
 
-// vim: ts=2:et:ft=asciidoc
+
+== Approach
+
+CSE 199 is being taught a bit differently than some other courses that you
+might take at college.
+//
+Rather than a series of lectures with homework outside of class, we're going
+to assign lectures (in the form of short videos) _outside_ of class and have
+you do interesting activities _inside_ class.
+//
+This is sometimes know as the
+https://en.wikipedia.org/wiki/Flipped_classroom[flipped classroom] model.
+//
+So rather than referring to our large meetings as lectures, we're calling
+them _activity sections_.
+//
+You'll have two one-hour activity sections per week plus one one-hour
+recitation in a smaller group of around 25 to 30 students.
+
+Because how we are teaching you is a bit different, your responsibilities as
+as student are a bit different.
+//
+Here's how a typical week would work from your perspective:
+
+. *Before class on Monday and Wednesday*: watch the assigned videos online.
+//
+Monday's activity will depend on knowledge obtained from these videos.
+//
+We are recording around 60 to 90 minutes of video content per week in the
+form of 12 to 18 5 minute videos.
+//
+So you should expected to watch around 30 to 45 minutes of video content
+before each activity section.
+//
+We consider that to be reasonable, and we will try to keep the videos a lot
+more interesting than your average textbook.
+//
+However, we would advise budgeting at least 60 to 90 minutes before each
+class to complete the video assignments--in case you need to watch one more
+than once or return to videos to review.
+//
+. *In class on Monday and Wednesday*: complete an interesting activity in
+small groups of around four students.
+//
+Each activity section has around 6 undergraduate teaching assistants and an
+instructor that will be on hand to help out during class.
+//
+. *In recitation on Thursday or Friday*: discuss the week's material in a
+smaller group.
+//
+Recitations are a great chance to ask questions about the video content and
+engage in discussions surrounding the material.
+
+Note that <<grades,your grade>> in this course is largely driven by
+participation--watching the videos online and coming to class and completing
+the in-class activities.
+//
+We have a few bits of homework for you to complete outside of class, but
+we've mostly moved the homework _inside_ of the classroom.
+//
+That's one of the advantages of the flipped classroom model.
+
+[[calendar]]
+== Calendar
+
+We suggest that you add our http://goo.gl/5D6g2E[global CSE 199 calendar] to
+your calendaring program.
+//
+If you are not using a calendaring program, we suggest that you begin using a
+calendaring program.
+
+Note that the calendar below only has things applicable to all CSE 199
+students.
+//
+These include weekly activities, staff office hours, open shooting sessions,
+movie nights, and <<dates,important dates>>.
+//
+This calendar does _not_ include activity section meeting or recitation
+meeting times and locations.
+
+++++
+<div class="video-container">
+<iframe
+src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=buffalo.edu_f47q0orjhk0a5vjrngcjs0jrt8%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"
+style="border-width:0" width="800" height="600" frameborder="0"
+scrolling="no"></iframe>
+</div>
+++++
+
+[[dates]]
+=== Other Important Dates
+
+Also on the <<calendar,calendar>>.
+//
+The registrar's office has their own semi-useful calendar
+link:++http://calendar.registrar.buffalo.edu/calendar/?ai1ec=action~month++[here].
+
+* *Last day to drop or add courses*: Tuesday 9/6/2016
+* *Midterm grade deadline*: Friday 10/4/2016
+* *Last day to resign: Friday 11/11/2016
+* *Last day of class*: Friday 12/9/2016
+* *Final grade deadline*: Monday 12/26/2016
 
 == Information
 
 === Course Staff
-
-==== Instructors
 
 link:https://blue.cse.buffalo.edu[Geoffrey Challen] is providing most of the
 content for the class in the form of short videos.
@@ -51,22 +150,12 @@ But you will notice contributions from others--including other course staff,
 other UB CSE faculty members, and hopefully eventually alumni and external
 experts footnote:[You will also have a chance to contribute your own videos
 as a course assignment.].
-
-The four fantastic faculty leading activity sections are:
-
-. link:http://www.cse.buffalo.edu/~hartloff/index.html[*Jesse
-Hartloff*]&mdash;CSE 199A, MW 4PM, Hochstetter 114
 //
-. http://www.cse.buffalo.edu/people/?u=mhertz[*Matthew Hertz*]&mdash;CSE 199B, MW
-4PM, Knox 110
-//
-. http://www.cse.buffalo.edu/people/?u=jwinikus[*Jennifer Winikus*]&mdash;CSE
-199C, MW 4PM, NSC 210
-//
-. http://www.cse.buffalo.edu/people/?u=ahughes6[*Andrew Hughes*]&mdash;CSE 199D,
-MW 9AM, Alumni 97
-
-==== Teaching Assistants
+The four fantastic faculty leading activity sections are
+http://www.cse.buffalo.edu/~hartloff/index.html[Jesse Hartloff],
+http://www.cse.buffalo.edu/people/?u=mhertz[Matthew Hertz],
+http://www.cse.buffalo.edu/people/?u=ahughes6[Andrew Hughes], and
+http://www.cse.buffalo.edu/people/?u=jwinikus[Jennifer Winikus].
 
 We have a great group of undergraduate and graduate teaching assistants to
 help you learn about the internet.
@@ -77,19 +166,91 @@ head undergraduate teaching assistant.
 https://blue.cse.buffalo.edu/people/carlnues[Carl Nuessle] is serving as the
 head (and only) graduate teaching assistant.
 //
-The other teaching assistants by activity section are:
+The 24 other teaching assistants are Aishani Bhalla, Mohit Bhatia, Isabelle
+Caneda, Wesley Csendom, Junjie Chen, Michael Drewitt, David Dobmeier, Lakshmi
+Ethiraj, Richard Hanulewicz, Liam Gensel, Harshita Girase, Patrick Jones,
+Heeba Kariappe, Valencia Kaplinsky, Lawreen Latif, Angus Lam, Ian Ngumi,
+Brijesh Rakholia, Rachel Roberts, Parth Shah, Kyle Schoener, Dan Starner,
+Evan Walley, and Grant Wrazen.
+//
+Phew!
+//
+That's quite a group.
+//
+Instructors and teaching assistants are broken down by activity section
+<<sections,below>>.
 
-. 199A: Junjie Chen, Richard Hanulewicz, Valencia Kaplinsky, Rachel Roberts,
-Kyle Schoener, and Grant Wrazen
-//
-. 199B: David Dobmeier, Harshita Girase, Patrick Jones, Angus Lam, Lakshmi
-Ethiraj, Brijesh Rakholia, and Evan Walley
-//
-. 199C: Liam Gensel, Heeba Kariappe, Lawreen Latif, Ian Ngumi, Parth Shah, Dan Starner
-//
-. 199D: Aishani Bhalla, Isabelle Caneda, Michael Drewitt, Mohit Bhatia,
-Wesley Csendom, Greg Bunyea, Geoffrey Challen
+=== Times and Locations
 
-== Section-Specific Information
+Times and locations for <<sections,activity sections>> and
+<<recitations,recitations>> are listed below.
+//
+You can also find this information on the HUB.
+
+In addition to activity sections and recitations we are planning a number of
+other optional--but fun--activities.
+//
+First, we have several movie nights planned for the semester where we will
+watch some great internet-related films footnote:[Clearly Werner Herzog timed
+the release of http://www.loandbeholdfilm.com/[Lo and Behold] to coincide
+with our class...].
+//
+Second, we will hold open shooting sessions each week on Wednesday starting
+at 10AM.
+//
+We're still shooting footage for the later weeks in the class, so if you'd
+like to be part of the studio audience you are more than welcome--although I
+can't spring for any fancy prizes.
+//
+Details about both of these events will be on the <<calendar,course
+calendar>>.
+//
+The course calendar will also list office hours for all CSE 199 instructors.
+
+=== Exams
+
+We will not give any exams.
+
+=== Prerequisites
+
+There are no prerequisites.
+
+== Schedule
+
+The course is broken into weekly topic units as described below.
+//
+Note that topics covered in each week will be discussed at a very high level
+and not in anywhere close to as much detail as would be included by more
+advanced courses for CSE majors footnote:[Like
+http://www.cse.buffalo.edu/faculty/dimitrio/courses/cse4589_s14/[CSE 489],
+taught at least sometimes by the all-knowning--yet
+shy&mdash;http://www.cse.buffalo.edu/faculty/dimitrio/[Dimitrios
+Koutsonikolas].].
+//
+Using the
+https://en.wikipedia.org/wiki/Transmission_Control_Protocol[transmission
+control protocol (TCP)] as an example:
+
+* A _detailed technical description_ of
+TCP in an advanced CSE course would include description of the various parts
+of the TCP header; the handshakes that establish and terminate connections;
+acknowledgements, selective acknowledgements, and retransmissions; maximum
+segment sizes and IP fragmentation; and dynamics of flow control including
+congestion window sizing.
+//
+* In contrast, in CSE 199 we will explain that the protocol is used to create
+a connection between two internet hosts by establishing reliable ordered
+delivery of data packets not provided by the internet protocol (IP) alone,
+while also explaining that TCP helps share network resources between active
+hosts.
+
+Thus higher-level internet design goals and concepts can be discussed without
+going into any of the technical details described above footnote:[Which are
+also, let's face it, somewhat dull.].
+
+[[sections]]
+== Sections
 
 === 199A
+
+// vim: ts=2:et:ft=asciidoc
