@@ -7,12 +7,20 @@ priority: 1.0
 {{> header css="/css/index.css" override_js="/js/index.js"}}
 
 <div id="content">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/courses/fys/syllabus/">UB CSE 199</a></li>
+  </ul>
   <nav>
     <div class="nav-wrapper container">
       <a href="/" class="brand-logo">
         <img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
       </a>
       <ul class="right">
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="dropdown1">
+            Courses<i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
         <li id="unmute_button" class="video-controls">
           <a id="unmute" class="btn-floating waves-effect waves-light btn">
             <i class="material-icons">volume_up</i>
