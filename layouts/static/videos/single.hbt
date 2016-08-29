@@ -5,6 +5,20 @@
   <main>
   <div class="section hide-on-large-only" id="menu-banner"></div>
   <div class="row">
+    <div id="video" class="col s12 l8">
+      <div class="video-container">
+        <iframe src="//www.youtube.com/embed/{{ firstVideo.youtube }}?border=0&autoplay=1" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">
+            <h3 class="flow-text">{{{ title }}}</h3>
+          </span>
+          <span class="small flow-text">{{{ contents }}}</span>
+        </div>
+      </div>
+    </div>
   </div>
   </main>
 </div>

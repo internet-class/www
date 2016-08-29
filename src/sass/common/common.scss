@@ -95,7 +95,7 @@ td.tableblock {
 	position: fixed !important;
 }
 
-.small .flow-text{
+.small .flow-text, .small.flow-text {
   font-weight: 300;
   $i: 0;
   @while $i <= $intervals {
