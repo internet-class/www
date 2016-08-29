@@ -48,7 +48,6 @@ main {
 	background-color: color("blue", "darken-1");
 }
 .video-title {
-	padding: 10px !important;
 	line-height: 1.2 !important;
   background-color: rgba(255,255,255,0.5) !important;
 	color: color("grey", "darken-4") !important;
@@ -59,4 +58,8 @@ a.video-card {
 }
 #video {
 	padding: 20px;
+	span.card-title {
+		margin-bottom: 10px;
+	}
 }
+
