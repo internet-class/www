@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="video-title card-title flow-text h4">{{{ title }}}</div>
-    <span class="small flow-text">{{{ contents }}}</span>
+    <div class="small flow-text">{{{ contents }}}</div>
   </div>
 </div>
 

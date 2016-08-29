@@ -21,13 +21,19 @@ $(function () {
 
 });
 
+var setChoice = function(choice) {
+  $('.video-choice').each(function() {
+    if ($(this).data('youtube') == choice) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
+}
+
 var player;
 function onYouTubeIframeAPIReady() {
-  var videos = $('.video-choice').map(function () {
-    return $(this).data('youtube');
-  });
   player = new YT.Player('player', {
-    videoId: _.sample(videos),
     height: '390',
     width: '640',
     events: {
@@ -37,7 +43,21 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
+  var videos = $('.video-choice').map(function () {
+    return $(this).data('youtube');
+  });
+  var choice = _.sample(videos);
+  player.loadVideoById(choice, 7, 'large');
+  setChoice(choice);
   event.target.playVideo();
+  event.target.seekTo(7);
 }
+
+$('a.video-choice').click(function() {
+  if (player) {
+    player.loadVideoById($(this).data('youtube'), 7, 'large');
+    setChoice($(this).data('youtube'));
+  }
+});
 
 // vim: ts=2:sw=2:et

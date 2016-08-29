@@ -9,14 +9,11 @@
       {{#each lessons}}
       <div class="col s12 m6 l4">
         <a class="video-card" href="/{{ path }}/">
-        <div class="card small hoverable">
+        <div class="card hoverable">
           <div class="card-image">
             <img src="//i.ytimg.com/vi/{{ firstVideo.youtube }}/maxresdefault.jpg"
             alt="YouTube placeholder">
-            <span class="flow-text card-title video-title">{{{ title }}}</span>
-          </div>
-          <div class="card-content">
-            {{{ contents }}}
+            <span class="small flow-text card-title video-title">{{{ title }}}</span>
           </div>
         </div>
         </a>

@@ -92,6 +92,13 @@ a.video-card {
     right: auto;
   }
 }
+#list {
+  .active {
+    img {
+      border: 4px solid color("blue", "darken-1");
+    }
+  }
+}
 
 /* vim: ts=2:sw=2:et
 */
