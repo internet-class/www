@@ -1,8 +1,9 @@
 ---
 title: "CSE 199 Fall 2016"
 spelling_exceptions:
-  - Geoff
-  - GWA
+  - eportfolio
+  - Hochstetter
+  - 4chan
 description: >
   Syllabus for CSE 199: How the Internet Works
 priority: 0.8
@@ -166,7 +167,7 @@ head (and only) graduate teaching assistant.
 The 24 other teaching assistants are Aishani Bhalla, Mohit Bhatia, Isabelle
 Caneda, Wesley Csendom, Junjie Chen, Michael Drewitt, David Dobmeier, Lakshmi
 Ethiraj, Richard Hanulewicz, Liam Gensel, Harshita Girase, Patrick Jones,
-Heeba Kariappe, Valencia Kaplinsky, Lawreen Latif, Angus Lam, Ian Ngumi,
+Heeba Kariapper, Valencia Kaplinsky, Lawreen Latif, Angus Lam, Ian Ngumi,
 Brijesh Rakholia, Rachel Roberts, Parth Shah, Kyle Schoener, Dan Starner,
 Evan Walley, and Grant Wrazen.
 //
@@ -235,7 +236,7 @@ control protocol (TCP)] as an example:
 * A _detailed technical description_ of
 TCP in an advanced CSE course would include description of the various parts
 of the TCP header; the handshakes that establish and terminate connections;
-acknowledgements, selective acknowledgements, and retransmissions; maximum
+acknowledgments, selective acknowledgments, and retransmissions; maximum
 segment sizes and IP fragmentation; and dynamics of flow control including
 congestion window sizing.
 //
@@ -287,8 +288,8 @@ dynamic web pages, server-side rendering, forms, HTTP GET key-value pairs,
 GET v. POST.
 //
 . *Crawling, Indexing and Ranking the Web*: web crawling and processing, the
-internet archive, data center computing, distributed indexes, mapreduce, data
-center networking, software-defined networking, the pagerank algorithm,
+internet archive, data center computing, distributed indexes, MapReduce, data
+center networking, software-defined networking, the PageRank algorithm,
 improving ranking using context, history, click tracking, website reputation.
 //
 . *Security and Authority*: certificates and certificate authorities, public
@@ -298,7 +299,7 @@ protocol vulnerabilities.
 . *Identity and Privacy*: cookies, server side tracking, IP addresses v.
 identities, anonymity online, online v. human identities.
 //
-. *The Interactive Web*: Javascript, web applications, asynchronous web
+. *The Interactive Web*: JavaScript, web applications, asynchronous web
 requests, modifying the DOM.
 //
 . *The Mobile and Pervasive Web*: internet architecture problems created by
