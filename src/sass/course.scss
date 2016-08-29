@@ -47,7 +47,7 @@ main {
 	height: 56px;
 	background-color: color("blue", "darken-1");
 }
-.video-title {
+.video-title, .choice-title {
 	line-height: 1.2 !important;
   background-color: rgba(255,255,255,0.5) !important;
 	color: color("grey", "darken-4") !important;
@@ -58,8 +58,40 @@ a.video-card {
 }
 #video {
 	padding: 20px;
-	span.card-title {
+	span.card-title.video-title {
 		margin-bottom: 10px;
 	}
 }
+#list {
+	span.card-title.video-title {
+    padding: 10px;
+		font-size: 1rem;
+	}
+}
+@media #{large-and-up} {
+  .video-col {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+}
+@media #{$medium-and-down} {
+  .video-col {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+}
+@media #{$small-and-down} {
+  .video-col {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+}
 
+/* vim: ts=2:sw=2:et
+*/

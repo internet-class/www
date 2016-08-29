@@ -1,10 +1,32 @@
-{{> header css="/css/course.css" }}
+{{> header css="/css/course.css" override_js="/js/videos/multiple.js" }}
 {{> course/sidenav }}
 
 <div id="content">
   <main>
   <div class="section hide-on-large-only" id="menu-banner"></div>
   <div class="row">
+    <div id="video" class="col s12 l8">
+      <div class="video-container">
+        <div id="player"></div>
+      </div>
+      {{> course/videoinfo }}
+    </div>
+    <div id="list" class="col s12 l4">
+      <div class="row">
+        {{#each videos}}
+        <div class="col video-col">
+          <a href="#" class="video-choice video-card" data-youtube="{{ youtube }}">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="//i.ytimg.com/vi/{{ youtube }}/maxresdefault.jpg" alt="YouTube placeholder">
+                <span class="card-title video-title">{{{ authorNames }}}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
   </div>
   </main>
 </div>
