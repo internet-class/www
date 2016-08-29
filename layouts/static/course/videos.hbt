@@ -10,9 +10,9 @@
       <div class="col s12 m6 l4">
         <div class="card small hoverable">
           <div class="card-image">
-            <img src="//i.ytimg.com/vi/{{ firstVideo.youtube }}/mqdefault.jpg"
+            <img src="//i.ytimg.com/vi/{{ firstVideo.youtube }}/maxresdefault.jpg"
             alt="YouTube placeholder">
-            <span class="card-title">{{{ title }}}</span>
+            <span class="flow-text card-title video-title">{{{ title }}}</span>
           </div>
           <div class="card-content">
             {{{ contents }}}

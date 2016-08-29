@@ -47,3 +47,10 @@ main {
 	height: 56px;
 	background-color: color("blue", "darken-1");
 }
+.video-title {
+	padding: 10px !important;
+	line-height: 1.2 !important;
+  background-color: rgba(255,255,255,0.5) !important;
+	color: color("grey", "darken-4") !important;
+	font-weight: 400 !important;
+}
