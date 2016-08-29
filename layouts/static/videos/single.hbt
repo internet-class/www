@@ -1,4 +1,4 @@
-{{> header css="/css/course.css" }}
+{{> header css="/css/course.css" override_js="/js/videos/single.js" }}
 {{> course/sidenav }}
 
 <div id="content">
