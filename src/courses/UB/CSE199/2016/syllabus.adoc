@@ -36,7 +36,7 @@ engineering, it also provides a good overview for potential majors.
 Familiarity with the web and access to a personal computer are assumed, but
 no technical background is required.
 
-
+[[approach]]
 == Approach
 
 CSE 199 is being taught a bit differently than some other courses that you
@@ -135,7 +135,7 @@ link:++http://calendar.registrar.buffalo.edu/calendar/?ai1ec=action~month++[here
 
 * *Last day to drop or add courses*: Tuesday 9/6/2016
 * *Midterm grade deadline*: Friday 10/4/2016
-* *Last day to resign: Friday 11/11/2016
+* *Last day to resign*: Friday 11/11/2016
 * *Last day of class*: Friday 12/9/2016
 * *Final grade deadline*: Monday 12/26/2016
 
@@ -207,6 +207,10 @@ calendar>>.
 //
 The course calendar will also list office hours for all CSE 199 instructors.
 
+=== Textbook
+
+There is no required textbook for this course.
+
 === Exams
 
 We will not give any exams.
@@ -215,7 +219,7 @@ We will not give any exams.
 
 There are no prerequisites.
 
-== Schedule
+== Description
 
 The course is broken into weekly topic units as described below.
 //
@@ -248,9 +252,397 @@ Thus higher-level internet design goals and concepts can be discussed without
 going into any of the technical details described above footnote:[Which are
 also, let's face it, somewhat dull.].
 
+=== Outline
+
+We reserve the right to adjust this schedule as needed.
+//
+That said, here's what we are trying to accomplish on a week-by-week basis:
+
+. *The Internet Era*: what the internet is, why it is worth studying,
+networking terminology, difference between the internet and the World Wide
+Web, internet ownership, internet standardization, finding out more about the
+internet, "Eternal September".
+//
+. *Connectivity*: cables, connected at work and at home, the last mile
+problem, the core internet, packets, circuit v. packet switching.
+//
+. *Protocols*: what is a protocol, clients and servers, the internet protocol
+(IP), IP addresses, the end-to-end principle, protocol stacks, encapsulation,
+other internet protocols, peer-to-peer systems.
+//
+. *Routing*: routers and end hosts, autonomous systems, the border gateway
+protocol, meet-me rooms, IP address structure, 512K day, traceroute, routing
+stability, public v. private addresses, onion routing.
+//
+. *Transport*: the TCP protocol, TCP connections, ports, well-known port
+numbers, NAT, problems with TCP, QUIC, TCP influence on overall network
+design, buffer bloat, the UDP protocol and unreliable connections, multipath
+TCP.
+//
+. *Naming*:  the domain name service (DNS) and DNS protocol, machine- and
+human-readable names, name translation, top-level domains, IPv4 and routing,
+name assignment, IPv4 address exhaustion, IPv6 and adoption problems.
+//
+. *Web Queries, Documents and Markup*: the HTTP protocol, HTML and CSS,
+separation of content and presentation, links, the DOM data structure,
+previous attempts like Gopher, the internet before the WWW, static and
+dynamic web pages, server-side rendering, forms, HTTP GET key-value pairs,
+GET v. POST.
+//
+. *Crawling, Indexing and Ranking the Web*: web crawling and processing, the
+internet archive, data center computing, distributed indexes, mapreduce, data
+center networking, software-defined networking, the pagerank algorithm,
+improving ranking using context, history, click tracking, website reputation.
+//
+. *Security and Authority*: certificates and certificate authorities, public
+key encryption, symmetric key encryption, trusted hardware modules, security
+protocol vulnerabilities.
+//
+. *Identity and Privacy*: cookies, server side tracking, IP addresses v.
+identities, anonymity online, online v. human identities.
+//
+. *The Interactive Web*: Javascript, web applications, asynchronous web
+requests, modifying the DOM.
+//
+. *The Mobile and Pervasive Web*: internet architecture problems created by
+mobility, limitations of mobile devices, mobile web performance problems and
+solutions, MPTCP and multihoming, the IoT, pervasive computing, energy and
+physical constraints on tiny devices, IPv6 and network growth, the physical
+web.
+//
+. *Your Brain on the Internet*: attention, concentration, distraction, deadly
+accidents, search v. knowledge, controlling our internet usage.
+//
+. *Internet Content and Economics*: early proposals for early payments via
+link counting, Bitcoin as an online currency, DRM and other efforts to
+prevent digital copying, ongoing efforts to find and block online content.
+//
+. *Lost and Future Visions of the Internet*: Berners-Lee’s original vision
+for collaborative content and arguments with Netscape, early internet
+communities like the WELL, modern internet communities like 4chan and the
+drug site, Lessig’s vision of an internet commons, Proposals for future
+improvements to the internet architecture, and will they ever be realized?
+
+=== Objectives
+
+The table below describes how this course meets the learning objectives of
+the University at Buffalo
+https://www.buffalo.edu/ubcurriculum/seminar.html[UB Seminar program]:
+
+[cols=3,options='header',role='small']
+|===
+
+| Outcome
+| Activities
+| Assessment
+
+| Think critically using multiple modes of inquiry
+//
+| Online quizzes, group projects, video assignment, final assignment
+//
+| All assignments
+
+| Analyze disciplinary content
+//
+| Online quizzes, group projects, video assignment, final assignment
+//
+| All assignments
+
+| Understand and apply methods of close reading, note-taking, analysis, and
+synthesis
+//
+| Online quizzes, group projects, video assignment, final paper
+//
+| All assignments, but particularly the video assignments
+
+| Recognize and debate ethical issues and academic integrity footnote:[FWIW,
+there is no "debate" about academic integrity...]
+//
+| Group projects
+//
+| Multiple weekly projects will touch on ethical issues; academic integrity
+will be discussed as a downside of web search.
+
+| Demonstrate proficiency in oral discourse and written communication
+//
+| Video assignments
+//
+| Preparation of video assignments
+
+| Develop essential research and study skills such as time management
+//
+| Online quizzes and module scheduling
+// 
+| Online quizzes ensure students are proceeding at the appropriate pace.
+
+| Utilize eportfolio footnote:[Why?]
+//
+| Video assignments
+//
+| Video lessons will be deposited in eportfolio as well as on YouTube.
+
+| Understand the academic expectations pertaining to studentship at the
+University at Buffalo and to higher learning at a research university
+//
+| Group assignments
+//
+| Inherent to the structure of the course, preparation for class and for
+group assignments.
+
+| Develop a broader perspective for help in making life choices in their
+college careers and beyond
+//
+| Group assignments, final paper
+//
+| Multiple weekly assignments will touch on societal and ethical issues and
+discuss how the internet is changing the broader world.
+
+|===
+
+== Grading
+
+Grading is largely driven by participation:
+
+* *30% video participation*: watching the online videos.
+//
+* *30% activity participation*: coming to class and completing activities
+with your group.
+//
+* *30% video contributions*: recording and uploading three short videos (10%
+each) with a group drawn from your activity section.
+//
+* *10% internet participation*: generating or curating online content.
+
+We discuss each of the grading components in more detail below.
+
+=== Video Participation
+
+Watching the videos _before_ coming to class is critical for <<approach,our
+approach>> to work.
+//
+We will monitor and quantify your progress through the video series in a
+variety of ways.
+
+=== Activity Participation
+
+Equally important to success in this course is coming to class and
+participating in the activities.
+//
+We will assign you to a new random group for each activity section, and one
+group member will be responsible for submitting the group's work and
+recording what group members were present.
+//
+Missing one or two classes during the semester is fine--that happens to
+anyone.
+//
+Missing class repeatedly will make it hard to pass this class.
+
+=== Video Contributions
+
+One of the best ways to learn new material is to explain it to others.
+//
+We're providing you a way to do that--but to hundreds or thousands of
+students in coming years.
+//
+During the semester you will need to record three short videos for inclusion
+in the link:/[`internet-class.org`] video library.
+//
+Some will be alternative explanations for existing concepts, but in other
+cases we will ask you to describe and explain a topic that is related to
+the material but not currently covered.
+//
+More details on these assignments will follow shortly.
+
+=== Internet Participation
+
+As a final assignment we will ask you to participate in the internet.
+//
+That can take a variety of forms: creating a personal website or blog,
+maintaining a https://www.wikipedia.org/[Wikipedia] page, contributing to a
+open source software project perhaps on https://www.github.com[GitHub], etc.
+//
+We are open to many different ideas here, but just to note: normal social
+networking activities _will not_ earn you credit for this activity.
+//
+You'll discuss this assignment in more detail with your activity section
+leader and course staff later in the semester.
+
+=== Grade Mapping
+
+Your score in the course will be converted to a letter grade as follows:
+
+[cols=3,options='header']
+|===
+
+| Letter Grade
+| Max
+| Min
+
+| A
+| 100
+| 94
+
+| A-
+| 93
+| 90
+
+| B+
+| 89
+| 87
+
+| B
+| 86
+| 84
+
+| B-
+| 83
+| 80
+
+| C+
+| 79
+| 77
+
+| C
+| 76
+| 74
+
+| C-
+| 73
+| 70
+
+| D
+| 69
+| 60
+
+| F
+| 59
+| 0
+
+|===
+
+=== Incomplete Grades
+
+Please refer to the
+http://undergrad-catalog.buffalo.edu/policies/grading/explanation.shtml#incomplete[undergraduate]
+incomplete policy. Of particular importance is this language:
+
+[quote]
+Students may only be given an *I* grade if they have a passing average in
+coursework that has been completed and have well-defined parameters to
+complete the course requirements that could result in a grade better than the
+default grade. _An *I* grade may not be assigned to a student who
+  did not attend the course._
+
+=== Academic Integrity
+
+Please review the http://www.cse.buffalo.edu/shared/policies/academic.php[CSE
+Department academic integrity policy] and the UB
+http://undergrad-catalog.buffalo.edu/policies/course/integrity.shtml[undergraduate]
+academic integrity policy to familiarize yourself with the relevant academic
+integrity policies and procedures.
+//
+*Students that submit plagiarized work will receive a grade of F for the
+course.*
+
+=== Disabilities
+
+Please register and coordinate with the Office of Disability Services. Let
+the course staff know when accommodations need to be made. We are committed
+to helping you learn.
+
+=== Online Resources
+
+This website is the source for all information about the class: the syllabus
+(which you are reading) and the video series.
+
+=== Mailing List
+
+All enrolled students will be added to a mailing list which we will use for
+course communication.
+//
+*You are responsible for email messages sent to this list, and to your
+`@buffalo.edu` email address.*
+//
+If you are not enrolled and would like to be added to the list, you can sign
+up https://www.internet-class.org/mailman/listinfo/199[here].
+
+== Getting Help
+
+Here's how to--and how not to--get help.
+
+=== Great Ways to Get Help
+
+* *Use the the forum.*
+//
+We will set up an online forum for you to discuss the videos and activities.
+//
+This is a great resource because it allows you to get help from anyone at any
+time--not just during class or recitation.
+//
+Please use and contribute to this valuable shared resource.
+
+* *Come to office hours.* We don't hold them for our health and
+instructors get bored when there isn't anyone to help!
+//
+So please don't hesitate to come by, even just to say hi.
+
+=== Bad Ways to Get Help
+
+* *Emailing any staff member using their `@buffalo.edu` email address.*
+//
+I instruct the staff to ignore these emails.
+//
+Use the forum or talk to them during class.
+
+
 [[sections]]
 == Sections
 
+Information specific to each activity section follows.
+//
+https://blue.cse.buffalo.edu/people/gwa/[Geoffrey Challen] may drop in on any
+of these sections at any time.
+//
+And of course https://blue.cse.buffalo.edu/people/carlnues/[Carl Nuessle] has
+been known to show up anywhere at any time as well--so be ready.
+
 === 199A
+
+. *Instructor*: http://www.cse.buffalo.edu/~hartloff/index.html[Jesse
+Hartloff]
+//
+. *Teaching Assistants*: Junjie Chen, Richard Hanulewicz, Valencia Kaplinsky,
+Rachel Roberts, Kyle Schoener, and Grant Wrazen
+//
+. *Dates and Times*: MW at 4PM in Hochstetter 114
+
+=== 199B
+
+. *Instructor*: http://www.cse.buffalo.edu/people/?u=mhertz[Matthew Hertz]
+//
+. *Teaching Assistants*: David Dobmeier, Lakshmi Ethiraj, Harshita Girase,
+Patrick Jones, Angus Lam, Brijesh Rakholia, and Evan Walley
+//
+. *Dates and Times*: MW at 4PM in Knox 110
+
+=== 199C
+
+. *Instructor*: http://www.cse.buffalo.edu/people/?u=jwinikus[Jennifer
+Winikus]
+//
+. *Teaching Assistants*: Liam Gensel, Heeba Kariapper, Lawreen Latif, Ian
+Ngumi, Parth Shah, and Dan Starner
+//
+. *Dates and Times*: MW at 4PM in NSC 210
+
+=== 199C
+
+. *Instructor*: http://www.cse.buffalo.edu/people/?u=ahughes6[Andrew Hughes]
+footnote:[Whose site is in serious need of an overhaul.]
+//
+. *Teaching Assistants*: Aishani Bhalla, Mohit Bhatia, Greg Bunyea, Isabelle
+Caneda, Wesley Csendom, Michael Drewitt, and occasionally Geoffrey Challen.
+//
+. *Dates and Times*: MW at 9AM in Alumni 97
 
 // vim: ts=2:et:ft=asciidoc

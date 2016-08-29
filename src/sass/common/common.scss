@@ -8,6 +8,20 @@
     display: none !important;
   }
 }
+p.tableblock {
+	margin: 0px;
+}
+td.tableblock {
+	padding: 5px;
+}
+.table-of-contents {
+	a.active {
+		border-left: 2px solid color("blue", "darken-1");
+	}
+	a:hover {
+		border-left: 1px solid color("blue", "lighten-2");
+	}
+}
 .toast a {
 	margin-left: 5px;
 	margin-right: 5px;
@@ -70,6 +84,22 @@
 	position: fixed !important;
 }
 
+.small .flow-text{
+  font-weight: 300;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 0.9rem * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 4.2rem;
+  }
+}
+
 h1.flow-text{
   font-weight: 400;
   $i: 0;
@@ -121,6 +151,21 @@ h4.flow-text{
   @while $i <= $intervals {
     @media only screen and (min-width : 360 + ($i * $interval-size)) {
       font-size: $h4-fontsize * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 4.2rem;
+  }
+}
+blockquote.flow-text{
+  font-weight: 400;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 1.0rem * (1 + (.02 * $i));
     }
     $i: $i + 1;
   }

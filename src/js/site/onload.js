@@ -1,6 +1,6 @@
 $(function () {
 	$('.scrollspy').scrollSpy({
-    scrollOffset: '250'
+    scrollOffset: '200'
   });
   $('.toc-wrapper').pushpin({
     top: $('.toc-wrapper').offset().top
