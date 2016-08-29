@@ -1,8 +1,8 @@
 {
-  "lessons": {
+  "picker": {
     "path": "challen@buffalo.edu/**/"
   },
-  "lessonList": [
+  "lessons": [
     {
       "uuid": "ee10ca9f-6293-4a57-83d7-c7702848ab47",
       "path": "01_era/01_why_internet"
