@@ -1,0 +1,16 @@
+{{> header css="/css/course.css" }}
+{{> course/sidenav }}
+
+<div id="content">
+  <main>
+  <div class="section hide-on-large-only" id="menu-banner"></div>
+  <div class="row">
+  </div>
+  </main>
+</div>
+
+{{> footer }}
+
+<!--
+  vim: ts=2:sw=2:et:ft=html
+-->
