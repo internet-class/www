@@ -7,7 +7,7 @@
   <div class="row">
     <div id="video" class="col s12 l8">
       <div class="video-container">
-        <iframe src="//www.youtube.com/embed/{{ firstVideo.youtube }}?border=0&autoplay=1&start=7" allowfullscreen>
+        <iframe src="//www.youtube.com/embed/{{ firstVideo.youtube }}?border=0&autoplay=1&start=8" allowfullscreen>
         </iframe>
       </div>
       {{> course/videoinfo }}

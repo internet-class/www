@@ -47,15 +47,14 @@ function onPlayerReady(event) {
     return $(this).data('youtube');
   });
   var choice = _.sample(videos);
-  player.loadVideoById(choice, 7, 'large');
+  player.loadVideoById(choice, 8, 'large');
   setChoice(choice);
   event.target.playVideo();
-  event.target.seekTo(7);
 }
 
 $('a.video-choice').click(function() {
   if (player) {
-    player.loadVideoById($(this).data('youtube'), 7, 'large');
+    player.loadVideoById($(this).data('youtube'), 8, 'large');
     setChoice($(this).data('youtube'));
   }
 });
