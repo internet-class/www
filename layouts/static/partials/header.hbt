@@ -11,7 +11,7 @@
 		{{/if}}
 		<meta name="description" lang="en-us" content="{{ description }}">
 
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ css }}">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/img/logos/favicon/apple-icon-57x57.png">
