@@ -1,4 +1,5 @@
 ---
 title: "CSE 199 Spring 2016"
 layout: course/videos.hbt
+slug: "fys"
 ---
