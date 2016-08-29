@@ -23,6 +23,8 @@ $(function () {
   $('.footnote').mouseenter(function() {
     activateFootnote(this);
   });
+
+  $(".button-collapse").sideNav();
   
   var throbbers = {};
   $('.lazy-iframe').each(function() {

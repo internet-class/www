@@ -1,5 +1,13 @@
 @import 'materialize';
 
+#nav-button {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	a {
+		color: white;
+	}
+}
 .visible-print {
   display: none !important;
 }
