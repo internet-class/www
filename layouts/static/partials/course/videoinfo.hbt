@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-content">
+    <div class="row">
+      <div class="col s6 left-align">
+        {{#if previous }}
+        <a href="/{{ previous.path }}"
+          class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped"
+          data-position="top" data-delay="50" data-tooltip="{{ previous.title }}">
+          <i class="material-icons">skip_previous</i>
+        </a>
+        {{/if}}
+      </div>
+      <div class="col s6 right-align">
+        {{#if next }}
+        <a href="/{{ next.path }}"
+          class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped"
+          data-position="top" data-delay="50" data-tooltip="{{ next.title }}">
+          <i class="material-icons">skip_next</i>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+    <div class="video-title card-title flow-text h4">{{{ title }}}</div>
+    <span class="small flow-text">{{{ contents }}}</span>
+  </div>
+</div>
+
+<!--
+  vim: ts=2:sw=2:et:ft=html
+-->
