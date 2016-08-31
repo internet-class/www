@@ -1,5 +1,7 @@
 ---
 title: "Historical protocols and Gopher."
+spelling_exceptions:
+  - Gopherspace
 ---
 
 At this point in internet history the World Wide Web has established itself as
