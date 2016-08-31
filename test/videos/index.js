@@ -342,6 +342,9 @@ describe('videos.js', function() {
         assert(fs.existsSync(path.join(src, 'src/in/' + videoData.output)));
         chai.expect(videoData.durationSec).to.be.within(18, 19);
         assert(!('find' in videoData));
+        assert(videoData.prerollLength == 7);
+        assert(videoData.postrollLength == 8);
+        assert(videoData.creditsLength == 3);
         assert(!(fs.existsSync(path.join(src, 'src/extras/videos.yaml'))));
         return done();
       });
