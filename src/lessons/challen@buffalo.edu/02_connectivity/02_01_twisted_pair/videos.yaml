@@ -5,6 +5,10 @@
   durationSec: 188.728
   inputHash: 98f0f8bfed590a36cf4d3a1cec433682
   output: 80d62c61c46198363399476083a5149b.mp4
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
+  skip: 8
   transcode: false
   upload: false
   youtube: Q9JsUnPPaW0

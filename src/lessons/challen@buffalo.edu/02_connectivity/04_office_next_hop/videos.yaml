@@ -16,3 +16,7 @@
   transcode: false
   upload: false
   youtube: uPyWqblKuYs
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
+  skip: 8

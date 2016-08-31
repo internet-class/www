@@ -3,6 +3,9 @@
     - 7b408cb77340f789025189647e4e3c88.MTS
   created: 'Tue Aug 09 2016 09:53:20 GMT-0400'
   durationSec: 276.312
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
   inputHash: 7b408cb77340f789025189647e4e3c88
   output: 0b2f7747e2838bfb7161d2d2b75df17c.mp4
   transcode: false

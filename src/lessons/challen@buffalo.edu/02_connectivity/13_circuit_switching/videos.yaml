@@ -7,4 +7,8 @@
   output: 7a81b8db292ef8cd97c94606cd401870.mp4
   transcode: false
   upload: false
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
+  skip: 8
   youtube: ob4FSeF2WJc

@@ -3,6 +3,10 @@
     - 487e4f8dd5d61f4d29eeb5bd367b5ad9.MTS
   created: 'Fri Aug 12 2016 09:18:20 GMT-0400'
   durationSec: 267.832
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
+  skip: 8
   inputHash: 487e4f8dd5d61f4d29eeb5bd367b5ad9
   output: 4739c597edf753f84110c9c1ca1750aa.mp4
   transcode: false

@@ -8,6 +8,10 @@
   transcode: false
   upload: false
   youtube: aoZB9vKej9o
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
+  skip: 8
 -
   files:
     - be439b860c89be94ebc6bcf881fe1c29.MTS
@@ -22,3 +26,7 @@
   transcode: false
   upload: false
   youtube: 7NrnqJUtXl8
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
+  skip: 8

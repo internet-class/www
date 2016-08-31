@@ -3,6 +3,9 @@
     - a8e96e4f133a4970fad6b6656f2a66bf.MTS
   created: 'Tue Aug 09 2016 09:27:38 GMT-0400'
   durationSec: 290.84
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
   inputHash: a8e96e4f133a4970fad6b6656f2a66bf
   output: dd627d0c2f5fe1a16670adbc91ea0f52.mp4
   transcode: false

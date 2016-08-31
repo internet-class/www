@@ -34,6 +34,9 @@
       name: 'Carl Nuessle'
       credits: 'Graduate Student, Computer Science and Engineering, University at Buffalo'
   durationSec: 344.905
+  creditsFile: black.mp4
+  prerollFile: typing.mp4
+  postrollFile: static.mp4
   inputHash: 2d9c9284ff500f5cff3d1dd167188ab6
   output: ab3294724854c61259d3d9656b475942.mp4
   transcode: false
