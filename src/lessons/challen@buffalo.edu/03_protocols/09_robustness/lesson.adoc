@@ -1,0 +1,11 @@
+---
+title: "What is the robustness principle?"
+---
+
+While the end-to-end principle gets all of the press, there's another design
+principle central to how the internet operates: the robustness principle.
+//
+It's arguably equally important in creating a robust and workable internet.
+//
+It's also a great reminder to software developers about how to build robust
+computer systems.

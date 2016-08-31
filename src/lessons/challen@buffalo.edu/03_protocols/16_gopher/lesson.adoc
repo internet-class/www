@@ -1,0 +1,15 @@
+---
+title: "Historical protocols and Gopher."
+---
+
+At this point in internet history the World Wide Web has established itself as
+the primary way that we explore the internet.
+//
+It is also how we interact with many other web services, including email.
+//
+But in the internet's earlier days WWW's dominance had yet to be established.
+//
+Let's take a trip to the internet's past and look at a protocol that competed
+with--and lost out to--the web.
+//
+Welcome to the Gopherspace!

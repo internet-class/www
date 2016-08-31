@@ -1,15 +1,5 @@
 -
   files:
-    - be75ed956661e280d5dfd84642fb92d2.MTS
-  created: 'Tue Aug 16 2016 13:28:38 GMT-0400'
-  durationSec: 303.864
-  inputHash: be75ed956661e280d5dfd84642fb92d2
-  output: ddf057dd95d9ecce69dcadbace03e83b.mp4
-  transcode: false
-  upload: false
-  youtube: '-xDgONqjHCk'
--
-  files:
     - b6b405e64f5b784fb9c3ede0ff6bf784.MTS
   created: 'Wed Aug 24 2016 12:47:10 GMT-0400'
   authors:
