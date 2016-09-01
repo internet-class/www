@@ -2,3 +2,14 @@
   files:
     - 53006d63d34eb95b9dd1e54e524bdca6.MTS
   created: 'Wed Aug 31 2016 11:39:58 GMT-0400'
+  creditsFile: black.mp4
+  prerollFile: slowglow.mp4
+  postrollFile: turnon.mp4
+  prerollLength: 7
+  creditsLength: 6
+  postrollLength: 2
+  durationSec: 290.84
+  inputHash: 53006d63d34eb95b9dd1e54e524bdca6
+  output: 6885974976baf277a1b5eb57ff72f3dc.mp4
+  transcode: false
+  upload: false

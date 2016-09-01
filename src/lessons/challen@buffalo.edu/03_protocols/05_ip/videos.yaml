@@ -3,3 +3,13 @@
     - db990f852b427516a9fde679a4e4b4ed.MTS
   creditsFile: bouncyis.MTS
   created: 'Wed Aug 31 2016 11:18:10 GMT-0400'
+  prerollFile: slowglow.mp4
+  postrollFile: turnon.mp4
+  prerollLength: 7
+  creditsLength: 29
+  postrollLength: 2
+  durationSec: 364.427
+  inputHash: db990f852b427516a9fde679a4e4b4ed
+  output: 1d95a0d2703a9adc4e0d297da0c54296.mp4
+  transcode: false
+  upload: false
