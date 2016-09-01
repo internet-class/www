@@ -100,6 +100,14 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/12_email/lesson.adoc"
   },
   {
+    "id": "6aa33b86-16d2-4f6a-8059-99aa161441a2",
+    "file": "lessons/challen@buffalo.edu/03_protocols/900_sending_email/lesson.adoc"
+  },
+  {
+    "id": "71a766a1-e5bc-4eaf-afe0-ec229afd3bd1",
+    "file": "lessons/challen@buffalo.edu/03_protocols/901_receiving_email/lesson.adoc"
+  },
+  {
     "id": "8fe7612f-5614-4ce9-ad42-afddd82aa3c4",
     "file": "lessons/challen@buffalo.edu/02_connectivity/15_past_v_future/lesson.adoc"
   },
