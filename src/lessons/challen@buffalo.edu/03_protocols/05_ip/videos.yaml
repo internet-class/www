@@ -5,3 +5,12 @@
   created: 'Wed Aug 31 2016 11:18:10 GMT-0400'
   prerollFile: slowglow.mp4
   postrollFile: turnon.mp4
+  prerollLength: 7
+  creditsLength: 16
+  postrollLength: 2
+  durationSec: 351.52
+  inputHash: db990f852b427516a9fde679a4e4b4ed
+  output: e6c06f579588a8a1cf40919af5c27c49.mp4
+  transcode: false
+  upload: false
+  youtube: fZgynBjxfss

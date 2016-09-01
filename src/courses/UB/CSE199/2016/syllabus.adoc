@@ -495,6 +495,8 @@ You can work with another student or alone on these assignments, but if
 working in a group of two both students need to be involved in several
 minutes of the video to receive full credit.
 
+==== Grading
+
 Video submissions will be graded on the following criteria:
 
 . *Length* (10%): is the video around five minutes in length?
@@ -523,6 +525,20 @@ learn the material?
 . *Production* (20%): is the video reasonably easy on the eyes and ears?
 We're not looking for Hollywood-level production values, but we should be
 able to hear and watch the videos without distress.
+
+==== Filming
+
+You are welcome to film your videos in any way you like.
+//
+We aren't looking for high production values, so your smartphone will probably
+work fine.
+//
+However, UB does have video production studios in the new
+http://library.buffalo.edu/silverman/[Silverman Library] on the third floor of
+Capen Hall.
+//
+You can reserve these rooms using
+http://libweb1.lib.buffalo.edu/openroom/[this online form].
 
 === Internet Participation
 
