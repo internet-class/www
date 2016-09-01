@@ -38,7 +38,8 @@ $(function () {
         var parentDiv = $(elem).closest('div.video-container');
         var width = $(parentDiv).outerWidth();
         var height = $(parentDiv).outerHeight();
-        if (width > 0 && height > 0) {
+        console.log($(elem).css('display'));
+        if (width > 0 && height > 0 && $(elem).is(":visible")) {
           var size = width / 5;
           if (height / 5 < size) {
             size = height / 5;

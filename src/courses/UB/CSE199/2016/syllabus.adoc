@@ -4,6 +4,7 @@ spelling_exceptions:
   - eportfolio
   - Hochstetter
   - 4chan
+  - renormalized
 description: >
   Syllabus for CSE 199: How the Internet Works
 priority: 0.8
@@ -21,18 +22,26 @@ communicate, learn, navigate, organize, work, play, and love.
 //
 The internet also represents a crowning achievement of computing: a single
 system uniting hardware and software, theory and implementation, standards
-and innovation, engineering and science, protests that topple governments and
-stupid cat videos.
+and innovation, engineering and science,
+https://en.wikipedia.org/wiki/Social_media_and_the_Arab_Spring[protests that
+topple governments]
 //
+and
+//
+http://tubularinsights.com/2-million-cat-videos-youtube/[adorable cat
+videos].
+
 This course provides an overview of how the internet works by describing
 everything required to answer a single search query.
 //
 Along with its technologies, we will delve into the internet’s past and
 future, policy challenges, and societal implications.
 //
-The course is targeted at a general audience, but because the internet
-reflects contributions from many areas of computer science and computer
-engineering, it also provides a good overview for potential majors.
+The course is targeted at a general audience.
+//
+But because the internet reflects contributions from many areas of computer
+science and computer engineering, it also provides a good overview for
+potential majors.
 //
 Familiarity with the web and access to a personal computer are assumed, but
 no technical background is required.
@@ -47,42 +56,56 @@ Rather than a series of lectures with homework outside of class, we're going
 to assign lectures (in the form of short videos) _outside_ of class and have
 you do interesting activities _inside_ class.
 //
-This is sometimes know as the
-https://en.wikipedia.org/wiki/Flipped_classroom[flipped classroom] model.
+This is sometimes know as a
+https://en.wikipedia.org/wiki/Flipped_classroom[flipped classroom].
 //
 So rather than referring to our large meetings as lectures, we're calling
 them _activity sections_.
 //
 You'll have two one-hour activity sections per week plus one one-hour
-recitation in a smaller group of around 25 to 30 students.
+recitation in a smaller group of 25&ndash;30 students.
 
 Because how we are teaching you is a bit different, your responsibilities as
 as student are a bit different.
 //
 Here's how a typical week would work from your perspective:
 
-. *Before class on Monday and Wednesday*: watch the assigned videos online.
+. *Before your activity section on Monday and Wednesday*: watch the assigned
+videos online.
 //
-Monday's activity will depend on knowledge obtained from these videos.
+Activities will depend on knowledge obtained from these videos.
 //
-We are recording around 60 to 90 minutes of video content per week in the
-form of 12 to 18 5 minute videos.
+We are recording 60&ndash;90 minutes of video content per week in the form of
+5 minute videos.
 //
-So you should expected to watch around 30 to 45 minutes of video content
+So you should expect to watch around 30&ndash;45 minutes of video content
 before each activity section.
 //
 We consider that to be reasonable, and we will try to keep the videos a lot
 more interesting than your average textbook.
 //
-However, we would advise budgeting at least 60 to 90 minutes before each
-class to complete the video assignments--in case you need to watch one more
-than once or return to videos to review.
+However, we would advise budgeting at least 60&ndash;90 minutes before each
+class to complete the video assignments.
 //
-. *In class on Monday and Wednesday*: complete an interesting activity in
-small groups of around four students.
+This leaves time in case you need to watch one more than once or return to
+videos to review.
 //
-Each activity section has around 6 undergraduate teaching assistants and an
-instructor that will be on hand to help out during class.
+. *In your Monday and Wednesday activity section*: complete an interesting
+activity in small groups of three or four students.
+//
+Each activity section has around multiple undergraduate teaching
+assistants--about one per four groups--and at least one instructor that will
+be on hand to help out during class.
+//
+You will need to check out of each activity section to receive credit.
+//
+This involves approaching a teaching assistant and showing them that you have
+completed the activity.
+//
+Rubrics for each activity will vary, but it is more important to use that you
+show up and do your best than that you complete every part of the activity.
+//
+Some activities you may find easy; others will be more challenging.
 //
 . *In recitation on Thursday or Friday*: discuss the week's material in a
 smaller group.
@@ -102,8 +125,9 @@ That's one of the advantages of the flipped classroom model.
 [[calendar]]
 == Calendar
 
-We suggest that you add our http://goo.gl/5D6g2E[global CSE 199 calendar] to
-your calendaring program.
+We suggest that you add our http://goo.gl/5D6g2E[global CSE 199 calendar] and
+the appropriate calendar for your <<sections,activity section>> to your
+calendaring program.
 //
 If you are not using a calendaring program, we suggest that you begin using a
 calendaring program.
@@ -116,10 +140,19 @@ movie nights, and <<dates,important dates>>.
 //
 This calendar does _not_ include activity section meeting or recitation
 meeting times and locations.
+//
+Activity sections are on section-specific calendars shown <<sections,below>>.
+//
+Please add recitations to your own personal calendar as needed.
 
 ++++
 <div class="video-container">
-  <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=buffalo.edu_f47q0orjhk0a5vjrngcjs0jrt8%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  <div class="show-on-small hide-on-med-and-up">
+    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=buffalo.edu_f47q0orjhk0a5vjrngcjs0jrt8%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  </div>
+  <div class="hide-on-small-only show-on-med-and-up">
+    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=buffalo.edu_f47q0orjhk0a5vjrngcjs0jrt8%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  </div>
 </div>
 ++++
 
@@ -429,11 +462,24 @@ participating in the activities.
 We will assign you to a new random group for each activity section, and one
 group member will be responsible for submitting the group's work and
 recording what group members were present.
-//
+
 Missing one or two classes during the semester is fine--that happens to
 anyone.
 //
-Missing class repeatedly will make it hard to pass this class.
+*However, there is no way to make up for a missed activity section.*
+//
+If you do not attend for any reason, legitimate or not, you will not receive
+credit for the activity.
+//
+As a result, missing class repeatedly will make it hard to pass this class.
+
+In addition, if you do not check out with a teaching assistant _during class_
+you will also not receive credit for the activity.
+//
+So please don't forget this step.
+//
+Luckily, we have enough undergraduate teaching assistants so that there is one
+for around four groups, so you should be able to find one at checkout time.
 
 === Video Contributions
 
@@ -441,15 +487,42 @@ One of the best ways to learn new material is to explain it to others.
 //
 We're providing you a way to do that--but to hundreds or thousands of
 students in coming years.
-//
+
 During the semester you will need to record three short videos for inclusion
 in the link:/[`internet-class.org`] video library.
 //
-Some will be alternative explanations for existing concepts, but in other
-cases we will ask you to describe and explain a topic that is related to
-the material but not currently covered.
+You can work with another student or alone on these assignments, but if
+working in a group of two both students need to be involved in several
+minutes of the video to receive full credit.
+
+Video submissions will be graded on the following criteria:
+
+. *Length* (10%): is the video around five minutes in length?
 //
-More details on these assignments will follow shortly.
+Course concepts have been subdivided appropriately so that they can be
+explained in that length of time.
+//
+If your video is too short, you probably aren't saying enough.
+//
+If it's too long, you're probably saying too much.
+//
+. *Participation* (10%): if done in groups of two, does the video involve
+both listed participants?
+//
+Students working alone get this credit for free, so there's a bit of tradeoff
+there when determining whether to work with a partner.
+//
+. *Clarity* (20%): does the video clearly explain the concept?
+//
+. *Accuracy* (20%): does the video accurate explain the concept? Do the video
+authors demonstrate their depth of knowledge of the material?
+//
+. *Excitement* (20%): does the video engage the viewer and make them want to
+learn the material?
+//
+. *Production* (20%): is the video reasonably easy on the eyes and ears?
+We're not looking for Hollywood-level production values, but we should be
+able to hear and watch the videos without distress.
 
 === Internet Participation
 
@@ -467,6 +540,9 @@ leader and course staff later in the semester.
 
 === Grade Mapping
 
+Scores from all four CSE 199 sections will be combined and, if needed,
+renormalized for the purposes of grading.
+//
 Your score in the course will be converted to a letter grade as follows:
 
 [cols=3,options='header']
@@ -604,36 +680,44 @@ of these sections at any time.
 And of course https://blue.cse.buffalo.edu/people/carlnues/[Carl Nuessle] has
 been known to show up anywhere at any time as well--so be ready.
 
-=== 199A
+=== 199A, 199B, 199C
 
-. *Instructor*: http://www.cse.buffalo.edu/~hartloff/index.html[Jesse
-Hartloff]
-//
-. *Teaching Assistants*: Junjie Chen, Richard Hanulewicz, Valencia Kaplinsky,
-Rachel Roberts, Kyle Schoener, and Grant Wrazen
-//
-. *Dates and Times*: MW at 4PM in Hochstetter 114
+The three 4PM sections will meet together in Bert's Cafeteria at 4PM on
+Mondays and Wednesdays.
 
-=== 199B
-
-. *Instructor*: http://www.cse.buffalo.edu/people/?u=mhertz[Matthew Hertz]
+. *Instructors*: http://www.cse.buffalo.edu/~hartloff/index.html[Jesse
+Hartloff], http://www.cse.buffalo.edu/people/?u=mhertz[Matthew Hertz], and
+http://www.cse.buffalo.edu/people/?u=jwinikus[Jennifer Winikus]
 //
-. *Teaching Assistants*: David Dobmeier, Lakshmi Ethiraj, Harshita Girase,
-Patrick Jones, Angus Lam, Brijesh Rakholia, and Evan Walley
+. *Teaching Assistants*: Junjie Chen, David Dobmeier, Lakshmi Ethiraj, Liam
+Gensel Harshita Girase, Richard Hanulewicz, Patrick Jones, Valencia
+Kaplinsky, Heeba Kariapper Angus Lam, Lawreen Latif Ian Ngumi Brijesh
+Rakholia, Rachel Roberts, Kyle Schoener, Parth Shah Dan Starner Grant Wrazen
+and Evan Walley
 //
-. *Dates and Times*: MW at 4PM in Knox 110
+. *Dates and Times*: MW at 4PM in Bert's Cafeteria
 
-=== 199C
+==== Calendar
 
-. *Instructor*: http://www.cse.buffalo.edu/people/?u=jwinikus[Jennifer
-Winikus]
+http://goo.gl/RdyBBy[This calendar] shows events for the 4PM sections only.
 //
-. *Teaching Assistants*: Liam Gensel, Heeba Kariapper, Lawreen Latif, Ian
-Ngumi, Parth Shah, and Dan Starner
+You should also add the <<calendar,CSE 199 global calendar>> to your
+calendaring program.
 //
-. *Dates and Times*: MW at 4PM in NSC 210
+You're using a calendaring program, right?
 
-=== 199C
+++++
+<div class="video-container">
+  <div class="show-on-small hide-on-med-and-up">
+    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jkn2ubsvhjkugbmih1ii8k4q10%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  </div>
+  <div class="hide-on-small-only show-on-med-and-up">
+    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jkn2ubsvhjkugbmih1ii8k4q10%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  </div>
+</div>
+++++
+
+=== 199D
 
 . *Instructor*: http://www.cse.buffalo.edu/people/?u=ahughes6[Andrew Hughes]
 footnote:[Whose site is in serious need of an overhaul.]
@@ -642,5 +726,27 @@ footnote:[Whose site is in serious need of an overhaul.]
 Caneda, Wesley Csendom, Michael Drewitt, and occasionally Geoffrey Challen.
 //
 . *Dates and Times*: MW at 9AM in Alumni 97
+
+==== Calendar
+
+http://goo.gl/HkkXZi[This calendar] shows events for the 9AM section only.
+//
+You should also add the <<calendar,CSE 199 global calendar>> to your
+calendaring program.
+//
+What do you mean you aren't using a calendaring program?
+//
+Everyone uses one!
+
+++++
+<div class="video-container">
+  <div class="show-on-small hide-on-med-and-up">
+    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uk6or0id7tdictntjsifs6jnvo%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  </div>
+  <div class="hide-on-small-only show-on-med-and-up">
+    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uk6or0id7tdictntjsifs6jnvo%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
+  </div>
+</div>
+++++
 
 // vim: ts=2:et:ft=asciidoc
