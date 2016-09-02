@@ -1,5 +1,26 @@
 @import 'common';
 
+nav {
+  background-color: rgba(255,255,255,0.5) !important;
+  box-shadow: none;
+}
+
+#nav-wrapper {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media #{$medium-and-up} {
+  #side-logo {
+    height: 64px;
+  }
+}
+@media #{$small-and-down} {
+  #side-logo {
+    height: 56px;
+  }
+}
+
 .section {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -61,6 +82,11 @@ a.video-card {
 	span.card-title.video-title {
 		margin-bottom: 10px;
 	}
+}
+@media #{$medium-and-down} {
+  #video {
+    padding-top: 0;
+  }
 }
 #list {
   padding-top: 0.5rem;

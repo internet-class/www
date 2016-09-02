@@ -1,11 +1,20 @@
 <header class="no-flow-text">
-	<div id="nav-button" class="container">
-		<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
-			<i class="material-icons">menu</i>
-		</a>
-	</div>
+  <nav class="hide-on-large-only">
+    <div id="nav-wrapper">
+      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right">
+        <li>
+          <a href="/" class="brand-logo">
+            <img id="side-logo" src="/img/logos/logo.png" alt="internet-class.org">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 	<ul id="nav-mobile" class="side-nav fixed">
-		<li class="logo">
+    <li class="logo hide-on-med-and-down">
 			<a id="logo-container" href="/" class="brand-logo">
 				<img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
 			</a>

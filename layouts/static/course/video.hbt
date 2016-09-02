@@ -3,7 +3,6 @@
 
 <div id="content">
   <main>
-  <div class="section hide-on-large-only" id="menu-banner"></div>
   <div class="row">
     <div id="video" class="col s12 l8">
       <div class="video-container">
