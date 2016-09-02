@@ -39,7 +39,8 @@
       <div class="row">
         {{#each videos}}
         <div class="col video-col">
-          <a href="#" class="video-choice video-card" data-youtube="{{ youtube }}">
+          <a href="#" class="video-choice video-card"
+                      data-youtube="{{ youtube }}" data-skip="{{ skip }}">
             <div class="card hoverable">
               <div class="card-image">
                 <img class="responsive-img" src="//i.ytimg.com/vi/{{ youtube }}/maxresdefault.jpg" alt="YouTube placeholder">

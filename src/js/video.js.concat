@@ -4,6 +4,7 @@ files:
 - js/video/materialize.js
 - js/video/youtube.js
 - js/video/underscore.js
+- js/video/tracker.js
 - js/video/onload.js
 output: js/video.js
 ---

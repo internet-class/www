@@ -61,6 +61,7 @@ function onPlayerReady(event) {
     setChoice(choice);
     $('#list').css({ visibility: 'visible' });
   }
+  trackVideo(player);
   event.target.playVideo();
 }
 
