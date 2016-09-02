@@ -96,112 +96,70 @@ td.tableblock {
 	position: fixed !important;
 }
 
-.small .flow-text, .small.flow-text {
-  font-weight: 300;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+$i: 0;
+@while $i <= $intervals {
+  @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    .small .flow-text, .small.flow-text {
       font-size: 0.9rem * (1 + (.02 * $i));
     }
-    $i: $i + 1;
-  }
-
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: 0.9rem;
-  }
-}
-
-h1.flow-text , .h1.flow-text {
-  font-weight: 400;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    h1.flow-text , .h1.flow-text {
+      font-weight: 400;
       font-size: $h1-fontsize * (1 + (.02 * $i));
     }
-    $i: $i + 1;
-  }
-
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: $h1-fontsize;
-  }
-}
-h2.flow-text , .h2.flow-text {
-  font-weight: 400;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    h2.flow-text , .h2.flow-text {
+      font-weight: 400;
       font-size: $h2-fontsize * (1 + (.02 * $i));
     }
-    $i: $i + 1;
-  }
-
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: $h2-fontsize;
-  }
-}
-h3.flow-text , .h3.flow-text {
-  font-weight: 400;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    h3.flow-text , .h3.flow-text {
+      font-weight: 400;
       font-size: $h3-fontsize * (1 + (.02 * $i));
     }
-    $i: $i + 1;
-  }
-
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: $h3-fontsize;
-  }
-}
-h4.flow-text , .h4.flow-text {
-  font-weight: 400;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    h4.flow-text , .h4.flow-text {
+      font-weight: 400;
       font-size: $h4-fontsize * (1 + (.02 * $i));
     }
-    $i: $i + 1;
-  }
-
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: $h4-fontsize;
-  }
-}
-h5.flow-text , .h5.flow-text {
-  font-weight: 400;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    h5.flow-text , .h5.flow-text {
+      font-weight: 400;
       font-size: $h5-fontsize * (1 + (.02 * $i));
     }
-    $i: $i + 1;
-  }
-
-  // Handle below 360px screen
-  @media only screen and (max-width: 360px) {
-    font-size: $h5-fontsize;
-  }
-}
-blockquote.flow-text{
-  font-weight: 400;
-  $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+    blockquote.flow-text {
+      font-weight: 400;
       font-size: 1.0rem * (1 + (.02 * $i));
     }
     $i: $i + 1;
   }
-
-  // Handle below 360px screen
   @media only screen and (max-width: 360px) {
-    font-size: 1.0rem;
+    .small .flow-text, .small.flow-text {
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+    h1.flow-text , .h1.flow-text {
+      font-weight: 400;
+      font-size: $h1-fontsize;
+    }
+    h2.flow-text , .h2.flow-text {
+      font-weight: 400;
+      font-size: $h2-fontsize;
+    }
+    h3.flow-text , .h3.flow-text {
+      font-weight: 400;
+      font-size: $h3-fontsize;
+    }
+    h4.flow-text , .h4.flow-text {
+      font-weight: 400;
+      font-size: $h4-fontsize;
+    }
+    h5.flow-text , .h5.flow-text {
+      font-weight: 400;
+      font-size: $h5-fontsize;
+    }
+    blockquote.flow-text {
+      font-weight: 400;
+      font-size: 1.0rem;
+    }
   }
 }
+
 .h1 {
 	@extend h1;
 }
