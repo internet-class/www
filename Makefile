@@ -55,7 +55,7 @@ silent:
 	@:
 
 run:
-	./app/bin/www
+	@./app/bin/www
 
 clean:
 	@rm -rf build deploy
