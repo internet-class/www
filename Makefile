@@ -1,4 +1,4 @@
-all: static | silent
+all: build | silent
 SHELL := /usr/bin/env bash
 
 backup:
@@ -34,30 +34,30 @@ upload:
 courses:
 	@node lib/docourses
 
-static:
+build:
 	@node lib/index.js $(DEPLOY) $(CHECK)
 	@while [ -n "$(find .build -depth -type d -empty -print -exec rmdir {} +)" ]; do :; done
 	@if [ -d ".build" ]; then \
-		rsync -rlpgoDc --delete .build/ static 2>/dev/null; \
-		rsync -rlpgoDc src/img/background/ static/img/background; \
+		rsync -rlpgoDc --delete .build/ build 2>/dev/null; \
+		rsync -rlpgoDc src/img/background/ build/static/img/background; \
 		rm -rf .build; \
 	else \
 		rm -rf static; \
 	fi
 
 deploy: DEPLOY = --deploy
-deploy: check static
+deploy: check build
 
 check: CHECK = --check
-check: static
+check: build
 
 silent:
 	@:
 
-run-static:
+run:
 	./node_modules/http-server/bin/http-server static -p 8082
 
 clean:
 	@rm -rf build deploy
 
-.PHONY: run clean silent static credentials videos import backup
+.PHONY: run clean silent build credentials videos import backup
