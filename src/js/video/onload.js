@@ -30,7 +30,7 @@ $(function () {
 
 var setChoice = function(choice) {
   $('.video-choice').each(function() {
-    if ($(this).data('youtube') == choice) {
+    if ($(this).data('youtube') == choice.id) {
       $(this).addClass('active');
     } else {
       $(this).removeClass('active');
@@ -39,7 +39,15 @@ var setChoice = function(choice) {
 }
 
 var player;
+var videoInfo = {};
 function onYouTubeIframeAPIReady() {
+  $('.video-choice').each(function () {
+    videoInfo[$(this).data('youtube')] = {
+      id: $(this).data('youtube'),
+      skip: $(this).data('skip'),
+      elem: $(this)
+    };
+  });
   player = new YT.Player('player', {
     height: '390',
     width: '640',
@@ -50,25 +58,36 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  var videos = $('.video-choice').map(function () {
-    return $(this).data('youtube');
-  });
-  if (videos.length == 1) {
-    player.loadVideoById(videos[0], 8, 'large');
+  if (_.keys(videoInfo).length == 1) {
+    var choice = videoInfo[_.keys(videoInfo)[0]];
+    player.loadVideoById(choice.id, choice.skip, 'large');
   } else {
-    var choice = _.sample(videos);
-    player.loadVideoById(choice, 8, 'large');
+    var choice = videoInfo[_.sample(_.keys(videoInfo))];
+    player.loadVideoById(choice.id, choice.skip, 'large');
     setChoice(choice);
     $('#list').css({ visibility: 'visible' });
   }
-  trackVideo(player);
+  trackVideo(player, {
+    videos: videoInfo
+  });
   event.target.playVideo();
 }
 
+var savedPositions = {};
+
 $('a.video-choice').click(function() {
   if (player) {
-    player.loadVideoById($(this).data('youtube'), 8, 'large');
-    setChoice($(this).data('youtube'));
+    try {
+      savedPositions[player.getVideoData().video_id] = player.getCurrentTime();
+    } catch (err) { };
+    var newVideoId = $(this).data('youtube');
+    var newVideoSkip = $(this).data('skip');
+    if ((newVideoId in savedPositions) &&
+        (savedPositions[newVideoId] > newVideoSkip)) {
+      newVideoSkip = savedPositions[newVideoId];
+    }
+    player.loadVideoById(newVideoId, newVideoSkip, 'large');
+    setChoice(videoInfo[$(this).data('youtube')]);
   }
 });
 
