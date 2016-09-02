@@ -2,7 +2,8 @@
 title: "CSE 199 Fall 2016"
 spelling_exceptions:
   - eportfolio
-  - Hochstetter
+  - Capen
+  - Silverman
   - 4chan
   - renormalized
 description: >
