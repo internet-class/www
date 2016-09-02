@@ -55,7 +55,7 @@ silent:
 	@:
 
 run:
-	./node_modules/http-server/bin/http-server static -p 8082
+	./app/bin/www
 
 clean:
 	@rm -rf build deploy
