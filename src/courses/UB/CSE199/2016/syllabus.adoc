@@ -295,42 +295,42 @@ networking terminology, difference between the internet and the World Wide
 Web, internet ownership, internet standardization, finding out more about the
 internet, "Eternal September".
 //
-. *Connectivity*: cables, connected at work and at home, the last mile
-problem, the core internet, packets, circuit v. packet switching.
+. *Connectivity*: [[connectivity]] cables, connected at work and at home, the
+last mile problem, the core internet, packets, circuit v. packet switching.
 //
-. *Protocols*: what is a protocol, clients and servers, the internet protocol
-(IP), IP addresses, the end-to-end principle, protocol stacks, encapsulation,
-other internet protocols, peer-to-peer systems.
+. *Protocols*: [[protocols]] what is a protocol, clients and servers, the
+internet protocol (IP), IP addresses, the end-to-end principle, protocol
+stacks, encapsulation, other internet protocols, peer-to-peer systems.
 //
-. *Routing*: routers and end hosts, autonomous systems, the border gateway
+. *Routing*: [[routing]] routers and end hosts, autonomous systems, the border gateway
 protocol, meet-me rooms, IP address structure, 512K day, traceroute, routing
 stability, public v. private addresses, onion routing.
 //
-. *Transport*: the TCP protocol, TCP connections, ports, well-known port
+. *Transport*: [[transport]] the TCP protocol, TCP connections, ports, well-known port
 numbers, NAT, problems with TCP, QUIC, TCP influence on overall network
 design, buffer bloat, the UDP protocol and unreliable connections, multipath
 TCP.
 //
-. *Naming*:  the domain name service (DNS) and DNS protocol, machine- and
+. *Naming*: [[naming]] the domain name service (DNS) and DNS protocol, machine- and
 human-readable names, name translation, top-level domains, IPv4 and routing,
 name assignment, IPv4 address exhaustion, IPv6 and adoption problems.
 //
-. *Web Queries, Documents and Markup*: the HTTP protocol, HTML and CSS,
+. *Web Queries, Documents and Markup*: [[queries]] the HTTP protocol, HTML and CSS,
 separation of content and presentation, links, the DOM data structure,
-previous attempts like Gopher, the internet before the WWW, static and
-dynamic web pages, server-side rendering, forms, HTTP GET key-value pairs,
-GET v. POST.
+previous attempts like Gopher, the internet before the WWW, static and dynamic
+web pages, server-side rendering, forms, HTTP GET key-value pairs, GET v.
+POST.
 //
-. *Crawling, Indexing and Ranking the Web*: web crawling and processing, the
+. *Crawling, Indexing and Ranking the Web*: [[crawling]] web crawling and processing, the
 internet archive, data center computing, distributed indexes, MapReduce, data
 center networking, software-defined networking, the PageRank algorithm,
 improving ranking using context, history, click tracking, website reputation.
 //
-. *Security and Authority*: certificates and certificate authorities, public
+. *Security and Authority*: [[security]] certificates and certificate authorities, public
 key encryption, symmetric key encryption, trusted hardware modules, security
 protocol vulnerabilities.
 //
-. *Identity and Privacy*: cookies, server side tracking, IP addresses v.
+. *Identity and Privacy*: [[identity]] cookies, server side tracking, IP addresses v.
 identities, anonymity online, online v. human identities.
 //
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
@@ -346,14 +346,14 @@ web.
 accidents, search v. knowledge, controlling our internet usage.
 //
 . *Internet Content and Economics*: early proposals for early payments via
-link counting, Bitcoin as an online currency, DRM and other efforts to
-prevent digital copying, ongoing efforts to find and block online content.
+link counting, Bitcoin as an online currency, DRM and other efforts to prevent
+digital copying, ongoing efforts to find and block online content.
 //
-. *Lost and Future Visions of the Internet*: Berners-Lee’s original vision
-for collaborative content and arguments with Netscape, early internet
-communities like the WELL, modern internet communities like 4chan and the
-drug site, Lessig’s vision of an internet commons, Proposals for future
-improvements to the internet architecture, and will they ever be realized?
+. *Lost and Future Visions of the Internet*: Berners-Lee’s original vision for
+collaborative content and arguments with Netscape, early internet communities
+like the WELL, modern internet communities like 4chan and the drug site,
+Lessig’s vision of an internet commons, Proposals for future improvements to
+the internet architecture, and will they ever be realized?
 
 === Objectives
 
@@ -540,6 +540,38 @@ Capen Hall.
 //
 You can reserve these rooms using
 http://libweb1.lib.buffalo.edu/openroom/[this online form].
+
+==== Due Dates
+
+The three video assignments are space out evenly throughout the semester, but
+they differ slightly in their requirements.
+
+. *Friday, 9/30/2016*: record an alternate explanation for one of the videos
+from Weeks 2&ndash;5. These weeks cover <<connectivity, connectivity (Week
+2)>>, <<protocols, protocols (Week 3)>>, <<routing, routing (Week 4)>>, and
+<<transport,transport (Week 5)>> footnote:[The Week 1 videos are a bit too
+general...].
+
+. *Friday, 11/4/2016*: record an alternate explanation for one of the videos
+from Weeks 6&ndash;10. These weeks cover <<naming, naming (Week 6)>>;
+<<queries,web queries, documents, and markup (Week 7)>>; <<crawling,crawling,
+indexing, and ranking the web (Week 8)>>; <<security,security and authority
+(Week 9)>>; and <<identity,identity and privacy (Week 10)>>.
+
+. *Friday, 12/9/2016*: record an explanation for a new lesson related to the
+course content not already covered.
+//
+Your topic can fit in to any of the material covered over the 15 weeks of the
+course.
+//
+You might want to try covering something in more depth than we have already
+covered--for example, explain a bit more about how fiber optic cable is made,
+or how transatlantic cables are laid.
+//
+Or you can bring in new material not already covered but relevant.
+//
+If you are concerned whether your topic is appropriate, please consult with a
+member of the course staff *before you get started*.
 
 === Internet Participation
 

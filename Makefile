@@ -46,10 +46,10 @@ static:
 	fi
 
 deploy: DEPLOY = --deploy
-deploy: check build
+deploy: check static
 
 check: CHECK = --check
-check: build
+check: static
 
 silent:
 	@:
