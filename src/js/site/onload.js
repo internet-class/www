@@ -27,7 +27,7 @@ $(function () {
   });
 
   $(".button-collapse").sideNav();
-  
+
   var throbbers = {};
   $('.lazy-iframe').each(function() {
     var waypoint = new Waypoint.Inview({

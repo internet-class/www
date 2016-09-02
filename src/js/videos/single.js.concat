@@ -1,7 +1,0 @@
----
-files:
-- js/videos/single/jquery-2.1.1.js
-- js/videos/single/materialize.js
-- js/videos/single/onload.js
-output: js/videos/single.js
----

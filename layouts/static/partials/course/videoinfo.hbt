@@ -4,7 +4,7 @@
       <div class="col s6 left-align">
         {{#if previous }}
         <a href="/{{ previous.path }}"
-          class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped"
+          class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
           data-position="top" data-delay="50" data-tooltip="{{ previous.title }}">
           <i class="material-icons">skip_previous</i>
         </a>
@@ -13,7 +13,7 @@
       <div class="col s6 right-align">
         {{#if next }}
         <a href="/{{ next.path }}"
-          class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped"
+          class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
           data-position="top" data-delay="50" data-tooltip="{{ next.title }}">
           <i class="material-icons">skip_next</i>
         </a>

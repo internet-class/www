@@ -18,6 +18,13 @@ $(function () {
   });
 
   $(".button-collapse").sideNav();
+  
+  $('a.tooltip-disable-on-click').each(function() {
+    $(this).click(function (e) {
+      e.preventDefault();
+      window.location = $(this).attr('href');
+    });
+  });
 
 });
 
@@ -46,9 +53,14 @@ function onPlayerReady(event) {
   var videos = $('.video-choice').map(function () {
     return $(this).data('youtube');
   });
-  var choice = _.sample(videos);
-  player.loadVideoById(choice, 8, 'large');
-  setChoice(choice);
+  if (videos.length == 1) {
+    player.loadVideoById(videos[0], 8, 'large');
+  } else {
+    var choice = _.sample(videos);
+    player.loadVideoById(choice, 8, 'large');
+    setChoice(choice);
+    $('#list').css({ visibility: 'visible' });
+  }
   event.target.playVideo();
 }
 

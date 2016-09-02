@@ -1,0 +1,63 @@
+{{> header css="/css/course.css" override_js="/js/video.js" }}
+{{> course/sidenav }}
+
+<div id="content">
+  <main>
+  <div class="section hide-on-large-only" id="menu-banner"></div>
+  <div class="row">
+    <div id="video" class="col s12 l8">
+      <div class="video-container">
+        <div id="player"></div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s6 left-align">
+              {{#if previous }}
+              <a href="/{{ previous.path }}"
+                 class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
+                 data-position="top" data-delay="50" data-tooltip="{{ previous.title }}">
+                <i class="material-icons">skip_previous</i>
+              </a>
+              {{/if}}
+            </div>
+            <div class="col s6 right-align">
+              {{#if next }}
+              <a href="/{{ next.path }}"
+                 class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
+                 data-position="top" data-delay="50" data-tooltip="{{ next.title }}">
+                <i class="material-icons">skip_next</i>
+              </a>
+              {{/if}}
+            </div>
+          </div>
+          <div class="video-title card-title flow-text h4">{{{ title }}}</div>
+          <div class="small flow-text">{{{ contents }}}</div>
+        </div>
+      </div>
+    </div>
+    <div id="list" class="col s12 l4">
+      <div class="row">
+        {{#each videos}}
+        <div class="col video-col">
+          <a href="#" class="video-choice video-card" data-youtube="{{ youtube }}">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="//i.ytimg.com/vi/{{ youtube }}/maxresdefault.jpg" alt="YouTube placeholder">
+                <span class="card-title video-title">{{{ authorNames }}}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+
+{{> footer }}
+
+<!--
+  vim: ts=2:sw=2:et:ft=html
+-->

@@ -1,0 +1,9 @@
+---
+files:
+- js/video/jquery-2.1.1.js
+- js/video/materialize.js
+- js/video/youtube.js
+- js/video/underscore.js
+- js/video/onload.js
+output: js/video.js
+---
