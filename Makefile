@@ -60,4 +60,4 @@ run-static:
 clean:
 	@rm -rf build deploy
 
-.PHONY: run clean silent build credentials videos import backup
+.PHONY: run clean silent static credentials videos import backup
