@@ -18,9 +18,9 @@
 			<a id="logo-container" href="/" class="brand-logo">
 				<img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
 			</a>
-			<li class="center-align"><a id="index" href="/{{ course}}/">{{ course.title }}</a></li>
-			<li class="bold"><a href="{{ course }}syllabus/" class="waves-effect waves-blue">Syllabus</a></li>
-			<li class="bold"><a href="{{ course }}" class="waves-effect waves-blue">Learn</a></li>
+			<li class="center-align"><a id="index" href="{{ course.path }}/">{{ course.title }}</a></li>
+			<li class="bold"><a href="{{ course.path }}/syllabus/" class="waves-effect waves-blue">Syllabus</a></li>
+			<li class="bold"><a href="{{ course.path }}/" class="waves-effect waves-blue">Learn</a></li>
 		</li>
 	</ul>
 </header>
