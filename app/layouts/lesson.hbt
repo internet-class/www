@@ -13,7 +13,7 @@
           <div class="row">
             <div class="col s6 left-align">
               {{#if previous }}
-              <a href="/{{ previous.path }}"
+              <a href="{{ course.path}}/{{ previous.path }}"
                  class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
                  data-position="top" data-delay="50" data-tooltip="{{ previous.title }}">
                 <i class="material-icons">skip_previous</i>
@@ -22,7 +22,7 @@
             </div>
             <div class="col s6 right-align">
               {{#if next }}
-              <a href="/{{ next.path }}"
+              <a href="{{ course.path}}/{{ next.path }}"
                  class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
                  data-position="top" data-delay="50" data-tooltip="{{ next.title }}">
                 <i class="material-icons">skip_next</i>
@@ -30,14 +30,14 @@
               {{/if}}
             </div>
           </div>
-          <div class="video-title card-title flow-text h4">{{{ title }}}</div>
-          <div class="small flow-text">{{{ contents }}}</div>
+          <div class="video-title card-title flow-text h4">{{{ lesson.title }}}</div>
+          <div class="small flow-text">{{{ lesson.contents }}}</div>
         </div>
       </div>
     </div>
     <div id="list" class="col s12 l4">
       <div class="row">
-        {{#each videos}}
+        {{#each lesson.videos}}
         <div class="col video-col">
           <a href="#" class="video-choice video-card"
                       data-youtube="{{ youtube }}" data-skip="{{ skip }}">
