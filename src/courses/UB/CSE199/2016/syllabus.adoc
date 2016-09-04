@@ -1,6 +1,5 @@
 ---
 title: "CSE 199 Fall 2016"
-slug: "fys"
 spelling_exceptions:
   - eportfolio
   - Capen
