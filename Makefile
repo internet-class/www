@@ -52,7 +52,7 @@ silent:
 	@:
 
 run:
-	./node_modules/nodemon/bin/nodemon.js --watch build --watch app ./app/bin/www build/courses.json build/lessons.json
+	./node_modules/nodemon/bin/nodemon.js --watch build --watch app ./app/bin/www --courses=build/courses.json --lessons=build/lessons.json
 
 clean:
 	@rm -rf build deploy

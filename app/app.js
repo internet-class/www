@@ -3,9 +3,10 @@ var express = require('express'),
     path = require('path'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    argv = require('minimist')(process.argv.slice(2));
 
-var courses = require('./routes/courses.js');
+var courses = require('./routes/courses.js')(argv['courses'], argv['lessons']);
 
 var app = express();
 var handlebars = express_handlebars.create({
@@ -24,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../build/static/')));
 
-app.use('/courses', courses.router);
+app.use('/courses', courses);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
