@@ -1,5 +1,5 @@
 {{> header css="/css/course.css" override_js="/js/video.js" }}
-{{> course/sidenav }}
+{{> sidenav }}
 
 <div id="content">
   <main>

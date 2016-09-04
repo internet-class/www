@@ -10,7 +10,7 @@ description: >
   Syllabus for CSE 199: How the Internet Works
 priority: 0.8
 changefreq: monthly
-layout: course/syllabus.hbt
+layout: syllabus.hbt
 flowtext: true
 doSections: true
 ---
