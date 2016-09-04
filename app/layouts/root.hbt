@@ -37,7 +37,13 @@
         </li>
         <li>
           {{#if login}}
-          <a id="login" href="#!" data-redirect-url="{{ redirectURL }}">Login</a>
+          <a id="login" href="#!" data-redirect-url="{{ redirectURL }}/login">
+            Login
+          </a>
+          {{else}}
+          <a href="/logout">
+            Logout
+          </a>
           {{/if}}
         </li>
       </ul>

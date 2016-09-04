@@ -19,6 +19,7 @@ app.set('config', jsonfile.readFileSync(argv._[0]));
 app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
 app.set('lessons', jsonfile.readFileSync(path.join(__dirname, '../build/lessons.json')));
 app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
+app.set('auth0ID', "UwFsZjKr41IigcENM5hDiuQvxILo6CXu");
 
 var handlebars = express_handlebars.create({
   extname: '.hbt',
@@ -42,24 +43,41 @@ app.use(passport.session());
 
 app.get('/', function (req, res) {
   var redirectURL = app.get('config').redirectURL;
+  console.log(req.user);
   res.render('root', {
     title: 'Learn the Internet on the Internet',
     description: 'Learn about the internet through short, fun videos.',
     login: (req.user === undefined),
-    redirectURL: redirectURL + '/callback'
+    redirectURL: redirectURL
   });
 });
 
 app.use('/courses', courses);
-
-app.get('/callback',
+  
+app.get('/login',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
     if (!req.user) {
       throw new Error('user null');
     }
-    res.redirect("/user");
+    if (res.query && res.query.redirect) {
+      res.redirect(res.query.redirect);
+    } else {
+      res.redirect('/');
+    }
   });
+
+app.get('/logout', function (req, res) {
+  req.session.destroy(function (err) {
+    var returnTo = "";
+    if (res.query && res.query.returnTo) {
+      returnTo = res.query.returnTo;
+    }
+    return res.redirect("https://internet-class.auth0.com/v2/logout?returnTo=" +
+        app.get('config').redirectURL + "/" + returnTo +
+        "&client_id=" + app.get('auth0ID'));
+  });
+});
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
