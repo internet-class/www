@@ -1,0 +1,19 @@
+{{> header css="/css/error.css" }}
+
+<div id="container">
+	<div class="row">
+		<div class="col s12 center-align">
+			<a href="/">
+				<img id="logo" class="responsive-img" src="/img/logos/logo.png" alt="internet-class.org">
+			</a>
+      <h1 class="flow-text">Server Error</h1>
+      <p class="flow-text">Internal confusion reigns: {{{ message }}}.</p>
+		</div>
+	</div>
+</div>
+
+{{> footer }}
+
+<!--
+  vim: ts=2:sw=2:et:ft=html
+-->
