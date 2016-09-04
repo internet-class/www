@@ -58,7 +58,6 @@ var renderLesson = function (course, lesson, req, res) {
 		next = lessons[lesson.next.uuid];
 		next.path = lesson.next.path;
 	}
-	console.log(lesson);
 	res.render('lesson', {
 		course: course,
 		lesson: lesson,
