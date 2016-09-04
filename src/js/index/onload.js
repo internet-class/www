@@ -90,6 +90,19 @@ $(function () {
 
   }, 50);
 
+  if ($("#login").length > 0) {
+    var lock = new Auth0Lock('UwFsZjKr41IigcENM5hDiuQvxILo6CXu', 'internet-class.auth0.com', {
+      auth: {
+        redirectUrl: $('#login').data('redirect-url'),
+        responseType: 'code',
+        params: { scope: 'email' }
+      }
+    });
+    console.log($('#login').data('redirect-url'));
+    $("#login").click(function () {
+      lock.show();
+    });
+  }
 });
 
 // vim: ts=2:sw=2:et

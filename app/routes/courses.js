@@ -1,6 +1,7 @@
 'use strict';
 
-var express = require('express'),
+var app = require('../app'),
+		express = require('express'),
     _ = require('underscore'),
     path = require('path'),
     jsonfile = require('jsonfile');
@@ -9,10 +10,9 @@ var courses = {};
 var lessons = {};
 
 var routeCourses = function (coursesFile, lessonsFile) {
-	courses = jsonfile.readFileSync(coursesFile);
-	lessons = jsonfile.readFileSync(lessonsFile);
-	
 	var router = express.Router();
+	courses = router.get('courses');
+	lessons = router.get('lessons');
 	_.each(courses.slug_to_uuid, function (uuid, slug) {
 		router.use('/' + slug, routeCourse(courses[uuid]));
 	});

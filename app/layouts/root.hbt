@@ -1,9 +1,3 @@
----
-title: Learn the Internet on the Internet
-description: >
-  Learn about the internet online through short, fun videos.
-priority: 1.0
----
 {{> header css="/css/index.css" override_js="/js/index.js"}}
 
 <div id="content">
@@ -40,6 +34,11 @@ priority: 1.0
           <a id="play" class="btn-floating waves-effect waves-light btn">
             <i class="material-icons">play_circle_filled</i>
           </a>
+        </li>
+        <li>
+          {{#if login}}
+          <a id="login" href="#!" data-redirect-url="{{ redirectURL }}">Login</a>
+          {{/if}}
         </li>
       </ul>
     </div>

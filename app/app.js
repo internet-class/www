@@ -1,31 +1,65 @@
+'use strict';
+
+var argv = require('minimist')(process.argv.slice(2)),
+    jsonfile = require('jsonfile');
+
 var express = require('express'),
     express_handlebars = require('express-handlebars'),
+		passport = require('passport'),
     path = require('path'),
     logger = require('morgan'),
-    cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser'),
-    argv = require('minimist')(process.argv.slice(2));
-
-var courses = require('./routes/courses.js')(argv['courses'], argv['lessons']);
+    cookie_parser = require('cookie-parser'),
+    body_parser = require('body-parser'),
+    session = require('express-session'),
+    courses = require('./routes/courses.js')(argv['courses'], argv['lessons']);
 
 var app = express();
+
+app.set('config', jsonfile.readFileSync(argv._[0]));
+app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
+app.set('lessons', jsonfile.readFileSync(path.join(__dirname, '../build/lessons.json')));
+app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
+
 var handlebars = express_handlebars.create({
   extname: '.hbt',
   layoutsDir: 'layouts',
   partialsDir: 'layouts/partials'
 });
-
 app.engine('.hbt', handlebars.engine);
 app.set('view engine', '.hbt');
 app.set('views', path.join(__dirname, 'layouts'));
 
+passport.use(require('./passport/auth0.js')(passport, app));
+
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../build/static/')));
+app.use(cookie_parser());
+app.use(body_parser.json());
+app.use(body_parser.urlencoded({ extended: false }));
+app.use(session({ secret: 'YOUR_CLIENT_SECRET', resave: false,  saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get('/', function (req, res) {
+  var redirectURL = app.get('config').redirectURL;
+  res.render('root', {
+    title: 'Learn the Internet on the Internet',
+    description: 'Learn about the internet through short, fun videos.',
+    login: (req.user === undefined),
+    redirectURL: redirectURL + '/callback'
+  });
+});
 
 app.use('/courses', courses);
+
+app.get('/callback',
+  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
+  function(req, res) {
+    if (!req.user) {
+      throw new Error('user null');
+    }
+    res.redirect("/user");
+  });
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
