@@ -31,9 +31,6 @@ transcode:
 upload:
 	@node lib/dovideos --upload
 
-courses:
-	@node lib/docourses
-
 build:
 	@node lib/index.js $(DEPLOY) $(CHECK)
 	@while [ -n "$(find .build -depth -type d -empty -print -exec rmdir {} +)" ]; do :; done
