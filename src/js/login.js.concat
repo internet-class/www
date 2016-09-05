@@ -1,0 +1,8 @@
+---
+files:
+- js/login/jquery-2.1.1.js
+- js/login/materialize.js
+- js/login/lock.min.js
+- js/login/onload.js
+output: js/login.js
+---

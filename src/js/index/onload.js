@@ -93,7 +93,7 @@ $(function () {
   if ($(".login-link").length > 0) {
     var lock = new Auth0Lock('UwFsZjKr41IigcENM5hDiuQvxILo6CXu', 'internet-class.auth0.com', {
       auth: {
-        redirectUrl: $('#login').data('redirect-url'),
+        redirectUrl: $('.login-link').first().data('redirect-url'),
         responseType: 'code',
         params: { scope: 'email' }
       }

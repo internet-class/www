@@ -8,14 +8,29 @@ nav .brand-logo {
   left: auto !important;
   transform: none !important;
 }
+#login-form {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-style: dashed;
+  border-width: 1px;
+  box-sizing: border-box;
+}
 @media #{$medium-and-up} {
   #logo {
     height: 64px;
+  }
+  #login-form {
+    margin-top: 74px;
   }
 }
 @media #{$small-and-down} {
   #logo {
     height: 56px;
+  }
+  #login-form {
+    margin-top: 66px;
   }
 }
 nav ul a.btn {

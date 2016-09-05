@@ -1,0 +1,38 @@
+{{> header css="/css/index.css" override_js="/js/login.js"}}
+
+<div id="content">
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo">
+        <img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
+      </a>
+    </div>
+  </nav>
+  <main>
+  <div id="fullscreen">
+    <div id="login-form" data-redirect-url="{{ redirectURL }}/callback"></div>
+    <div id="bottom">
+      <div id="title">
+        <div id="title_box">
+          <h1 class="font-scale" data-font="64" data-font-min="24">
+            <strong>That page requires authentication.</strong>
+          </h1>
+          <h4 class="font-scale" data-font="40" data-font-min="14">Please log in above.</h4>
+        </div>
+      </div>
+    </div>
+    <div id="background"></div>
+  </div>
+</div>
+
+<!--[if lt IE 9]>
+<script>
+  document.createElement('video');
+</script>
+<![endif]-->
+
+{{> footer }}
+
+<!--
+  vim: ts=2:sw=2:et:ft=html
+-->

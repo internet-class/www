@@ -20,7 +20,6 @@ app.set('lessons', jsonfile.readFileSync(path.join(__dirname, '../build/lessons.
 app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
 app.set('auth0ID', "UwFsZjKr41IigcENM5hDiuQvxILo6CXu");
 
-var courses = require('./routes/courses.js');
 
 var handlebars = express_handlebars.create({
   extname: '.hbt',
@@ -53,32 +52,8 @@ app.get('/', function (req, res) {
   });
 });
 
-app.use('/courses', courses);
-  
-app.get('/callback',
-  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
-  function(req, res) {
-    if (!req.user) {
-      throw new Error('user null');
-    }
-    if (res.query && res.query.redirect) {
-      res.redirect(res.query.redirect);
-    } else {
-      res.redirect('/');
-    }
-  });
-
-app.get('/logout', function (req, res) {
-  req.session.destroy(function (err) {
-    var returnTo = "";
-    if (res.query && res.query.returnTo) {
-      returnTo = res.query.returnTo;
-    }
-    return res.redirect("https://internet-class.auth0.com/v2/logout?returnTo=" +
-        app.get('config').redirectURL + "/" + returnTo +
-        "&client_id=" + app.get('auth0ID'));
-  });
-});
+app.use('/courses', require('./routes/courses.js'));
+var login = require('./routes/login.js');
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -91,7 +66,7 @@ if (app.get('env') === 'development') {
     var error = err.status || 500;
     res.status(error);
     if (error === 403 || error === 404) {
-      res.sendfile(path.join(__dirname, '../build/static/' + error + '/index.html'));
+      res.sendFile(path.join(__dirname, '../build/static/' + error + '/index.html'));
     } else {
       res.render('errors/500', {
         message: err.message,
