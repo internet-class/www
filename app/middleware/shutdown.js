@@ -1,7 +1,5 @@
 var extend = require('lodash.assign')
 
-module.exports = createMiddleware
-
 function createMiddleware(server, app, opts) {
 
 	var shuttingDown = false, options = extend({ logger: console , forceTimeout: 30000 }, opts)
@@ -42,5 +40,7 @@ function createMiddleware(server, app, opts) {
 
 	return middleware
 }
+
+module.exports = createMiddleware
 
 // vim: ts=2:sw=2:et

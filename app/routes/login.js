@@ -6,11 +6,13 @@ var app = require('../app'),
 
 var router = express.Router();
 router.get('/callback',
-  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
+  passport.authenticate('auth0', { failureRedirect: '/login' }),
   function(req, res) {
     if (!req.user) {
       throw new Error('user null');
     }
+    var users = app.get('db').collection('users');
+    console.log(req.user);
     if (req.query && req.query.returnTo) {
       res.redirect(req.query.returnTo);
     } else {

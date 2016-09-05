@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 var argv = require('minimist')(process.argv.slice(2)),
@@ -11,47 +13,65 @@ var express = require('express'),
     body_parser = require('body-parser'),
     session = require('express-session'),
     assert = require('assert'),
-    mongo = require('mongodb').MongoClient;
+    mongo = require('mongodb').MongoClient,
+    common = require('./common.js'),
+    http = require('http'),
+    shutdown = require('./middleware/shutdown.js');
 
 var app = module.exports = express();
-
-app.set('staticDir', path.join(__dirname, '../build/static/'));
 app.set('config', jsonfile.readFileSync(argv._[0]));
-app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
-app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
-app.set('auth0ID', "UwFsZjKr41IigcENM5hDiuQvxILo6CXu");
 
-var handlebars = express_handlebars.create({
-  extname: '.hbt',
-  layoutsDir: 'layouts',
-  partialsDir: 'layouts/partials'
-});
-app.engine('.hbt', handlebars.engine);
-app.set('view engine', '.hbt');
-app.set('views', path.join(__dirname, 'layouts'));
-
-passport.use(require('./passport/auth0.js')(passport, app));
-
-app.use(logger('dev'));
-app.use(express.static(app.get('staticDir')));
-app.use(body_parser.json());
-app.use(body_parser.urlencoded({ extended: false }));
-app.use(session({
-  secret: app.get('secrets').auth0,
-  resave: false,
-  saveUninitialized: false
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-
-mongo.connect(app.get('config').mongo.URI, function (err, db) {
-  assert(!err);
+var db = mongo.connect(app.get('config').mongo.URI);
+db.then(function (result) {
   app.set('db', db);
+  app.set('staticDir', path.join(__dirname, '../build/static/'));
+  app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
+  app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
+  app.set('auth0ID', "UwFsZjKr41IigcENM5hDiuQvxILo6CXu");
+
+  var handlebars = express_handlebars.create({
+    extname: '.hbt',
+    layoutsDir: 'layouts',
+    partialsDir: 'layouts/partials'
+  });
+  app.engine('.hbt', handlebars.engine);
+  app.set('view engine', '.hbt');
+  app.set('views', path.join(__dirname, 'layouts'));
+
+  passport.use(require('./passport/auth0.js')(passport, app));
+
+  app.use(logger('dev'));
+  app.use(express.static(app.get('staticDir')));
+  app.use(body_parser.json());
+  app.use(body_parser.urlencoded({ extended: false }));
+  app.use(session({
+    secret: app.get('secrets').auth0,
+    resave: false,
+    saveUninitialized: false
+  }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+
   app.use('/', require('./routes/root.js'));
   app.use('/', require('./routes/login.js'));
   app.use('/courses', require('./routes/courses.js'));
+  require('./middleware/errors.js');
+  
+  var server = http.createServer(app);
+  console.log("Here");
+  app.use(shutdown(server, app));
+  app.set('port', common.normalizePort(app.get('config').port || '8082'));
+  server.listen(app.get('port'));
+  server.on('error', function (error) {
+    return common.onError(error, app.get('port'));
+  });
+  server.on('listening', function () {
+    return common.onListening(server.address());
+  });
+}, function (err) {
+  console.log(err);
+}).catch(function (err) {
+  console.log(err);
 });
-
-require('./middleware/errors.js');
 
 // vim: ts=2:sw=2:et
