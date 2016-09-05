@@ -33,13 +33,12 @@ router.get('/callback',
     });
     update.then(function (result) {
       assert(result.matchedCount == 1);
-      console.log(result);
+
       if (result.upsertedCount == 1) {
         var assignedCourse = req.user._json.user_metadata.assignedCourse;
         assert(assignedCourse);
         var firstLesson = app.get('courses').courses[assignedCourse].first_lesson;
         assert(firstLesson);
-        console.log("There");
 
         users.updateOne({
           _id: req.user.id,

@@ -9,7 +9,8 @@ var app = require('../app'),
 
 var routeCourse = function (course) {
 	var router = express.Router();
-	router.use(protect);
+	router.use(protect.redirect),
+	router.use(protect.load),
 	router.get('/', function (req, res) {
 		renderIndex(course, req, res);
 	});
