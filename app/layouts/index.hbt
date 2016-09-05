@@ -7,14 +7,14 @@
     <div class="col s12">
       {{#each lessons}}
       <div class="col s12 m6 l4">
-        <a class="video-card" href="/courses/{{ path }}/">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="//i.ytimg.com/vi/{{ firstVideo.youtube }}/maxresdefault.jpg"
-            alt="YouTube placeholder">
-            <span class="small flow-text card-title video-title">{{{ title }}}</span>
+        <a class="video-card" {{#if active}} href="/courses/{{ path }}/"{{/if}}>
+          <div class="card {{#if active}}hoverable active{{/if}}">
+            <div class="card-image">
+              <img src="//i.ytimg.com/vi/{{ firstVideo.youtube }}/maxresdefault.jpg"
+                   alt="YouTube placeholder">
+              <span class="small flow-text card-title video-title">{{{ title }}}</span>
+            </div>
           </div>
-        </div>
         </a>
       </div>
       {{/each}}

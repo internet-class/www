@@ -26,6 +26,10 @@ var routeCourse = function (course) {
 var renderIndex = function (course, req, res) {
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
 		var listLesson = lessons[lesson.uuid];
+		console.log(lesson.uuid, res.locals.user.lessons.current);
+		if (res.locals.user.lessons.current.indexOf(lesson.uuid) !== -1) {
+			listLesson.active = true;
+		}
 		listLesson.firstVideo = listLesson.videos[0];
 		listLesson.path = path.join(course.slug, lesson.path);
 		return listLesson;
