@@ -6,20 +6,6 @@ var app = require('../app'),
     path = require('path'),
     jsonfile = require('jsonfile');
 
-var courses = {};
-var lessons = {};
-
-var routeCourses = function (coursesFile, lessonsFile) {
-	var router = express.Router();
-	courses = router.get('courses');
-	lessons = router.get('lessons');
-	_.each(courses.slug_to_uuid, function (uuid, slug) {
-		router.use('/' + slug, routeCourse(courses[uuid]));
-	});
-
-	return router;
-}
-
 var routeCourse = function (course) {
 	var router = express.Router();
 	router.get('/', function (req, res) {
@@ -66,4 +52,12 @@ var renderLesson = function (course, lesson, req, res) {
 	});
 }
 
-exports = module.exports = routeCourses
+var courses = app.get('courses');
+var lessons = app.get('lessons');
+
+var router = express.Router();
+_.each(courses.slug_to_uuid, function (uuid, slug) {
+	router.use('/' + slug, routeCourse(courses[uuid]));
+});
+
+exports = module.exports = router

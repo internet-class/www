@@ -10,16 +10,17 @@ var express = require('express'),
     logger = require('morgan'),
     cookie_parser = require('cookie-parser'),
     body_parser = require('body-parser'),
-    session = require('express-session'),
-    courses = require('./routes/courses.js')(argv['courses'], argv['lessons']);
+    session = require('express-session');
 
-var app = express();
+var app = module.exports = express();
 
 app.set('config', jsonfile.readFileSync(argv._[0]));
 app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
 app.set('lessons', jsonfile.readFileSync(path.join(__dirname, '../build/lessons.json')));
 app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
 app.set('auth0ID', "UwFsZjKr41IigcENM5hDiuQvxILo6CXu");
+
+var courses = require('./routes/courses.js');
 
 var handlebars = express_handlebars.create({
   extname: '.hbt',
@@ -99,7 +100,5 @@ if (app.get('env') === 'development') {
     }
   });
 }
-
-module.exports = app;
 
 // vim: ts=2:sw=2:et
