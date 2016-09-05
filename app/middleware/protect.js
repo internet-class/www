@@ -18,18 +18,22 @@ var forbidden = function(req, res, next) {
   }
 }
 
+var loadUser = function(res, userId, callback) {
+  app.get('db').collection('users').findOne({
+    _id: userId
+  }, function (err, doc) {
+    assert(!err);
+    assert(doc);
+    res.locals.user = doc;
+    res.locals.user.slug = path.join('/courses',
+        app.get('courses').courses[doc.courses.current].slug);
+    return callback();
+  });
+}
+
 var load = function(req, res, next) {
 	if (req.isAuthenticated()) {
-		app.get('db').collection('users').findOne({
-			_id: req.user.id
-		}, function (err, doc) {
-			assert(!err);
-			assert(doc);
-			res.locals.user = doc;
-			res.locals.user.slug = path.join('/courses',
-					app.get('courses').courses[doc.courses.current].slug);
-			next();
-		});
+    loadUser(res, req.user.id, next);
 	} else {
 		return next();
 	}
@@ -37,6 +41,7 @@ var load = function(req, res, next) {
 
 module.exports.redirect = redirect
 module.exports.forbidden = forbidden
+module.exports.loadUser = loadUser
 module.exports.load = load
 
 // vim: ts=2:sw=2:et

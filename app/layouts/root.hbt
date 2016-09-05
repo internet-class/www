@@ -53,7 +53,11 @@
   <div id="fullscreen">
     <div id="bottom">
       <div id="button" class="center-align">
+        {{#if login }}
         <a href="#" class="login-link btn btn-large">Get Started</a>
+        {{else}}
+        <a href="{{ slug }}" class="btn btn-large">Continue</a>
+        {{/if}}
       </div>
       <div id="title">
         <div id="title_box">

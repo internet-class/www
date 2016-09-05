@@ -6,15 +6,17 @@ var app = require('../app'),
     path = require('path'),
 		protect = require('../middleware/protect.js');
 
+var courses = app.get('courses').courses;
+var lessons = app.get('courses').lessons;
+
 var routeCourse = function (course) {
-	var router = express.Router();
+	var router = express.Router()
+		.use(protect.redirect)
+		.use(protect.load)
+		.get('/', function (req, res) {
+			renderIndex(course, req, res);
+		});
 
-	router.use(protect.redirect);
-	router.use(protect.load);
-
-	router.get('/', function (req, res) {
-		renderIndex(course, req, res);
-	});
 	_.each(course.lessons, function (lesson) {
 		router.get('/' + lesson.path, function (req, res) {
 			renderLesson(course, lesson, req, res);
@@ -51,6 +53,7 @@ var renderLesson = function (course, lesson, req, res) {
 	} else if (lesson.uuid in user.lessons.completed) {
 		lesson.completed = true;
 	} else {
+		// TODO : Add a flash message here.
 		return res.redirect(res.locals.user.slug)
 	}
 	lesson.videos = _.shuffle(lesson.videos);
@@ -64,7 +67,6 @@ var renderLesson = function (course, lesson, req, res) {
 		next = lessons[lesson.next.uuid];
 		next.path = lesson.next.path;
 	}
-	console.log(lesson);
 	res.render('lesson', {
 		course: course,
 		lesson: lesson,
@@ -74,12 +76,11 @@ var renderLesson = function (course, lesson, req, res) {
 	});
 }
 
-var courses = app.get('courses').courses;
-var lessons = app.get('courses').lessons;
-
 var router = express.Router();
 _.each(courses.slug_to_uuid, function (uuid, slug) {
 	router.use('/' + slug, routeCourse(courses[uuid]));
 });
 
 exports = module.exports = router
+
+// vim: ts=2:sw=2:et
