@@ -90,7 +90,7 @@ $(function () {
 
   }, 50);
 
-  if ($("#login").length > 0) {
+  if ($(".login-link").length > 0) {
     var lock = new Auth0Lock('UwFsZjKr41IigcENM5hDiuQvxILo6CXu', 'internet-class.auth0.com', {
       auth: {
         redirectUrl: $('#login').data('redirect-url'),
@@ -98,8 +98,7 @@ $(function () {
         params: { scope: 'email' }
       }
     });
-    console.log($('#login').data('redirect-url'));
-    $("#login").click(function () {
+    $(".login-link").click(function () {
       lock.show();
     });
   }

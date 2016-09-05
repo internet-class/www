@@ -54,7 +54,7 @@ app.get('/', function (req, res) {
 
 app.use('/courses', courses);
   
-app.get('/login',
+app.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
     if (!req.user) {
