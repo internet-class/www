@@ -21,8 +21,7 @@ var express = require('express'),
 var app = module.exports = express();
 app.set('config', jsonfile.readFileSync(argv._[0]));
 
-var db = mongo.connect(app.get('config').mongo.URI);
-db.then(function (result) {
+mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.set('db', db);
   app.set('staticDir', path.join(__dirname, '../build/static/'));
   app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
@@ -58,7 +57,6 @@ db.then(function (result) {
   require('./middleware/errors.js');
   
   var server = http.createServer(app);
-  console.log("Here");
   app.use(shutdown(server, app));
   app.set('port', common.normalizePort(app.get('config').port || '8082'));
   server.listen(app.get('port'));
@@ -72,6 +70,7 @@ db.then(function (result) {
   console.log(err);
 }).catch(function (err) {
   console.log(err);
+  console.log(err.stack);
 });
 
 // vim: ts=2:sw=2:et

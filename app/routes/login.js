@@ -8,6 +8,7 @@ var router = express.Router();
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/login' }),
   function(req, res) {
+    console.log("Here");
     if (!req.user) {
       throw new Error('user null');
     }
@@ -17,6 +18,16 @@ router.get('/callback',
       res.redirect(req.query.returnTo);
     } else {
       res.redirect('/');
+    }
+  }, function (err, req, res, next) {
+    if (err) {
+      if (req.query && req.query.returnTo) {
+        res.redirect('/login?returnTo=' + req.query.returnTo);
+      } else {
+        res.redirect('/login');
+      }
+    } else {
+      next();
     }
   });
 
