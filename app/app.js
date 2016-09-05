@@ -2,23 +2,20 @@
 
 'use strict';
 
-var argv = require('minimist')(process.argv.slice(2)),
-    jsonfile = require('jsonfile');
-
 var express = require('express'),
+    jsonfile = require('jsonfile'),
+    argv = require('minimist')(process.argv.slice(2)),
+    mongo = require('mongodb').MongoClient,
+    path = require('path'),
     express_handlebars = require('express-handlebars'),
 		passport = require('passport'),
-    path = require('path'),
     logger = require('morgan'),
     body_parser = require('body-parser'),
-    session = require('express-session'),
     cookie_parser = require('cookie-parser'),
+    session = require('express-session'),
     connect_flash = require('connect-flash'),
-    assert = require('assert'),
-    mongo = require('mongodb').MongoClient,
-    common = require('./common.js'),
     http = require('http'),
-    shutdown = require('./middleware/shutdown.js');
+    common = require('./common.js');
 
 var app = module.exports = express();
 app.set('config', jsonfile.readFileSync(argv._[0]));
@@ -26,8 +23,8 @@ app.set('config', jsonfile.readFileSync(argv._[0]));
 mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.set('db', db);
   app.set('staticDir', path.join(__dirname, '../build/static/'));
-  app.set('courses', jsonfile.readFileSync(path.join(__dirname, '../build/courses.json')));
-  app.set('secrets', jsonfile.readFileSync(path.join(__dirname, 'secrets.json')));
+  app.set('courses', jsonfile.readFileSync(argv._[1]));
+  app.set('secrets', jsonfile.readFileSync(argv._[2]));
   app.set('auth0ID', "UwFsZjKr41IigcENM5hDiuQvxILo6CXu");
 
   var handlebars = express_handlebars.create({
@@ -64,7 +61,7 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
   require('./middleware/errors.js');
   
   var server = http.createServer(app);
-  app.use(shutdown(server, app));
+  app.use(require('./middleware/shutdown.js')(server, app));
   app.set('port', common.normalizePort(app.get('config').port || '8082'));
   server.listen(app.get('port'));
   server.on('error', function (error) {
