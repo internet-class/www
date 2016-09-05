@@ -69,12 +69,14 @@ function onPlayerReady(event) {
   if (_.keys(videoInfo).length > 1) {
     $('#list').css({ visibility: 'visible' });
   }
-  trackVideo(player, {
-    emptyOK: 6,
-    debug: false,
-    videos: videoInfo,
-    doneCallback: videoFinished
-  });
+  if ($("#player").data('tracking') === true) {
+    trackVideo(player, {
+      emptyOK: 6,
+      debug: false,
+      videos: videoInfo,
+      doneCallback: videoFinished
+    });
+  }
   event.target.playVideo();
 }
 

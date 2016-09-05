@@ -26,7 +26,7 @@ var routeCourse = function (course) {
 
 var renderIndex = function (course, req, res) {
 	var user = res.locals.user;
-	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
+	var lessonIndex = _.map(course.orderedLessons.slice(0), function (lesson) {
 		var listLesson = lessons[lesson.uuid];
 		if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
@@ -45,7 +45,7 @@ var renderIndex = function (course, req, res) {
 
 var renderLesson = function (course, lesson, req, res) {
 	var user = res.locals.user;
-	lesson = _.extend(lesson, lessons[lesson.uuid]);
+	lesson = _.extend({}, lesson, lessons[lesson.uuid]);
 	if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
 		lesson.current = true;
 	} else if (lesson.uuid in user.lessons.completed) {
@@ -53,6 +53,7 @@ var renderLesson = function (course, lesson, req, res) {
 	} else {
 		return res.redirect(res.locals.user.slug)
 	}
+	lesson.videos = _.shuffle(lesson.videos);
 
 	var previous, next;
 	if (lesson.previous) {
@@ -63,6 +64,7 @@ var renderLesson = function (course, lesson, req, res) {
 		next = lessons[lesson.next.uuid];
 		next.path = lesson.next.path;
 	}
+	console.log(lesson);
 	res.render('lesson', {
 		course: course,
 		lesson: lesson,
