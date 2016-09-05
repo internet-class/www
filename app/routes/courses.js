@@ -54,8 +54,8 @@ var renderLesson = function (course, lesson, req, res) {
 	});
 }
 
-var courses = app.get('courses');
-var lessons = app.get('lessons');
+var courses = app.get('courses').courses;
+var lessons = app.get('courses').lessons;
 
 var router = express.Router();
 _.each(courses.slug_to_uuid, function (uuid, slug) {
