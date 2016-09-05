@@ -37,7 +37,7 @@
         </li>
         <li>
           {{#if login}}
-          <a class="login-link" href="#" data-redirect-url="{{ redirectURL }}/callback">
+          <a class="login-link" href="#" data-redirect-url="{{ redirectURL }}">
             Login
           </a>
           {{else}}

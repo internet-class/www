@@ -5,7 +5,7 @@ var app = require('../app'),
 
 var router = express.Router();
 router.get('/', function (req, res) {
-  var redirectURL = app.get('config').redirectURL;
+  var redirectURL = app.get('config').redirectURL + "/callback";
   res.render('root', {
     title: 'Learn the Internet on the Internet',
     description: 'Learn about the internet through short, fun videos.',

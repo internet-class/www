@@ -10,7 +10,7 @@
   </nav>
   <main>
   <div id="fullscreen">
-    <div id="login-form" data-redirect-url="{{ redirectURL }}/callback"></div>
+    <div id="login-form" data-redirect-url="{{ redirectURL }}"></div>
     <div id="bottom">
       <div id="title">
         <div id="title_box">

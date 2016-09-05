@@ -4,10 +4,12 @@ var app = require('../app'),
 		express = require('express'),
     _ = require('underscore'),
     path = require('path'),
+		protect = require('../middleware/protect.js'),
     jsonfile = require('jsonfile');
 
 var routeCourse = function (course) {
 	var router = express.Router();
+	router.use(protect);
 	router.get('/', function (req, res) {
 		renderIndex(course, req, res);
 	});

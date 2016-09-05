@@ -47,6 +47,7 @@ app.use(passport.session());
 app.use('/', require('./routes/root.js'));
 app.use('/', require('./routes/login.js'));
 app.use('/courses', require('./routes/courses.js'));
-require('./routes/errors.js');
+
+require('./middleware/errors.js');
 
 // vim: ts=2:sw=2:et

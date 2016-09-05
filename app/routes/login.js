@@ -11,15 +11,18 @@ router.get('/callback',
     if (!req.user) {
       throw new Error('user null');
     }
-    if (res.query && res.query.redirect) {
-      res.redirect(res.query.redirect);
+    if (req.query && req.query.returnTo) {
+      res.redirect(req.query.returnTo);
     } else {
       res.redirect('/');
     }
   });
 
 router.get('/login', function (req, res) {
-  var redirectURL = app.get('config').redirectURL;
+  var redirectURL = app.get('config').redirectURL + "/callback";
+  if (req.query && req.query.returnTo) {
+    redirectURL += "?returnTo=" + req.query.returnTo;
+  }
   res.render('login', {
     redirectURL: redirectURL
   })
