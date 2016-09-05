@@ -129,6 +129,10 @@ a.video-card {
 }
 .video-card {
   .card.active {
+    border: 4px solid color("green", "darken-1");
+    margin: 6px;
+  }
+  .card.completed {
     border: 4px solid color("blue", "darken-1");
     margin: 6px;
   }

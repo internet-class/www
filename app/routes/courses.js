@@ -25,11 +25,15 @@ var routeCourse = function (course) {
 }
 
 var renderIndex = function (course, req, res) {
+	var user = res.locals.user;
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
 		var listLesson = lessons[lesson.uuid];
-		if (res.locals.user.lessons.current.indexOf(lesson.uuid) !== -1) {
+		if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
+		} else if (lesson.uuid in user.lessons.completed) {
+			listLesson.completed = true;
 		}
+		listLesson.dolink = listLesson.active || listLesson.completed;
 		listLesson.path = path.join(course.slug, lesson.path);
 		return listLesson;
 	});
@@ -40,11 +44,11 @@ var renderIndex = function (course, req, res) {
 }
 
 var renderLesson = function (course, lesson, req, res) {
+	var user = res.locals.user;
 	lesson = _.extend(lesson, lessons[lesson.uuid]);
-	var lessonStatus;
-	if (res.locals.user.lessons.current.indexOf(lesson.uuid) !== -1) {
+	if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
 		lesson.current = true;
-	} else if (res.locals.user.lessons.completed.indexOf(lesson.uuid) !== -1) {
+	} else if (lesson.uuid in user.lessons.completed) {
 		lesson.completed = true;
 	} else {
 		return res.redirect(res.locals.user.slug)

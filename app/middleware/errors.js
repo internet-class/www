@@ -14,10 +14,11 @@ if (app.get('env') === 'development') {
     if (error === 403 || error === 404) {
       res.sendFile(app.get('staticDir') + error + '/index.html');
     } else {
-      res.render('errors/500', {
-        message: err.message,
-        error: err
-      });
+			console.log(err);
+			console.log(err.stack);
+      res.render('errors/500', { message: err.message, error: err });
     }
   });
 }
+
+// vim: ts=2:sw=2:et

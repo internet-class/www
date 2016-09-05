@@ -7,8 +7,10 @@
     <div class="col s12">
       {{#each lessons}}
       <div class="col s12 m6 l4">
-        <a class="video-card" {{#if active}} href="/courses/{{ path }}/"{{/if}}>
-          <div class="card {{#if active}}hoverable active{{/if}}">
+        <a class="video-card" {{#if dolink}} href="/courses/{{ path }}/"{{/if}}>
+          <div class="card
+                      {{#if completed}}hoverable completed{{/if}}
+                      {{#if active}}hoverable active{{/if}}">
             <div class="card-image">
               <img src="//i.ytimg.com/vi/{{ videos.0.youtube }}/maxresdefault.jpg"
                    alt="YouTube placeholder">

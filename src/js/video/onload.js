@@ -70,6 +70,7 @@ function onPlayerReady(event) {
     $('#list').css({ visibility: 'visible' });
   }
   trackVideo(player, {
+    emptyOK: 6,
     debug: false,
     videos: videoInfo,
     doneCallback: videoFinished
