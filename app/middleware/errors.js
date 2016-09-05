@@ -1,12 +1,12 @@
 var app = require('../app');
 
-app.use(function(req, res, next) {
+var notFound = function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   return next(err);
-});
+}
 
-app.use(function(err, req, res, next) {
+var errorPage = function(err, req, res, next) {
   var error = err.status || 500;
   res.status(error);
   if (error === 403 || error === 404) {
@@ -18,6 +18,15 @@ app.use(function(err, req, res, next) {
     }
     res.render('errors/500', { message: err.message, error: err });
   }
-});
+}
+
+var quietError = function(err, req, res, next) {
+  var error = err.status || 500;
+  res.status(error).send();
+}
+
+exports.notFound = notFound
+exports.errorPage = errorPage
+exports.quietError = quietError
 
 // vim: ts=2:sw=2:et
