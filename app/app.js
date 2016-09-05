@@ -14,7 +14,6 @@ var express = require('express'),
     cookie_parser = require('cookie-parser'),
     session = require('express-session'),
     connect_flash = require('connect-flash'),
-    errors = require('./middleware/errors.js'),
     http = require('http'),
     common = require('./common.js');
 
@@ -65,6 +64,8 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
     .use(connect_flash())
     .use(passport.initialize())
     .use(passport.session());
+
+  var errors = require('./middleware/errors.js');
 
   app.use('/', require('./routes/root.js'))
     .use('/', require('./routes/login.js'))
