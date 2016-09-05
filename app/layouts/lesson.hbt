@@ -7,7 +7,7 @@
     <div id="video" class="col s12 l8">
       <div class="video-container">
         <iframe id="player" type="text/html" width="640" height="390"
-          src="//www.youtube.com/embed/{{ lesson.videos.0.youtube }}?enablejsapi=1&autoplay=1&origin={{ origin }}"
+          src="//www.youtube.com/embed/{{ lesson.videos.0.youtube }}?enablejsapi=1&autoplay=1&origin={{ origin }}&fs=0&modestbranding=1&start={{ lesson.videos.0.skip }}"
           frameborder="0" {{#if lesson.current}}data-tracking="true"{{/if}}></iframe>
       </div>
       <div class="card">
