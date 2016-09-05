@@ -17,6 +17,8 @@ var express = require('express'),
     http = require('http'),
     common = require('./common.js');
 
+var session_file_store = require('session-file-store')(session);
+
 var app = module.exports = express();
 app.set('config', jsonfile.readFileSync(argv._[0]));
 
@@ -45,7 +47,16 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.use(body_parser.json());
   app.use(body_parser.urlencoded({ extended: false }));
   app.use(cookie_parser(app.get('secrets').auth0));
+
+  var store;
+  if (app.get('env') === 'development') {
+    store = new session_file_store({
+      path: path.join(__dirname, '.sessions')
+    });
+  }
+
   app.use(session({
+    store: store,
     secret: app.get('secrets').auth0,
     resave: false,
     saveUninitialized: false

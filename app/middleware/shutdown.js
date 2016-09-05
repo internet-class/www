@@ -35,7 +35,7 @@ function createMiddleware(server, app, opts) {
 			return next();
 		}
 		res.set('Connection', 'close')
-		res.status(503).send('Server is in the process of restarting.')
+		res.status(503).send('Server is restarting.')
 	}
 
 	return middleware

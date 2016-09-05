@@ -5,15 +5,17 @@ var app = require('../app'),
 var redirect = function(req, res, next) {
 	if (!req.isAuthenticated()) {
 		return res.redirect('/login?returnTo=' + req.originalUrl);
-	}
-	next();
+	} else {
+    return next();
+  }
 }
 
 var forbidden = function(req, res, next) {
 	if (!req.isAuthenticated()) {
 		return res.status(401).send();
-	}
-	next();
+	} else {
+    return next();
+  }
 }
 
 var load = function(req, res, next) {
@@ -29,7 +31,7 @@ var load = function(req, res, next) {
 			next();
 		});
 	} else {
-		next();
+		return next();
 	}
 }
 
