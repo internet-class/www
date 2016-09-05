@@ -8,8 +8,10 @@ var app = require('../app'),
 
 var routeCourse = function (course) {
 	var router = express.Router();
-	router.use(protect.redirect),
-	router.use(protect.load),
+
+	router.use(protect.redirect);
+	router.use(protect.load);
+
 	router.get('/', function (req, res) {
 		renderIndex(course, req, res);
 	});
@@ -28,7 +30,6 @@ var renderIndex = function (course, req, res) {
 		if (res.locals.user.lessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
 		}
-		listLesson.firstVideo = listLesson.videos[0];
 		listLesson.path = path.join(course.slug, lesson.path);
 		return listLesson;
 	});
@@ -62,7 +63,8 @@ var renderLesson = function (course, lesson, req, res) {
 		course: course,
 		lesson: lesson,
 		previous: previous,
-		next: next
+		next: next,
+		origin: app.get('config').origin
 	});
 }
 

@@ -10,7 +10,7 @@
         <a class="video-card" {{#if active}} href="/courses/{{ path }}/"{{/if}}>
           <div class="card {{#if active}}hoverable active{{/if}}">
             <div class="card-image">
-              <img src="//i.ytimg.com/vi/{{ firstVideo.youtube }}/maxresdefault.jpg"
+              <img src="//i.ytimg.com/vi/{{ videos.0.youtube }}/maxresdefault.jpg"
                    alt="YouTube placeholder">
               <span class="small flow-text card-title video-title">{{{ title }}}</span>
             </div>

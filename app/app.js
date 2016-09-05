@@ -38,6 +38,8 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.engine('.hbt', handlebars.engine);
   app.set('view engine', '.hbt');
   app.set('views', path.join(__dirname, 'layouts'));
+  app.set('handlebars', handlebars);
+  require('./layouts/helpers.js');
 
   passport.use(require('./passport/auth0.js')(passport, app));
 

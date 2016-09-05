@@ -6,7 +6,9 @@
   <div class="row">
     <div id="video" class="col s12 l8">
       <div class="video-container">
-        <div id="player"></div>
+        <iframe id="player" type="text/html" width="640" height="390"
+          src="//www.youtube.com/embed/{{ lesson.videos.0.youtube }}?enablejsapi=1&autoplay=1&origin={{ origin }}"
+          frameborder="0" {{#if lesson.current}}data-tracking="true"{{/if}}></iframe>
       </div>
       <div class="card">
         <div class="card-content">
@@ -22,8 +24,8 @@
             </div>
             <div class="col s6 right-align">
               {{#if next }}
-              <a href="{{ course.path}}/{{ next.path }}"
-                 class="btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
+              <a id="next_link" href="{{ course.path}}/{{ next.path }}"
+                 class="{{#if lesson.current}}disabled{{/if}} btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
                  data-position="top" data-delay="50" data-tooltip="{{ next.title }}">
                 <i class="material-icons">skip_next</i>
               </a>
@@ -44,7 +46,9 @@
             <div class="card hoverable">
               <div class="card-image">
                 <img class="responsive-img" src="//i.ytimg.com/vi/{{ youtube }}/maxresdefault.jpg" alt="YouTube placeholder">
-                <span class="card-title video-title">{{{ authorNames }}}</span>
+                <span class="card-title video-title">
+                  {{#and_list authors}}{{ name }}{{/and_list}}
+                </span>
               </div>
             </div>
           </a>

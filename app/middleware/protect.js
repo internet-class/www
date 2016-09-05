@@ -9,6 +9,13 @@ var redirect = function(req, res, next) {
 	next();
 }
 
+var forbidden = function(req, res, next) {
+	if (!req.isAuthenticated()) {
+		return res.status(401).send();
+	}
+	next();
+}
+
 var load = function(req, res, next) {
 	if (req.isAuthenticated()) {
 		app.get('db').collection('users').findOne({
@@ -27,4 +34,7 @@ var load = function(req, res, next) {
 }
 
 module.exports.redirect = redirect
+module.exports.forbidden = forbidden
 module.exports.load = load
+
+// vim: ts=2:sw=2:et

@@ -1,0 +1,7 @@
+---
+title: "This is about adorable cats."
+---
+
+Cats are great!
+//
+Aren't they adorable.

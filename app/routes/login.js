@@ -49,7 +49,7 @@ router.get('/callback',
             },
             lessons: {
               current: [ firstLesson],
-              completed: []
+              completed: {}
             }
           }
         }, function (err, result) {
@@ -75,7 +75,7 @@ router.get('/callback',
   });
 
 router.get('/login', function (req, res) {
-  var redirectURL = app.get('config').redirectURL + "/callback";
+  var redirectURL = app.get('config').origin + "/callback";
   if (req.query && req.query.returnTo) {
     redirectURL += "?returnTo=" + req.query.returnTo;
   }
@@ -91,7 +91,7 @@ router.get('/logout', function (req, res) {
       returnTo = res.query.returnTo;
     }
     return res.redirect("https://internet-class.auth0.com/v2/logout?returnTo=" +
-        app.get('config').redirectURL + "/" + returnTo +
+        app.get('config').origin + "/" + returnTo +
         "&client_id=" + app.get('auth0ID'));
   });
 });

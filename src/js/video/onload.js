@@ -49,26 +49,30 @@ function onYouTubeIframeAPIReady() {
     };
   });
   player = new YT.Player('player', {
-    height: '390',
-    width: '640',
     events: {
       'onReady': onPlayerReady
     }
   });
 }
 
+function videoFinished(info) {
+  delete(info.watchedBins);
+  $.post('/api/v0/tracker/complete', info, function() {
+    $("#next_link").removeClass('disabled');
+  })
+    .fail(function () {
+      Materialize.toast("Failed to record lesson completion. Please reload the page.", 5000);
+    });
+}
 function onPlayerReady(event) {
-  if (_.keys(videoInfo).length == 1) {
-    var choice = videoInfo[_.keys(videoInfo)[0]];
-    player.loadVideoById(choice.id, choice.skip, 'large');
-  } else {
-    var choice = videoInfo[_.sample(_.keys(videoInfo))];
-    player.loadVideoById(choice.id, choice.skip, 'large');
-    setChoice(choice);
+  setChoice(videoInfo[_.keys(videoInfo)[0]]);
+  if (_.keys(videoInfo).length > 1) {
     $('#list').css({ visibility: 'visible' });
   }
   trackVideo(player, {
-    videos: videoInfo
+    debug: false,
+    videos: videoInfo,
+    doneCallback: videoFinished
   });
   event.target.playVideo();
 }

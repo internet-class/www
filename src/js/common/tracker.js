@@ -12,6 +12,7 @@ var checkTime = function (player, options, videoId, videoLength) {
 			watchedLength: 0,
 			maxBins: Math.floor(((videoLength - skip) / options.bin) - options.emptyOK),
 			watchedBins: {},
+			youtube: videoId,
 			done: false
 		}
 	}
