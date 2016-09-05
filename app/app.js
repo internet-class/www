@@ -8,9 +8,10 @@ var express = require('express'),
 		passport = require('passport'),
     path = require('path'),
     logger = require('morgan'),
-    cookie_parser = require('cookie-parser'),
     body_parser = require('body-parser'),
-    session = require('express-session');
+    session = require('express-session'),
+    assert = require('assert'),
+    mongo = require('mongodb').MongoClient;
 
 var app = module.exports = express();
 
@@ -43,9 +44,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', require('./routes/root.js'));
-app.use('/', require('./routes/login.js'));
-app.use('/courses', require('./routes/courses.js'));
+mongo.connect(app.get('config').mongo.URI, function (err, db) {
+  assert(!err);
+  app.set('db', db);
+  app.use('/', require('./routes/root.js'));
+  app.use('/', require('./routes/login.js'));
+  app.use('/courses', require('./routes/courses.js'));
+});
 
 require('./middleware/errors.js');
 
