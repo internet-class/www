@@ -12,6 +12,8 @@ var express = require('express'),
     logger = require('morgan'),
     body_parser = require('body-parser'),
     session = require('express-session'),
+    cookie_parser = require('cookie-parser'),
+    connect_flash = require('connect-flash'),
     assert = require('assert'),
     mongo = require('mongodb').MongoClient,
     common = require('./common.js'),
@@ -43,11 +45,13 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.use(express.static(app.get('staticDir')));
   app.use(body_parser.json());
   app.use(body_parser.urlencoded({ extended: false }));
+  app.use(cookie_parser(app.get('secrets').auth0));
   app.use(session({
     secret: app.get('secrets').auth0,
     resave: false,
     saveUninitialized: false
   }));
+  app.use(connect_flash());
   app.use(passport.initialize());
   app.use(passport.session());
 

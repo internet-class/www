@@ -1,4 +1,5 @@
 var app = require('../app'),
+		path = require('path'),
     assert = require('assert');
 
 var redirect = function(req, res, next) {
@@ -16,6 +17,8 @@ var load = function(req, res, next) {
 			assert(!err);
 			assert(doc);
 			res.locals.user = doc;
+			res.locals.user.slug = path.join('/courses',
+					app.get('courses').courses[doc.courses.current].slug);
 			next();
 		});
 	} else {

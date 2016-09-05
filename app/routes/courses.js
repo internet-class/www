@@ -26,7 +26,6 @@ var routeCourse = function (course) {
 var renderIndex = function (course, req, res) {
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
 		var listLesson = lessons[lesson.uuid];
-		console.log(lesson.uuid, res.locals.user.lessons.current);
 		if (res.locals.user.lessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
 		}
@@ -42,6 +41,15 @@ var renderIndex = function (course, req, res) {
 
 var renderLesson = function (course, lesson, req, res) {
 	lesson = _.extend(lesson, lessons[lesson.uuid]);
+	var lessonStatus;
+	if (res.locals.user.lessons.current.indexOf(lesson.uuid) !== -1) {
+		lesson.current = true;
+	} else if (res.locals.user.lessons.completed.indexOf(lesson.uuid) !== -1) {
+		lesson.completed = true;
+	} else {
+		return res.redirect(res.locals.user.slug)
+	}
+
 	var previous, next;
 	if (lesson.previous) {
 		previous = lessons[lesson.previous.uuid];
