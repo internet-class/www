@@ -48,11 +48,26 @@ function onYouTubeIframeAPIReady() {
       elem: $(this)
     };
   });
+  var choice = videoInfo[_.keys(videoInfo)[0]];
   player = new YT.Player('player', {
+    width: 640,
+    height: 390,
+    videoId: choice.id,
+    playerVars: {
+      autoplay: true,
+      fs: false,
+      modestbranding: true,
+      origin: $("#player").data('origin'),
+      start: choice.skip
+    },
     events: {
       'onReady': onPlayerReady
     }
   });
+  if (_.keys(videoInfo).length > 1) {
+    setChoice(choice);
+    $('#list').css({ visibility: 'visible' });
+  }
 }
 
 function videoFinished(info) {
@@ -65,16 +80,12 @@ function videoFinished(info) {
     });
 }
 function onPlayerReady(event) {
-  setChoice(videoInfo[_.keys(videoInfo)[0]]);
-  if (_.keys(videoInfo).length > 1) {
-    $('#list').css({ visibility: 'visible' });
-  }
   if ($("#player").data('tracking') === true) {
     trackVideo(player, {
-      emptyOK: 6,
+      complete: $("#player").data('tracking-complete'),
       debug: false,
-      videos: videoInfo,
-      doneCallback: videoFinished
+      doneCallback: videoFinished,
+      videos: videoInfo
     });
   }
   event.target.playVideo();

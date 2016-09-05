@@ -8,9 +8,9 @@ var checkTime = function (player, options, videoId, videoLength) {
 	}
 	if (!(videoId in infoById)) {
 		infoById[videoId] = {
-			maxLength: Math.floor(videoLength - skip - options.emptyOK * options.bin),
+			maxLength: Math.floor((videoLength - skip) * options.complete / 100.0),
 			watchedLength: 0,
-			maxBins: Math.floor(((videoLength - skip) / options.bin) - options.emptyOK),
+			maxBins: Math.floor(((videoLength - skip) / options.bin) * options.complete / 100.0),
 			watchedBins: {},
 			youtube: videoId,
 			done: false
@@ -55,7 +55,7 @@ var onPlayerStateChange = function (event, player, options) {
 
 var trackVideoDefaults = {
 	debug: true,
-	emptyOK: 2,
+	complete: 90,
 	bin: 10,
 	sample: 1
 }

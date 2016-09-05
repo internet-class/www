@@ -62,16 +62,16 @@ var renderLesson = function (course, lesson, req, res) {
 	if (lesson.previous) {
 		previous = lessons[lesson.previous.uuid];
 		previous.path = lesson.previous.path;
+    lesson.previous = previous;
 	}
 	if (lesson.next) {
 		next = lessons[lesson.next.uuid];
 		next.path = lesson.next.path;
+    lesson.next = next;
 	}
 	res.render('lesson', {
 		course: course,
 		lesson: lesson,
-		previous: previous,
-		next: next,
 		origin: app.get('config').origin
 	});
 }
