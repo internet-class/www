@@ -4,8 +4,7 @@ var app = require('../app'),
 		express = require('express'),
     _ = require('underscore'),
     path = require('path'),
-		protect = require('../middleware/protect.js'),
-    jsonfile = require('jsonfile');
+		protect = require('../middleware/protect.js');
 
 var routeCourse = function (course) {
 	var router = express.Router();

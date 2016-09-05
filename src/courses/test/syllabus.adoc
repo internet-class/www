@@ -1,0 +1,18 @@
+---
+description: >
+  This is just a test course. About cats.
+priority: 0.8
+changefreq: monthly
+layout: syllabus.hbt
+flowtext: true
+doSections: true
+---
+:linkattrs:
+
+== Overview
+
+I'm just testing this to see if it works.
+//
+All about cats!
+
+// vim: ts=2:et:ft=asciidoc

@@ -58,6 +58,7 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.use('/', require('./routes/root.js'));
   app.use('/', require('./routes/login.js'));
   app.use('/courses', require('./routes/courses.js'));
+  app.use('/api/v0/tracker', require('./routes/tracker.js'));
   require('./middleware/errors.js');
   
   var server = http.createServer(app);

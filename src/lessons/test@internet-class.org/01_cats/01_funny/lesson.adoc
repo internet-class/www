@@ -1,0 +1,7 @@
+---
+title: "This is about funny cats."
+---
+
+Cats are great!
+//
+And sometimes funny.
