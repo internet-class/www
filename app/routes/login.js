@@ -1,7 +1,11 @@
+'use strict';
+
 var app = require('../app'),
+		express = require('express'),
 		passport = require('passport');
 
-app.get('/callback',
+var router = express.Router();
+router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
     if (!req.user) {
@@ -14,14 +18,14 @@ app.get('/callback',
     }
   });
 
-app.get('/login', function (req, res) {
+router.get('/login', function (req, res) {
   var redirectURL = app.get('config').redirectURL;
   res.render('login', {
     redirectURL: redirectURL
   })
 });
 
-app.get('/logout', function (req, res) {
+router.get('/logout', function (req, res) {
   req.session.destroy(function (err) {
     var returnTo = "";
     if (res.query && res.query.returnTo) {
@@ -32,3 +36,7 @@ app.get('/logout', function (req, res) {
         "&client_id=" + app.get('auth0ID'));
   });
 });
+
+exports = module.exports = router
+
+// vim: ts=2:sw=2:et
