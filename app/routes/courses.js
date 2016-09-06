@@ -34,9 +34,9 @@ var renderIndex = function (course, req, res, review) {
 	var user = res.locals.user;
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
 		var listLesson = _.extend({}, lessons[lesson.uuid]);
-    var currentLessons = user.lessons[user.courses.current];
-    assert(currentLessons);
-		if (currentLessons.current.indexOf(lesson.uuid) !== -1) {
+    var courseLessons = user.lessons[user.courses.current];
+    assert(courseLessons);
+		if (courseLessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
 		} else if (lesson.uuid in user.lessons.completed) {
 			listLesson.completed = true;
@@ -66,9 +66,9 @@ var renderIndex = function (course, req, res, review) {
 var renderLesson = function (course, lesson, req, res) {
 	var user = res.locals.user;
 	lesson = _.extend({}, lesson, lessons[lesson.uuid]);
-  var currentLessons = user.lessons[user.courses.current];
-  assert(currentLessons);
-	if (currentLessons.current.indexOf(lesson.uuid) !== -1) {
+  var courseLessons = user.lessons[user.courses.current];
+  assert(courseLessons);
+	if (courseLessons.current.indexOf(lesson.uuid) !== -1) {
 		lesson.current = true;
 	} else if (lesson.uuid in user.lessons.completed) {
 		lesson.completed = true;

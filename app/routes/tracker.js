@@ -19,13 +19,15 @@ var router = express.Router()
     try {
       var user = res.locals.user;
       var course = courses[user.courses.current];
+      var courseLessons = user.lessons[user.courses.current];
+      assert(courseLessons);
 
       var completedVideo = req.body.youtube;
       assert(completedVideo in videos);
       var completedLesson = videos[completedVideo];
       assert(completedLesson && (completedLesson in course.lessons));
-      assert(user.lessons.current.length == 1);
-      assert(_.without(user.lessons.current, completedLesson).length == 0);
+      assert(courseLessons.current.length == 1);
+      assert(_.without(courseLessons.current, completedLesson).length == 0);
       var nextLesson = course.lessons[completedLesson].next;
       var currentLessons;
       if (nextLesson) {
@@ -41,6 +43,7 @@ var router = express.Router()
       var users = app.get('db').collection('users');
       var update = users.updateOne({ _id: req.user.id, }, { $set: query });
     } catch (err) {
+      console.log(err);
       res.status(500).send();
       return;
     }
