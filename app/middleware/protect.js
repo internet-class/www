@@ -24,18 +24,17 @@ var loadUser = function(res, userId, next) {
   var findUser = users.findOne({ _id: userId });
   findUser.then(function(doc) {
     if (!doc) {
-      res.redirect('/logout');
       return Promise.resolve();
     }
     user = res.locals.user = doc;
     user.slug = path.join('/courses', app.get('courses').courses[user.courses.current].slug);
-    if (user.lessons.current.length == 0 && user.lessons.previous) {
+    var currentLessons = user.lessons[user.courses.current];
+    if (currentLessons.current.length == 0 && currentLessons.previous) {
       var nextLesson = app.get('courses').courses[user.courses.current].lessons[user.lessons.previous].next;
       if (nextLesson) {
-        user.lessons.current = [ nextLesson.uuid ];
-        return users.updateOne({ _id: userId }, {
-          $set: { "lessons.current": user.lessons.current }
-        });
+        var query = {};
+        query["lessons.current." + user.courses.current] = [ nextLesson.uuid ];
+        return users.updateOne({ _id: userId }, { $set: query });
       }
     }
     return Promise.resolve();

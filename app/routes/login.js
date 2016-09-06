@@ -28,7 +28,8 @@ var router = express.Router()
 
       var users = app.get('db').collection('users');
       var update = users.updateOne({ _id: req.user.id, },
-        { $set: { lastLogin: moment.utc().toDate() } },
+        { $set: { lastLogin: moment.utc().toDate(),
+                  user: req.user._json } },
         { upsert: true });
 
       update.then(function (result) {
@@ -46,17 +47,18 @@ var router = express.Router()
               completed[skip] = moment.utc().toDate();
             });
           }
-          return users.updateOne({ _id: req.user.id, }, {
-            $set: {
-              courses: {
-                current: assignedCourse
-              },
-              lessons: {
-                current: [ courseInfo.first_lesson ],
-                completed: completed
-              }
+          var query = {
+            courses: {
+              current: assignedCourse
+            },
+            lessons: {
+              completed: completed
             }
-          });
+          };
+          query.lessons[assignedCourse] = {
+            current: [ courseInfo.first_lesson ]
+          }
+          return users.updateOne({ _id: req.user.id, }, { $set: query });
         } else {
           return Promise.resolve();
         }
@@ -66,12 +68,11 @@ var router = express.Router()
         });
       }).catch(next);
     }, function (err, req, res) {
+      req.session.destroy(function (err) {
       // TODO : Add flash message here.
-      if (req.query && req.query.returnTo) {
-        res.redirect('/login?returnTo=' + req.query.returnTo);
-      } else {
-        res.redirect('/login');
-      }
+      return res.redirect("https://internet-class.auth0.com/v2/logout?returnTo=" +
+          app.get('config').origin + "/login" + "&client_id=" + app.get('auth0ID'));
+      });
     })
   .get('/login', function (req, res) {
     var redirectURL = app.get('config').origin + "/callback";

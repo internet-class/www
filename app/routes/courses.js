@@ -1,6 +1,7 @@
 'use strict';
 
 var app = require('../app'),
+    assert = require('assert'),
 		express = require('express'),
     _ = require('underscore'),
     path = require('path'),
@@ -33,7 +34,9 @@ var renderIndex = function (course, req, res, review) {
 	var user = res.locals.user;
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
 		var listLesson = _.extend({}, lessons[lesson.uuid]);
-		if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
+    var currentLessons = user.lessons[user.courses.current];
+    assert(currentLessons);
+		if (currentLessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
 		} else if (lesson.uuid in user.lessons.completed) {
 			listLesson.completed = true;
@@ -63,7 +66,9 @@ var renderIndex = function (course, req, res, review) {
 var renderLesson = function (course, lesson, req, res) {
 	var user = res.locals.user;
 	lesson = _.extend({}, lesson, lessons[lesson.uuid]);
-	if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
+  var currentLessons = user.lessons[user.courses.current];
+  assert(currentLessons);
+	if (currentLessons.current.indexOf(lesson.uuid) !== -1) {
 		lesson.current = true;
 	} else if (lesson.uuid in user.lessons.completed) {
 		lesson.completed = true;
