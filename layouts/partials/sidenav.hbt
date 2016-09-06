@@ -19,8 +19,21 @@
 				<img id="logo" src="/img/logos/logo.png" alt="internet-class.org">
 			</a>
 			<li class="center-align"><a id="index" href="{{ course.path }}/">{{ course.title }}</a></li>
-			<li class="bold"><a href="{{ course.path }}/syllabus/" class="waves-effect waves-blue">Syllabus</a></li>
-			<li class="bold"><a href="{{ course.path }}/" class="waves-effect waves-blue">Learn</a></li>
+      <li class="bold {{ syllabus }}">
+        <a href="{{ course.path }}/syllabus/" class="waves-effect waves-blue">
+          Syllabus
+        </a>
+      </li>
+      <li class="bold {{ learn }}">
+        <a href="{{ course.path }}/" class="waves-effect waves-blue">
+          Learn
+        </a>
+      </li>
+      <li class="bold {{ review }}">
+        <a href="{{ course.path }}/review/" class="waves-effect waves-blue">
+          Review
+        </a>
+      </li>
 		</li>
 	</ul>
 </header>

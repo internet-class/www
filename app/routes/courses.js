@@ -14,8 +14,11 @@ var routeCourse = function (course) {
 		.use(protect.redirect)
 		.use(protect.load)
 		.get('/', function (req, res) {
-			renderIndex(course, req, res);
-		});
+			renderIndex(course, req, res, false);
+		})
+    .get('/review/', function (req, res) {
+      renderIndex(course, req, res, true);
+    });
 
 	_.each(course.lessons, function (lesson) {
 		router.get('/' + lesson.path, function (req, res) {
@@ -26,7 +29,7 @@ var routeCourse = function (course) {
 	return router;
 }
 
-var renderIndex = function (course, req, res) {
+var renderIndex = function (course, req, res, review) {
 	var user = res.locals.user;
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
 		var listLesson = _.extend({}, lessons[lesson.uuid]);
@@ -39,11 +42,22 @@ var renderIndex = function (course, req, res) {
 		listLesson.path = path.join(course.slug, lesson.path);
 		return listLesson;
 	});
-	res.render('index', {
+  if (!review) {
+    lessonIndex = _.filter(lessonIndex, function (lesson) {
+      return (!(lesson.completed));
+    });
+  }
+  var context = {
     title: course.title,
 		course: course,
-		lessons: lessonIndex
-	});
+		lessons: lessonIndex,
+	};
+  if (review) {
+    context['review'] = 'active';
+  } else {
+    context['learn'] = 'active';
+  }
+	res.render('index', context);
 }
 
 var renderLesson = function (course, lesson, req, res) {

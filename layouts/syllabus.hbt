@@ -1,5 +1,5 @@
 {{> header css="/css/course.css" }}
-{{> sidenav }}
+{{> sidenav syllabus="active" }}
 
 <div id="content">
 <main>
