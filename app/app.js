@@ -91,11 +91,10 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
   server.on('listening', function () {
     return common.onListening(server.address());
   });
-}, function (err) {
-  console.log(err);
 }).catch(function (err) {
   console.log(err);
   console.log(err.stack);
+  process.exit(-1);
 });
 
 // vim: ts=2:sw=2:et

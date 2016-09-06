@@ -20,7 +20,7 @@ function returnToRedirect(req, res) {
 var router = express.Router()
   .get('/callback',
     passport.authenticate('auth0', { failureRedirect: '/login' }),
-    function(req, res) {
+    function(req, res, next) {
       if (!req.user) {
         throw new Error('user null');
       }
@@ -39,7 +39,7 @@ var router = express.Router()
           var firstLesson = app.get('courses').courses[assignedCourse].first_lesson;
           assert(firstLesson);
 
-          users.updateOne({ _id: req.user.id, }, {
+          return users.updateOne({ _id: req.user.id, }, {
             $set: {
               courses: {
                 current: assignedCourse
@@ -49,31 +49,21 @@ var router = express.Router()
                 completed: {}
               }
             }
-          }, function (err, result) {
-            assert(!err);
-            protect.loadUser(res, req.user.id, function () {
-              returnToRedirect(req, res);
-            });
           });
         } else {
-          protect.loadUser(res, req.user.id, function () {
-            returnToRedirect(req, res);
-          });
-          return;
+          return Promise.resolve();
         }
-      }).catch(function (err) {
-        throw(err);
-      });
-    }, function (err, req, res, next) {
-      if (err) {
-        // TODO : Add flash message here.
-        if (req.query && req.query.returnTo) {
-          res.redirect('/login?returnTo=' + req.query.returnTo);
-        } else {
-          res.redirect('/login');
-        }
+      }).then(function (result) {
+        protect.loadUser(res, req.user.id, function () {
+          returnToRedirect(req, res);
+        });
+      }).catch(next);
+    }, function (err, req, res) {
+      // TODO : Add flash message here.
+      if (req.query && req.query.returnTo) {
+        res.redirect('/login?returnTo=' + req.query.returnTo);
       } else {
-        next();
+        res.redirect('/login');
       }
     })
   .get('/login', function (req, res) {
