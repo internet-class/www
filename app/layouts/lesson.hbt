@@ -30,6 +30,12 @@
                  data-position="top" data-delay="50" data-tooltip="{{ lesson.next.title }}">
                 <i class="material-icons">skip_next</i>
               </a>
+              {{else}}
+              <a id="next_link" href="{{ course.path}}/"
+                 class="{{#if lesson.current}}disabled{{/if}} btn btn-floating btn-medium waves-effect waves-light blue tooltipped tooltip-disable-on-click"
+                 data-position="top" data-delay="50" data-tooltip="You've finished all the assigned lessons! Click here to return to the menu.">
+                <i class="material-icons">done</i>
+              </a>
               {{/if}}
             </div>
           </div>

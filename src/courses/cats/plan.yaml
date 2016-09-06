@@ -3,6 +3,8 @@ slug: "cats"
 uuid: "36483e3b-447c-489d-9a24-3954d9031496"
 picker:
   path:
-    - "lessons/test@internet-class.org/**/lesson.html"
+    - "lessons/test@internet-class.org/01*/01*/lesson.html"
+    - "lessons/test@internet-class.org/01*/02*/lesson.html"
+    - "lessons/test@internet-class.org/01*/03*/lesson.html"
 tracker:
   complete: 10

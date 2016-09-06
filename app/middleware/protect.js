@@ -24,15 +24,16 @@ var loadUser = function(res, userId, callback) {
   var findUser = users.findOne({ _id: userId });
   findUser.then(function(doc) {
     if (!doc) {
-      return callback();
+      return res.redirect('/logout');
     }
     user = res.locals.user = doc;
     user.slug = path.join('/courses', app.get('courses').courses[user.courses.current].slug);
     if (user.lessons.current.length == 0 && user.lessons.previous) {
       var nextLesson = app.get('courses').courses[user.courses.current].lessons[user.lessons.previous].next;
       if (nextLesson) {
-        var updateNext = users.updateOne({ _id: userID }, {
-          $set: { "lessons.current": [ nextLesson ] }
+        user.lessons.current = [ nextLesson.uuid ];
+        var updateNext = users.updateOne({ _id: userId }, {
+          $set: { "lessons.current": user.lessons.current }
         });
         updateNext.then(function (result) {
           assert(result.matchedCount == 1);

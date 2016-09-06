@@ -28,8 +28,8 @@ var routeCourse = function (course) {
 
 var renderIndex = function (course, req, res) {
 	var user = res.locals.user;
-	var lessonIndex = _.map(course.orderedLessons.slice(0), function (lesson) {
-		var listLesson = lessons[lesson.uuid];
+	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
+		var listLesson = _.extend({}, lessons[lesson.uuid]);
 		if (user.lessons.current.indexOf(lesson.uuid) !== -1) {
 			listLesson.active = true;
 		} else if (lesson.uuid in user.lessons.completed) {
@@ -40,6 +40,7 @@ var renderIndex = function (course, req, res) {
 		return listLesson;
 	});
 	res.render('index', {
+    title: course.title,
 		course: course,
 		lessons: lessonIndex
 	});
@@ -70,6 +71,7 @@ var renderLesson = function (course, lesson, req, res) {
     lesson.next = next;
 	}
 	res.render('lesson', {
+    title: lesson.title,
 		course: course,
 		lesson: lesson,
 		origin: app.get('config').origin
