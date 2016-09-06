@@ -19,6 +19,19 @@
           </div>
         </a>
       </div>
+      {{else}}
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title light-blue-text">You're Done!</span>
+            <p class="small flow-text">At least for now. Sit tight until we release more videos. Or
+            do some review!</p>
+          </div>
+          <div class="card-action">
+            <a href="{{ course.path }}/review/">Review</a>
+          </div>
+        </div>
+      </div>
       {{/each}}
     </div>
   </div>

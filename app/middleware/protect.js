@@ -24,16 +24,17 @@ var loadUser = function(res, userId, next) {
   var findUser = users.findOne({ _id: userId });
   findUser.then(function(doc) {
     if (!doc) {
-      return Promise.resolve();
+      return new Error("Can't find user.");
     }
     user = res.locals.user = doc;
     user.slug = path.join('/courses', app.get('courses').courses[user.courses.current].slug);
     var currentLessons = user.lessons[user.courses.current];
     if (currentLessons.current.length == 0 && currentLessons.previous) {
-      var nextLesson = app.get('courses').courses[user.courses.current].lessons[user.lessons.previous].next;
+      var nextLesson = app.get('courses').courses[user.courses.current].lessons[currentLessons.previous].next;
       if (nextLesson) {
+        user.lessons[user.courses.current].current = [ nextLesson.uuid ];
         var query = {};
-        query["lessons.current." + user.courses.current] = [ nextLesson.uuid ];
+        query["lessons." + user.courses.current + ".current"] = [ nextLesson.uuid ];
         return users.updateOne({ _id: userId }, { $set: query });
       }
     }
