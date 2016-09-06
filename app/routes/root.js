@@ -5,8 +5,7 @@ var app = require('../app'),
     protect = require('../middleware/protect.js');
 
 var router = express.Router()
-  .use(protect.load)
-  .get('/', function (req, res) {
+  .get('/', protect.load, function (req, res) {
     var redirectURL = app.get('config').origin + "/callback";
     var login = true, slug;
     if (req.user) {

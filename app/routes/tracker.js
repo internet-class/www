@@ -36,6 +36,7 @@ var router = express.Router()
       }
       var query = {};
       query["lessons.current"] = currentLessons;
+      query["lessons.previous"] = completedLesson;
       query["lessons.completed." + completedLesson] = moment.utc().toDate();
       var users = app.get('db').collection('users');
       var update = users.updateOne({ _id: req.user.id, }, { $set: query });
