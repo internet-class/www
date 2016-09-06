@@ -1,6 +1,7 @@
 {
 	"origin": "http://localhost:8082",
 	"port": 8082,
+	"session": "filesystem",
 	"mongo": {
 		"URI": "mongodb://development:development@ds019956.mlab.com:19956/internet-class-development"
 	}

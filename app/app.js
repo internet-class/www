@@ -13,14 +13,16 @@ var express = require('express'),
     body_parser = require('body-parser'),
     cookie_parser = require('cookie-parser'),
     session = require('express-session'),
+    assert = require('assert'),
     connect_flash = require('connect-flash'),
     http = require('http'),
     common = require('./common.js');
 
-var session_file_store = require('session-file-store')(session);
-
 var app = module.exports = express();
 app.set('config', jsonfile.readFileSync(argv._[0]));
+if (app.get('config').proxy) {
+  app.set('trust proxy', 1);
+}
 
 mongo.connect(app.get('config').mongo.URI).then(function (db) {
   app.set('db', db)
@@ -49,11 +51,16 @@ mongo.connect(app.get('config').mongo.URI).then(function (db) {
     .use(cookie_parser(app.get('secrets').auth0));
 
   var store;
-  if (app.get('env') === 'development') {
+  if (app.get('config').session === 'filesystem') {
+    var session_file_store = require('session-file-store')(session);
     store = new session_file_store({
       path: path.join(__dirname, '.sessions')
     });
+  } else if (app.get('config').session === 'redis') {
+    var redis_store = require('connect-redis')(session);
+    store = new redis_store();
   }
+  assert(store);
 
   app.use(session({
       store: store,

@@ -1,0 +1,9 @@
+{
+	"origin": "https://dev.internet-class.org",
+	"proxy": true,
+	"session": "redis",
+	"port": 3333,
+	"mongo": {
+		"URI": "mongodb://developer:developer@ds019906.mlab.com:19906/dev-internet-class"
+	}
+}
