@@ -1,6 +1,7 @@
 'use strict';
 
 var app = require('../app'),
+     _ = require('underscore'),
     assert = require('assert'),
 		express = require('express'),
 		passport = require('passport'),
@@ -36,17 +37,23 @@ var router = express.Router()
         if (result.upsertedCount == 1) {
           var assignedCourse = req.user._json.user_metadata.assignedCourse;
           assert(assignedCourse);
-          var firstLesson = app.get('courses').courses[assignedCourse].first_lesson;
-          assert(firstLesson);
-
+          var courseInfo = app.get('courses').courses[assignedCourse];
+          assert(courseInfo);
+          assert(courseInfo.first_lesson);
+          var completed = {};
+          if (courseInfo.lessons.skip && courseInfo.lessons.skip.length > 0) {
+            _.each(courseInfo.lessons.skip, function (skip) {
+              completed[skip] = moment.utc().toDate();
+            });
+          }
           return users.updateOne({ _id: req.user.id, }, {
             $set: {
               courses: {
                 current: assignedCourse
               },
               lessons: {
-                current: [ firstLesson ],
-                completed: {}
+                current: [ courseInfo.first_lesson ],
+                completed: completed
               }
             }
           });

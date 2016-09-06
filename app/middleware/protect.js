@@ -18,13 +18,14 @@ var forbidden = function(req, res, next) {
   }
 }
 
-var loadUser = function(res, userId, callback) {
+var loadUser = function(res, userId, next) {
   var user;
   var users = app.get('db').collection('users');
   var findUser = users.findOne({ _id: userId });
   findUser.then(function(doc) {
     if (!doc) {
-      return res.redirect('/logout');
+      res.redirect('/logout');
+      return Promise.resolve();
     }
     user = res.locals.user = doc;
     user.slug = path.join('/courses', app.get('courses').courses[user.courses.current].slug);
@@ -32,21 +33,18 @@ var loadUser = function(res, userId, callback) {
       var nextLesson = app.get('courses').courses[user.courses.current].lessons[user.lessons.previous].next;
       if (nextLesson) {
         user.lessons.current = [ nextLesson.uuid ];
-        var updateNext = users.updateOne({ _id: userId }, {
+        return users.updateOne({ _id: userId }, {
           $set: { "lessons.current": user.lessons.current }
-        });
-        updateNext.then(function (result) {
-          assert(result.matchedCount == 1);
-          return callback();
-        }).catch(function(err) {
-          throw(err);
         });
       }
     }
-    return callback();
-  }).catch(function(err) {
-    throw(err);
-  });
+    return Promise.resolve();
+  }).then(function (result) {
+    if (result) {
+      assert(result.matchedCount == 1);
+    }
+    return next();
+  }).catch(next);
 }
 
 var load = function(req, res, next) {

@@ -3,4 +3,9 @@ slug: "fys"
 uuid: "9b01b560-7b8b-444d-aa41-5f9c07fee117"
 picker:
   path:
-    - "lessons/challen@buffalo.edu/01_era/**/lesson.html"
+    - "lessons/challen@buffalo.edu/01*/**/lesson.html"
+    - "lessons/challen@buffalo.edu/02*/**/lesson.html"
+  skip:
+    - "lessons/challen@buffalo.edu/01*/**/lesson.html"
+tracker:
+  complete: 90

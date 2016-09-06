@@ -10,7 +10,7 @@ var router = express.Router()
     var login = true, slug;
     if (req.user) {
       login = false;
-      slug = res.locals.user.slug;
+      slug = res.locals.user !== undefined ? res.locals.user.slug : undefined;
     }
     res.render('root', {
       title: 'Learn the Internet on the Internet',
