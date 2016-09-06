@@ -40,10 +40,15 @@ var loadUser = function(res, userId, next) {
     }
     return Promise.resolve();
   }).then(function (result) {
-    if (result) {
-      assert(result.matchedCount == 1);
+    if (result && result.matchedCount == 0) {
+      req.session.destroy(function (err) {
+        // TODO : Add flash message here.
+        return res.redirect("https://internet-class.auth0.com/v2/logout?returnTo=" +
+            app.get('config').origin + "/login" + "&client_id=" + app.get('auth0ID'));
+        });
+    } else {
+      return next();
     }
-    return next();
   }).catch(next);
 }
 
