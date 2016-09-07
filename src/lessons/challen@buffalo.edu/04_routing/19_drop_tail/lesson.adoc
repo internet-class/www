@@ -1,0 +1,9 @@
+---
+title: "What is the difference between drop head and drop tail?"
+---
+
+How routers handle overload can have a large effect on the end hosts trying to
+send packets across the internet.
+//
+When a router runs out of space to hold incoming packets, the thing that seems
+the most fair isn't always the best thing to do.

@@ -1,0 +1,13 @@
+---
+title: "What was the Morris worm?"
+---
+
+A fun bit of early internet history concerns a famous computer worm launched
+by Robert Morris in 1988.
+//
+While the intent of the worm was to map the internet, its effect was that the
+_entire_ early internet had to be taken offline and repaired--something that
+would be impossible or at least incredibly inconvenient today.
+//
+Robert Morris was convicted of a computer crime...  but is also now a tenured
+professor of computer science at MIT.
