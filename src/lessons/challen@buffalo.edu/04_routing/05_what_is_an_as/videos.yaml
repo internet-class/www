@@ -1,0 +1,26 @@
+-
+  files:
+    - 66c90da1c776d3e7000d3620a03ba10b.MTS
+  creditsFile: stuck.MTS
+  created: 'Wed Sep 07 2016 17:26:52 GMT-0400'
+  authors:
+    -
+      name: 'Geoffrey Challen'
+      credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'
+  producers:
+    -
+      name: 'Greg Bunyea'
+      credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
+-
+  files:
+    - 81f678dafe6a8ebb18ed8c936ead4ff1.MTS
+  created: 'Wed Sep 07 2016 15:37:06 GMT-0400'
+  creditsFile: offline.MTS
+  authors:
+    -
+      name: 'Geoffrey Challen'
+      credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'
+  producers:
+    -
+      name: 'Greg Bunyea'
+      credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
