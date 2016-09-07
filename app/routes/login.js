@@ -79,7 +79,7 @@ var router = express.Router()
     if (req.query && req.query.returnTo) {
       redirectURL += "?returnTo=" + req.query.returnTo;
     }
-    res.render('login', { redirectURL: redirectURL });
+    res.render('login', { title: "Login", redirectURL: redirectURL });
   })
   .get('/logout', function (req, res) {
     req.session.destroy(function (err) {
