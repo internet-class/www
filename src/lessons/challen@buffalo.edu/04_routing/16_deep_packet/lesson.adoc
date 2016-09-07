@@ -1,0 +1,17 @@
+---
+title: "What is deep packet inspection?"
+---
+
+Typically routers are designed to only look at the destination address of each
+packet.
+//
+This allows routing decisions to be made as quickly as possible.
+//
+However, routers _do_ have access to the rest of contents of the packets that
+pass through them.
+//
+Looking at other parts of the packet it referred to as _deep packet
+inspection_.
+//
+Deep packet inspection can be used to accomplish many things, but it's not
+clear whether any of them are good things to do.

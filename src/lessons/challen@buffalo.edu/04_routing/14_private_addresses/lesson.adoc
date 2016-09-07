@@ -1,0 +1,14 @@
+---
+title: "What are private IP addresses?"
+---
+
+Several blocks of internet protocol (IP) addresses are marked as unroutable
+and also called private IP addresses.
+//
+Core internet routers encountering a packet with an unroutable address will
+drop it immediately.
+//
+So what are unroutable addresses for?
+//
+Despite seeming useless, they play an important role in today's internet
+routing architecture.

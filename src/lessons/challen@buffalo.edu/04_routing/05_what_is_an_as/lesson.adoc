@@ -1,0 +1,18 @@
+---
+title: "What is an autonomous system?"
+---
+
+The internet is an internetwork--a network of computer networks.
+//
+When discussing routing, we sometimes refer to these independent networks as
+_autonomous systems_.
+//
+Each autonomous system is responsible for routing packets internally.
+//
+To travel across the broader internet, packets must traverse multiple
+autonomous systems.
+//
+So it is more accurate to think of internet routing as happening across
+autonomous systems, rather than between individual computers.
+//
+So yes: the internet is an internetwork--a network of computer networks!

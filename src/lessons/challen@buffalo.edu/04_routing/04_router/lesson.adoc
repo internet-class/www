@@ -1,0 +1,19 @@
+---
+title: "What is a router?"
+---
+
+Computers on the internet can be divided into two categories--routers, and
+_end-hosts_.
+//
+End-hosts are most of the computers you are familiar with.
+//
+Routers, on the other hand, operate within the core of the internet.
+//
+While end-hosts run higher-level protocols, routers typically only run the
+internet protocol.
+//
+And while end-hosts would be familiar to you, routers are _highly-specialized_
+pieces of dedicated hardware.
+//
+Their job is to one job and do it really well--make choices for how to direct
+packets onward toward their destination.

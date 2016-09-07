@@ -1,0 +1,13 @@
+---
+title: "What are some problems with internet routing?"
+---
+
+Internet routing works most of the time, but problems can arise.
+//
+Two examples are _routing loops_ and _route flapping_.
+//
+Routing loops can cause packets to circle in the network without ever reaching
+their destination.
+//
+Route flapping can cause routers to change their minds frequently and lead to
+a lot of unnecessary routing announcements.

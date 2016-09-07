@@ -1,0 +1,13 @@
+---
+title: "What is a man-in-the-middle attack?"
+---
+
+Because connections on the internet span many different machines, compromising
+a machine on a routing path can allow the attacker to observe a lot of
+traffic.
+//
+This is also known as a _man-(or woman)-in-the-middle attack_.
+//
+Even if packet contents are encrypted, observing communication patterns
+between computers can expose things that the communicating parties may want to
+reveal.

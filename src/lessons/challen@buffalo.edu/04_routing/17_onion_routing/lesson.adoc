@@ -1,0 +1,17 @@
+---
+title: "What is onion routing?"
+---
+
+Routing is a fundamentally public activity.
+//
+Core internet routers can see both where the packet is going and where it came
+from.
+//
+Even if the contents are encrypted, in certain cases it is dangerous to even
+expose that two computers on the internet are communicating with each other.
+//
+One solution is known as _onion routing_.
+//
+In onion routing, the structure of the messages combined with clever
+encryption allow routers to only know the previous and next hops--but not the
+source or the final destination.

@@ -1,0 +1,15 @@
+---
+title: "What is a end-host?"
+---
+
+Computers on the internet can be divided into two categories--routers, and
+_end-hosts_.
+//
+End-hosts are most of the computers you are familiar with.
+//
+The comprise the start and end points of most connections on the internet.
+//
+Your laptop is an end host.
+//
+So is your smartphone, and your desktop (if you have one), and the web servers
+or other servers that you connect to.
