@@ -17,6 +17,8 @@
     -
       name: 'Greg Bunyea'
       credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
+  transcode: false
+  upload: false
 -
   created: 'Tue Aug 09 2016 11:23:16 GMT-0400'
   durationSec: 55
@@ -33,3 +35,5 @@
     -
       name: 'Greg Bunyea'
       credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
+  transcode: false
+  upload: false
