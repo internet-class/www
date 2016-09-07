@@ -46,6 +46,17 @@ potential majors.
 Familiarity with the web and access to a personal computer are assumed, but
 no technical background is required.
 
+== Announcements
+
+We're trying announcements through video this semester. Here's the playlist:
+
+++++
+<div class="video-container">
+<div class="lazy-iframe"
+data-src="https://www.youtube.com/embed/videoseries?list=PLk97mPCd8nvb3LuRd9PKgSE9wgeoUjj08&amp;showinfo=1"></div>
+</div>
+++++
+
 [[approach]]
 == Approach
 
@@ -453,6 +464,8 @@ approach>> to work.
 //
 We will monitor and quantify your progress through the video series in a
 variety of ways.
+//
+Attempting to foil them will be considered a violation of academic integrity.
 
 === Activity Participation
 
@@ -472,6 +485,25 @@ If you do not attend for any reason, legitimate or not, you will not receive
 credit for the activity.
 //
 As a result, missing class repeatedly will make it hard to pass this class.
+
+There are 26 activities this semester and we will grade participation out of
+22--meaning that you have 4 excused abscences.
+//
+These can be used for any reason: family obligations, leisure travel,
+hangovers, alarm configuration mistakes, confusions about what day of the
+week it is, not finding your partners, not making it back to check in with
+your teaching assistant, etc.
+//
+That said, we would suggest that you reserve your four excused abscences for
+interesting uses (like leisure travel) as opposed to for stupid uses (alarm
+configuration mistakes).
+//
+The choice is up to you, but don't contact us after you miss class asking if
+you can make up the activity.
+//
+Regardless of why you missed class, the answer is no footnote:[If you think
+that you will legitimately miss more than four classes this term, please come
+talk to us. Although... should you be in school at all?].
 
 In addition, if you do not check out with a teaching assistant _during class_
 you will also not receive credit for the activity.
@@ -514,10 +546,13 @@ both listed participants?
 Students working alone get this credit for free, so there's a bit of tradeoff
 there when determining whether to work with a partner.
 //
-. *Clarity* (20%): does the video clearly explain the concept?
+. *Clarity and Accuracy* (20%): does the video clearly explain the concept?
 //
-. *Accuracy* (20%): does the video accurate explain the concept? Do the video
-authors demonstrate their depth of knowledge of the material?
+Does the video accurate explain the concept? Do the video authors demonstrate
+their depth of knowledge of the material?
+//
+. *Originality* (20%): does the video explore the idea in a new way and not
+one derivative of existing video explanations?
 //
 . *Excitement* (20%): does the video engage the viewer and make them want to
 learn the material?
