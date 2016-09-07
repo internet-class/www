@@ -1,0 +1,13 @@
+---
+title: "Basics of internet network structure."
+---
+
+Any computer network faces a tradeoff.
+//
+Adding more links creates more capacity and makes the network more robust,
+since packets can be routed around link failures.
+//
+However, links are infrastructure and therefore expensive.
+//
+The internet strikes a balance between the extremes of a fully-connected (and
+absurdly expensive) network and a minimally-connected (but fragile) network.

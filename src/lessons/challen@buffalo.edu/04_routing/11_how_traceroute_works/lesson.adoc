@@ -1,0 +1,8 @@
+---
+title: "How does traceroute work?"
+---
+
+`traceroute` is one interesting tool enabled by ICMP.
+//
+And the way that it works also illustrates an interesting feature of the IP
+packet header--the time to live (TTL) field.

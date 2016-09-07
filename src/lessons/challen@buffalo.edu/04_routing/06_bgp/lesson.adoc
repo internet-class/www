@@ -1,0 +1,15 @@
+---
+title: "What is the border gateway protocol (BGP)?"
+---
+
+Routing on the internet is actually performed between autonomous systems
+(ASes).
+//
+Those autonomous systems need a way to determine how to send data to ASes that
+they are not directly connected with.
+//
+To do this, the use the border gateway protocol, or BGP.
+//
+By exchanging routing announcements using BGP routers located in each
+autonomous system can eventually build up a routing table allowing them to
+determine the best way to reach any other AS connected to the internet.

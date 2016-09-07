@@ -1,0 +1,24 @@
+---
+title: "What is a meet-me room?"
+---
+
+Many autonomous systems peer only with one or several large autonomous systems
+run by large internet service providers (ISPs).
+//
+This ensures that they can reach all other ASes that are connected to the
+internet, but doesn't always provide optimal routes--particularly for
+geographically proximate ASes.
+//
+For example, two autonomous systems located in the same town might find that
+their traffic actually requires many additional hops if sent through a large
+ISP.
+//
+It would be much more efficient for them to establish a direct connection with
+each other.
+//
+Meet-me rooms or internet exchange points (IXPs) are places designed to enable
+these connections.
+//
+Any interested AS in the Buffalo area, for example, could run a cable from
+their network to a meet-me room allowing them to connect (or peer) with many
+other local ASes.

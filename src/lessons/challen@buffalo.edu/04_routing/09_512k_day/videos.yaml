@@ -1,8 +1,8 @@
 -
-  created: 'Tue Aug 09 2016 11:23:16 GMT-0400'
-  durationSec: 47
-  youtube: FHH6hIc2GyE
-  skip: 0
+  files:
+    - d00c52205b871706a3db8fc5ea3d4c32.MTS
+  created: 'Wed Sep 07 2016 11:20:44 GMT-0400'
+  transcode: false
   authors:
     -
       name: 'Geoffrey Challen'

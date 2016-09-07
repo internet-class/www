@@ -1,0 +1,22 @@
+---
+title: "Introduction to internet routing."
+---
+
+For billions of computers to be able to communicate with each other, the
+internet has to be able to _route_ packets between them.
+//
+Routing is a core internet function and the only thing that makes
+long-distance computer-to-computer communication possible.
+//
+Routing also presents an interesting set of challeges.
+//
+Routing decisions have be made extremely quickly, which places constraints on
+the structure of the IP addresses used during the routing process.
+//
+Routers have be able to determine how to route packets appropriately, which
+requires separate protocols.
+//
+Ideally routes are stable (don't change over time) but also robust (change if
+existing paths become overloaded or unusable).
+//
+So there's a lot of interesting stuff to discuss here.

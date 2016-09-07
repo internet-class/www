@@ -1,0 +1,12 @@
+---
+title: "What was 512k day?"
+---
+
+Generally we want the internet to get bigger.
+//
+Bringing more people online will continue to change the world.
+//
+But there was a day that the internet got just a bit _too_ big--or at least
+the routing tables got too large.
+//
+This is the story of 512k day, August 12th, 2014.

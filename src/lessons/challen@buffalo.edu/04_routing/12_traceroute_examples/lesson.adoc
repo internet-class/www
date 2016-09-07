@@ -1,0 +1,8 @@
+---
+title: "Examples of traceroute usage."
+---
+
+Let's have some fun with `traceroute`!
+//
+We'll inspect a few routes to different internet destinations and try to see
+if we can map them into physical space.

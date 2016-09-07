@@ -13,6 +13,10 @@
     -
       name: 'Suzanna Challen'
       credits: 'Thinks she likes cats'
+  producers:
+    -
+      name: 'Greg Bunyea'
+      credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
 -
   created: 'Tue Aug 09 2016 11:23:16 GMT-0400'
   durationSec: 55
@@ -25,3 +29,7 @@
     -
       name: 'Greg Bunyea'
       credits: 'Serious Cat Lover'
+  producers:
+    -
+      name: 'Greg Bunyea'
+      credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'

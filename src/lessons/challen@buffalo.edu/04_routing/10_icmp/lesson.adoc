@@ -1,0 +1,12 @@
+---
+title: "What is the Internet Control Message Protocol (ICMP)?
+---
+
+The core internet protocol suite (IP, TCP, and UDP) is primarily concerned
+with moving data between computers on the internet.
+//
+But it also includes another protocol that is entirely dedicated to control
+traffic: the Internet Control Message Protocol (ICMP).
+//
+Despite the fact that ICMP is not concerned with carrying data, it does enable
+several tools that we can use to find out more about the internet's structure.

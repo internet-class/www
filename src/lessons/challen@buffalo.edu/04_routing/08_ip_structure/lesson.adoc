@@ -1,0 +1,21 @@
+---
+title: "How are IP addresses structured to enable efficient routing?"
+---
+
+Routing is a critical core internet function.
+//
+It has to be fast.
+//
+Really fast.
+//
+If all IP address required their own routes that each router would have to
+store, routing tables would have around 4 billion entries.
+//
+Routers use special hardware to improve routing performance and those hardware
+components cannot hold anywhere close to 4 billion entries.
+//
+Instead, to reduce the number of routing table entries we organize IP address
+hierarchically.
+//
+This allows routers to make routing decisions by only examining some part of
+the _prefix_ of the IP address, rather than the entire address.
