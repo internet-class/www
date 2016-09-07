@@ -92,6 +92,10 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/09_robustness/lesson.adoc"
   },
   {
+    "id": "5309999a-20c5-4a36-83e6-88acd5618dfe",
+    "file": "lessons/challen@buffalo.edu/04_routing/19_drop_tail/lesson.adoc"
+  },
+  {
     "id": "560d5034-6f97-4a28-8014-0b6bf42474e3",
     "file": "lessons/challen@buffalo.edu/01_era/09_find_out_more/lesson.adoc"
   },
@@ -226,6 +230,10 @@
   {
     "id": "ee10ca9f-6293-4a57-83d7-c7702848ab47",
     "file": "lessons/challen@buffalo.edu/01_era/01_why_internet/lesson.adoc"
+  },
+  {
+    "id": "ee8318bc-f93c-4f45-94a4-a5ea860b7539",
+    "file": "lessons/challen@buffalo.edu/04_routing/18_morris_worm/lesson.adoc"
   },
   {
     "id": "f0b3bc20-f4ad-4eec-905b-106eb1bfb902",
