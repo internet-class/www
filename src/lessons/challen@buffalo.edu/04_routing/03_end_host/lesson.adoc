@@ -1,5 +1,5 @@
 ---
-title: "What is a end-host?"
+title: "What is an end-host?"
 ---
 
 Computers on the internet can be divided into two categories--routers, and
