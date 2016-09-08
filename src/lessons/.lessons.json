@@ -77,7 +77,7 @@
   },
   {
     "id": "43c1ab0f-f149-4351-8a3c-dfcb14baa085",
-    "file": "lessons/challen@buffalo.edu/04_routing/04_router/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/04_routing/04_01_router/lesson.adoc"
   },
   {
     "id": "45e0d6a8-7ea4-4734-9640-3b60d4f92e1b",
@@ -218,6 +218,10 @@
   {
     "id": "c1d9f530-6c04-4dd0-847d-7ba6c5d17d37",
     "file": "lessons/challen@buffalo.edu/03_protocols/15_p2p/lesson.adoc"
+  },
+  {
+    "id": "c51ab6a5-a109-442b-b22a-54a4bfdeb4cb",
+    "file": "lessons/challen@buffalo.edu/04_routing/04_02_store_and_forward/lesson.adoc"
   },
   {
     "id": "c5db2109-4f93-45cd-a8a5-95b3bb2e32f0",

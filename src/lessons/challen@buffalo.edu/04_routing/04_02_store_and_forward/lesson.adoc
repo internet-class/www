@@ -1,0 +1,13 @@
+---
+title: "What is store and forward routing?"
+---
+
+Internet routers operate using a technique called store and forward.
+//
+Packets that arrive from any link are put into a memory buffer.
+//
+A separate process grabs packets out of the buffer and tries to route them on
+to their destination.
+//
+Buffering packets in memory allows the router to deal with fluctuations in
+load and with differences in capacity between its links.
