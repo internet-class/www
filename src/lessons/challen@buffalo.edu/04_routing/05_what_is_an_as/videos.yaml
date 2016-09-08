@@ -20,7 +20,6 @@
   inputHash: 66c90da1c776d3e7000d3620a03ba10b
   output: 75873465dcf308020cbc5e98e320b82a.mp4
   transcode: false
-  upload: false
 -
   files:
     - 81f678dafe6a8ebb18ed8c936ead4ff1.MTS
@@ -43,4 +42,3 @@
   inputHash: 81f678dafe6a8ebb18ed8c936ead4ff1
   output: 7386f7ce7f4d76792b47d2d167575185.mp4
   transcode: false
-  upload: false
