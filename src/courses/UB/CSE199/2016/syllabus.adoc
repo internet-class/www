@@ -57,6 +57,18 @@ data-src="https://www.youtube.com/embed/videoseries?list=PLk97mPCd8nvb3LuRd9PKgS
 </div>
 ++++
 
+[[forum]]
+== Forum
+
+We've set up a Discourse forum for students to use
+https://discourse.internet-class.org/[here].
+//
+The forum is the place to go to peruse announcements, find out more about the
+course, and get help with any technical issues you might be having.
+//
+Please ask questions on the forum before approaching the course staff--this
+will help you get a reply quicker!
+
 [[approach]]
 == Approach
 
@@ -729,9 +741,10 @@ Here's how to--and how not to--get help.
 
 === Great Ways to Get Help
 
-* *Use the the forum.*
-//
-We will set up an online forum for you to discuss the videos and activities.
+* *Use the the <<forum,forum>>.*
+
+The online <<forum,forum>> is the place to go to discuss the videos and
+activities.
 //
 This is a great resource because it allows you to get help from anyone at any
 time--not just during class or recitation.
@@ -749,7 +762,7 @@ So please don't hesitate to come by, even just to say hi.
 //
 I instruct the staff to ignore these emails.
 //
-Use the forum or talk to them during class.
+Use the <<forum,forum>> or talk to them during class.
 
 
 [[sections]]
