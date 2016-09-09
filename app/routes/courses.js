@@ -57,8 +57,10 @@ var renderIndex = function (course, req, res, review) {
 	};
   if (review) {
     context['review'] = 'active';
+    context['title'] = 'Review';
   } else {
     context['learn'] = 'active';
+    context['title'] = 'Learn';
   }
 	res.render('index', context);
 }
