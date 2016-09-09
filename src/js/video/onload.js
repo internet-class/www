@@ -55,9 +55,10 @@ function onYouTubeIframeAPIReady() {
     videoId: choice.id,
     playerVars: {
       autoplay: true,
-      fs: false,
+      fs: true,
       modestbranding: true,
       origin: $("#player").data('origin'),
+      rel: false,
       start: choice.skip
     },
     events: {
