@@ -5,6 +5,7 @@ picker:
   path:
     - "lessons/challen@buffalo.edu/01*/**/lesson.html"
     - "lessons/challen@buffalo.edu/02*/**/lesson.html"
+    - "lessons/challen@buffalo.edu/03*/**/lesson.html"
   skip:
     - "lessons/challen@buffalo.edu/01*/**/lesson.html"
 tracker:
