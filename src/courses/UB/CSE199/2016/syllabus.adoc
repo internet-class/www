@@ -1,4 +1,5 @@
 ---
+title: "CSE 199 Syllabus"
 spelling_exceptions:
   - eportfolio
   - Capen
