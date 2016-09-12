@@ -139,6 +139,15 @@ a.video-card {
   .card {
     margin: 10px;
   }
+  .card.deadline .card-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100%;
+    overflow: hidden;
+    padding: 5px;
+  }
 }
 
 /* vim: ts=2:sw=2:et

@@ -19,6 +19,26 @@
           </div>
         </a>
       </div>
+      {{#if lastDeadline }}
+      <div class="col s12 m6 l4">
+        <div class="video-card">
+          <div class="card deadline">
+            <div class="card-image">
+              <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAQAAACRI2S5AAAAEElEQVR42mNkIAAYRxWAAQAG9gAKqv6+AwAAAABJRU5ErkJggg=="
+                   alt="Blank image.">
+            </div>
+            <div class="card-content">
+              <div class="center-align small flow-text">
+                Previous videos due
+                  <span class="light-blue-text">
+                    <strong>{{format_date deadline 'deadline' false  }}</strong>
+                  </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/if}}
       {{else}}
       <div class="col s12 m6 l4">
         <div class="card">

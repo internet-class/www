@@ -1,5 +1,6 @@
 var app = require('../app'),
 		_ = require('underscore'),
+    moment = require('moment-timezone');
 		handlebars = require('handlebars');
 
 handlebars.registerHelper('and_list', function (contextList, options) {
@@ -15,4 +16,26 @@ handlebars.registerHelper('and_list', function (contextList, options) {
 		list = comma_list.join(", ") + ", and " + list.slice(-1)[0];
 	}
 	return new handlebars.SafeString(list);
+});
+
+handlebars.registerHelper('format_date', function format_date(datetime, format, utc) {
+  var common_formats = {
+    normal: "M/D/YYYY",
+    name: "DD MMM YYYY",
+    proposal: "M/YYYY",
+    blog: "DD MMM YYYY [at] HH:mm [EST]",
+    xml: "ddd, DD MMM YYYY HH:mm:ss ZZ",
+		file: "YYYY-MM-DD",
+		deadline: "dddd, M/D/YYYY @ h:mm A"
+  };
+  format = common_formats[format] || format;
+  if (utc === undefined) {
+    utc = true;
+  }
+	console.log(format);
+  if (utc) {
+    return moment.utc(datetime).format(format);
+  } else {
+    return moment.utc(datetime).tz("America/New_York").format(format);
+  }
 });

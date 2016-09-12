@@ -10,3 +10,8 @@ picker:
     - "lessons/challen@buffalo.edu/01*/**/lesson.html"
 tracker:
   complete: 90
+deadlines:
+  - path: "lessons/challen@buffalo.edu/02*/**"
+    time: "2016-09-09 23:59:59"
+  - path: "lessons/challen@buffalo.edu/03*/**"
+    time: "2016-09-13 23:59:59"
