@@ -49,6 +49,11 @@ var renderIndex = function (course, req, res, review) {
     lessonIndex = _.filter(lessonIndex, function (lesson) {
       return (!(lesson.completed));
     });
+  } else {
+    lessonIndex = _.filter(lessonIndex, function (lesson) {
+      lesson.lastDeadline = lesson.newDeadline = undefined;
+      return lesson.completed;
+    });
   }
   var context = {
     title: course.title,

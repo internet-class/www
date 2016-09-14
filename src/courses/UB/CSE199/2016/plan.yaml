@@ -6,12 +6,17 @@ picker:
     - "lessons/challen@buffalo.edu/01*/**/lesson.html"
     - "lessons/challen@buffalo.edu/02*/**/lesson.html"
     - "lessons/challen@buffalo.edu/03*/**/lesson.html"
+    - "lessons/challen@buffalo.edu/04*/**/lesson.html"
   skip:
     - "lessons/challen@buffalo.edu/01*/**/lesson.html"
 tracker:
   complete: 90
 deadlines:
-  - path: "lessons/challen@buffalo.edu/02*/**"
+  - start: "lessons/challen@buffalo.edu/02*/01*/*"
     time: "2016-09-09 23:59:59"
-  - path: "lessons/challen@buffalo.edu/03*/**"
+  - start: "lessons/challen@buffalo.edu/03*/01*/*"
     time: "2016-09-13 23:59:59"
+  - start: "lessons/challen@buffalo.edu/04*/01*/*"
+    time: "2016-09-18 23:59:59"
+  - start: "lessons/challen@buffalo.edu/04*/10*/*"
+    time: "2016-09-20 23:59:59"
