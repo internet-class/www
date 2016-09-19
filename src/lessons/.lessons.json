@@ -1,5 +1,13 @@
 [
   {
+    "id": "0221b24d-ebf2-49f4-85b7-aa3095d051a1",
+    "file": "lessons/challen@buffalo.edu/05_transport/19_net_neutrality/lesson.adoc"
+  },
+  {
+    "id": "03a9ab75-e348-48df-a646-055a1ba2b529",
+    "file": "lessons/challen@buffalo.edu/05_transport/12_why_udp/lesson.adoc"
+  },
+  {
     "id": "04bea591-ea29-4fa9-be76-992d49ab0ae4",
     "file": "lessons/challen@buffalo.edu/03_protocols/07_ip_suite/lesson.adoc"
   },
@@ -28,6 +36,10 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/03_office_first_hop/lesson.adoc"
   },
   {
+    "id": "1a937d29-bfc9-4427-a3d6-709dd73f5e19",
+    "file": "lessons/challen@buffalo.edu/05_transport/02_tcp_intro/lesson.adoc"
+  },
+  {
     "id": "1dae80f3-de80-4c66-8bf7-d478549f8cd4",
     "file": "lessons/challen@buffalo.edu/03_protocols/16_gopher/lesson.adoc"
   },
@@ -48,6 +60,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/08_ip_structure/lesson.adoc"
   },
   {
+    "id": "2a4d5b81-5fbe-4dc3-976b-90821f900dc3",
+    "file": "lessons/challen@buffalo.edu/05_transport/18_nat/lesson.adoc"
+  },
+  {
     "id": "2a5165a2-1d80-4fb1-b909-6ec9eea896b7",
     "file": "lessons/challen@buffalo.edu/01_era/06_internet_v_www/lesson.adoc"
   },
@@ -58,6 +74,14 @@
   {
     "id": "2e0c5483-3e07-4616-aa7a-90fc928e78a7",
     "file": "lessons/challen@buffalo.edu/04_routing/16_deep_packet/lesson.adoc"
+  },
+  {
+    "id": "36b819d1-41c0-4700-80e0-e3945fb91f29",
+    "file": "lessons/challen@buffalo.edu/05_transport/07_internet_performance/lesson.adoc"
+  },
+  {
+    "id": "37d9e36f-fe59-43b6-922b-8934103f5aa8",
+    "file": "lessons/challen@buffalo.edu/05_transport/20_typing/lesson.adoc"
   },
   {
     "id": "39d98c4e-badf-4fba-8036-3e2788149693",
@@ -104,6 +128,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/15_mitm_attack/lesson.adoc"
   },
   {
+    "id": "50bdfbbe-b7fb-4561-be85-3509eb5f399c",
+    "file": "lessons/challen@buffalo.edu/05_transport/10_packet_drops/lesson.adoc"
+  },
+  {
     "id": "511a3ae8-2156-41fc-8046-f4c67fec5e9e",
     "file": "lessons/challen@buffalo.edu/03_protocols/05_ip/lesson.adoc"
   },
@@ -122,6 +150,14 @@
   {
     "id": "580467f5-c18d-4c84-858f-4fcb1968ca58",
     "file": "lessons/challen@buffalo.edu/03_protocols/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "58132e92-9a15-4ffe-83d4-dbf396d8c6bb",
+    "file": "lessons/challen@buffalo.edu/05_transport/16_remy/lesson.adoc"
+  },
+  {
+    "id": "58701fe8-d74e-4f1f-ba7b-e445859fdf7a",
+    "file": "lessons/challen@buffalo.edu/05_transport/13_tcp_problems/lesson.adoc"
   },
   {
     "id": "58adde9e-eb8b-4ffc-83f0-ce57bc536bad",
@@ -144,12 +180,20 @@
     "file": "lessons/challen@buffalo.edu/04_routing/10_icmp/lesson.adoc"
   },
   {
+    "id": "5ecb2717-e57b-4643-8d2b-7b7143690516",
+    "file": "lessons/challen@buffalo.edu/05_transport/08_bandwidth/lesson.adoc"
+  },
+  {
     "id": "6961a500-7065-47fc-84e1-d4827c035832",
     "file": "lessons/challen@buffalo.edu/03_protocols/12_email/lesson.adoc"
   },
   {
     "id": "6aa33b86-16d2-4f6a-8059-99aa161441a2",
     "file": "lessons/challen@buffalo.edu/03_protocols/901_receiving_email/lesson.adoc"
+  },
+  {
+    "id": "6c82e833-7e70-4c33-b9e6-02b3224d1da3",
+    "file": "lessons/challen@buffalo.edu/05_transport/03_tcp_reliability/lesson.adoc"
   },
   {
     "id": "71a766a1-e5bc-4eaf-afe0-ec229afd3bd1",
@@ -160,12 +204,24 @@
     "file": "lessons/challen@buffalo.edu/04_routing/07_meet_me_room/lesson.adoc"
   },
   {
+    "id": "7c944d1c-c774-495d-8ab6-0b2b2e127fa3",
+    "file": "lessons/challen@buffalo.edu/05_transport/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "857f35da-ddb2-4bfc-a9cc-4577ff619e4c",
+    "file": "lessons/challen@buffalo.edu/05_transport/15_quic/lesson.adoc"
+  },
+  {
     "id": "86b30f23-dcdc-4fe2-af44-937f55205521",
     "file": "lessons/challen@buffalo.edu/04_routing/03_end_host/lesson.adoc"
   },
   {
     "id": "86e7a4c3-a38f-4255-8dce-1957768f5a05",
     "file": "lessons/challen@buffalo.edu/04_routing/02_internet_structure/lesson.adoc"
+  },
+  {
+    "id": "876ec10f-8352-4973-87e3-d904fe4964c5",
+    "file": "lessons/challen@buffalo.edu/05_transport/06_tcp_handshake/lesson.adoc"
   },
   {
     "id": "88513885-705d-4aa2-92b8-1c532161c802",
@@ -178,6 +234,10 @@
   {
     "id": "9d359f2b-1189-4fc4-9b92-ad44e1f67e5a",
     "file": "lessons/challen@buffalo.edu/04_routing/09_512k_day/lesson.adoc"
+  },
+  {
+    "id": "9f939a05-b8c8-46cf-876e-34e0498358a8",
+    "file": "lessons/challen@buffalo.edu/05_transport/05_tcp_ports/lesson.adoc"
   },
   {
     "id": "a0942055-6122-4b1c-bcd0-eececc676d2b",
@@ -206,6 +266,10 @@
   {
     "id": "b2add6b2-3c00-4ed0-9244-cbe555b905bd",
     "file": "lessons/challen@buffalo.edu/03_protocols/02_what_is_a_protocol/lesson.adoc"
+  },
+  {
+    "id": "ba998aa4-c359-4571-8bdb-7699286e65e7",
+    "file": "lessons/challen@buffalo.edu/05_transport/14_multipath_tcp/lesson.adoc"
   },
   {
     "id": "bebfbc29-afdd-49a8-9495-a888c2f3ba38",
@@ -238,6 +302,10 @@
   {
     "id": "d2988a58-0037-4431-a317-15e11527b65f",
     "file": "lessons/challen@buffalo.edu/04_routing/12_traceroute_examples/lesson.adoc"
+  },
+  {
+    "id": "d312c395-b9e2-4591-89a1-1e0c61b8e582",
+    "file": "lessons/challen@buffalo.edu/05_transport/04_tcp_fairness/lesson.adoc"
   },
   {
     "id": "d3705161-ce54-4806-b863-59abbabf14d9",
@@ -276,11 +344,23 @@
     "file": "lessons/challen@buffalo.edu/01_era/07_invented/lesson.adoc"
   },
   {
+    "id": "f6eee114-7750-4a5b-8245-3c30cbdecb3b",
+    "file": "lessons/challen@buffalo.edu/05_transport/11_udp/lesson.adoc"
+  },
+  {
     "id": "fdab2123-34e4-41c5-9775-db4d2f516688",
     "file": "lessons/challen@buffalo.edu/03_protocols/04_client_server/lesson.adoc"
   },
   {
+    "id": "fe708194-7959-4e53-8863-a3a343264697",
+    "file": "lessons/challen@buffalo.edu/05_transport/17_bittorrent/lesson.adoc"
+  },
+  {
     "id": "ffbc00bb-f3d1-460b-8b2d-d1efa47eb26b",
     "file": "lessons/challen@buffalo.edu/02_connectivity/09_cellular_wireless/lesson.adoc"
+  },
+  {
+    "id": "ffd01844-71e5-4250-9b14-8a2bdb508c9c",
+    "file": "lessons/challen@buffalo.edu/05_transport/09_latency/lesson.adoc"
   }
 ]
