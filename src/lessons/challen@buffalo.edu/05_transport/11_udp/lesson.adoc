@@ -1,0 +1,22 @@
+---
+title: "What is the universal datagram protocol (UDP)?"
+---
+
+The transmission control protocol (TCP) creates reliable and fair connections
+between multiple computers on the internet.
+//
+It is the most widely-used internet transport protocol--at least for now.
+//
+But there is another widely-deployed transport protocol called the universal
+datagram protocol, or UDP.
+//
+Unlike TCP, UDP provides no reliability.
+//
+And unlike TCP, UDP provides no flow control or fairness.
+//
+It does preserve port numbers similar to TCP, although UDP does not establish
+a connection between multiple computers.
+//
+While UDP may seem to jettison several useful features of TCP, the fact that
+it exists and many internet-connected computers support it is enabling
+important innovation at the transport layer.

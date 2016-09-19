@@ -1,0 +1,27 @@
+---
+title: "Introduction to the transport layer."
+---
+
+The Internet Protocol provides best-effort packet delivery across routes
+established within the interior of the internet.
+//
+Everything else is left to the endpoints--a decision known as the _end to end
+principle_.
+//
+One of the most important tasks _not_ handled by the Internet Protocol is
+enabling reliable, efficient, and fair delivery of content from one
+internet-connected computer to another.
+//
+This layer is known as the transport layer and the protocols running at it are
+referred to as transport protocols.
+
+In an interesting development, the transport layer reintroduces the idea of a
+connection that we discarded at the IP layer in favor of packet-based
+communication.
+//
+Building connections on top of packets preserves many of the benefits of both
+approaches.
+//
+Connections help organize the exchange of information, while packets can still
+independently find the best path between hosts and ensure that network
+resources are well utilized.

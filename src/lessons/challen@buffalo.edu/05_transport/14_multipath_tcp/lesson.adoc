@@ -1,0 +1,16 @@
+---
+title: "What is multipath TCP?"
+---
+
+TCP is designed to manage a single network connection.
+//
+But today's mobile devices frequently have multiple ways to connect to the
+internet: for example, both a Wifi connection and a mobile data network.
+//
+TCP was not designed to _switch between_ these connections seamlessly as
+required by mobility.
+//
+And it also cannot take advantage of the increased bandwidth that can be
+sometimes achieved by using both connections _simultaneously_.
+//
+Multipath TCP is a new approach to TCP designed to address these problems.

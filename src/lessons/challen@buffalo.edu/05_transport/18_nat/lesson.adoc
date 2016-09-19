@@ -1,0 +1,16 @@
+---
+title: "How does network address translation work?"
+---
+
+TCP port numbers play an important role in a common approach to network
+translation.
+//
+Network address translation allows computers with private IP addresses that
+would normally not be accessible to access the internet.
+//
+A computer that does have a public IP address rewrites the IP address and TCP
+port numbers of packets as they are transferred between the server and the
+client.
+//
+NAT plays an important role in addressing one of the design limitations of the
+IP protocol: the limited (and exhausted) number of available IP addresses.

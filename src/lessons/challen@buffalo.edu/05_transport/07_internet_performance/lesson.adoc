@@ -1,0 +1,9 @@
+---
+title: "How do we measure internet performance?"
+---
+
+Internet performance is usually measured using two metrics: _bandwidth_ and
+_latency_.
+//
+While related, these two performance measures are different and reflect
+different connection realities.

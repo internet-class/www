@@ -1,0 +1,9 @@
+---
+title: "What is a TCP handshake and how is it used to initiate a connection?"
+---
+
+To begin a TCP connection the endpoints exchange a set series of messages
+known as a _handshake_.
+//
+The handshake allows both parties to agree to the connection and negotiate
+connection parameters.

@@ -1,0 +1,15 @@
+---
+title: "Why would you choose the unreliable UDP protocol over TCP?"
+---
+
+Compared to TCP, UDP seems less useful.
+//
+It drops packets and provides no guidance on how fast packets should be sent.
+//
+But there are some very important internet applications that can benefit from
+unreliable packet delivery and sometimes suffer due to TCP's guarantees.
+//
+Typical to the design of the rest of the internet, the overall goal is
+flexibility.
+//
+UDP allows applications that do not need TCP's guarantees to avoid them.

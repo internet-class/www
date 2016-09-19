@@ -1,0 +1,21 @@
+---
+title: "What is the transmission control protocol (TCP)?"
+---
+
+The transmission control protocol (TCP) is today's most widely-used transport
+protocol.
+//
+It adds three pieces of important functionality to the best-effort internet
+protocol (IP).
+//
+First, TCP enables _reliable_ delivery between two internet-connected
+computers.
+//
+Second, TCP allows multiple clients and connections to share network resources
+with some degree of _fairness_.
+//
+Third, TCP adds a layer of naming that separates multiple connections between
+the same computers into logical _connections_.
+//
+The details of how TCP accomplishes these tasks are complex, but the design
+principles are fairly simple.

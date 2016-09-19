@@ -1,0 +1,16 @@
+---
+title: "What is bandwidth? How is it different than latency?"
+---
+
+Bandwidth measures the aggregate speed at which a certain amount of data can
+be transmitted from one host on the internet to another.
+//
+Although bandwidth and latency are interrelated and frequently affect each
+other, a simple thought experiment can help illustrate the difference between
+the two.
+//
+What would be the fastest way to send a large amount of data across the
+country?
+//
+The solution involves a communication technology, but maybe not the one that
+you were expecting...

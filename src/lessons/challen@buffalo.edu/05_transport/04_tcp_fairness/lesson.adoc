@@ -1,0 +1,16 @@
+---
+title: "How does TCP allow multiple clients to share internet resources?"
+---
+
+The transmission control protocol (TCP) allows multiple computers or
+connections to share internet resources fairly.
+//
+It does this by slowing down dramatically when it detects packet loss within
+the network.
+//
+Since packet loss is frequently caused by congestion at some shared link or
+router that is servicing multiple TCP connections, one connection slowing down
+creates capacity that other connections can use.
+//
+TCP tries to run connections as fast as possible _without_ losing packets,
+which both enables sharing and avoids expensive retransmissions.

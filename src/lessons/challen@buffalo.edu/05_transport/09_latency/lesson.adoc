@@ -1,0 +1,14 @@
+---
+title: "What is latency? What affects latency?"
+---
+
+Latency measures how long it takes one packet to travel from one computer on
+the internet to another.
+//
+At least for now, the speed of light places a fundamental bound on how quickly
+everything--including information--can move from one place to another.
+//
+It takes light around 100 ms to circle the globe, so a packet can't arrive any
+faster than that!
+//
+However, most delays on the internet are caused by computers, not by cables.

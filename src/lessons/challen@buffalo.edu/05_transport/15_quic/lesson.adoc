@@ -1,0 +1,21 @@
+---
+title: "What is QUIC?"
+---
+
+Among the many problems with TCP is that the approach to reliably delivering
+data between machines is one-size-fits-all.
+//
+But not every connection has the same needs, and some have extra information
+that can be used to improve reliable transport.
+//
+Partly to enable innovation and customization at the transport layer (and
+partly to address well-understood problems with TPC), Google has created and
+is rolling out QUIC: Quick UDP Internet Connection.
+//
+QUIC enables secure connections to be established using fewer round-trips,
+reducing connection latency--particularly when reconnecting to servers that
+have been used before.
+//
+QUIC is also designed to fetch all of the multiple resources typically needed
+to render a web page using a single connection while avoiding the
+head-of-the-line that TCP would cause.

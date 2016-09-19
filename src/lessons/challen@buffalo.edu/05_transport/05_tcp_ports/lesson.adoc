@@ -1,0 +1,13 @@
+---
+title: "What is a TCP port and how is it used during connections?"
+---
+
+The transmission control protocol (TCP) provides an additional level of naming
+that helps organize data transfer between computers connected to the internet.
+//
+In addition to the internet protocol (IP) address that identifies a computer,
+TCP adds two _port numbers_ that identify a connection between two computers.
+//
+Packets that are part of a connection flow between the computers the same way
+at the IP layer, but the port numbers allow TCP to separate connections when
+packets arrive at the endpoints.

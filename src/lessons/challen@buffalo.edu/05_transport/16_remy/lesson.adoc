@@ -1,0 +1,29 @@
+---
+title: "What is Remy?"
+---
+
+Work on new transport protocols is going on in academic research labs as well
+as at large companies.
+//
+A particularly interesting and innovative approach was recently developed at
+MIT and is known as Remy.
+//
+Remy's developers noted that TCP had been subject to many different tweaks
+over the years to its various parameters and behaviors.
+//
+This led to an exploding space of TCP variants, such as TCP Cubic, TCP New
+Reno, etc.
+//
+Overall, this approach attempts to get TCP to perform better by tweaking it
+and hoping that the changes work well when deployed on billions of devices.
+//
+But TCP has extremely complex interactions with the rest of the network _and_
+must work well in large number of different networking environments.
+//
+In contrast, Remy takes a different approach.
+//
+Connections place weights on how important bandwidth and latency are to them
+and Remy takes care of the rest.
+//
+It creates computer-generated algorithms that respond to properties of the
+connection to outperform even sophisticated approaches designed by humans.

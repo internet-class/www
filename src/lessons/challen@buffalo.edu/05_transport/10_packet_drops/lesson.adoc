@@ -1,0 +1,13 @@
+---
+title: "Why are packets dropped on the internet?"
+---
+
+The tranmission control protocol (TCP) is designed to repair packets dropped
+by the unreliable internet protocol (IP) layer.
+//
+But why are packets dropped in the first place?
+//
+On the wired internet the answer was usually congestion.
+//
+But the wireless internet is making the answer to this question much more
+interesting.

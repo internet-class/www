@@ -1,0 +1,18 @@
+---
+title: "What is BitTorrent?"
+---
+
+BitTorrent solves a different transport problem that TCP.
+//
+TCP is designed to allow a pair of machines to exchange data quickly and
+reliably.
+//
+In contrast, BitTorrent is designed for a _large group_ of machines to
+exchange the same file quickly and reliably.
+//
+Rather than optimizing a single path, BitTorrent tries to take advantage of
+all available network bandwidth by dividing the transfers needed to retrieve a
+single large file between multiple cooperating peers.
+//
+This allows it to frequently outperform the typical model in which clients
+download only from a central server.

@@ -1,0 +1,21 @@
+---
+title: "What is net neutrality?"
+---
+
+Internet connections pass across many cooperating computer networks.
+//
+Unfortunately, that makes it possible for internet service providers or other
+network operators to manipulate connections that utilize their infrastructure.
+//
+This can take the form of boosting the speed of connections to "friendly"
+websites, or degrading connections to "unfriendly" websites.
+//
+The principle of net neutrality states that internet operators should treat
+all traffic the same and not meddle in the middle of the network.
+//
+This is now the law in the United States, although policies in other countries
+vary.
+//
+However, as net neutrality has become more firmly established service
+providers have found other ways to drive traffic towards and away from certain
+sites.

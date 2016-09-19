@@ -1,0 +1,12 @@
+---
+title: "How does TCP enable reliable delivery?"
+---
+
+The transmission control protocol (TCP) enables _reliable_ packet delivery
+multiple multiple computers connected to the internet.
+//
+It does this by having the communicating computers exchange information about
+what packets have arrived and what have not.
+//
+By doing this, packets that may have been dropped by the unreliable internet
+protocol (IP) layer can be retransmitted and reliable communication achieved.
