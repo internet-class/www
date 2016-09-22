@@ -1,0 +1,13 @@
+---
+title: "How are domain names hierarchically organized?"
+---
+
+Just like IP addresses, domain names are also hierarchically allocated and
+organized.
+//
+In a somewhat-confusing twist, unlike an IP address where the prefix is on the
+left and identifies the organization, for a domain name the part that
+identifies an organization is on the right--it's the postfix.
+//
+Nevertheless, once you learn how to parse domain names they make a lot of
+sense.

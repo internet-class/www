@@ -1,0 +1,10 @@
+---
+title: "How do you register a new host name?"
+---
+
+Once you own a domain name you can create as many host names as you like.
+//
+If you don't own the domain name, then you probably need to talk to someone.
+//
+That makes sense--if anyone could add a host name to `google.com` chaos would
+ensue!

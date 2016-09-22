@@ -1,0 +1,12 @@
+---
+title: "Why not just use IP addresses for everything?"
+---
+
+Internet-connected computers name each other using IP addresses like
+172.217.0.37.
+//
+One way to avoid naming problems altogether would be to just have humans use
+these same names when they use the internet as computers use to identify each
+other.
+//
+Unfortunately, that doesn't work out particularly well.

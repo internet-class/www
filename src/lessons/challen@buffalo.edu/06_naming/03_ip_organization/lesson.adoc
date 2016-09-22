@@ -1,0 +1,15 @@
+---
+title: "How and why are IP addresses hierarchically organized?"
+---
+
+IP addresses are organized and allocated hierarchically.
+//
+This simplifies both IP address administration and the routing tables used by
+internet routers.
+//
+The result is that IP addresses have a variable-length prefix that identifies
+the organization that administers them and path that is used when routing
+packets.
+//
+The original internet design set up three address classes, although this
+decision has been revisited since then.

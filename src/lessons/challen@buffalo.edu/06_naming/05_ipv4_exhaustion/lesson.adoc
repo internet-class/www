@@ -1,0 +1,11 @@
+---
+title: "What is IPv4 exhaustion?"
+---
+
+Unfortunately we are running out of IP version 4 (IPv4) addressses.
+//
+There are a variety of reasons for this, and a variety of solutions that help
+address parts of the problem.
+//
+But the real solution is a slow migration toward IP version 6 (IPv6) which
+provides _a lot_ more addresses.
