@@ -2,7 +2,7 @@
   files:
     - be337aef3ea32f26211e5fca8d8f25a3.MTS
   created: 'Wed Sep 21 2016 13:33:22 GMT-0400'
-  transcode: false
+  creditsFile: ipv6count.MTS
   authors:
     -
       name: 'Geoffrey Challen'
