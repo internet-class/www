@@ -21,4 +21,4 @@ how associated with unencrypted HTTP protocol connections.
 //
 Administration of online names is also distributed in reasonable ways, giving
 organizations control over various parts of both human and machine readable
-namspaces.
+namespaces.

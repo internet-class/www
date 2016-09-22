@@ -1,5 +1,7 @@
 ---
 title: "What is Remy?"
+spelling_exceptions:
+  - Remy
 ---
 
 Work on new transport protocols is going on in academic research labs as well

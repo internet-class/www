@@ -1,5 +1,7 @@
 ---
 title: "What was 512k day?"
+spelling_exceptions:
+  - 512k
 ---
 
 Generally we want the internet to get bigger.

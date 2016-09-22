@@ -2,7 +2,7 @@
 title: "Why are packets dropped on the internet?"
 ---
 
-The tranmission control protocol (TCP) is designed to repair packets dropped
+The transmission control protocol (TCP) is designed to repair packets dropped
 by the unreliable internet protocol (IP) layer.
 //
 But why are packets dropped in the first place?
