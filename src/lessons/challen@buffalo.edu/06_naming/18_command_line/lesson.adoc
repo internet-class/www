@@ -1,5 +1,5 @@
 ---
-title: "What should you learn how to use the command line?"
+title: "Why should you learn how to use the command line?"
 ---
 
 It seems like a relic of days gone by.
