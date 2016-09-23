@@ -538,8 +538,11 @@ During the semester you will need to record three short videos for inclusion
 in the link:/[`internet-class.org`] video library.
 //
 You can work with another student or alone on these assignments, but if
-working in a group of two both students need to be involved in several
-minutes of the video to receive full credit.
+working in a group of two both students need to be involved in several minutes
+of the video to receive full credit.
+//
+Note that both students in a group of two must be both be in CSE 199
+footnote:[Duh...?], although they don't have to be in the same section.
 
 ==== Grading
 
