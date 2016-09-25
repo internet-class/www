@@ -59,21 +59,31 @@ $(function () {
   $("#mute, #unmute").click(muteUnmute);
 
   var chooseVideo = function() {
-    var video = $("video#background");
-    var webm = document.createElement('source');
-    webm.type = 'video/webm';
-    var mp4 = document.createElement('mp4');
-    mp4.type = 'video/mp4';
-    if ($(window).width() > 800) {
-      webm.src = '/img/background/large.webm';
-      mp4.src = '/img/background/large.mp4';
-    } else {
-      webm.src = '/img/background/small.webm';
-      mp4.src = '/img/background/small.mp4';
+    try {
+      var player = dashjs.MediaPlayer().create();
+      player.initialize(document.querySelector("#background"),
+          "/background/manifest.mpd", true);
+      player.getDebug().setLogToBrowserConsole(false);
+      player.setStableBufferTime(5);
+      player.setFastSwitchEnabled(true);
+      player.enableLastBitrateCaching(false);
+    } catch (err) {
+      var video = $("video#background");
+      var webm = document.createElement('source');
+      webm.type = 'video/webm';
+      var mp4 = document.createElement('mp4');
+      mp4.type = 'video/mp4';
+      if ($(window).width() > 800) {
+        webm.src = '/img/background/large.webm';
+        mp4.src = '/img/background/large.mp4';
+      } else {
+        webm.src = '/img/background/small.webm';
+        mp4.src = '/img/background/small.mp4';
+      }
+      video.append(webm);
+      video.append(mp4);
+      video.load();
     }
-    video.append(webm);
-    video.append(mp4);
-    video.load();
   };
   chooseVideo();
 
@@ -87,7 +97,6 @@ $(function () {
       setPaused(true);
     }, false);
     $("#play_button, #pause_button, #unmute_button, #mute_button").css({ visibility: 'visible' });
-
   }, 50);
 
   if ($(".login-link").length > 0) {
