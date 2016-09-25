@@ -59,15 +59,15 @@ $(function () {
   $("#mute, #unmute").click(muteUnmute);
 
   var chooseVideo = function() {
-    try {
+    if ('MediaSource' in window) {
       var player = dashjs.MediaPlayer().create();
       player.initialize(document.querySelector("#background"),
           "/background/manifest.mpd", true);
-      player.getDebug().setLogToBrowserConsole(false);
+      player.getDebug().setLogToBrowserConsole(true);
       player.setStableBufferTime(5);
       player.setFastSwitchEnabled(true);
       player.enableLastBitrateCaching(false);
-    } catch (err) {
+    } else {
       var video = $("video#background");
       var webm = document.createElement('source');
       webm.type = 'video/webm';
