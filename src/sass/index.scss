@@ -107,12 +107,17 @@ nav ul a.btn {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url("/img/background/1.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 video {
   display: block;
+}
+video::-webkit-media-controls {
+  display:none !important;
+}
+video::-webkit-media-controls-enclosure {
+  display:none !important;
 }
 
 /* vim: ts=2:sw=2:et
