@@ -70,9 +70,9 @@ _.each(rates.audio.rates, function (rate) {
   });
 });
 
-async.eachLimit(allTranscodes, 8, function (transcode, callback) {
+async.eachLimit(allTranscodes.reverse(), 8, function (transcode, callback) {
+  console.log(transcode.command);
   if (argv.dry_run) {
-    console.log(transcode.command);
     return callback();
   } else {
     child_process.exec(transcode.command, function (err, stdout, stderr) {
@@ -95,8 +95,9 @@ async.eachLimit(allTranscodes, 8, function (transcode, callback) {
     streams: streams,
     output: "manifest.mpd"
   });
+  console.log(command);
   if (argv.dry_run) {
-    console.log(command);
+    return;
   } else {
     child_process.execSync(command);
     console.log(outputDir);
