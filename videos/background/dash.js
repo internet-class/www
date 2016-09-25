@@ -24,7 +24,7 @@ var outputDir = temp.mkdirSync();
 var videoTemplate = handlebars.compile(
   'ffmpeg -i ' + input + ' -c:v libvpx-vp9 -filter:v fps=29.97 -s {{{ size }}} ' +
   '-b:v {{{ bandwidth }}}k -minrate {{{ bandwidth }}}k -maxrate {{{ bandwidth }}}k ' +
-  '-keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1 ' +
+  '-keyint_min 30 -g 30 -tile-columns 4 -frame-parallel 1 ' +
   '-an -f webm -dash 1 ' + outputDir + '/{{{ output }}}'
 );
 var audioTemplate = handlebars.compile(
@@ -99,7 +99,7 @@ async.eachLimit(allTranscodes.reverse(), 8, function (transcode, callback) {
   if (argv.dry_run) {
     return;
   } else {
-    child_process.execSync(command);
+    child_process.execSync(command + " 2>&1 1> /dev/null");
     console.log(outputDir);
   }
 });
