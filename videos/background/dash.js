@@ -28,7 +28,7 @@ var videoTemplate = handlebars.compile(
   '-an -f webm -dash 1 ' + outputDir + '/{{{ output }}}'
 );
 var audioTemplate = handlebars.compile(
-  'ffmpeg -i ' + input + ' -c:a libvorbis -b:a {{{ rate }}}k -vn -f webm -dash 1 ' +
+  'ffmpeg -i ' + input + ' -c:a libvorbis -b:a {{{ rate }}}k -ac 1 -vn -f webm -dash 1 ' +
   outputDir + '/{{{ output }}}'
 );
 var manifestTemplate = handlebars.compile(
