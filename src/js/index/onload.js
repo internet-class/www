@@ -57,16 +57,34 @@ $(function () {
 
   $("#play, #pause").click(playPause);
   $("#mute, #unmute").click(muteUnmute);
-
+  
+  var loadControls = function () {
+    var video = $("video#background").get(0);
+    setPaused(video.paused);
+    video.addEventListener('play', function () {
+      setPaused(false);
+    }, false);
+    video.addEventListener('pause', function () {
+      setPaused(true);
+    }, false);
+    $("#play_button, #pause_button, #unmute_button, #mute_button").css({ visibility: 'visible' });
+  };
+  
+  var dashEnabled;
   var chooseVideo = function() {
-    if ('MediaSource' in window) {
-      var player = dashjs.MediaPlayer().create();
-      player.initialize(document.querySelector("#background"),
-          "/background/manifest.mpd", true);
-      player.getDebug().setLogToBrowserConsole(true);
-      player.setStableBufferTime(5);
-      player.setFastSwitchEnabled(true);
-      player.enableLastBitrateCaching(false);
+    shaka.polyfill.installAll();
+    if (shaka.Player.isBrowserSupported()) {
+      var player = new shaka.Player(document.getElementById('background'));
+      player.configure({
+        streaming: {
+          bufferBehind: 75
+        }
+      });
+      player.load("/background/manifest.mpd")
+        .then(loadControls)
+        .catch(function (event) {
+          console.log("Failed " + event.detail);
+        });
     } else {
       var video = $("video#background");
       var webm = document.createElement('source');
@@ -82,22 +100,11 @@ $(function () {
       }
       video.append(webm);
       video.append(mp4);
+      video.addEventListener('loadeddata', loadControls);
       video.load();
     }
   };
   chooseVideo();
-
-  window.setTimeout(function () {
-    var video = $("video#background").get(0);
-    setPaused(video.paused);
-    video.addEventListener('play', function () {
-      setPaused(false);
-    }, false);
-    video.addEventListener('pause', function () {
-      setPaused(true);
-    }, false);
-    $("#play_button, #pause_button, #unmute_button, #mute_button").css({ visibility: 'visible' });
-  }, 50);
 
   if ($(".login-link").length > 0) {
     var lock = new Auth0Lock('UwFsZjKr41IigcENM5hDiuQvxILo6CXu', 'internet-class.auth0.com', {
