@@ -8,7 +8,7 @@ internet has to be able to _route_ packets between them.
 Routing is a core internet function and the only thing that makes
 long-distance computer-to-computer communication possible.
 //
-Routing also presents an interesting set of challeges.
+Routing also presents an interesting set of challenges.
 //
 Routing decisions have be made extremely quickly, which places constraints on
 the structure of the IP addresses used during the routing process.

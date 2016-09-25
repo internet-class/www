@@ -1,0 +1,17 @@
+---
+title: "What are well-known TCP port numbers?"
+---
+
+Translation is one approach to naming things online.
+//
+Another is convention.
+//
+Conventions establish defaults that associate semantics with numbers.
+//
+A good example of this approach are _well-known TCP port numbers_.
+//
+When your web browser wants to retrieve a web page over an insecure
+(unencrypted) connection, it tries to open a connection to TCP port 80 on the
+host.
+//
+There's no reason that 80 is 80--it's just what we've agreed on.

@@ -1,0 +1,24 @@
+---
+title: "Introduction to internet naming."
+---
+
+Naming is an interesting computer science problem, and quite interesting
+online.
+//
+The internet must reconcile the numbers that computers like to use when
+talking to each other with the readable and meaningful names that humans like
+and remember.
+//
+Names also need to have structure to aid with routing and establishing trust
+online.
+//
+We tackle this problem in a few ways.
+//
+One is by translating human-readable names to machine-readable names.
+//
+Another solution is establishing conventions, the result being that port 80 is
+how associated with unencrypted HTTP protocol connections.
+//
+Administration of online names is also distributed in reasonable ways, giving
+organizations control over various parts of both human and machine readable
+namespaces.

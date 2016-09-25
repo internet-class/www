@@ -1,0 +1,9 @@
+---
+title: "How do you register a new domain name?"
+---
+
+We're running out of IPv4 addresses, so getting one is hard.
+//
+But we are _not_ running out of domain names so getting one is pretty easy.
+//
+If you have a web browser and credit card ready, you're ready to go.

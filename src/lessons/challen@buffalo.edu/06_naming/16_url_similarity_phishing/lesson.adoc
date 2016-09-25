@@ -1,0 +1,14 @@
+---
+title: "What is a URL similarity phishing attack?"
+---
+
+Because humans associate trust relationships with website URLs, this trust can
+be used to attack or deceive them.
+//
+One form of a phishing attack involves an attacker acquiring a domain name
+that is similar to the site that they are trying to attack.
+//
+If you visit `microsoft.com.notmicrosoft.com' you might mistake it for a
+legitimate Microsoft site.
+//
+So go ahead and enter your username and password!

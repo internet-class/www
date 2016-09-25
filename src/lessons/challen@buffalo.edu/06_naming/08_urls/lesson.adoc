@@ -1,0 +1,12 @@
+---
+title: "What is a URL/URI?"
+---
+
+Many (but not all) of the human names that we use on the internet are either
+URLs or URIs.
+//
+URLs are _uniform resource locators_, a subset of the more general _uniform
+resource identifier_ (URI).
+//
+Whether you are using them to identify a web page or a Git repository, URIs
+have a common format.

@@ -34,6 +34,11 @@
           Review
         </a>
       </li>
+      <li class="bold">
+        <a href="https://discourse.internet-class.org" target="_blank" class="waves-effect waves-blue">
+          Forum
+        </a>
+      </li>
 		</li>
 	</ul>
 </header>

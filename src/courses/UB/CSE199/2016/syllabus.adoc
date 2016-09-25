@@ -6,6 +6,7 @@ spelling_exceptions:
   - Silverman
   - 4chan
   - renormalized
+  - Werner Herzog
 description: >
   Syllabus for CSE 199: How the Internet Works
 priority: 0.8
@@ -282,7 +283,7 @@ Note that topics covered in each week will be discussed at a very high level
 and not in anywhere close to as much detail as would be included by more
 advanced courses for CSE majors footnote:[Like
 http://www.cse.buffalo.edu/faculty/dimitrio/courses/cse4589_s14/[CSE 489],
-taught at least sometimes by the all-knowning--yet
+taught at least sometimes by the all-knowing--yet
 shy&mdash;http://www.cse.buffalo.edu/faculty/dimitrio/[Dimitrios
 Koutsonikolas].].
 //
@@ -500,14 +501,14 @@ credit for the activity.
 As a result, missing class repeatedly will make it hard to pass this class.
 
 There are 26 activities this semester and we will grade participation out of
-22--meaning that you have 4 excused abscences.
+22--meaning that you have 4 excused absences.
 //
 These can be used for any reason: family obligations, leisure travel,
 hangovers, alarm configuration mistakes, confusions about what day of the
 week it is, not finding your partners, not making it back to check in with
 your teaching assistant, etc.
 //
-That said, we would suggest that you reserve your four excused abscences for
+That said, we would suggest that you reserve your four excused absences for
 interesting uses (like leisure travel) as opposed to for stupid uses (alarm
 configuration mistakes).
 //
@@ -526,6 +527,7 @@ So please don't forget this step.
 Luckily, we have enough undergraduate teaching assistants so that there is one
 for around four groups, so you should be able to find one at checkout time.
 
+[[videos]]
 === Video Contributions
 
 One of the best ways to learn new material is to explain it to others.
@@ -537,8 +539,11 @@ During the semester you will need to record three short videos for inclusion
 in the link:/[`internet-class.org`] video library.
 //
 You can work with another student or alone on these assignments, but if
-working in a group of two both students need to be involved in several
-minutes of the video to receive full credit.
+working in a group of two both students need to be involved in several minutes
+of the video to receive full credit.
+//
+Note that both students in a group of two must be both be in CSE 199
+footnote:[Duh...?], although they don't have to be in the same section.
 
 ==== Grading
 

@@ -9,7 +9,7 @@ But not every connection has the same needs, and some have extra information
 that can be used to improve reliable transport.
 //
 Partly to enable innovation and customization at the transport layer (and
-partly to address well-understood problems with TPC), Google has created and
+partly to address well-understood problems with TCP), Google has created and
 is rolling out QUIC: Quick UDP Internet Connection.
 //
 QUIC enables secure connections to be established using fewer round-trips,

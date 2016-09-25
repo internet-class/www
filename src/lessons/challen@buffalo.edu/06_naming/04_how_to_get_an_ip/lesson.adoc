@@ -1,0 +1,9 @@
+---
+title: "How do you get a new IP address?"
+---
+
+Most blocks of addresses within the IPv4 address space have already been
+allocated to organizations to manage.
+//
+As a result, getting a new IP address usually requires talking to a network
+administrator.

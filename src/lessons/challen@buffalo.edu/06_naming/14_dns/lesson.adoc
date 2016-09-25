@@ -1,0 +1,14 @@
+---
+title: "What is the domain name service (DNS)?"
+---
+
+Domain name to IP address translation happens all the time on the internet.
+//
+The core internet service responsible for translating machine names to numbers
+is the domain name service, also known as _DNS_.
+//
+DNS can be thought of as a distributed phone book in which computers all over
+the world regularly exchange information about correct translations.
+//
+However, DNS is a bit more complicated than a phone book in ways that have
+important implications for internet performance.

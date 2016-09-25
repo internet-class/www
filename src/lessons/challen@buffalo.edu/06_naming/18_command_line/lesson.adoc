@@ -1,0 +1,20 @@
+---
+title: "Why should you learn how to use the command line?"
+---
+
+It seems like a relic of days gone by.
+//
+Why would anyone want to interact with their computer using just a terminal
+and a keyboard?
+//
+Aren't mice great?
+//
+Don't we all want to point and click?
+//
+Is the GUI a major step forward?
+//
+Well, sometimes.
+//
+But the command line remains a more powerful way to access your computer.
+//
+Learn it--you won't regret that you did.
