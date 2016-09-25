@@ -1,5 +1,7 @@
 ---
 title: "What is a meet-me room?"
+spelling_exceptions:
+  - /IXPs?/
 ---
 
 Many autonomous systems peer only with one or several large autonomous systems

@@ -1,0 +1,16 @@
+---
+title: "What is DHCP?"
+---
+
+Because IP addresses are managed and allocated by your internet service
+provider (ISP), your computer's IP address will generally change depending on
+how you are connected.
+//
+Frequently for computers that only act as clients IP address are only provided
+when a machine connects to the internet.
+//
+Your computer probably obtains an IP address this way on campus, using a
+protocol called the _Dynamic Host Configuration Protocol_ (DHCP).
+//
+If you use a wireless router at home, it probably hands out private IP
+addresses in the same way.

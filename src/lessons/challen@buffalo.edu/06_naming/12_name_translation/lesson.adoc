@@ -1,0 +1,10 @@
+---
+title: "How are host names translated to IP addresses?"
+---
+
+Every time you use a host name in a URL, URI, email address, or any other way,
+it must be translated to an IP address.
+//
+The packets exchange by computers on the internet are routed and addressed
+_only_ by IP addresses, not at all using the human-readable names created for
+our convenience.

@@ -1,0 +1,20 @@
+---
+title: "What is IPv6?"
+---
+
+The ultimate solution to the IPv4 exhaustion problem and other issues with
+IPv4 is the next generation of IP: IP version 6, or IPv6.
+//
+IPv6 widens the 32-bit IPv4 addresses to 128 bits, which creates _a lot_ more
+addresses.
+//
+The larger address space also simplifies various aspects of network
+administration.
+//
+Unfortunately IPv6 is not backwards compatible with IPv4 and so it is taking a
+long time to roll it out.
+//
+But we're getting there.
+//
+Today you might already notice that one or several of your computers sometimes
+has an IPv6 address.
