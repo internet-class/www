@@ -3,7 +3,7 @@ files:
 - js/index/jquery-2.1.1.js
 - js/index/materialize.js
 - js/index/lock.min.js
-- js/index/dash.all.min.js
+- js/index/shaka-player.compiled.js
 - js/index/onload.js
 output: js/index.js
 ---
