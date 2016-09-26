@@ -77,7 +77,9 @@ $(function () {
       var player = new shaka.Player(document.getElementById('background'));
       player.configure({
         streaming: {
-          bufferBehind: 75
+          bufferBehind: 75,
+          rebufferingGoal: 5,
+          bufferingGoal: 10
         }
       });
       player.load("/background/manifest.mpd")
