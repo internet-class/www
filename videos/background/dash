@@ -26,14 +26,12 @@ var videoTemplate = handlebars.compile(
   '-b:v {{{ bandwidth }}}k -minrate {{{ bandwidth }}}k -maxrate {{{ bandwidth }}}k ' +
   '-keyint_min 30 -g 30 -tile-columns 4 -frame-parallel 1 ' +
   '-an -f webm ' + outputDir + '/{{{ output }}}.out && ' +
-  'sample_muxer -max_cluster_duration 1.0 -i ' + outputDir + '/{{{ output }}}.out -o ' + outputDir + '/{{{ output }}} && ' +
+  'sample_muxer -i ' + outputDir + '/{{{ output }}}.out -o ' + outputDir + '/{{{ output }}} && ' +
   'rm ' + outputDir + '/{{{ output }}}.out'
 );
 var audioTemplate = handlebars.compile(
-  'ffmpeg -i ' + input + ' -c:a libvorbis -b:a {{{ rate }}}k -ac 1 -vn -f webm ' +
-  outputDir + '/{{{ output }}}.out && ' +
-  'sample_muxer -max_cluster_duration 1.0 -i ' + outputDir + '/{{{ output }}}.out -o ' + outputDir + '/{{{ output }}} && ' +
-  'rm ' + outputDir + '/{{{ output }}}.out'
+  'ffmpeg -i ' + input + ' -c:a libvorbis -b:a {{{ rate }}}k -ac 1 -vn -f webm -dash 1 ' +
+  outputDir + '/{{{ output }}}'
 );
 var manifestTemplate = handlebars.compile(
   'ffmpeg ' + 

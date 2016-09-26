@@ -84,8 +84,8 @@ $(function () {
       });
       player.load("https://www.internet-class.org/background/manifest.mpd")
         .then(loadControls)
-        .catch(function (event) {
-          console.log("Failed " + event.detail);
+        .catch(function (error) {
+          console.log("Failed " + error);
         });
     } else {
       var video = $("video#background");
