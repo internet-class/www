@@ -80,7 +80,7 @@ $(function () {
           bufferBehind: 75
         }
       });
-      player.load("/background/manifest.mpd")
+      player.load("https://www.internet-class.org/background/manifest.mpd")
         .then(loadControls)
         .catch(function (event) {
           console.log("Failed " + event.detail);
