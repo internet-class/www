@@ -30,6 +30,19 @@ var routeCourse = function (course) {
 	return router;
 }
 
+var routeHead = function (course) {
+  var router = express.Router();
+  _.each(course.lessons, function (lesson) {
+    router.head('/' + lesson.path, function (req, res) {
+      res.status(302).send();
+    });
+  });
+  router.use(function (req, res, next) {
+    res.status(404).send();
+  });
+  return router;
+}
+
 var renderIndex = function (course, req, res, review) {
 	var user = res.locals.user;
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
@@ -106,6 +119,7 @@ var renderLesson = function (course, lesson, req, res) {
 
 var router = express.Router();
 _.each(courses.slug_to_uuid, function (uuid, slug) {
+  router.use('/' + slug, routeHead(courses[uuid]));
 	router.use('/' + slug, routeCourse(courses[uuid]));
 });
 
