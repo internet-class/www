@@ -38,7 +38,11 @@ var routeHead = function (course) {
     });
   });
   router.use(function (req, res, next) {
-    res.status(404).send();
+    if (req.method === 'HEAD') {
+      res.status(404).send();
+    } else {
+      next();
+    }
   });
   return router;
 }
