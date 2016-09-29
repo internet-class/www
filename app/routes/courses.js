@@ -69,6 +69,10 @@ var renderIndex = function (course, req, res, review) {
   } else {
     lessonIndex = _.filter(lessonIndex, function (lesson) {
       lesson.lastDeadline = lesson.newDeadline = undefined;
+      if (user.user.user_metadata.staff === true) {
+        lesson.completed = true;
+        lesson.dolink = true;
+      }
       return lesson.completed;
     });
   }
@@ -96,7 +100,9 @@ var renderLesson = function (course, lesson, req, res) {
 		lesson.current = true;
 	} else if (lesson.uuid in user.lessons.completed) {
 		lesson.completed = true;
-	} else {
+	} else if (user.user.user_metadata.staff === true) {
+    lesson.completed = true;
+  } else {
 		// TODO : Add a flash message here.
 		return res.redirect(res.locals.user.slug)
 	}

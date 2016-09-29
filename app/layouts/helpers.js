@@ -32,10 +32,11 @@ handlebars.registerHelper('format_date', function format_date(datetime, format, 
   if (utc === undefined) {
     utc = true;
   }
-	console.log(format);
   if (utc) {
     return moment.utc(datetime).format(format);
   } else {
     return moment.utc(datetime).tz("America/New_York").format(format);
   }
 });
+
+// vim: ts=2:sw=2:et
