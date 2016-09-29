@@ -1,0 +1,19 @@
+---
+title: "What server-side rendering?"
+---
+
+On the dynamic web requests paths are dynamically converted to HTML documents.
+//
+There are many, many ways to do this--new ways, old ways, good ways, and
+not-so-good ways.
+//
+We'll look at an example that highlights some of the common features of many
+modern dynamic server-side rendering frameworks.
+//
+First, the request path is mapped to a function.
+//
+Second, that function performs some computation, possibly using information
+provided by the client as input.
+//
+Finally, the results are fed to a templating system that uses them to
+construct the page using a mixture of static and dynamic content.

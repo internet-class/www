@@ -1,0 +1,13 @@
+---
+title: "How are pages retrieved by a web browser?"
+---
+
+Retrieving a web page typically requires multiple `GET` requests.
+//
+The first retrieves the initial HTML document.
+//
+Subsequent requests then retrieve all the other parts of the page:
+stylesheets, images, JavaScript code, and other page components.
+//
+The process is complex and its performance depends to a great deal on the
+resources that are involved.

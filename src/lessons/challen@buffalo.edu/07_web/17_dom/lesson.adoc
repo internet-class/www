@@ -1,0 +1,12 @@
+---
+title: "What is the document object model (DOM)?"
+---
+
+JavaScript interacts with the page contents through an abstraction known as
+the _document object model_ or, more typically, the DOM.
+//
+The DOM consists of the HTML converted into a tree-based representation of the
+page's contents.
+//
+The browser builds the initial DOM based on the page's HTML source, but from
+that point on the DOM can evolve as determined by the JavaScript.

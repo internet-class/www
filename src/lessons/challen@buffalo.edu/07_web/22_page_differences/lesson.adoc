@@ -1,0 +1,14 @@
+---
+title: "Why do pages sometimes look different on different web browsers?"
+---
+
+Despite the HTML being identical, different web browsers sometimes render the
+same page differently.
+//
+This drives web developers nuts.
+//
+There is no good technological reason for it, but there is a good human
+reason--different web browser developers interpreted the same standards
+differently.
+//
+Happily we're making a bit of progress on this problem recently.

@@ -1,0 +1,10 @@
+---
+title: "What is HTTP/2?"
+---
+
+The HTTP protocol has been extremely successful.
+//
+But, like the rest of the internet, it continues to evolve.
+//
+A new version of HTTP, known as HTTP/2, is designed to address many of the
+well-understood problems with the current HTTP protocol version 1.1.
