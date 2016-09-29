@@ -16,6 +16,10 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/02_02_fiber/lesson.adoc"
   },
   {
+    "id": "0f1d14dc-0361-4129-a151-f5235e80cdb2",
+    "file": "lessons/challen@buffalo.edu/07_web/01_introduction/lesson.adoc"
+  },
+  {
     "id": "0f2e56c9-34a7-400d-8f6c-a04153f785ef",
     "file": "lessons/test@internet-class.org/01_cats/03_adorable/lesson.adoc"
   },
@@ -152,6 +156,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/15_mitm_attack/lesson.adoc"
   },
   {
+    "id": "50271f39-61ef-4eab-9486-5598dd7c9589",
+    "file": "lessons/challen@buffalo.edu/07_web/07_http_responses/lesson.adoc"
+  },
+  {
     "id": "50bdfbbe-b7fb-4561-be85-3509eb5f399c",
     "file": "lessons/challen@buffalo.edu/05_transport/10_packet_drops/lesson.adoc"
   },
@@ -164,8 +172,16 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/09_robustness/lesson.adoc"
   },
   {
+    "id": "52e1ab6d-7f5e-4b7e-827f-26078be52349",
+    "file": "lessons/challen@buffalo.edu/07_web/09_page_components/lesson.adoc"
+  },
+  {
     "id": "5309999a-20c5-4a36-83e6-88acd5618dfe",
     "file": "lessons/challen@buffalo.edu/04_routing/19_drop_tail/lesson.adoc"
+  },
+  {
+    "id": "556ad932-66c9-4489-be40-873d4898760e",
+    "file": "lessons/challen@buffalo.edu/07_web/16_link_limitations/lesson.adoc"
   },
   {
     "id": "55bc2232-314d-47fa-a39d-6e21eddb280d",
@@ -210,6 +226,10 @@
   {
     "id": "5ecb2717-e57b-4643-8d2b-7b7143690516",
     "file": "lessons/challen@buffalo.edu/05_transport/08_bandwidth/lesson.adoc"
+  },
+  {
+    "id": "62fb9a27-1777-4437-a98d-a50d6a4565fa",
+    "file": "lessons/challen@buffalo.edu/07_web/08_request_path/lesson.adoc"
   },
   {
     "id": "6961a500-7065-47fc-84e1-d4827c035832",
@@ -292,12 +312,20 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/02_01_twisted_pair/lesson.adoc"
   },
   {
+    "id": "a09e668e-1d20-4bdc-8c23-736d3ec1a7b9",
+    "file": "lessons/challen@buffalo.edu/07_web/10_html/lesson.adoc"
+  },
+  {
     "id": "a1ab5146-6053-4679-a5b9-690bda0bc5e2",
     "file": "lessons/challen@buffalo.edu/02_connectivity/17_eternal_september/lesson.adoc"
   },
   {
     "id": "a1db769e-beba-4f55-a42b-e5ccd45a0366",
     "file": "lessons/challen@buffalo.edu/06_naming/08_urls/lesson.adoc"
+  },
+  {
+    "id": "a3cbddbf-1b7b-4ba2-86bc-c3f4614c21b9",
+    "file": "lessons/challen@buffalo.edu/07_web/12_javascript/lesson.adoc"
   },
   {
     "id": "a4364988-dbf8-4454-b40b-9cee4a69e478",
@@ -316,12 +344,20 @@
     "file": "lessons/challen@buffalo.edu/01_era/02_why_search/lesson.adoc"
   },
   {
+    "id": "a9517749-0765-4b23-984d-efc91636bd78",
+    "file": "lessons/challen@buffalo.edu/07_web/14_other_markup/lesson.adoc"
+  },
+  {
     "id": "aeb0b139-f46b-4695-8eb0-9742c5cc7d77",
     "file": "lessons/test@internet-class.org/01_cats/01_funny/lesson.adoc"
   },
   {
     "id": "b2add6b2-3c00-4ed0-9244-cbe555b905bd",
     "file": "lessons/challen@buffalo.edu/03_protocols/02_what_is_a_protocol/lesson.adoc"
+  },
+  {
+    "id": "ba830c8b-1e0a-48c3-bfeb-68c329e6055d",
+    "file": "lessons/challen@buffalo.edu/07_web/06_get_v_post/lesson.adoc"
   },
   {
     "id": "ba998aa4-c359-4571-8bdb-7699286e65e7",
@@ -348,6 +384,10 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/13_circuit_switching/lesson.adoc"
   },
   {
+    "id": "c80bc637-bd2d-494a-84be-5b12eb1af545",
+    "file": "lessons/challen@buffalo.edu/07_web/15_hyperlink/lesson.adoc"
+  },
+  {
     "id": "c9a46227-b2fc-44b0-b8de-ff5c36dc4f1a",
     "file": "lessons/challen@buffalo.edu/03_protocols/03_protocol_structure/lesson.adoc"
   },
@@ -364,6 +404,10 @@
     "file": "lessons/test@internet-class.org/01_cats/02_cute/lesson.adoc"
   },
   {
+    "id": "d08cdcaa-2ba9-4e7c-bc89-1a1e541adeae",
+    "file": "lessons/challen@buffalo.edu/07_web/13_content_v_presentation/lesson.adoc"
+  },
+  {
     "id": "d2988a58-0037-4431-a317-15e11527b65f",
     "file": "lessons/challen@buffalo.edu/04_routing/12_traceroute_examples/lesson.adoc"
   },
@@ -376,8 +420,20 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/13_other_protocols/lesson.adoc"
   },
   {
+    "id": "d6fa3075-141f-483a-8dd8-634f6101654d",
+    "file": "lessons/challen@buffalo.edu/07_web/11_css/lesson.adoc"
+  },
+  {
     "id": "d784b86e-c85a-4303-a76f-381528889669",
     "file": "lessons/challen@buffalo.edu/02_connectivity/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "d97424aa-1b33-4d6a-b8f6-11d1f36acac8",
+    "file": "lessons/challen@buffalo.edu/07_web/04_get/lesson.adoc"
+  },
+  {
+    "id": "dacb4292-9b0e-499b-b67e-1fecd085cef1",
+    "file": "lessons/challen@buffalo.edu/07_web/05_post/lesson.adoc"
   },
   {
     "id": "db79ef48-1c63-4d3d-bd7c-c80b652c222a",
@@ -400,12 +456,20 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/06_ip_address/lesson.adoc"
   },
   {
+    "id": "ed507f44-63db-49f7-ac26-7714edf7b03b",
+    "file": "lessons/challen@buffalo.edu/07_web/03_http_requests/lesson.adoc"
+  },
+  {
     "id": "ee10ca9f-6293-4a57-83d7-c7702848ab47",
     "file": "lessons/challen@buffalo.edu/01_era/01_why_internet/lesson.adoc"
   },
   {
     "id": "ee8318bc-f93c-4f45-94a4-a5ea860b7539",
     "file": "lessons/challen@buffalo.edu/04_routing/18_morris_worm/lesson.adoc"
+  },
+  {
+    "id": "f035456b-a09d-4715-a1d4-d757a5786af4",
+    "file": "lessons/challen@buffalo.edu/07_web/02_chrome_developer_tools/lesson.adoc"
   },
   {
     "id": "f0b3bc20-f4ad-4eec-905b-106eb1bfb902",

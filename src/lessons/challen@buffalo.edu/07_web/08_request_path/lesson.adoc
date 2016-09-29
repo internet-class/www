@@ -5,7 +5,7 @@ title: "How is the path used by a web request?"
 The web has continued to evolve since it was originally created.
 //
 A great example of that evolution is how the path in a HTTP request is
-inteprereted by the web server.
+interpreted by the web server.
 //
 In the early days of the web, that path frequently named an actual HTML
 document that was stored on the server--it was a file name.
