@@ -2,7 +2,6 @@
   files:
     - 6e22ca9d356e44c4cd643c200c87df90.MTS
   created: 'Thu Sep 29 2016 08:28:24 GMT-0400'
-  transcode: false
   authors:
     -
       name: 'Geoffrey Challen'
@@ -11,3 +10,13 @@
     -
       name: 'Greg Bunyea'
       credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
+  creditsFile: black.mp4
+  prerollFile: slowglow.mp4
+  postrollFile: turnon.mp4
+  prerollLength: 7
+  creditsLength: 6
+  postrollLength: 2
+  durationSec: 268.824
+  inputHash: 6e22ca9d356e44c4cd643c200c87df90
+  output: ec035843c02eab3fe458dc87b15db195.mp4
+  transcode: false
