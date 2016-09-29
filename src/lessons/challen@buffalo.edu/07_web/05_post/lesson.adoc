@@ -1,0 +1,11 @@
+---
+title: "How is the POST HTTP protocol request used?"
+---
+
+Probably the second most common HTTP protocol request is `POST`.
+//
+Unlike `GET`, `POST` is not used to request documents--instead, it is used by
+clients to send data to the server.
+//
+If you have logged on to a website, purchased anything online, or sent an
+email through a web mail client, then you've submitted a `POST` request.

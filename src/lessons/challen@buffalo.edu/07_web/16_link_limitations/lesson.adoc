@@ -1,0 +1,11 @@
+---
+title: "What are some limitations of HTML hyperlinks?"
+---
+
+Links are a very powerful part of HTML.
+//
+But they also have limitations, most of which were anticipated by early web
+designers.
+//
+Some had proposals for alternative linking approaches that would have led to
+radically different World Wide Webs.

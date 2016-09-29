@@ -1,0 +1,12 @@
+---
+title: "What are the components of a web page?"
+---
+
+As browsers have established themselves a critical piece of computer software,
+the expectations placed on them have grown.
+//
+(This is why your browser can now open a PDF document.)
+//
+But most true web pages are still built from four fundamental building blocks:
+hypertext markup language (HTML), cascading style sheets (CSS), images (and
+other media), and JavaScript.

@@ -1,0 +1,12 @@
+---
+title: "What is the difference between GET and POST?"
+---
+
+Both `GET` and `POST` HTTP requests can send data to the web server.
+//
+`GET` encodes data into the URL, while `POST` includes it in the body of the
+message.
+//
+But there are important semantic differences between `GET` and `POST` requests
+which explain why `POST` is almost always (and should be) used for form
+submissions that change the state of the world.

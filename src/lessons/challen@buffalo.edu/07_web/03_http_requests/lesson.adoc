@@ -1,0 +1,12 @@
+---
+title: "What are common HTTP protocol requests?"
+---
+
+One of the core components of the world wide web is the HTTP protocol.
+//
+Let's take a quick look at the most common types of HTTP requests--different
+requests that web clients (typically a browser) can make of a web server.
+//
+While the HTTP protocol defines a whole host of different request types,
+including `HEAD`, `PUT`, `DELETE`, and `OPTIONS`, there are only two that you
+really need to know: `GET` and `POST`.

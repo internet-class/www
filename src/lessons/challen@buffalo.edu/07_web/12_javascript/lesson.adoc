@@ -1,0 +1,17 @@
+---
+title: "What is JavaScript?"
+---
+
+JavaScript is probably the most fascinating part of the modern web.
+//
+Almost every page that you load in your browser comes with a bit of computer
+code that runs when the page loads.
+//
+That computer code can do pretty much anything with the page: change
+elements, respond to user input, send web requests in the background, and so
+on.
+//
+Most of our modern experience of the web is defined by JavaScript.
+//
+To see how pervasive JavaScript is, try disabling it and see if you can get
+anything done online!

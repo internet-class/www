@@ -1,0 +1,12 @@
+---
+title: "Why separate content (HTML) from presentation (CSS)?"
+---
+
+With the introduction of cascading style sheets (CSS), web pages separated the
+content and semantics contained in the HTML from presentation logic contained
+in the CSS.
+//
+This separation is both useful and very powerful.
+//
+It helps create compact HTML and helps sites create a consistent look across
+multiple web pages.

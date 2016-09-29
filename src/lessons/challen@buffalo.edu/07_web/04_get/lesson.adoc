@@ -1,0 +1,14 @@
+---
+title: "How is the GET HTTP protocol request used?"
+---
+
+`GET` is by far the most common request used by HTTP, one of the most common
+application-level internet protocols.
+//
+So if you understand `GET` you are a long way towards understanding a lot of
+what happens online.
+//
+`GET` requests a document from a web server.
+//
+It can also pass some parameters that the server can use when determining how
+to return the document.

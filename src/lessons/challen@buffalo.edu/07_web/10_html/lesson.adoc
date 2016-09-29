@@ -1,0 +1,17 @@
+---
+title: "What is hypertext markup language (HTML)?"
+---
+
+Hypertext markup language is the markup language that defines the web.
+//
+It defines how elements of page are structured and their relationships to each
+other.
+//
+Unlike cascading style sheets (CSS), which should describe how page elements
+_look_, correct HTML defines the _semantics_ of page content.
+//
+For example, HTML might define that a certain block of text is a single
+paragraph.
+//
+CSS might then define how much space there should be between that paragraph
+and the paragraphs before and after it.

@@ -1,0 +1,15 @@
+---
+title: "What are common HTTP protocol responses?"
+---
+
+HTTP requests define how a client can make requests to a server.
+//
+But the protocol also must define how the server can respond.
+//
+In many cases the response includes a document of some kind, maybe the one
+that was requested.
+//
+But the HTTP protocol also defines many _response codes_ that the server can
+use to indicate various types of things to the client.
+//
+That's why 404 has become associated with not being able to find something...

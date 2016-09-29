@@ -1,0 +1,13 @@
+---
+title: "What are cascading style sheets (CSS)?"
+---
+
+Cascading style sheets (CSS) are a later web innovation allowing the
+separation of content semantics and presentation.
+//
+Unlike HTML, which defines page semantics, CSS is supposed to determine
+exactly how page elements should look.
+//
+Examples include how much white space surrounds elements, the font and font
+size that should be used for text, whether images should have borders and what
+they should look like, and so on.
