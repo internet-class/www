@@ -1,3 +1,25 @@
 ---
 title: "Introduction to web search."
 ---
+
+Today search is a fundamental part of the internet.
+//
+All of the content on the web wouldn't be very useful if you couldn't find
+anything.
+//
+Search is also a fascinating story.
+//
+It requires tens or hundreds of thousands of machines that must work together
+and perform well despite constant failures and disruptions.
+//
+It requires clever and novel algorithms to find, index, and rank everything,
+while withstanding attempts to manipulate search results.
+//
+It requires understanding web page content and estimating the _significance_
+of a particular page to a search user.
+//
+Search also touches on issues of fairness, reputation, spam, and online
+permanence.
+//
+All of this comes together everything time you search online--and it all
+works remarkably well.
