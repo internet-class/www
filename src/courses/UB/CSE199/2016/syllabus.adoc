@@ -345,7 +345,7 @@ previous attempts like Gopher, the internet before the WWW, static and dynamic
 web pages, server-side rendering, forms, HTTP GET key-value pairs, GET v.
 POST.
 //
-. *Crawling, Indexing and Ranking the Web*: [[crawling]] web crawling and processing, the
+. *Search*: [[search]] web crawling and processing, the
 internet archive, data center computing, distributed indexes, MapReduce, data
 center networking, software-defined networking, the PageRank algorithm,
 improving ranking using context, history, click tracking, website reputation.
@@ -606,9 +606,9 @@ general...].
 
 . *Friday, 11/4/2016*: record an alternate explanation for one of the videos
 from Weeks 6&ndash;10. These weeks cover <<naming, naming (Week 6)>>;
-<<queries,web queries, documents, and markup (Week 7)>>; <<crawling,crawling,
-indexing, and ranking the web (Week 8)>>; <<security,security and authority
-(Week 9)>>; and <<identity,identity and privacy (Week 10)>>.
+<<queries,web queries, documents, and markup (Week 7)>>; <<search, search
+(Week 8)>>; <<security,security and authority (Week 9)>>; and
+<<identity,identity and privacy (Week 10)>>.
 
 . *Friday, 12/9/2016*: record an explanation for a new lesson related to the
 course content not already covered.
