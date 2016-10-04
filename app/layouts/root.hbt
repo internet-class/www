@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-    <video muted loop autoplay poster="/img/background/1.png" id="background"></video>
+    <video muted loop autoplay controls id="background" poster="/img/background/1.png"></video>
   </div>
 </div>
 

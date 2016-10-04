@@ -1,0 +1,9 @@
+---
+title: "What is a hyperlink?"
+---
+
+Hyperlinks are one of the core components that make the web so interesting.
+//
+Any page can create a link to any other page.
+//
+Let's look at a few typical hyperlinks.

@@ -1,0 +1,15 @@
+---
+title: "What are some other markup languages?"
+---
+
+Hypertext markup language (HTML) is one example of a markup language.
+//
+Markup languages mix text content with instruction about how that text should
+look.
+//
+HTML is not the only markup language, and maybe not even the best one
+available today for authoring web content.
+//
+Let's look at a few alternatives.
+//
+That will also help better explain the concept of a markup language.

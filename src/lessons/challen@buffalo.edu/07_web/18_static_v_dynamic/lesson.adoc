@@ -1,0 +1,16 @@
+---
+title: "What is the difference between a static and dynamic web page?"
+---
+
+On the early web paths corresponded to files located on the web server.
+//
+The server retrieved the file and delivered its contents to the client.
+//
+But on today's web, the path is frequently used to _dynamically_ create a page
+that is then sent back to the client.
+//
+The easiest way to see this process in action is to do one of the more common
+things people do online: launch a web search.
+//
+Clearly the server doesn't have pages sitting around waiting for every
+possible search!

@@ -1,0 +1,11 @@
+video:
+  - resolution: "160x90"
+    sizes: [ 512, 1024, 2048, 4096 ]
+  - resolution: "320x180"
+    sizes: [ 512, 1024, 2048, 4096 ]
+  - resolution: "640x360"
+    sizes: [ 512, 1024, 2048, 4096 ]
+  - resolution: "1280x720"
+    sizes: [ 512, 1024, 2048, 4096 ]
+audio:
+  rates: [ 64, 128 ]

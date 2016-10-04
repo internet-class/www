@@ -1,0 +1,5 @@
+video:
+  - resolution: "160x90"
+    sizes: [ 512, 1024 ]
+audio:
+  rates: [ 64 ]

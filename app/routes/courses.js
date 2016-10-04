@@ -30,6 +30,23 @@ var routeCourse = function (course) {
 	return router;
 }
 
+var routeHead = function (course) {
+  var router = express.Router();
+  _.each(course.lessons, function (lesson) {
+    router.head('/' + lesson.path, function (req, res) {
+      res.status(302).send();
+    });
+  });
+  router.use(function (req, res, next) {
+    if (req.method === 'HEAD') {
+      res.status(404).send();
+    } else {
+      next();
+    }
+  });
+  return router;
+}
+
 var renderIndex = function (course, req, res, review) {
 	var user = res.locals.user;
 	var lessonIndex = _.map(course.orderedLessons, function (lesson) {
@@ -52,6 +69,10 @@ var renderIndex = function (course, req, res, review) {
   } else {
     lessonIndex = _.filter(lessonIndex, function (lesson) {
       lesson.lastDeadline = lesson.newDeadline = undefined;
+      if (user.user.user_metadata.staff === true) {
+        lesson.completed = true;
+        lesson.dolink = true;
+      }
       return lesson.completed;
     });
   }
@@ -79,7 +100,9 @@ var renderLesson = function (course, lesson, req, res) {
 		lesson.current = true;
 	} else if (lesson.uuid in user.lessons.completed) {
 		lesson.completed = true;
-	} else {
+	} else if (user.user.user_metadata.staff === true) {
+    lesson.completed = true;
+  } else {
 		// TODO : Add a flash message here.
 		return res.redirect(res.locals.user.slug)
 	}
@@ -106,6 +129,7 @@ var renderLesson = function (course, lesson, req, res) {
 
 var router = express.Router();
 _.each(courses.slug_to_uuid, function (uuid, slug) {
+  router.use('/' + slug, routeHead(courses[uuid]));
 	router.use('/' + slug, routeCourse(courses[uuid]));
 });
 

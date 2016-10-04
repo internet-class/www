@@ -1,0 +1,10 @@
+---
+title: "What is Mosaic and how did it help the web win?"
+---
+
+Early versions of the web were text-based and felt a bit like an upgrade
+version of Gopher.
+//
+But at some point the web caught fire and took over the internet.
+//
+Mosaic is a big part of that, and this is why.

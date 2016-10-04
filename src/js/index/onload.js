@@ -57,27 +57,8 @@ $(function () {
 
   $("#play, #pause").click(playPause);
   $("#mute, #unmute").click(muteUnmute);
-
-  var chooseVideo = function() {
-    var video = $("video#background");
-    var webm = document.createElement('source');
-    webm.type = 'video/webm';
-    var mp4 = document.createElement('mp4');
-    mp4.type = 'video/mp4';
-    if ($(window).width() > 800) {
-      webm.src = '/img/background/large.webm';
-      mp4.src = '/img/background/large.mp4';
-    } else {
-      webm.src = '/img/background/small.webm';
-      mp4.src = '/img/background/small.mp4';
-    }
-    video.append(webm);
-    video.append(mp4);
-    video.load();
-  };
-  chooseVideo();
-
-  window.setTimeout(function () {
+  
+  var loadControls = function () {
     var video = $("video#background").get(0);
     setPaused(video.paused);
     video.addEventListener('play', function () {
@@ -87,8 +68,45 @@ $(function () {
       setPaused(true);
     }, false);
     $("#play_button, #pause_button, #unmute_button, #mute_button").css({ visibility: 'visible' });
-
-  }, 50);
+  };
+  
+  var dashEnabled;
+  var chooseVideo = function() {
+    shaka.polyfill.installAll();
+    if (shaka.Player.isBrowserSupported()) {
+      var player = new shaka.Player(document.getElementById('background'));
+      player.configure({
+        streaming: {
+          bufferBehind: 75,
+          rebufferingGoal: 5,
+          bufferingGoal: 10
+        }
+      });
+      player.load("https://www.internet-class.org/background/manifest.mpd")
+        .then(loadControls)
+        .catch(function (error) {
+          console.log("Failed " + error);
+        });
+    } else {
+      var video = $("video#background");
+      var webm = document.createElement('source');
+      webm.type = 'video/webm';
+      var mp4 = document.createElement('mp4');
+      mp4.type = 'video/mp4';
+      if ($(window).width() > 800) {
+        webm.src = '/img/background/large.webm';
+        mp4.src = '/img/background/large.mp4';
+      } else {
+        webm.src = '/img/background/small.webm';
+        mp4.src = '/img/background/small.mp4';
+      }
+      video.append(webm);
+      video.append(mp4);
+      video.addEventListener('loadeddata', loadControls);
+      video.load();
+    }
+  };
+  chooseVideo();
 
   if ($(".login-link").length > 0) {
     var lock = new Auth0Lock('UwFsZjKr41IigcENM5hDiuQvxILo6CXu', 'internet-class.auth0.com', {

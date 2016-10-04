@@ -1,28 +1,109 @@
-#!/usr/bin/env bash
+#!/usr/bin/env node
 
-VP9_DASH_PARAMS="-tile-columns 4 -frame-parallel 1"
-rm -rf output/*
-ffmpeg -f concat -i concat -codec copy output/ALL.MTS
-#ffmpeg -i output/ALL.MTS -c:v libvpx-vp9 -filter:v fps=29.97 -s 160x90 -b:v 100k -keyint_min 150 -g 150 ${VP9_DASH_PARAMS} -an -f webm -dash 1 output/video_160x90_250k.webm
-#ffmpeg -i output/ALL.MTS -c:v libvpx-vp9 -filter:v fps=29.97 -s 320x180 -b:v 250k -keyint_min 150 -g 150 ${VP9_DASH_PARAMS} -an -f webm -dash 1 output/video_320x180_500k.webm
-ffmpeg -i output/ALL.MTS -c:v libvpx-vp9 -filter:v fps=29.97 -s 640x360 -b:v 50k -minrate 50k -maxrate 50k -keyint_min 150 -g 150 ${VP9_DASH_PARAMS} -an -f webm -dash 1 output/video_640x360_300M.webm
-exit 0
-ffmpeg -i output/ALL.MTS -c:v libvpx-vp9 -filter:v fps=29.97 -s 640x360 -b:v 1000k -keyint_min 150 -g 150 ${VP9_DASH_PARAMS} -an -f webm -dash 1 output/video_640x360_1000k.webm
-ffmpeg -i output/ALL.MTS -c:v libvpx-vp9 -filter:v fps=29.97 -s 1280x720 -b:v 1500k -keyint_min 150 -g 150 ${VP9_DASH_PARAMS} -an -f webm -dash 1 output/video_1280x720_500k.webm
-ffmpeg -i output/ALL.MTS -c:a libvorbis -b:a 32k -vn -f webm -dash 1 output/audio_32k.webm
-ffmpeg -i output/ALL.MTS -c:a libvorbis -b:a 64k -vn -f webm -dash 1 output/audio_64k.webm
-ffmpeg -i output/ALL.MTS -c:a libvorbis -b:a 128k -vn -f webm -dash 1 output/audio_128k.webm
-ffmpeg \
- -f webm_dash_manifest -i output/video_160x90_250k.webm \
- -f webm_dash_manifest -i output/video_320x180_500k.webm \
- -f webm_dash_manifest -i output/video_640x360_750k.webm \
- -f webm_dash_manifest -i output/video_640x360_1000k.webm \
- -f webm_dash_manifest -i output/video_1280x720_500k.webm \
- -f webm_dash_manifest -i output/audio_32k.webm \
- -f webm_dash_manifest -i output/audio_64k.webm \
- -f webm_dash_manifest -i output/audio_128k.webm \
- -c copy -map 0 -map 1 -map 2 -map 3 -map 4 -map 5 \
- -f webm_dash_manifest -adaptation_sets "id=0,streams=0,1,2,3,4 id=1,streams=5,6,7" \
- output/manifest.mpd
+'use strict';
 
-# vim: ft=sh:tw=0
+var argv = require('minimist')(process.argv.slice(2)),
+    yamljs = require('yamljs'),
+    fs = require('fs-extra'),
+    handlebars = require('handlebars'),
+    _ = require('underscore'),
+    async = require('async'),
+    child_process = require('child_process'),
+    temp = require('temp'),
+    assert = require('assert');
+
+var input = argv._[0];
+var lengthCommandLine =
+  'ffprobe -v error -select_streams v:0 -show_entries format=duration ' + 
+  '-of default=noprint_wrappers=1:nokey=1 ' + input;
+var inputDurationSec = parseFloat(child_process.execSync(lengthCommandLine));
+
+var rates = yamljs.parse(fs.readFileSync(argv._[1]).toString());
+var outputDir = temp.mkdirSync();
+
+var videoTemplate = handlebars.compile(
+  'ffmpeg -i ' + input + ' -c:v libvpx-vp9 -filter:v fps=29.97 -s {{{ size }}} ' +
+  '-b:v {{{ bandwidth }}}k -minrate {{{ bandwidth }}}k -maxrate {{{ bandwidth }}}k ' +
+  '-keyint_min 30 -g 30 -tile-columns 4 -frame-parallel 1 ' +
+  '-an -f webm ' + outputDir + '/{{{ output }}}.out && ' +
+  'sample_muxer -i ' + outputDir + '/{{{ output }}}.out -o ' + outputDir + '/{{{ output }}} && ' +
+  'rm ' + outputDir + '/{{{ output }}}.out'
+);
+var audioTemplate = handlebars.compile(
+  'ffmpeg -i ' + input + ' -c:a libvorbis -b:a {{{ rate }}}k -ac 1 -vn -f webm -dash 1 ' +
+  outputDir + '/{{{ output }}}'
+);
+var manifestTemplate = handlebars.compile(
+  'ffmpeg ' + 
+  '{{#each video}} -f webm_dash_manifest -i ' + outputDir + '/{{ this }} {{/each}} ' +
+  '{{#each audio}} -f webm_dash_manifest -i ' + outputDir + '/{{ this }} {{/each }} ' +
+  '-c copy {{ maps }} -f webm_dash_manifest -adaptation_sets "{{{ streams }}}" ' +
+  outputDir + '/{{ output }}'
+);
+
+var video = [];
+var audio = [];
+
+var allTranscodes = [];
+_.each(rates.video, function (rate) {
+  _.each(rate.sizes, function (size) {
+    var targetRate = Math.floor((parseInt(size) * (1024 * 8)) / inputDurationSec / 1024);
+    var output = "video_" + rate.resolution + "_" + targetRate + "k.webm";
+    video.push(output);
+    allTranscodes.push({
+      output: output,
+      command: videoTemplate({
+        size: rate.resolution,
+        bandwidth: targetRate,
+        output: output
+      })
+    });
+  });
+});
+_.each(rates.audio.rates, function (rate) {
+  var output = "audio_" + rate + "k.webm";
+  audio.push(output);
+  allTranscodes.push({
+    output: output,
+    command: audioTemplate({
+      rate: rate,
+      output: output
+    })
+  });
+});
+
+async.eachLimit(allTranscodes.reverse(), 8, function (transcode, callback) {
+  console.log(transcode.command);
+  if (argv.dry_run) {
+    return callback();
+  } else {
+    child_process.exec(transcode.command, function (err, stdout, stderr) {
+      return callback(err);
+    });
+  }
+}, function () {
+  var maps = _.map(allTranscodes, function (unused, index) {
+    return "-map " + index;
+  }).join(" ");
+  var streams = "id=0,streams=" + _.map(video, function (unused, index) {
+    return index;
+  }).join(",") + " id=1,streams=" + _.map(audio, function (unused, index) {
+    return video.length + index;
+  }).join(",");
+  var command = manifestTemplate({
+    video: video,
+    audio: audio,
+    maps: maps,
+    streams: streams,
+    output: "manifest.mpd"
+  });
+  console.log(command);
+  if (argv.dry_run) {
+    return;
+  } else {
+    child_process.execSync(command + " 2>&1 1> /dev/null");
+    console.log(outputDir);
+  }
+});
+
+// vim: ts=2:sw=2:et:ft=javascript

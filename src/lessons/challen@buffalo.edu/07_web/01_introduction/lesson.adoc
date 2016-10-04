@@ -1,0 +1,18 @@
+---
+title: "Introduction to web protocols, queries, and documents."
+---
+
+The world wide web has come to define our experience of the internet.
+//
+The web browser has not only become the one must-have piece of software on any
+machine, but web applications that run inside the browser have begun to
+replace traditional desktop applications.
+//
+As defined by Sir Tim Berners-Lee, the web consists of three components: names
+(URLs), a protocol (HTTP), and a specific type of markup (HTML).
+//
+These innovations have proven remarkably durable.
+//
+Web names have broadened to cover many non-WWW uses, the HTTP protocol is now
+used by smartphone apps as well as web browsers, and HTML has evolved to help
+create ever richer online experiences.

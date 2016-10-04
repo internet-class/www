@@ -1,0 +1,13 @@
+---
+title: "What are the Chrome developer tools?"
+---
+
+By far the best tool for a real internet explorer is the developer toolkit
+built in to modern browsers.
+//
+It will reveal an enormous amount of information about how the web works,
+including page structure, components, loading process, performance, and all
+kinds of other interesting things.
+//
+Let's look at one good example--the developer tools built in to the popular
+Chrome web browser.
