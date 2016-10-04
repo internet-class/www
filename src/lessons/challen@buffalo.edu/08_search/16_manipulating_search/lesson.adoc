@@ -1,3 +1,16 @@
 ---
 title: "How can search results be manipulated?"
 ---
+
+Regardless of their approach, all search engine algorithms are open to
+various kinds of manipulation.
+//
+And there is great interest among website builders in improving their search
+ranking.
+//
+Moving from the second to the first page of search results can provide an
+immediate boost in web traffic and, accordingly, in revenue generate by
+hosted advertisements.
+//
+In response, search providers are constantly fighting back at attempts to
+manipulate their results.

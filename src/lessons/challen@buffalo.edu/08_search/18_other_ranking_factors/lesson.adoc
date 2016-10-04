@@ -1,3 +1,15 @@
 ---
 title: "What are all the factors used to rank search results?"
 ---
+
+Global page rankings are only the beginning of how a final set of search
+results and result orderings are determined.
+//
+Additional factors that are considered include variants of the original
+search that incorporate synonyms or fix misspellings, as well as the age of
+the page.
+//
+Many additional factors that are considered are personal.
+//
+These can include the user's estimated location, the language that pages are
+written in, and the user's search history.

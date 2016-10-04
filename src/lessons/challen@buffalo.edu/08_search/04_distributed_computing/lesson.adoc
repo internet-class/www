@@ -1,3 +1,13 @@
 ---
 title: "Why distribute computing?"
 ---
+
+Distributing computation across many different machines creates a lot of
+challenges.
+//
+So why not just build a single computer with enough storage to hold the
+entire internet and powerful enough to search the whole internet quickly?
+//
+The answer involves a small diversion into computer hardware, as well as some
+interesting lessons about the tradeoffs between cost, complexity, and
+reliability in computer systems.

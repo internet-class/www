@@ -1,3 +1,15 @@
 ---
 title: "What do web crawlers miss?"
 ---
+
+Web crawlers find a lot of the web, but not necessarily everything.
+//
+Pages get missed for a variety of reasons.
+//
+Sometimes there are no links to them.
+//
+Other times accessing them requires permissions that the robot crawler
+doesn't have.
+//
+And well-behaved web crawlers will also ignore pages if told to be the
+website in the form of a `robots.txt` file.

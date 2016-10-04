@@ -1,3 +1,14 @@
 ---
 title: "What is MapReduce?"
 ---
+
+Building efficient data centers that can hold thousands of machines is hard
+enough.
+//
+Programming thousands of machines is even harder.
+//
+One approach pioneered by Google is known as MapReduce.
+//
+MapReduce provides a programming model that simplifies programming thousands
+of machines by breaking down distributed programs into two steps: map, and
+reduce.

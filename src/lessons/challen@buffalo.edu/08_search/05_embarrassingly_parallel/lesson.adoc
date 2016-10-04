@@ -1,3 +1,10 @@
 ---
 title: "What is an embarrassingly parallel workload?"
 ---
+
+Some workloads are very difficult to distribute among multiple machines.
+//
+Happily, some are not.
+//
+The ones that are _really_ easy are sometimes referred to as being
+_embarrassingly_ easy.

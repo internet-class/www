@@ -1,3 +1,22 @@
 ---
 title: "Overview of a single internet search."
 ---
+
+Let's review everything that has to happen for you to perform a single
+internet search.
+//
+First, all of the billions of web pages have to be found and processed.
+//
+That processing has to prepare the search engine to reply to any possible
+search.
+//
+Second, the relative importance of various pages has to be established.
+//
+Search engines use many different factors to determine how to rank results,
+but at the most basic level some pages are better than others--more
+reputable or more useful.
+//
+Finally, the search engine has to receive your search, locate all relevant
+pages, rank them, and return the results.
+//
+Amazingly, this entire process happens in a fraction of a second.

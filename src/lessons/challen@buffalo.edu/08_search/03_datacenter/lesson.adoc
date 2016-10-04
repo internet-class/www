@@ -1,3 +1,14 @@
 ---
 title: "What is a data center?"
 ---
+
+Searching something as enormous as the world wide web can only be
+accomplished by a huge number of computers.
+//
+The large fraction of computers operated by large internet companies--like
+Facebook, Google, Microsoft, or Twitter--are located in _data centers_.
+//
+Data centers are specifically designed to hold large numbers of computers.
+//
+That design goal produces a specific set of challenges, particularly related
+to power and heating.

@@ -1,3 +1,14 @@
 ---
 title: "How do we make search fast?"
 ---
+
+To be useful, web search has to be fast.
+//
+Really fast web search makes interactive and adaptive search styles possible.
+//
+Making search fast gets harder as the web gets larger, which it has been.
+//
+At the same time, web search has become faster.
+//
+At the heart of fast and efficient web search are both clever algorithms and
+a lot of careful systems engineering.

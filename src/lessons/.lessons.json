@@ -292,10 +292,6 @@
     "file": "lessons/challen@buffalo.edu/05_transport/03_tcp_reliability/lesson.adoc"
   },
   {
-    "id": "6e9ed137-237a-4e45-ae85-8e07174436fb",
-    "file": "lessons/challen@buffalo.edu/08_search/20_digital_preservation/lesson.adoc"
-  },
-  {
     "id": "71a766a1-e5bc-4eaf-afe0-ec229afd3bd1",
     "file": "lessons/challen@buffalo.edu/03_protocols/900_sending_email/lesson.adoc"
   },
@@ -305,7 +301,7 @@
   },
   {
     "id": "7b3c9124-48b8-4822-a609-9bd83163624c",
-    "file": "lessons/challen@buffalo.edu/08_search/21_bad_searches/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/08_search/20_bad_searches/lesson.adoc"
   },
   {
     "id": "7b86ce57-b91d-4009-89ce-ce22ad2b6e9a",
@@ -357,7 +353,7 @@
   },
   {
     "id": "90071c21-e1cd-4b4b-9b19-209bb5e8149b",
-    "file": "lessons/challen@buffalo.edu/08_search/22_being_forgotten/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/08_search/21_being_forgotten/lesson.adoc"
   },
   {
     "id": "91422487-6b52-441c-ab2b-edaac5e77df3",
@@ -425,7 +421,7 @@
   },
   {
     "id": "aafc5a6c-c8d3-40c5-afba-1be43bbb776f",
-    "file": "lessons/challen@buffalo.edu/08_search/23_how_to_search/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/08_search/22_how_to_search/lesson.adoc"
   },
   {
     "id": "aeb0b139-f46b-4695-8eb0-9742c5cc7d77",

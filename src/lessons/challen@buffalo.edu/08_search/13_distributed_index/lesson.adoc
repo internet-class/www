@@ -1,3 +1,14 @@
 ---
-title: "How are search indices distributed?"
+title: "How are search indexes distributed?"
 ---
+
+Search indexes for the web are far too large to be efficiently stored on a
+single machine.
+//
+As a result, search indexes are distributed across multiple machines.
+//
+In turn, this means that web searches must access multiple machines to return
+a complete set of results.
+//
+Optimizing this interaction is one of the many challenges to making web
+search fast.

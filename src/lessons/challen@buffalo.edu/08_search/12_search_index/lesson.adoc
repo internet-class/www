@@ -1,3 +1,22 @@
 ---
 title: "What is a search index?"
 ---
+
+The goal of crawling the web and analyzing page contents is to construct a
+search _index_.
+//
+An search index is not altogether different than the index of a book.
+//
+Book indexes map key terms to pages on which those terms appear or are
+discussed.
+//
+Search indexes map search terms to web pages on which those terms appear.
+//
+However, multiple important differences distinguish book indexes from web
+search indexes.
+//
+First, the web is constantly changing, so indexes must be automatically
+created and updated.
+//
+Second, search engines must be prepared for users to search for anything and
+build indexes accordingly.

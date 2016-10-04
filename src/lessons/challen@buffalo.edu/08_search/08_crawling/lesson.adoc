@@ -1,3 +1,12 @@
 ---
 title: "How do you find everything on the web?"
 ---
+
+The world wide web consists of billions of web pages and is growing and
+changing constantly.
+//
+So how do you find all of those pages?
+//
+The process typically utilizes an automated computer program known as a _web
+crawler_, which exploits the linked structure of the WWW to use one page to
+find more pages.

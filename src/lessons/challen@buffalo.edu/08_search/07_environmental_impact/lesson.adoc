@@ -1,3 +1,13 @@
 ---
 title: "What is the environmental impact of the internet?"
 ---
+
+The internet has many positive aspects.
+//
+But is it destroying the environment?
+//
+Information and communication technology (ICT) clearly has some environmental
+impact.
+//
+But the magnitude of that impact is not well understood, and the overall
+environmental impact of the internet requires considering many other factors.

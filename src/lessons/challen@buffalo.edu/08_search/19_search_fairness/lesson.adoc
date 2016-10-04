@@ -1,3 +1,12 @@
 ---
 title: "Are search engines fair? Should they be?"
 ---
+
+Many companies that operate popular internet search engines also operate
+other internet services.
+//
+At times, they have been accused of using their search engines to promote
+their other products.
+//
+There have been calls for web search providers to eliminate these potential
+conflicts of interest when returning search results.

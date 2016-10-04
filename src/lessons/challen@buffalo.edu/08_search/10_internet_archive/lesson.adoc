@@ -1,3 +1,15 @@
 ---
 title: "What is the internet archive?"
 ---
+
+The web is changing constantly.
+//
+Pages move and disappear, and page contents change.
+//
+But the web at any moment in time is a piece of our collective history.
+//
+Viewing old pages can be interesting, and at times can uncover information
+that some would prefer to keep hidden.
+//
+Happily the Internet Archive project is actively archiving the internet and
+creating a historical record of how it has evolved.

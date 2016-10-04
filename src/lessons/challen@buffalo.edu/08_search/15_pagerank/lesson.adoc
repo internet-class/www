@@ -1,3 +1,16 @@
 ---
 title: "What is PageRank?"
 ---
+
+Armed with a web search index we are ready to answer queries.
+//
+But one of the most important challenges of web search remains unsolved.
+//
+To satisfy users, search engines strive to deliver the best results first.
+//
+While today's web searches are highly personalized to various aspects of the
+user performing the search, they still rely on generalized rankings of
+different web pages.
+//
+One of the most famous algorithms for ranking pages--although it's name does
+_not_ refer to web pages--is the PageRank algorithm used by Google.

@@ -1,3 +1,22 @@
 ---
 title: "What is search engine optimization (SEO)?"
 ---
+
+The broad category of ways that sites attempt to improve their rankings is
+known as _search engine optimization_, or SEO.
+//
+SEO is sometimes broken into two categories.
+//
+Black hat SEO consists of manipulative strategies that search engine
+providers do not condone and actively defend against.
+//
+In contrast, white hat SEO consists of a variety of techniques that can
+improve the way that a page is processed by search engines and ensure that
+search results are relevant.
+//
+Search providers typically support white hat SEO since its collective effect
+is to improve the overall quality of search results.
+//
+Many white hat SEO techniques consist of various ways to restructure the
+page's HTML to ensure that its contents can be properly indexed and its key
+topics determined.

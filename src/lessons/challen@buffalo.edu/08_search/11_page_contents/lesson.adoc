@@ -1,3 +1,10 @@
 ---
 title: "How are page contents processed by a crawler?"
 ---
+
+Search engines derive information about web pages by examining their
+contents.
+//
+Happily, hypertext markup language provides both structured content and
+metadata about each page that is useful when preparing to answer search
+queries.
