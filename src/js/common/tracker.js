@@ -97,7 +97,7 @@ var checkTime = function (player, options, videoId, videoLength) {
       (options.problemCallback)) {
     options.problemCallback(info, player);
   }
-  
+
   if ((_.keys(info.watchedBins).length > info.maxBins) &&
       (info.watchedLength > info.maxLength)) {
     info.done = true;
