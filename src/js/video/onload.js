@@ -26,6 +26,12 @@ $(function () {
     });
   });
 
+  $('#close_modal').click(function () {
+    var videoId = $("#problem_modal").data('videoId');
+    resetTracker(videoId);
+    player.loadVideoById(videoId, startPositions[videoId], 'large');
+    $("#problem_modal").closeModal();
+  });
 });
 
 var setChoice = function(choice) {
@@ -78,13 +84,29 @@ function onYouTubeIframeAPIReady() {
 }
 
 function videoFinished(info) {
-  delete(info.watchedBins);
   $.post('/api/v0/tracker/complete', info, function() {
     $("#next_link").removeClass('disabled');
-  })
-    .fail(function () {
-      Materialize.toast("Failed to record lesson completion. Please reload the page.", 5000);
-    });
+  }).fail(function () {
+    Materialize.toast("Failed to record lesson completion. Please reload the page.", 5000);
+  });
+}
+function videoProblem(info) {
+  player.pauseVideo();
+  var problem = "";
+  if (info.problems.visibility) {
+    problem = "You need to leave the window in the foreground. Pay attention!";
+  } else if (info.problems.skipped) {
+    problem = "You skipped a section. Watch the video start to finish without seeking.";
+  } else if (info.problems.muted) {
+    problem = "You muted the video. Leave the audio enabled.";
+  } else if (info.problems.speeding) {
+    problem = "You're watching the video too fast. Leave it at normal speed.";
+  }
+  problem += " <strong>Please watch the videos from start to finish, at normal speed, " +
+    "in the foreground, and with sound enabled.</strong>";
+  $("#problem_description").html(problem);
+  $("#problem_modal").data('videoId', info.youtube);
+  $("#problem_modal").openModal({ dismissible: false });
 }
 function onPlayerReady(event) {
   if ($("#player").data('tracking') === true) {
@@ -92,23 +114,28 @@ function onPlayerReady(event) {
       complete: $("#player").data('tracking-complete'),
       debug: false,
       doneCallback: videoFinished,
+      problemCallback: videoProblem,
       videos: videoInfo
     });
   }
   event.target.playVideo();
 }
 
-var savedPositions = {};
+var startPositions = {},
+    savedPositions = {};
+
+$('.video-choice').each(function() {
+  startPositions[$(this).data('youtube')] = $(this).data('skip');
+  savedPositions[$(this).data('youtube')] = $(this).data('skip');
+});
 
 $('a.video-choice').click(function() {
   if (player) {
-    try {
-      savedPositions[player.getVideoData().video_id] = player.getCurrentTime();
-    } catch (err) { };
+    savedPositions[player.getVideoData().video_id] = player.getCurrentTime();
     var newVideoId = $(this).data('youtube');
     var newVideoSkip = $(this).data('skip');
     if ((newVideoId in savedPositions) &&
-        (savedPositions[newVideoId] > newVideoSkip)) {
+        (savedPositions[newVideoId] >= newVideoSkip)) {
       newVideoSkip = savedPositions[newVideoId];
     }
     player.loadVideoById(newVideoId, newVideoSkip, 'large');
