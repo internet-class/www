@@ -1,0 +1,20 @@
+---
+title: "What is a certificate authority?"
+---
+
+Establishing a secure communication channel is important--but how do you know
+you are communicating with the right entity?
+//
+The structure of the internet makes it easy to launch so-called man in the
+middle attacks.
+//
+This allows even secure communication channels to be established with the
+wrong site or computer.
+//
+Alternatively, phishing attacks may try to confuse users by mimicking the look
+and feel of websites they are used to--like their bank's site.
+//
+On the web this problem is solved using so-called _certificate authorities_.
+//
+A small number of trusted entities provide a basis on which the legitimacy of
+other sites can be established.
