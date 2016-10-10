@@ -9,6 +9,7 @@
   transcode: false
   upload: false
   youtube: xah8viUhW9Y
+  prerollLength: 7
   authors:
     -
       name: 'Geoffrey Challen'
