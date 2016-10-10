@@ -2,12 +2,13 @@
 title: "What is a brute force attack?"
 ---
 
-One use of trapdoor functions is to encrypt a message so that it can be safely
-transmitted across an insecure channel.
+There are sophisticated and complex attacks that can be launched against
+various modern crytosystems.
 //
-Another use is to allow a sender to _sign_ a message so that the recipient can
-verify that the sender originated the message and that the message was not
-altered during transmission.
+But you could also just try banging the door down.
 //
-Along with encryption, digital signatures form the basis for secure and
-trusted online communication.
+A brute force attack consists of an attack just repeatedly trying to break a
+system: for example, by guessing passwords.
+//
+However, brute force attacks can be somewhat sophisticated and work at least
+some of the time.

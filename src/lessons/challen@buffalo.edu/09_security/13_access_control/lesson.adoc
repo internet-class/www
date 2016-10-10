@@ -1,0 +1,15 @@
+---
+title: "What is access control?"
+---
+
+Securing the internet also requires making sure that people can access
+machines that they should be able to but cannot access them in ways that they
+should not be able to.
+//
+We refer to this as _access control_.
+//
+For example, I should be able to retrieve web pages from a third-party web
+server but not modify them.
+//
+Or I should be able to send email using a mail server only if I have an
+account and only be able to read my email and not email belonging to others.
