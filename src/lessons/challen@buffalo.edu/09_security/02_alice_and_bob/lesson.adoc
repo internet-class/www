@@ -1,0 +1,10 @@
+---
+title: "Who are Alice and Bob?"
+---
+
+Before we start talking about internet security, we need to introduce two very
+special people: Alice and Bob.
+//
+We'll find Alice and Bob forever trying to perform various security-related
+tasks online, and constantly threatened by mysterious and powerful
+adversaries.

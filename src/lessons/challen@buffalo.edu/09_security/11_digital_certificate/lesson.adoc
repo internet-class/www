@@ -1,0 +1,13 @@
+---
+title: "What is a digital certificate?"
+---
+
+One use of trapdoor functions is to encrypt a message so that it can be safely
+transmitted across an insecure channel.
+//
+Another use is to allow a sender to _sign_ a message so that the recipient can
+verify that the sender originated the message and that the message was not
+altered during transmission.
+//
+Along with encryption, digital signatures form the basis for secure and
+trusted communication online.

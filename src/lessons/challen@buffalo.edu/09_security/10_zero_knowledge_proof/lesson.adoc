@@ -1,0 +1,12 @@
+---
+title: "What is a zero-knowledge proof?"
+---
+
+One of the more elegant and counterintuitive ideas in modern cryptography is
+the notion of a _zero-knowledge proof_ (ZNP).
+//
+A ZNP allows one party (the prover) to prove to another (the verifier) that
+they know a secret *without revealing any information about the secret
+itself.*
+//
+It's a totally wild idea that has deep implications for online security.

@@ -1,0 +1,24 @@
+---
+title: "Introduction to internet security."
+---
+
+As our lives have moved online we now perform many sensitive or personal
+transactions over the internet.
+//
+When we send email, we want to ensure that it not read or modified during
+transmission.
+//
+When we purchase goods and services, we want to ensure that our payment
+information does not fall into the wrong hands.
+//
+And even when we search the web, we may want to ensure that our explorations
+remain private and are not visible to our internet service provider.
+//
+Accomplishing these tasks requires a complex ecosystem combining beautiful
+mathematical algorithms and systems to establish trust and control who can
+access what internet resources.
+//
+Clearly we're still getting it right--few months go by without news of another
+hack or security vulnerability.
+//
+But we're making progress.

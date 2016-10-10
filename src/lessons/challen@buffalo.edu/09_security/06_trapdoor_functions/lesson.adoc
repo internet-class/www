@@ -1,0 +1,20 @@
+---
+title: "What is a crytographically secure hash function?"
+---
+
+Modern cryptography depends on the existence of several special kinds of
+mathematical functions.
+//
+One important kind is a _trapdoor function_.
+//
+Trapdoor functions are somewhat similar to hash functions in that they are
+easy to compute but hard to invert... except if you know a secret piece of
+information.
+//
+So if someone does not have the secret or key, they cannot invert the
+function.
+//
+If they do, they can open the trapdoor and invert the function.
+//
+Trapdoor functions form the basis of modern crytographic techniques that are
+widely-used online.

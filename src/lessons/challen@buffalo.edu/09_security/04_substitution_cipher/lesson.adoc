@@ -1,0 +1,17 @@
+---
+title: "What is a substitution cipher?"
+---
+
+A simple and easy-to-understand version of symmetric encryption is what is
+known as a substitution cipher.
+//
+The key for a substitution cipher is a table that maps every possible
+character in the plaintext message to a different value.
+//
+To encrypt a message, the sender replaces all characters in the plaintext with
+their value in the lookup table.
+//
+To decrypt a message, the recipient reverses the process.
+//
+Unfortunately, simple substitution ciphers are extremely insecure and subject
+to a variety of simple attacks.
