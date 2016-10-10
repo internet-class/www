@@ -1,0 +1,16 @@
+---
+title: "What is hacking?"
+---
+
+Hacking is a complicated term.
+//
+In it's most colloquial form it has become synonymous with programming--hence
+the term "hackathon".
+//
+But it's darker meaning involves breaking into a machine that you don't have
+access to--hence the phrase "I got hacked."
+//
+Malicious hacking take many forms and be done for a variety of reasons.
+//
+It can exploit flaws with software or, equally often, with the humans that use
+and support software systems.

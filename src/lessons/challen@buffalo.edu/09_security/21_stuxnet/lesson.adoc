@@ -1,0 +1,18 @@
+---
+title: "What was Stuxnet?"
+---
+
+If you want to establish the seriousness of cybersecurity and the importance
+of the internet, Stuxnet is a great example.
+//
+Stuxnet refers to a computer worm that was designed to interfere with uranium
+enrichment in Iran.
+//
+It utilized several zero-day vulnerabilities to cause Iranian centrifuges to
+malfunction in what appeared like accidents.
+//
+Although it has never been confirmed, Stuxnet is believed to be a
+highly-sophisticated joint US-Israeli cyberweapon.
+//
+(To be clear: this discussion is in no way condoning cyberwarfare or any kind
+of warfare, or picking a side in this confrontation.)

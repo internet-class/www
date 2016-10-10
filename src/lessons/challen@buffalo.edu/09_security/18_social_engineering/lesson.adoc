@@ -1,0 +1,14 @@
+---
+title: "What is social engineering?"
+---
+
+Many malicious hacks take advantage of flaws in computer systems.
+//
+But it is a widely-held belief that humans are the weakest link in any
+security system.
+//
+In many cases, hackers gain initial access to the systems that they are
+attacking by leveraging so-called _social engineering_ attacks.
+//
+These attacks are designed to convince humans to provide secure information
+that they probably should not.

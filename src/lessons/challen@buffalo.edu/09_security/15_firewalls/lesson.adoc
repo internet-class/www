@@ -1,0 +1,16 @@
+---
+title: "What is a firewall?"
+---
+
+One of the most basic ways to safeguard a computer online is to eliminate the
+ability of other computers to connect to it.
+//
+This can be done entirely or selectively.
+//
+The software providing this functionality is referred to as a _firewall_.
+//
+In it's simplest form firewalls simply block incoming connections to various
+ports on the protected machine.
+//
+But they can be much more complex and use a great deal of state and history to
+determine whether to allow certain connections.

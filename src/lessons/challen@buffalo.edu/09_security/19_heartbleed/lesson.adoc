@@ -1,0 +1,17 @@
+---
+title: "What was the Heartbleed bug?"
+---
+
+A great example of a software flaw in a deployed crytosystem is the Heartbleed
+vulnerability identified in 2014: also known as CVE-2014-0160.
+//
+Heartbleed was an extremely serious problem.
+//
+It exploited a bug in the widespread and popular OpenSSL crytographic software
+library.
+//
+Attackers could read arbitrary memory contents from the machine that they were
+attacking, allowing them to steal keys, passwords, server content, and
+anything else that might be stored in the server's memory.
+//
+Even today we are not yet sure of the amount of information that it exposed.

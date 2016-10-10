@@ -1,0 +1,18 @@
+---
+title: "What was the HBGary hack?"
+---
+
+In 2011 the online group Anonymous launched an attack on the company HBGary, a
+US security contractor.
+//
+Within a short period of time they were able to gain access to HBGary's
+servers.
+//
+The company's private emails and private user account data were published and
+it's website was defaced.
+//
+The HBGary hack provides an excellent example of how a motivated group of
+hackers can combine social engineering attacks with attacks aimed at software
+vulnerabilities--to devastating effect.
+//
+(Note that this discussion is in no way condoning this or any hack.)
