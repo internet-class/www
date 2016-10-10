@@ -108,6 +108,7 @@ function videoProblem(info) {
   $("#problem_modal").data('videoId', info.youtube);
   $("#problem_modal").openModal({ dismissible: false });
 }
+
 function onPlayerReady(event) {
   if ($("#player").data('tracking') === true) {
     trackVideo(player, {
@@ -116,6 +117,13 @@ function onPlayerReady(event) {
       doneCallback: videoFinished,
       problemCallback: videoProblem,
       videos: videoInfo
+    });
+  } else {
+    player.addEventListener('onStateChange', function (event) {
+      if (event.data == 1) {
+        player.unMute();
+        player.setPlaybackRate(1);
+      }
     });
   }
   event.target.playVideo();
