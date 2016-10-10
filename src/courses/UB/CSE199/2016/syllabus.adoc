@@ -339,7 +339,7 @@ TCP.
 human-readable names, name translation, top-level domains, IPv4 and routing,
 name assignment, IPv4 address exhaustion, IPv6 and adoption problems.
 //
-. *Web Queries, Documents and Markup*: [[queries]] the HTTP protocol, HTML and CSS,
+. *Web*: [[queries]] the HTTP protocol, HTML and CSS,
 separation of content and presentation, links, the DOM data structure,
 previous attempts like Gopher, the internet before the WWW, static and dynamic
 web pages, server-side rendering, forms, HTTP GET key-value pairs, GET v.
@@ -350,9 +350,10 @@ internet archive, data center computing, distributed indexes, MapReduce, data
 center networking, software-defined networking, the PageRank algorithm,
 improving ranking using context, history, click tracking, website reputation.
 //
-. *Security and Authority*: [[security]] certificates and certificate authorities, public
-key encryption, symmetric key encryption, trusted hardware modules, security
-protocol vulnerabilities.
+. *Security*: [[security]] Alice and Bob, symmetric and asymmetric encryption,
+simple ciphers, trapdoor and one-way functions, zero-knowledge proofs,
+certificates and certificate authorities, access control, firewalls, hacking,
+zero-day exploits, social engineering, famous hacks, personal web security.
 //
 . *Identity and Privacy*: [[identity]] cookies, server side tracking, IP addresses v.
 identities, anonymity online, online v. human identities.

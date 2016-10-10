@@ -28,6 +28,10 @@
     "file": "lessons/test@internet-class.org/01_cats/03_adorable/lesson.adoc"
   },
   {
+    "id": "132d7069-a754-4c2e-8b8b-fec345593116",
+    "file": "lessons/challen@buffalo.edu/09_security/17_zero_day_exploit/lesson.adoc"
+  },
+  {
     "id": "13937846-1541-462d-a326-0620cb6a9511",
     "file": "lessons/challen@buffalo.edu/02_connectivity/05_01_davis_hop/lesson.adoc"
   },
@@ -80,6 +84,10 @@
     "file": "lessons/challen@buffalo.edu/06_naming/12_name_translation/lesson.adoc"
   },
   {
+    "id": "25b8a067-6207-47ed-923b-110200b105ce",
+    "file": "lessons/challen@buffalo.edu/09_security/03_symmetric_encryption/lesson.adoc"
+  },
+  {
     "id": "27957e96-3f33-4b81-84b9-1029986147ed",
     "file": "lessons/challen@buffalo.edu/04_routing/13_routing_problems/lesson.adoc"
   },
@@ -100,6 +108,10 @@
     "file": "lessons/challen@buffalo.edu/01_era/06_internet_v_www/lesson.adoc"
   },
   {
+    "id": "2b6cc90f-99fa-4270-a622-d02fb841cfda",
+    "file": "lessons/challen@buffalo.edu/09_security/16_hacking/lesson.adoc"
+  },
+  {
     "id": "2d21f8d4-c172-494c-b4a7-1793680c150f",
     "file": "lessons/challen@buffalo.edu/01_era/08_standards/lesson.adoc"
   },
@@ -112,12 +124,20 @@
     "file": "lessons/challen@buffalo.edu/04_routing/16_deep_packet/lesson.adoc"
   },
   {
+    "id": "2eb44686-4a7f-44d6-9783-ef8b3a4a957a",
+    "file": "lessons/challen@buffalo.edu/09_security/12_certificate_authority/lesson.adoc"
+  },
+  {
     "id": "3318f70d-7412-4efb-908f-23e47b04c96c",
     "file": "lessons/challen@buffalo.edu/07_web/17_dom/lesson.adoc"
   },
   {
     "id": "334b401e-e435-41a4-bc20-f8a868953689",
     "file": "lessons/challen@buffalo.edu/07_web/23_why_the_web_won/lesson.adoc"
+  },
+  {
+    "id": "358424bf-1a6e-4e9f-81d9-1c044605e708",
+    "file": "lessons/challen@buffalo.edu/09_security/14_access_control/lesson.adoc"
   },
   {
     "id": "36b819d1-41c0-4700-80e0-e3945fb91f29",
@@ -132,12 +152,20 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/07_last_mile_problem/lesson.adoc"
   },
   {
+    "id": "3b6f1ad2-634f-423e-9eb3-8789a20a1ee9",
+    "file": "lessons/challen@buffalo.edu/09_security/10_zero_knowledge_proof/lesson.adoc"
+  },
+  {
     "id": "3cff5141-c26b-44b9-813e-82e955037d63",
     "file": "lessons/challen@buffalo.edu/03_protocols/11_encapsulation/lesson.adoc"
   },
   {
     "id": "3e733f9d-f108-4553-be58-b7625d79777d",
     "file": "lessons/challen@buffalo.edu/04_routing/11_how_traceroute_works/lesson.adoc"
+  },
+  {
+    "id": "3f73d50a-6beb-43b9-b079-d77fded61c17",
+    "file": "lessons/challen@buffalo.edu/09_security/21_stuxnet/lesson.adoc"
   },
   {
     "id": "401d9370-4872-4e03-abaa-5c333b61abdc",
@@ -212,6 +240,10 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/09_robustness/lesson.adoc"
   },
   {
+    "id": "52bd5b14-70c2-42c0-8fa8-28a082344b56",
+    "file": "lessons/challen@buffalo.edu/09_security/18_social_engineering/lesson.adoc"
+  },
+  {
     "id": "52e1ab6d-7f5e-4b7e-827f-26078be52349",
     "file": "lessons/challen@buffalo.edu/07_web/09_page_components/lesson.adoc"
   },
@@ -270,6 +302,10 @@
   {
     "id": "62fb9a27-1777-4437-a98d-a50d6a4565fa",
     "file": "lessons/challen@buffalo.edu/07_web/08_request_path/lesson.adoc"
+  },
+  {
+    "id": "63614d41-170a-4c83-9b14-a190eb08dc04",
+    "file": "lessons/challen@buffalo.edu/09_security/08_asymmetric_encryption/lesson.adoc"
   },
   {
     "id": "685cca87-39eb-446d-a16f-c6e41dea3b1c",
@@ -336,6 +372,10 @@
     "file": "lessons/challen@buffalo.edu/05_transport/06_tcp_handshake/lesson.adoc"
   },
   {
+    "id": "87b438a8-6138-4952-bcf4-31fd26cbbc80",
+    "file": "lessons/challen@buffalo.edu/09_security/05_hash_functions/lesson.adoc"
+  },
+  {
     "id": "88513885-705d-4aa2-92b8-1c532161c802",
     "file": "lessons/challen@buffalo.edu/04_routing/06_bgp/lesson.adoc"
   },
@@ -362,6 +402,14 @@
   {
     "id": "951caec1-afac-4d01-bbe7-8dc098ea5a7e",
     "file": "lessons/challen@buffalo.edu/08_search/06_mapreduce/lesson.adoc"
+  },
+  {
+    "id": "9a5030fa-2a03-4a99-8b51-e7366df355ab",
+    "file": "lessons/challen@buffalo.edu/09_security/20_hbgary/lesson.adoc"
+  },
+  {
+    "id": "9bf4b40c-0864-4ae9-af7b-6401c3637999",
+    "file": "lessons/challen@buffalo.edu/09_security/23_safe_online/lesson.adoc"
   },
   {
     "id": "9d359f2b-1189-4fc4-9b92-ad44e1f67e5a",
@@ -400,6 +448,10 @@
     "file": "lessons/challen@buffalo.edu/06_naming/07_what_is_dhcp/lesson.adoc"
   },
   {
+    "id": "a60b8aa0-ca01-4949-b62c-0d44b9032fe3",
+    "file": "lessons/challen@buffalo.edu/09_security/09_key_exchange/lesson.adoc"
+  },
+  {
     "id": "a64cb11e-9688-4471-97d1-6815d60b0ea1",
     "file": "lessons/challen@buffalo.edu/04_routing/05_what_is_an_as/lesson.adoc"
   },
@@ -420,12 +472,24 @@
     "file": "lessons/challen@buffalo.edu/07_web/14_other_markup/lesson.adoc"
   },
   {
+    "id": "aa517a0f-b21e-4d0a-b562-25902d9132e2",
+    "file": "lessons/challen@buffalo.edu/09_security/19_heartbleed/lesson.adoc"
+  },
+  {
     "id": "aafc5a6c-c8d3-40c5-afba-1be43bbb776f",
     "file": "lessons/challen@buffalo.edu/08_search/22_how_to_search/lesson.adoc"
   },
   {
     "id": "aeb0b139-f46b-4695-8eb0-9742c5cc7d77",
     "file": "lessons/test@internet-class.org/01_cats/01_funny/lesson.adoc"
+  },
+  {
+    "id": "aeb90f1f-8ff2-4da0-ac2c-7fd98a1f91f6",
+    "file": "lessons/challen@buffalo.edu/09_security/04_substitution_cipher/lesson.adoc"
+  },
+  {
+    "id": "b1f15ef7-b18c-4339-b43b-4b0997e9b586",
+    "file": "lessons/challen@buffalo.edu/09_security/01_introduction/lesson.adoc"
   },
   {
     "id": "b2add6b2-3c00-4ed0-9244-cbe555b905bd",
@@ -438,6 +502,14 @@
   {
     "id": "ba998aa4-c359-4571-8bdb-7699286e65e7",
     "file": "lessons/challen@buffalo.edu/05_transport/14_multipath_tcp/lesson.adoc"
+  },
+  {
+    "id": "bc090b0f-d3b5-4676-96dd-e3d2f29e2a9d",
+    "file": "lessons/challen@buffalo.edu/09_security/02_alice_and_bob/lesson.adoc"
+  },
+  {
+    "id": "bddbd809-853e-4e1a-b1ff-e7b3b513cf19",
+    "file": "lessons/challen@buffalo.edu/09_security/11_digital_certificate/lesson.adoc"
   },
   {
     "id": "bebfbc29-afdd-49a8-9495-a888c2f3ba38",
@@ -472,6 +544,10 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/13_circuit_switching/lesson.adoc"
   },
   {
+    "id": "c62f69ef-9464-4828-8f31-462951b1b72e",
+    "file": "lessons/challen@buffalo.edu/09_security/22_website_security/lesson.adoc"
+  },
+  {
     "id": "c80bc637-bd2d-494a-84be-5b12eb1af545",
     "file": "lessons/challen@buffalo.edu/07_web/15_hyperlink/lesson.adoc"
   },
@@ -504,6 +580,10 @@
     "file": "lessons/test@internet-class.org/01_cats/02_cute/lesson.adoc"
   },
   {
+    "id": "d079f387-d330-4f9b-a6b4-901379da96c6",
+    "file": "lessons/challen@buffalo.edu/09_security/06_trapdoor_functions/lesson.adoc"
+  },
+  {
     "id": "d08cdcaa-2ba9-4e7c-bc89-1a1e541adeae",
     "file": "lessons/challen@buffalo.edu/07_web/13_content_v_presentation/lesson.adoc"
   },
@@ -522,6 +602,14 @@
   {
     "id": "d3705161-ce54-4806-b863-59abbabf14d9",
     "file": "lessons/challen@buffalo.edu/03_protocols/13_other_protocols/lesson.adoc"
+  },
+  {
+    "id": "d69ff941-57e1-414a-a3e5-b37242bfbe1e",
+    "file": "lessons/challen@buffalo.edu/09_security/15_firewalls/lesson.adoc"
+  },
+  {
+    "id": "d6aa8972-9938-4ede-ba1c-d6c5dd0f395a",
+    "file": "lessons/challen@buffalo.edu/09_security/07_factoring/lesson.adoc"
   },
   {
     "id": "d6d02a1e-be3b-42cb-83ef-42f8af9dd6e9",
@@ -566,6 +654,10 @@
   {
     "id": "e4094339-fe3c-404d-806a-d9844da5e831",
     "file": "lessons/challen@buffalo.edu/03_protocols/08_end_to_end/lesson.adoc"
+  },
+  {
+    "id": "e5f9f2b1-4554-4031-8049-9f7344c7fa64",
+    "file": "lessons/challen@buffalo.edu/09_security/13_brute_force_attack/lesson.adoc"
   },
   {
     "id": "e9a98e82-55cb-4df8-b31e-38eb0a1042d9",
