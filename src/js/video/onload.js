@@ -118,13 +118,6 @@ function onPlayerReady(event) {
       problemCallback: videoProblem,
       videos: videoInfo
     });
-  } else {
-    player.addEventListener('onStateChange', function (event) {
-      if (event.data == 1) {
-        player.unMute();
-        player.setPlaybackRate(1);
-      }
-    });
   }
   event.target.playVideo();
 }
