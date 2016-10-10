@@ -8,7 +8,7 @@
   output: fbc7d126ac22c7d32ffff84482a9210c.mp4
   prerollFile: typing.mp4
   postrollFile: static.mp4
-  skip: 8
+  prerollLength: 7
   transcode: false
   upload: false
   youtube: o0ImyCrk8xw

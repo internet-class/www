@@ -15,7 +15,7 @@
   transcode: false
   upload: false
   youtube: Cq0SQkA9GRw
-  skip: 8
+  prerollLength: 7
   authors:
     -
       name: 'Geoffrey Challen'

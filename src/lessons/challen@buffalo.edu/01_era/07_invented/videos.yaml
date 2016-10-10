@@ -42,4 +42,4 @@
   transcode: false
   upload: false
   youtube: g6PivHNZLpE
-  skip: 8
+  prerollLength: 7

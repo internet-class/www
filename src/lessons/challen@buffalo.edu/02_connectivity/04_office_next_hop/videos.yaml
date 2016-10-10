@@ -19,7 +19,7 @@
   creditsFile: black.mp4
   prerollFile: typing.mp4
   postrollFile: static.mp4
-  skip: 8
+  prerollLength: 7
   producers:
     -
       name: 'Greg Bunyea'

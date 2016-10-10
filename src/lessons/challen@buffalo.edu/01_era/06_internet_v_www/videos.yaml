@@ -19,7 +19,7 @@
   transcode: false
   upload: false
   youtube: 0KIWorfEoUs
-  skip: 8
+  prerollLength: 7
 -
   files:
     - 48ec488a46c57c37033404cb9a4e6f1c.MTS
@@ -33,7 +33,7 @@
   transcode: false
   upload: false
   youtube: THuk4-KdSDY
-  skip: 8
+  prerollLength: 7
   authors:
     -
       name: 'Geoffrey Challen'

@@ -10,7 +10,7 @@
   creditsFile: black.mp4
   prerollFile: typing.mp4
   postrollFile: static.mp4
-  skip: 8
+  prerollLength: 7
   inputHash: cc1dbedbcea4a79c6ab6055ceb574c47
   output: 622ca7f9f2d9227fd951e3ca0e9a6d21.mp4
   transcode: false
