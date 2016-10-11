@@ -318,32 +318,42 @@ That said, here's what we are trying to accomplish on a week-by-week basis:
 networking terminology, difference between the internet and the World Wide
 Web, internet ownership, internet standardization, finding out more about the
 internet, "Eternal September".
+** *Activities*: https://goo.gl/84pxLp[Internet Avoidance (2016-08-31)]
 //
 . *Connectivity*: [[connectivity]] cables, connected at work and at home, the
 last mile problem, the core internet, packets, circuit v. packet switching.
+** *Activities*: https://goo.gl/XIgNXO[Connection Detection (2016-09-07)]
 //
 . *Protocols*: [[protocols]] what is a protocol, clients and servers, the
 internet protocol (IP), IP addresses, the end-to-end principle, protocol
 stacks, encapsulation, other internet protocols, peer-to-peer systems.
+** *Activities*: https://goo.gl/7KKbhJ[DIY RFC (2016-09-12)],
+https://goo.gl/NJmcUG[Human-Computer Interaction (2016-09-14)]
 //
 . *Routing*: [[routing]] routers and end hosts, autonomous systems, the border gateway
 protocol, meet-me rooms, IP address structure, 512K day, traceroute, routing
 stability, public v. private addresses, onion routing.
+** *Activities*: https://goo.gl/Wf1cvD[S'More Routing (2016-09-19)],
+https://goo.gl/7gddaN[Tracking with `traceroute` (2016-09-21)]
 //
 . *Transport*: [[transport]] the TCP protocol, TCP connections, ports, well-known port
 numbers, NAT, problems with TCP, QUIC, TCP influence on overall network
 design, buffer bloat, the UDP protocol and unreliable connections, multipath
 TCP.
+** *Activities*: https://goo.gl/YZ68jb[Video Review Session (2016-09-26)], https://goo.gl/QWFGSY[Great White `wireshark` (2016-09-28)]
 //
 . *Naming*: [[naming]] the domain name service (DNS) and DNS protocol, machine- and
 human-readable names, name translation, top-level domains, IPv4 and routing,
 name assignment, IPv4 address exhaustion, IPv6 and adoption problems.
+** *Activities*: https://goo.gl/sG4YGV[All Kinds of Names (2016-10-03)], https://goo.gl/QJ79Hv[Name Tools (2016-10-05)]
 //
 . *Web*: [[queries]] the HTTP protocol, HTML and CSS,
 separation of content and presentation, links, the DOM data structure,
 previous attempts like Gopher, the internet before the WWW, static and dynamic
 web pages, server-side rendering, forms, HTTP GET key-value pairs, GET v.
 POST.
+** *Activities*: https://goo.gl/51cvgP[`git` a Personal Website I
+(2016-10-10)]
 //
 . *Search*: [[search]] web crawling and processing, the
 internet archive, data center computing, distributed indexes, MapReduce, data
