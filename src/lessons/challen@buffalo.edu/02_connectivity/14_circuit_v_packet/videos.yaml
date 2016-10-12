@@ -12,6 +12,7 @@
   prerollFile: typing.mp4
   postrollFile: static.mp4
   prerollLength: 7
+  end: 7
   authors:
     -
       name: 'Geoffrey Challen'
@@ -38,6 +39,7 @@
   prerollFile: typing.mp4
   postrollFile: static.mp4
   prerollLength: 7
+  end: 7
   producers:
     -
       name: 'Greg Bunyea'

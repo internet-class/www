@@ -9,6 +9,7 @@
   prerollFile: typing.mp4
   postrollFile: static.mp4
   prerollLength: 7
+  end: 7
   transcode: false
   upload: false
   youtube: Q9JsUnPPaW0

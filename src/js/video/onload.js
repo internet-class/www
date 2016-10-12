@@ -57,6 +57,7 @@ function onYouTubeIframeAPIReady() {
     videoInfo[$(this).data('youtube')] = {
       id: $(this).data('youtube'),
       skip: $(this).data('skip'),
+      end: $(this).data('end'),
       elem: $(this)
     };
   });
@@ -113,7 +114,7 @@ function onPlayerReady(event) {
   if ($("#player").data('tracking') === true) {
     trackVideo(player, {
       complete: $("#player").data('tracking-complete'),
-      debug: false,
+      debug: true,
       doneCallback: videoFinished,
       problemCallback: videoProblem,
       videos: videoInfo

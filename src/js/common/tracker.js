@@ -41,20 +41,18 @@ var checkInterval;
 var lastCheck, lastStream;
 
 var checkTime = function (player, options, videoId, videoLength) {
-  var skip = 0;
-  if (videoId in options.videos) {
-    skip = options.videos[videoId].skip || 0;
-  }
+  var skip = options.videos[videoId].skip,
+      end = options.videos[videoId].end;
   var isMuted = player.isMuted();
   if (!(videoId in infoById)) {
     player.unMute();
     isMuted = false;
     player.setPlaybackRate(1);
     infoById[videoId] = {
-      maxLength: Math.floor((videoLength - skip) * options.complete / 100.0),
+      maxLength: videoLength - skip - end,
       watchedLength: 0,
       streamedLength: 0,
-      maxBins: Math.floor(((videoLength - skip) / options.bin) * options.complete / 100.0),
+      maxBins: Math.floor((videoLength - skip - end) / options.bin),
       watchedBins: {},
       youtube: videoId,
       done: false,
@@ -139,8 +137,7 @@ var onPlayerStateChange = function (event, player, options) {
 
 var trackVideoDefaults = {
   debug: false,
-  complete: 90,
-  bin: 10,
+  bin: 5,
   sample: 1
 }
 var trackVideo = function (player, options) {

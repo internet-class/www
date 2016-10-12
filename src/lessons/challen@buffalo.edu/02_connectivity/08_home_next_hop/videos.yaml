@@ -7,6 +7,7 @@
   prerollFile: typing.mp4
   postrollFile: static.mp4
   prerollLength: 7
+  end: 7
   inputHash: 487e4f8dd5d61f4d29eeb5bd367b5ad9
   output: 4739c597edf753f84110c9c1ca1750aa.mp4
   transcode: false

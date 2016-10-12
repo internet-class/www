@@ -59,7 +59,7 @@
         {{#each lesson.videos}}
         <div class="col video-col">
           <a href="#" class="video-choice video-card"
-                      data-youtube="{{ youtube }}" data-skip="{{ skip }}">
+                      data-youtube="{{ youtube }}" data-skip="{{ skip }}" data-end="{{ end }}">
             <div class="card hoverable">
               <div class="card-image">
                 <img class="responsive-img" src="//i.ytimg.com/vi/{{ youtube }}/maxresdefault.jpg" alt="YouTube placeholder">

@@ -20,6 +20,7 @@
   upload: false
   youtube: 0KIWorfEoUs
   prerollLength: 7
+  end: 7
 -
   files:
     - 48ec488a46c57c37033404cb9a4e6f1c.MTS
@@ -34,6 +35,7 @@
   upload: false
   youtube: THuk4-KdSDY
   prerollLength: 7
+  end: 7
   authors:
     -
       name: 'Geoffrey Challen'
