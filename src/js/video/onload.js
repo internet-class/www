@@ -114,7 +114,7 @@ function onPlayerReady(event) {
   if ($("#player").data('tracking') === true) {
     trackVideo(player, {
       complete: $("#player").data('tracking-complete'),
-      debug: true,
+      debug: false,
       doneCallback: videoFinished,
       problemCallback: videoProblem,
       videos: videoInfo
