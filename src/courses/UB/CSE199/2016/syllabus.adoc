@@ -609,7 +609,14 @@ general...].
 from Weeks 6&ndash;10. These weeks cover <<naming, naming (Week 6)>>;
 <<queries,web queries, documents, and markup (Week 7)>>; <<search, search
 (Week 8)>>; <<security,security and authority (Week 9)>>; and
-<<identity,identity and privacy (Week 10)>>.
+<<identity,identity and privacy (Week 10)>>. *Note that you cannot record the
+following videos:*
+.. Any of the introductions: "Introduction to internet naming", "Introduction
+to web protocols, queries, and documents", "Introduction to search", "Overview
+of a single search", etc.
+.. Any of the tool videos: "Why you should learn to use the command line",
+"You should vote", "What are the Chrome developer tools?", "What should you
+not search for?", "How to search the web", etc.
 
 . *Friday, 12/9/2016*: record an explanation for a new lesson related to the
 course content not already covered.
@@ -624,7 +631,7 @@ or how transatlantic cables are laid.
 Or you can bring in new material not already covered but relevant.
 //
 If you are concerned whether your topic is appropriate, please consult with a
-member of the course staff *before you get started*.
+member of the course staff *before you start*.
 
 === Internet Participation
 

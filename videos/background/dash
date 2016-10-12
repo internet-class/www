@@ -29,10 +29,21 @@ var videoTemplate = handlebars.compile(
   'sample_muxer -i ' + outputDir + '/{{{ output }}}.out -o ' + outputDir + '/{{{ output }}} && ' +
   'rm ' + outputDir + '/{{{ output }}}.out'
 );
+var mp4VideoTemplate = handlebars.compile(
+  'ffmpeg -i ' + input + ' -size {{{ size }}} -c:v libx264 ' +
+  '-b:v {{{ bandwidth }}}k -bf 2 -g 90 -sc_threshold 0 ' +
+  '-an ' + outputDir + '/{{{ output }}}'
+);
+
 var audioTemplate = handlebars.compile(
   'ffmpeg -i ' + input + ' -c:a libvorbis -b:a {{{ rate }}}k -ac 1 -vn -f webm -dash 1 ' +
   outputDir + '/{{{ output }}}'
 );
+var mp4AudioTemplate = handlebars.compile(
+  'ffmpeg -i ' + input + ' -c:a aac -strict experimental -b:a {{{ rate }}}k -ac 1 -vn ' +
+  outputDir + '/{{{ output }}}'
+);
+
 var manifestTemplate = handlebars.compile(
   'ffmpeg ' + 
   '{{#each video}} -f webm_dash_manifest -i ' + outputDir + '/{{ this }} {{/each}} ' +
@@ -40,14 +51,31 @@ var manifestTemplate = handlebars.compile(
   '-c copy {{ maps }} -f webm_dash_manifest -adaptation_sets "{{{ streams }}}" ' +
   outputDir + '/{{ output }}'
 );
+var mp4ManifestTemplate = handlebars.compile(
+  'MP4Box -dash 3000 -rap -profile dashavc264:onDemand ' + 
+  '{{#each video}} ' + outputDir + '/{{ this }}#video {{/each}} ' +
+  '{{#each audio}} ' + outputDir + '/{{ this }}#audio {{/each}}'
+);
 
 var video = [];
+var mp4Video = [];
 var audio = [];
+var mp4Audio = [];
 
 var allTranscodes = [];
 _.each(rates.video, function (rate) {
   _.each(rate.sizes, function (size) {
     var targetRate = Math.floor((parseInt(size) * (1024 * 8)) / inputDurationSec / 1024);
+    var output = "video_" + rate.resolution + "_" + targetRate + "k.mp4";
+    mp4Video.push(output);
+    allTranscodes.push({
+      output: output,
+      command: mp4VideoTemplate({
+        size: rate.resolution,
+        bandwidth: targetRate,
+        output: output
+      })
+    });
     var output = "video_" + rate.resolution + "_" + targetRate + "k.webm";
     video.push(output);
     allTranscodes.push({
@@ -66,6 +94,15 @@ _.each(rates.audio.rates, function (rate) {
   allTranscodes.push({
     output: output,
     command: audioTemplate({
+      rate: rate,
+      output: output
+    })
+  });
+  var output = "audio_" + rate + "k.mp4";
+  mp4Audio.push(output);
+  allTranscodes.push({
+    output: output,
+    command: mp4AudioTemplate({
       rate: rate,
       output: output
     })
@@ -98,10 +135,20 @@ async.eachLimit(allTranscodes.reverse(), 8, function (transcode, callback) {
     output: "manifest.mpd"
   });
   console.log(command);
+  if (!argv.dry_run) {
+    child_process.execSync(command + " 2>&1 1> /dev/null");
+    console.log(outputDir);
+  }
+  var mp4Dir = temp.mkdirSync();
+  var command = mp4ManifestTemplate({
+    video: video,
+    audio: audio
+  });
+  console.log(command);
   if (argv.dry_run) {
     return;
   } else {
-    child_process.execSync(command + " 2>&1 1> /dev/null");
+    child_process.execSync(command + " 2>&1 1> /dev/null", { cwd: mp4Dir });
     console.log(outputDir);
   }
 });
