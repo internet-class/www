@@ -1,10 +1,12 @@
 ---
 title: "CSE 199 Syllabus"
 spelling_exceptions:
+  - DIY
   - eportfolio
   - Capen
   - Silverman
   - 4chan
+  - S'More
   - renormalized
   - Werner Herzog
 description: >

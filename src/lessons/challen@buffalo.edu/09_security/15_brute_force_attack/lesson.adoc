@@ -3,7 +3,7 @@ title: "What is a brute force attack?"
 ---
 
 There are sophisticated and complex attacks that can be launched against
-various modern crytosystems.
+various modern cryptosystems.
 //
 But you could also just try banging the door down.
 //

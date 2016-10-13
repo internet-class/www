@@ -1,5 +1,7 @@
 ---
 title: "What is a zero-knowledge proof?"
+spelling_exceptions:
+  - ZNP
 ---
 
 One of the more elegant and counterintuitive ideas in modern cryptography is

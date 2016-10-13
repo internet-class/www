@@ -3,7 +3,7 @@ title: "How do two parties exchange keys to communicate securely?"
 ---
 
 While asymmetric (public-key) encryption does allow two parties to communicate
-security without exchanging keys, assymetric encryption requires expensive
+security without exchanging keys, asymmetric encryption requires expensive
 computation for each message.
 //
 Symmetric key algorithms are much more efficient.

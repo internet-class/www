@@ -1,10 +1,10 @@
 ---
-title: "What is the basis for most modern crytography?"
+title: "What is the basis for most modern cryptography?"
 ---
 
 Trapdoor functions have proven fairly difficult to find.
 //
-Most modern crytosystems--including RSA--are based on factoring.
+Most modern cryptosystems--including RSA--are based on factoring.
 //
 Given two very large prime numbers it is easy to multiply them together to
 create a third number that has only two factors.
@@ -12,7 +12,7 @@ create a third number that has only two factors.
 But given that third number it is very hard to determine what it's two factors
 are.
 //
-This asymmetry is the basis of modern crytography and most of our online
+This asymmetry is the basis of modern cryptography and most of our online
 security.
 //
 If anyone ever determines how to quickly factor huge numbers, it will have

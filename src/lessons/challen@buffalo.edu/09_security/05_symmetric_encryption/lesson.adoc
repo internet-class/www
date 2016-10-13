@@ -2,21 +2,21 @@
 title: "What is symmetric encryption?"
 ---
 
-Crytography has a fascinating history going back thousands of years.
+Cryptography has a fascinating history going back thousands of years.
 //
-However, until relatively recently all crytographic algorithms fell into one
+However, until relatively recently all cryptographic algorithms fell into one
 category referred to as _symmetric_ encryption.
 //
 In symmetric encryption both the sender and receive share a single key that is
 used both to encrypt and decrypt messages.
 //
-Encryption takes a _plaintext_ message and produces a _cyphertext_.
+Encryption takes a _plaintext_ message and produces a _ciphertext_.
 //
-Decryption takes the _cyphertext_ message and produces the original
+Decryption takes the _ciphertext_ message and produces the original
 _plaintext_.
 //
 A variety of simple symmetric encryption algorithms exist.
 //
 Symmetric encryption is still in wide use today, although computers have
-allowe the algorithms that are used to become significantly more complex and
+allowed the algorithms that are used to become significantly more complex and
 secure.

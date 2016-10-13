@@ -12,5 +12,5 @@ One-way functions are easy to compute but very hard for anyone to invert.
 Sometimes we refer to these functions as _hash functions_ and their output as
 a hash.
 //
-Crytographic hash functions are a subset of hash functions that have special
-properties important to their use in crytography.
+Cryptographic hash functions are a subset of hash functions that have special
+properties important to their use in cryptography.

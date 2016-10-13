@@ -5,7 +5,7 @@ title: "What is asymmetric encryption?"
 In symmetric key encryption the same key is used for both encryption and
 decryption.
 //
-In contrast, in assymetric key encryption a public key (known to everyone) is
+In contrast, in asymmetric key encryption a public key (known to everyone) is
 used for encryption and a private key (known only to the recipient) is used
 for decryption.
 //
@@ -13,5 +13,5 @@ Many asymmetric key encryption approaches are based on factoring as a trapdoor
 function, with the public key being the multiple of the two secret primes and
 the private key being the two secret primes.
 //
-Assymmetric key encryption allows one party to encrypt a message to a second
+Asymmetric key encryption allows one party to encrypt a message to a second
 party they have never communicated with previously.

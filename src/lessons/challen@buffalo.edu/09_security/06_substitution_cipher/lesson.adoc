@@ -1,5 +1,7 @@
 ---
 title: "What is a substitution cipher?"
+spelling_exceptions:
+  - lookup
 ---
 
 A simple and easy-to-understand version of symmetric encryption is what is

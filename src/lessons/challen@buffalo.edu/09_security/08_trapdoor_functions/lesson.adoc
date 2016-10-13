@@ -1,5 +1,5 @@
 ---
-title: "What is a crytographically secure hash function?"
+title: "What is a trapdoor function?"
 ---
 
 Modern cryptography depends on the existence of several special kinds of
@@ -16,5 +16,5 @@ function.
 //
 If they do, they can open the trapdoor and invert the function.
 //
-Trapdoor functions form the basis of modern crytographic techniques that are
+Trapdoor functions form the basis of modern cryptographic techniques that are
 widely-used online.

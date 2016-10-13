@@ -1,5 +1,7 @@
 ---
 title: "What was Stuxnet?"
+spelling_exceptions:
+  - Stuxnet
 ---
 
 If you want to establish the seriousness of cybersecurity and the importance
