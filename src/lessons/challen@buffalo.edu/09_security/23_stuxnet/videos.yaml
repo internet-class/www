@@ -2,7 +2,7 @@
   files:
     - ab3f616b1aeca65a85a2ea6c5590f978.MTS
   created: 'Wed Oct 12 2016 15:37:28 GMT-0400'
-  transcode: false
+  creditsFile: bah.MTS
   authors:
     -
       name: 'Geoffrey Challen'
