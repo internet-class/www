@@ -1,0 +1,13 @@
+---
+title: "What is end-to-end encryption?"
+---
+
+Much of the encryption that is performed online is so-called end-to-end
+encryption.
+//
+End-to-end encryption means encryption and decryption are performed at the
+ends of the connection: on the client and server, or on both peers of a
+peer-to-peer connection.
+//
+This is in contrast to link-layer encryption, where encryption is potentially
+performed only on one part of a connection--such as a wireless link.

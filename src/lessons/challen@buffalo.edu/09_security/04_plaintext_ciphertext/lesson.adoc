@@ -1,0 +1,27 @@
+---
+title: "What is a plaintext? What is a ciphertext?"
+---
+
+When discussing encryption we frequently use two terms: _plaintext_ and
+_ciphertext_.
+//
+The plaintext is the original message that the sender wants to securely
+deliver to the receiver.
+//
+The ciphertext is the message that is actually transmitted over the insecure
+channel.
+//
+Before transmission, the sender transforms the plaintext into the
+ciphertext--this is _encryption_.
+//
+When the ciphertext is received, the receiver must transform the ciphertext
+back into the plaintext--this is _decryption_.
+//
+To be secure, encryption and decryption must require that the sender and
+receiver possess some secret information or _key_.
+//
+The goal of most encryption systems is to ensure that the ciphertext cannot be
+decrypted--transformed back into the plaintext--without that secret key.
+//
+This prevents an adversary or anyone able to eavesdrop on the connection from
+recovering the original message plaintext.
