@@ -371,7 +371,7 @@ simple ciphers, trapdoor and one-way functions, zero-knowledge proofs,
 certificates and certificate authorities, access control, firewalls, hacking,
 zero-day exploits, social engineering, famous hacks, personal web security.
 //
-. *Identity and Privacy*: [[identity]] cookies, server side tracking, IP addresses v.
+. *Identity*: [[identity]] cookies, server side tracking, IP addresses v.
 identities, anonymity online, online v. human identities.
 //
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
