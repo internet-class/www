@@ -355,12 +355,16 @@ previous attempts like Gopher, the internet before the WWW, static and dynamic
 web pages, server-side rendering, forms, HTTP GET key-value pairs, GET v.
 POST.
 ** *Activities*: https://goo.gl/51cvgP[`git` a Personal Website I
-(2016-10-10)]
+(2016-10-10)] (https://youtu.be/8x6InF3s8eM[Video Walkthrough]),
+https://goo.gl/FHxeqf[`git` a Personal Website II (2016-10-12)]
+(https://youtu.be/8QaI18MyxGs[Video Walkthrough])
 //
 . *Search*: [[search]] web crawling and processing, the
 internet archive, data center computing, distributed indexes, MapReduce, data
 center networking, software-defined networking, the PageRank algorithm,
 improving ranking using context, history, click tracking, website reputation.
+** *Activities*: https://goo.gl/896Lc9[Personal Parallel Processing
+(2016-10-17)]
 //
 . *Security*: [[security]] Alice and Bob, symmetric and asymmetric encryption,
 simple ciphers, trapdoor and one-way functions, zero-knowledge proofs,
