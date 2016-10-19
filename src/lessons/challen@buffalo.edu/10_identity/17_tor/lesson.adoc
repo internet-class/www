@@ -1,0 +1,9 @@
+---
+title: "How does Tor improve online privacy?"
+---
+
+To review, Tor is an onion routing protocol designed to help keep your
+browsing activities private.
+//
+Tor utilizes a variety of different techniques intended to make it hard to
+track an individual's internet activities.

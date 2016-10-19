@@ -1,0 +1,13 @@
+---
+title: "What is the Tails OS?"
+---
+
+For the privacy-concerned--or the paranoid--Tails OS may be a good way to
+protect yourself online.
+//
+Tails boots off of a USB stick and leaves no trace of itself once powered
+down.
+//
+All internet connections are forced to use the Tor network, and a variety of
+other security- and privacy-conscious decisions have been made and software
+tools installed.

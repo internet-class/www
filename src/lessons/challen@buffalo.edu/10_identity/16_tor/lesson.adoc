@@ -1,3 +1,0 @@
----
-title: "How does Tor improve online privacy?"
----

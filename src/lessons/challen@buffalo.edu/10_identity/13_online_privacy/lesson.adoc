@@ -1,3 +1,15 @@
 ---
 title: "What is online privacy?"
 ---
+
+Given that much of what we do online is tracked, what does the term online
+privacy even mean?
+//
+Usually our goal in engaging in private behavior online is to conceal it from
+some entity.
+//
+Depending on who the adversary is, this can be straightforward or incredibly
+daunting.
+//
+Luckily for individual users, strong encryption offers a way to establish
+privacy in certain cases and keep our online activities unmonitored.

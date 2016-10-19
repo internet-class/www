@@ -1,3 +1,19 @@
 ---
-title: "What is the Great Firewall?"
+title: "What is the Golden Shield?"
 ---
+
+China provides a great example of how governments can control and monitor the
+way that their citizens access the internet.
+//
+The Golden Shield refers to a collection of techniques used by the Chinese
+government to monitor and restrict internet access within the country.
+//
+Certain sites are blocked entirely, while other sites (including search
+engines) may have their transmissions altered to remove certain results.
+//
+In some cases China actually launches man-in-the-middle attacks on secure
+connections through forged site certificates.
+//
+Although a variety of techniques exist allowing technical sophisticates to
+bypass some of these restrictions, they are likely succeeding in controlling
+access to the internet for many Chinese citizens.

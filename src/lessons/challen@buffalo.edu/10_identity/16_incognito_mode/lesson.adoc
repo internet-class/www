@@ -1,0 +1,9 @@
+---
+title: "What is incognito browser mode?" 
+---
+
+One way to achieve at least a bit of privacy online is through the use of
+incognito or private browsing mode.
+//
+However, this widely-available tool does not protect you from a variety of
+different ways that you can be tracked online.

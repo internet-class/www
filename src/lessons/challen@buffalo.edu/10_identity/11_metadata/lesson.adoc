@@ -1,3 +1,17 @@
 ---
 title: "What is metadata?"
 ---
+
+An important term that has emerged in the debate surrounding online privacy
+and government tracking is _metadata_.
+//
+Metadata is used to refer to information about a particular set of
+communications that is _not_ the content of those communications.
+//
+So the subject line of an email, rather than its contents.
+//
+Or the location that a text message was sent, rather than its contents.
+//
+While metadata seems like it might be safer to collect, it can still be used
+to uncover information about individuals that could constitute a violation of
+privacy.

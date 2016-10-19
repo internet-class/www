@@ -1,0 +1,12 @@
+---
+title: "What are some weaknesses in the Tor protocol?"
+---
+
+Tor is a useful tool, but it is hardly foolproof.
+//
+A recent attack launched by researchers at Carnegie Mellon highlighted some of
+the weaknesses with the system.
+//
+In particular, in a Tor like system control over a large number of
+participating nodes can be used to deanonymize traffic and potentially link
+users with the sites that they visit.

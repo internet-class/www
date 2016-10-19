@@ -1,3 +1,13 @@
 ---
 title: "How can the government track you online?"
 ---
+
+Websites already can and do record a great deal about your interaction with
+their site.
+//
+But the government is a much stronger adversary and has the ability to monitor
+a lot more of your online activity.
+//
+We don't know exactly what particular governments collect and precisely how,
+but we can use our imagination to conjure up what they _could_ do,
+particularly if they are targeting a certain person for whatever reason.
