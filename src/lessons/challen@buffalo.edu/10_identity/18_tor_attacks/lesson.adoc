@@ -1,5 +1,7 @@
 ---
 title: "What are some weaknesses in the Tor protocol?"
+spelling_exceptions:
+  - deanonymize
 ---
 
 Tor is a useful tool, but it is hardly foolproof.

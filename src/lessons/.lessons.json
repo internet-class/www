@@ -9,7 +9,7 @@
   },
   {
     "id": "03ee05d7-f11f-47aa-b099-e46b3c068971",
-    "file": "lessons/challen@buffalo.edu/10_identity/20_ashley_madison_hack/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/21_ashley_madison_hack/lesson.adoc"
   },
   {
     "id": "04bea591-ea29-4fa9-be76-992d49ab0ae4",
@@ -58,10 +58,6 @@
   {
     "id": "1cb48893-fe77-4a75-92a2-b9c64e6d2d86",
     "file": "lessons/challen@buffalo.edu/06_naming/01_introduction/lesson.adoc"
-  },
-  {
-    "id": "1d03f1d3-e4df-483e-ba3f-5773d75f08ae",
-    "file": "lessons/challen@buffalo.edu/10_identity/22_reverge_porn/lesson.adoc"
   },
   {
     "id": "1dae80f3-de80-4c66-8bf7-d478549f8cd4",
@@ -205,7 +201,7 @@
   },
   {
     "id": "462866cc-3ce7-4b37-866a-ce3fe97e514b",
-    "file": "lessons/challen@buffalo.edu/10_identity/17_tor_attacks/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/18_tor_attacks/lesson.adoc"
   },
   {
     "id": "466b1bc9-ae6b-44df-b430-abfaec2ee4c2",
@@ -234,6 +230,10 @@
   {
     "id": "4c9fb692-ac70-4a3b-a549-7dec62c8fa39",
     "file": "lessons/challen@buffalo.edu/02_connectivity/11_core_internet/lesson.adoc"
+  },
+  {
+    "id": "4e6ad334-e1cc-42c2-91dd-5034c3d9c373",
+    "file": "lessons/challen@buffalo.edu/10_identity/14_technology_and_privacy/lesson.adoc"
   },
   {
     "id": "4ea0e5c2-f645-4b0d-befd-d40d6c5bd754",
@@ -316,10 +316,6 @@
     "file": "lessons/challen@buffalo.edu/05_transport/08_bandwidth/lesson.adoc"
   },
   {
-    "id": "60b90efc-c3ec-42fe-949e-7c9fbb8d5fcd",
-    "file": "lessons/challen@buffalo.edu/10_identity/23_online_anonymity/lesson.adoc"
-  },
-  {
     "id": "62fb9a27-1777-4437-a98d-a50d6a4565fa",
     "file": "lessons/challen@buffalo.edu/07_web/08_request_path/lesson.adoc"
   },
@@ -389,7 +385,7 @@
   },
   {
     "id": "82057664-71ba-4680-b321-d2e3680a021c",
-    "file": "lessons/challen@buffalo.edu/10_identity/21_fappening/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/22_fappening/lesson.adoc"
   },
   {
     "id": "82b31493-5ee3-4038-9477-942cb4f1d812",
@@ -405,7 +401,7 @@
   },
   {
     "id": "86b1bec1-8adc-419e-8cb9-3d91b5226d56",
-    "file": "lessons/challen@buffalo.edu/10_identity/14_pwned/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/15_pwned/lesson.adoc"
   },
   {
     "id": "86b30f23-dcdc-4fe2-af44-937f55205521",
@@ -481,7 +477,7 @@
   },
   {
     "id": "a124717a-a329-4912-8c10-ba0e38f833d7",
-    "file": "lessons/challen@buffalo.edu/10_identity/12_great_firewall/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/12_golden_shield/lesson.adoc"
   },
   {
     "id": "a1ab5146-6053-4679-a5b9-690bda0bc5e2",
@@ -505,7 +501,7 @@
   },
   {
     "id": "a43f78fc-295c-49df-89f0-06b62df8da2f",
-    "file": "lessons/challen@buffalo.edu/10_identity/24_google_about_me/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/23_google_about_me/lesson.adoc"
   },
   {
     "id": "a60b8aa0-ca01-4949-b62c-0d44b9032fe3",
@@ -517,7 +513,7 @@
   },
   {
     "id": "a7110eed-85b8-414f-8bd4-64e7cbcb161b",
-    "file": "lessons/challen@buffalo.edu/10_identity/19_privacy_at_work/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/20_privacy_at_work/lesson.adoc"
   },
   {
     "id": "a8408c67-69ca-49db-a891-5323d92929ec",
@@ -573,7 +569,7 @@
   },
   {
     "id": "bb11fca4-a2d4-44c2-b475-0c74a4b03fc5",
-    "file": "lessons/challen@buffalo.edu/10_identity/18_tails/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/19_tails/lesson.adoc"
   },
   {
     "id": "bc090b0f-d3b5-4676-96dd-e3d2f29e2a9d",
@@ -637,7 +633,7 @@
   },
   {
     "id": "ca366cb6-23b9-46fa-8dbd-512ef9a1b4d3",
-    "file": "lessons/challen@buffalo.edu/10_identity/15_incognito_mode/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/16_incognito_mode/lesson.adoc"
   },
   {
     "id": "ca6edb4a-ab7c-4959-9773-c95bcd6f5143",
@@ -801,7 +797,7 @@
   },
   {
     "id": "fee23bb2-3b7b-4793-836a-a3202fa21606",
-    "file": "lessons/challen@buffalo.edu/10_identity/16_tor/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/17_tor/lesson.adoc"
   },
   {
     "id": "ffbc00bb-f3d1-460b-8b2d-d1efa47eb26b",

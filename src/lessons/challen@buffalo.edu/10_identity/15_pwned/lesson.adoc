@@ -1,5 +1,7 @@
 ---
 title: "What does it mean to be pwned?"
+spelling_exceptions:
+  - pwned
 ---
 
 Have you been pwned?

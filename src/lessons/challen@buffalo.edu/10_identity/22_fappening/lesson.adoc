@@ -1,5 +1,7 @@
 ---
 title: "What was the fappening?"
+spelling_exceptions:
+  - iCloud
 ---
 
 In another well-publicized recent data breach, personal photos from many
