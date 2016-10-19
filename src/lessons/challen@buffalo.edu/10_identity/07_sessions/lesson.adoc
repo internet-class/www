@@ -1,3 +1,17 @@
 ---
 title: "What is a browser session?"
 ---
+
+HTTP is designed to be a stateless protocol.
+//
+But in many cases websites want to store information about users across
+multiple requests.
+//
+For example, consider a checkout process where what the user is purchasing,
+where the items are being shipped, and payment information need to be retained
+across multiple requests.
+//
+To do this, websites typically establish what are called _sessions_ containing
+data that persists across multiple visits from the same client.
+//
+Cookies are used to identify the clients themselves.

@@ -1,3 +1,13 @@
 ---
 title: "What is a browser cookie?"
 ---
+
+Many authentication schemes require that the browser retain a small piece of
+information about the user--known as an _HTTP cookie_.
+//
+While cookies are often used for authentication, they can be used to record
+stateful information about a user session, like shopping cart contents.
+//
+They can also be used to track users over multiple visits to the same website,
+although this use has caused concern and led to new warnings on sites that you
+may have noticed.

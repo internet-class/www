@@ -85,6 +85,7 @@
 	"SMTP": true,
 	"snuck": true,
 	"/stylesheets?/": true,
+	"stateful": true,
 	"Tim Berners-Lee": true,
 	"TCP": true,
 	"templating": true,
@@ -97,6 +98,7 @@
 	"/URIs?/": true,
 	"username": true,
 	"Valencia Kaplinsky": true,
+	"walkthrough": true,
 	"Wesley Csendom": true,
 	"Wifi": true
 }

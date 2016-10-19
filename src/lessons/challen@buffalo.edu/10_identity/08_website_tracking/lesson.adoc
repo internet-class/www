@@ -1,3 +1,15 @@
 ---
 title: "What can and do websites track about you?"
 ---
+
+Websites can and do record a variety of information about you as you use them.
+//
+Anything that generates a HTTP request can be recorded, and modern browsers
+typically send along a variety of information that can be used to identify the
+browser and operating system.
+//
+In some cases user IP address can be used to at least identify a
+coarse-grained location.
+//
+How much information sites actually retain is a function of how valuable the
+information is and how they plan on using it.

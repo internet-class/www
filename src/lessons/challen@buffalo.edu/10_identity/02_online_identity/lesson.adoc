@@ -1,3 +1,17 @@
 ---
 title: "What is an online identity?"
 ---
+
+Our online identities are quite distinct from our actual human identities.
+//
+In some cases the internet doesn't know anything about us, and so we are
+invisible online.
+//
+In other cases, our human names don't identify us well online, and so our
+identities begin to merge with others with identical names.
+//
+In other cases, even if we can be uniquely identified, the information that
+the internet "knows" about us is incomplete--or worse, inaccurate.
+//
+Like any human acquaintance, how the internet knows us is a function of what
+it knows about us.

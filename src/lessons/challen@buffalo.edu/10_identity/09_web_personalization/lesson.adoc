@@ -1,3 +1,16 @@
 ---
 title: "How do websites personalize content for you?"
 ---
+
+One of the main reasons that many websites track information about you is to
+try and personalize the content on the page.
+//
+In many cases, this means personalized ads, but shopping sites may use the
+data more directly.
+//
+You may consider personalization to be harmless.
+//
+Or you may consider it to be warping your experience of the internet.
+//
+A lot of it depends on what information about you is collected and how it is
+used.

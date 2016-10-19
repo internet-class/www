@@ -1,3 +1,16 @@
 ---
 title: "What is authentication?"
 ---
+
+One of the most common ways to establish your identity online is through the
+process of authentication.
+//
+Authentication can and frequently is used for access control--to ensure that
+only certain users have access to certain systems or capabilities.
+//
+But it does this by having users establish their _identity_ in a way that can
+be retrieve information about them or the roles and capabilities they have on
+a particular system.
+//
+So part of our online identity is the sets of username and password
+combinations we use to access certain sites.

@@ -1,3 +1,11 @@
 ---
 title: "Why is an IP address not an identity?"
 ---
+
+When we exchange data online an internet protocol (IP) address identifies our
+machine so that it can communicate with other computers.
+//
+But, for a variety of reasons, that IP address doesn't necessarily identify
+us.
+//
+Although it can in certain cases.

@@ -1,3 +1,25 @@
 ---
 title: "Introduction to internet identity."
 ---
+
+Who are you online?
+//
+And does that identity bear any resemblance to the person you are in the real
+world?
+//
+As more and more of our personal lives are lived online, the question of what
+is an internet identity and how we shape it are becoming more important.
+//
+The internet and the web can be a great way to share things about our lives
+with others.
+//
+But the same system can also violate our privacy when information that we
+would prefer to keep private makes its way online.
+//
+At that point it can be very hard to recover.
+//
+To talk about identity we have to discuss authentication, typically used to
+establish your identity online.
+//
+We'll also discuss what sites track about you and what happens when that
+information gets out unintentionally.

@@ -1,3 +1,19 @@
 ---
 title: "What is two-factor authentication?"
 ---
+
+Increasing security concerns and the demonstrated difficulty that humans have
+with passwords have led to the widespread deployment of _two-factor
+authentication_.
+//
+Two factor authentication systems vary, but the basic principle is the same:
+to combine something you _know_ with something you _have_.
+//
+Something you know could be a password, and something you have could be your
+smartphone.
+//
+Properly deployed, two-factor authentication systems can be more secure that
+standard password-based approaches.
+//
+That's because even if a data breach reveals your username and password, it
+doesn't give a hacker access to your personal phone.
