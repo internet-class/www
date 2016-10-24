@@ -1,3 +1,17 @@
 ---
-title: "What is a distributed denial of service attack?"
+title: "What is a distributed denial of service (DDoS) attack?"
 ---
+
+It is difficult for a single site to generate enough traffic to launch an
+effective denial of service (DoS) attack.
+//
+Large spikes in traffic are also easy for sites to detect and defend against.
+//
+So instead of using a single attacking node, denial of service attacks are
+often launched by a bunch of computers acting together.
+//
+This is referred to as a _distributed denial of service (DDoS) attack_.
+//
+Because attackers do not usually have legitimate access to a sufficient number
+of machines to launch a DDoS, frequently groups of hacked machines referred to
+as _botnets_ are used.

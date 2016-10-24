@@ -1,3 +1,13 @@
 ---
-title: "What is a denial of service attack?"
+title: "What is a denial of service (DoS) attack?"
 ---
+
+A common way to try to disable a website or web service is known as a _denial
+of service (DoS) attack_.
+//
+A denial of service attack occurs when the attacker can overwhelm a website
+with illegitimate requests to the point where it cannot handle legitimate
+ones.
+//
+How the website and web server are designed impacts the degree to which DoS
+attacks succeed or fail.
