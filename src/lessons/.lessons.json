@@ -8,6 +8,10 @@
     "file": "lessons/challen@buffalo.edu/05_transport/12_why_udp/lesson.adoc"
   },
   {
+    "id": "045e878a-1f17-4b00-ae52-868bbe6ef036",
+    "file": "lessons/challen@buffalo.edu/10_identity/21_dos/lesson.adoc"
+  },
+  {
     "id": "04bea591-ea29-4fa9-be76-992d49ab0ae4",
     "file": "lessons/challen@buffalo.edu/03_protocols/07_ip_suite/lesson.adoc"
   },
@@ -456,6 +460,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/09_512k_day/lesson.adoc"
   },
   {
+    "id": "9e672f50-3a7c-41cf-891c-0e35bef9b886",
+    "file": "lessons/challen@buffalo.edu/10_identity/22_ddos/lesson.adoc"
+  },
+  {
     "id": "9f939a05-b8c8-46cf-876e-34e0498358a8",
     "file": "lessons/challen@buffalo.edu/05_transport/05_tcp_ports/lesson.adoc"
   },
@@ -493,7 +501,7 @@
   },
   {
     "id": "a43f78fc-295c-49df-89f0-06b62df8da2f",
-    "file": "lessons/challen@buffalo.edu/10_identity/20_google_about_me/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/20_facebook_ad_prefs/lesson.adoc"
   },
   {
     "id": "a60b8aa0-ca01-4949-b62c-0d44b9032fe3",
