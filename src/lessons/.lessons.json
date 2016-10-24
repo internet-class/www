@@ -8,10 +8,6 @@
     "file": "lessons/challen@buffalo.edu/05_transport/12_why_udp/lesson.adoc"
   },
   {
-    "id": "03ee05d7-f11f-47aa-b099-e46b3c068971",
-    "file": "lessons/challen@buffalo.edu/10_identity/21_ashley_madison_hack/lesson.adoc"
-  },
-  {
     "id": "04bea591-ea29-4fa9-be76-992d49ab0ae4",
     "file": "lessons/challen@buffalo.edu/03_protocols/07_ip_suite/lesson.adoc"
   },
@@ -384,10 +380,6 @@
     "file": "lessons/challen@buffalo.edu/08_search/18_other_ranking_factors/lesson.adoc"
   },
   {
-    "id": "82057664-71ba-4680-b321-d2e3680a021c",
-    "file": "lessons/challen@buffalo.edu/10_identity/22_fappening/lesson.adoc"
-  },
-  {
     "id": "82b31493-5ee3-4038-9477-942cb4f1d812",
     "file": "lessons/challen@buffalo.edu/08_search/07_environmental_impact/lesson.adoc"
   },
@@ -501,7 +493,7 @@
   },
   {
     "id": "a43f78fc-295c-49df-89f0-06b62df8da2f",
-    "file": "lessons/challen@buffalo.edu/10_identity/23_google_about_me/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/10_identity/20_google_about_me/lesson.adoc"
   },
   {
     "id": "a60b8aa0-ca01-4949-b62c-0d44b9032fe3",
@@ -510,10 +502,6 @@
   {
     "id": "a64cb11e-9688-4471-97d1-6815d60b0ea1",
     "file": "lessons/challen@buffalo.edu/04_routing/05_what_is_an_as/lesson.adoc"
-  },
-  {
-    "id": "a7110eed-85b8-414f-8bd4-64e7cbcb161b",
-    "file": "lessons/challen@buffalo.edu/10_identity/20_privacy_at_work/lesson.adoc"
   },
   {
     "id": "a8408c67-69ca-49db-a891-5323d92929ec",
