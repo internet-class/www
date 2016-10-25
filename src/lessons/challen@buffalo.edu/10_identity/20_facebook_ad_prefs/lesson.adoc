@@ -1,3 +1,8 @@
 ---
-title: "What does Google know about me?"
+title: "What does Facebook think of me?"
 ---
+
+Facebook and other online tools have good ways to find out what they think of
+you.
+//
+Let's use those tools and see what we find!
