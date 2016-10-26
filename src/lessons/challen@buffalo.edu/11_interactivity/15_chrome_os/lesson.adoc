@@ -1,5 +1,7 @@
 ---
 title: "What is Chrome OS?"
+spelling_exceptions:
+  - Chromebook
 ---
 
 With the expansion of browser capabilities and the rise of web apps, it is now

@@ -1,5 +1,7 @@
 ---
 title: "What is a cross-site scripting attack?"
+spelling_exceptions:
+  - Osama
 ---
 
 The explosion of JavaScript has created many security problems.

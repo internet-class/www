@@ -1,5 +1,8 @@
 ---
 title: "What is the ePortfolio?"
+spelling_exceptions:
+  - Digication
+  - ePortfolio
 ---
 
 You will be required to use the Digication ePortfolio to complete your

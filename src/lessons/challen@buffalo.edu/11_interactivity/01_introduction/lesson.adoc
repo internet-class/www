@@ -5,7 +5,7 @@ title: "Introduction to the interactive web."
 How the web morphed from a content delivery platform to an app delivery
 platform is probably one of the more fascinating stories in technology.
 //
-The original internet served static webpages.
+The original internet served static web pages.
 //
 Then servers began generating those pages dynamically.
 //

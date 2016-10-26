@@ -1,5 +1,7 @@
 ---
 title: "What is React?"
+spelling_exceptions:
+  - Instagram
 ---
 
 Today JavaScript web application frameworks are everywhere.

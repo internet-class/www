@@ -1,5 +1,7 @@
 ---
 title: "What is JavaScript?"
+spelling_exceptions:
+  - Brendan Eich
 ---
 
 JavaScript is a dynamic, untyped, interpreted programming language.

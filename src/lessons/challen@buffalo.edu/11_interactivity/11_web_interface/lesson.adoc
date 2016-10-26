@@ -1,5 +1,7 @@
 ---
 title: "What is a web interface?"
+spelling_exceptions:
+  - RESTful
 ---
 
 The changes in design patterns that have led to the rise of web apps have been
