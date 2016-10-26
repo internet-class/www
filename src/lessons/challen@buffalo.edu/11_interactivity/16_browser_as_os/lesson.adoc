@@ -1,3 +1,15 @@
 ---
 title: "Has the browser become the modern OS?"
 ---
+
+For decades native applications ran on top of a resource manager called an
+_operating system_.
+//
+Now, multiple web applications run in separate tabs inside an application
+called the web browser.
+//
+This shift has caused web browsers to be faced with many of the same problems
+faced by traditional operating systems.
+//
+It has also proved extremely disruptive to large companies that built
+businesses around selling operating systems and native software.
