@@ -1,3 +1,18 @@
 ---
 title: "What is a web application?"
 ---
+
+The rise of JavaScript has seen the rise of so-called web applications, also
+called web apps or sometimes single-page web apps.
+//
+The distinction between a web page and a web app is somewhat fuzzy.
+//
+In general, web apps do not follow earlier patterns of interaction with the
+web server.
+//
+The user is typically on the same web page for long periods of time, even
+though the display may change as they interact with the page.
+//
+Rather than having the web browser generate HTTP requests and reload the page,
+JavaScript code is used to interact with the server in the background and
+update the display as needed.

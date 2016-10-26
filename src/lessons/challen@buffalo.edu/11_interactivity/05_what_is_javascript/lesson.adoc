@@ -1,3 +1,18 @@
 ---
 title: "What is JavaScript?"
 ---
+
+JavaScript is a dynamic, untyped, interpreted programming language.
+//
+It was designed by Brendan Eich and first appeared in early versions of
+Netscape Navigator in September 1995.
+//
+Critically--when compared with Java, Flash, and other interactive web
+technologies--JavaScript has long been supported by all major web browsers
+_without_ plugins.
+//
+Recently, there has also been a surge of interest in server-side scripting
+using JavaScript using implementations such as `node.js`.
+//
+This allows for a more seamless web development experience since the same
+programming language runs both on the client and on the server.
