@@ -1,3 +1,17 @@
 ---
 title: "What is React?"
 ---
+
+Today JavaScript web application frameworks are everywhere.
+//
+All share the common goal of simplifying the process of developing interactive
+web applications in JavaScript that can be distributed over the web and run
+in the browser.
+//
+If you search a bit, you can easily find many that are well-supported by
+various web companies and that have large and active developer communities.
+//
+One example is React.
+//
+React was originally developed at Facebook and is now supported by other
+companies including Instagram.

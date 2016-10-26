@@ -1,3 +1,19 @@
 ---
 title: "What is AJAX?"
 ---
+
+One of the core capabilities that enable web application is the ability of
+JavaScript to perform network operations in the background.
+//
+The original name for this design pattern was AJAX: asynchronous JavaScript
+and XML.
+//
+However, today the wire format for data exchange between client-side
+JavaScript and the backend server is as likely to be JavaScript Object
+Notation (JSON) or something else, rather than XML.
+//
+But the concept remains: JavaScript can both send and receive data from a web
+server in the background, either with or without user interaction.
+//
+These requests do not trigger the page to reload in the traditional sense, and
+they are happening all the time for web apps without you noticing.

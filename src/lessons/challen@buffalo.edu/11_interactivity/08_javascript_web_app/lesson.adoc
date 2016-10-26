@@ -1,3 +1,18 @@
 ---
 title: "How does JavaScript enable web apps?"
 ---
+
+JavaScript is the core technology that enables today's web applications.
+//
+At a high level, many user interactions are characterized by some input that
+needs to be handled, which triggers some operation, and then updates the
+interface to reflect that the action took place.
+//
+JavaScript is all phases of this design pattern.
+//
+It can be trigger to run on many different types of input events.
+//
+It can perform all kinds of computation and communicate with web servers.
+//
+And it can update the display by modifying the Document Object Model initially
+constructed from the page's HTML.

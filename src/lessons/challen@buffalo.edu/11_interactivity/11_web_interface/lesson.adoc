@@ -1,3 +1,23 @@
 ---
 title: "What is a web interface?"
 ---
+
+The changes in design patterns that have led to the rise of web apps have been
+accompanied by changes to the way that web servers are used.
+//
+Today, many client-side JavaScript web applications and standalone
+applications make use of _web interfaces_.
+//
+A web interface allows a site to expose functionality to both web apps and
+other applications.
+//
+For example creating a user on a particular site or granting them access to
+some resource would be done via a HTTP POST to a particular URL.
+//
+The contents of that message would describe what should be done, and the web
+interface would respond with a message in JSON, XML, or HTML describing the
+result of the action.
+//
+When the HTTP requests (GET, POST, etc.) are used properly and no state is
+carried between actions, the interface is sometimes referred to a RESTful
+(representational state transfer).

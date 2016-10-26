@@ -1,3 +1,15 @@
 ---
 title: "What is jQuery?"
 ---
+
+As JavaScript has taken off, a number of useful libraries have appeared that
+make developing JavaScript applications or even small pieces of JavaScript
+easier.
+//
+One of the more important is jQuery.
+//
+jQuery provides programming access to the DOM in a clean, cross-browser
+fashion.
+//
+It also has come to include code to perform many common web application tasks,
+such as registering event handlers and performing web requests.

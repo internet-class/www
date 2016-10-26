@@ -1,3 +1,22 @@
 ---
 title: "What is a cross-site scripting attack?"
 ---
+
+The explosion of JavaScript has created many security problems.
+//
+One of the more important are so-called cross-site scripting attacks.
+//
+These attacks attempt to violate the _same origin_ policy normally used to
+protect content on web pages that may come from multiple sources.
+//
+For example, JavaScript that is loaded by an HTML iFrame cannot normally
+access page contents outside of the iFrame, which could include sensitive
+information.
+//
+However, in some cases badly designed web applications will allow users to
+accidentally run JavaScript in the context of the page--frequently as the
+result of clicking on a link provided by the attacker.
+//
+In other cases, social engineering is used to convince users to cut and paste
+a dangerous piece of JavaScript into their browser--for example, to view the
+fictional Osama bin Laden death video.
