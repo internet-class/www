@@ -1,3 +1,14 @@
 ---
 title: "What was a Java applet?"
 ---
+
+Java applets represent an early--and failed--attempt to bring interactive
+experiences to the web.
+//
+Today Chrome has dropped support for applets altogether.
+//
+Why the interactive web moved away from applets and toward JavaScript is a
+subject of debate.
+//
+The fact that applets require software that must be installed outside the
+browser and special browser plugins to work may be part of the reason.

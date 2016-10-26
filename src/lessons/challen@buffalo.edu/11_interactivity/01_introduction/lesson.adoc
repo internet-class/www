@@ -1,3 +1,18 @@
 ---
 title: "Introduction to the interactive web."
 ---
+
+How the web morphed from a content delivery platform to an app delivery
+platform is probably one of the more fascinating stories in technology.
+//
+The original internet served static webpages.
+//
+Then servers began generating those pages dynamically.
+//
+Then client-side code started to become a large part of the web experience.
+//
+And now, many web applications consist almost entirely of client-side code
+that makes little to no use of earlier web paradigms.
+//
+This transition has brought fundamental and deep changes to the modern
+computing experience.

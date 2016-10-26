@@ -1,3 +1,13 @@
 ---
 title: "What does JavaScript have to do with Java?"
 ---
+
+In short--nothing.
+//
+But the two languages make a fascinating comparison.
+//
+Java was developed over multiple years to achieve the goal of "write once, run
+anywhere."
+//
+JavaScript was developed rapidly but went on to achieve that goal pretty much
+by accident.

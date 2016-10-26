@@ -1,3 +1,20 @@
 ---
 title: "What is a Flash plugin?"
 ---
+
+Adobe Flash was another early technology used to create interactive web
+experiences.
+//
+In particularly, Flash was used to stream video from sites like YouTube for
+many years.
+//
+Unfortunately, Flash, like Java applets, seems on its way out.
+//
+Again, the reasons are complicated.
+//
+For video, the HTML standard caught up to Flash and now supports video files
+natively, eliminating the need for Flash plugins on many sites that use video.
+//
+A public feud with Apple probably did not help either, along with Adobe's
+brief attempt to monetize use of the platform by forcing developers to
+purchase licenses to use certain features.
