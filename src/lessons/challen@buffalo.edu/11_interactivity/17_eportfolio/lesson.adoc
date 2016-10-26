@@ -1,3 +1,9 @@
 ---
-title: "What is HTML5?"
+title: "What is the ePortfolio?"
 ---
+
+You will be required to use the Digication ePortfolio to complete your
+capstone project at UB.
+//
+This video prepared by the UB Curriculum office will introduce you to the
+curriculum and ePortfolio platform.
