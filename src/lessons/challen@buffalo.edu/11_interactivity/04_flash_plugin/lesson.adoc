@@ -18,3 +18,6 @@ natively, eliminating the need for Flash plugins on many sites that use video.
 A public feud with Apple probably did not help either, along with Adobe's
 brief attempt to monetize use of the platform by forcing developers to
 purchase licenses to use certain features.
+//
+Adobe themselves announced in 2011 that they would discontinue development of
+Flash for mobile devices and focus on HTML5.

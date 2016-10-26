@@ -1,3 +1,19 @@
 ---
 title: "What is HTML5?"
 ---
+
+As the web has evolved, HTML has evolved along with it.
+//
+The newest HTML standard--HTML5--was published in October 2014 by the World
+Wide Web Consortium.
+//
+It provides a number of new features designed to reflect the modern
+interactive web experience, including native support for audio and video
+elements and scriptable 2D graphics rendering.
+//
+It also standardizes page interfaces and the document object model (DOM) used
+by JavaScript.
+//
+Many observers noted that HTML5 began to subsume some of the core
+functionality previously provided by Flash, leading to decreased use of Flash
+plugins.

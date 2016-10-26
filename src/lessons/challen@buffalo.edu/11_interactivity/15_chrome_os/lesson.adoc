@@ -1,3 +1,13 @@
 ---
-title: "What is HTML5?"
+title: "What is Chrome OS?"
 ---
+
+With the expansion of browser capabilities and the rise of web apps, it is now
+possible to create an entire computer oriented around the browser as
+interface.
+//
+The Chromebook by Google runs Chrome OS, consisting of the Linux kernel but
+using Chrome as its primary user interface.
+//
+As a result, most user data is stored in the cloud, and most apps are web apps
+run in the browser.
