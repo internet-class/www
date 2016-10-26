@@ -364,12 +364,16 @@ internet archive, data center computing, distributed indexes, MapReduce, data
 center networking, software-defined networking, the PageRank algorithm,
 improving ranking using context, history, click tracking, website reputation.
 ** *Activities*: https://goo.gl/896Lc9[Personal Parallel Processing
-(2016-10-17)]
+(2016-10-17)], https://goo.gl/mWpMD4[Search Games and `archive.org`
+(2016-10-19)]
 //
 . *Security*: [[security]] Alice and Bob, symmetric and asymmetric encryption,
 simple ciphers, trapdoor and one-way functions, zero-knowledge proofs,
 certificates and certificate authorities, access control, firewalls, hacking,
-zero-day exploits, social engineering, famous hacks, personal web security.
+zero-day exploits, social engineering, famous hacks, personal web security,
+denial of service attacks.
+** *Activities*: https://goo.gl/Fq4VSV[Capture the Flag (2016-10-24)],
+https://goo.gl/oTzI1o[Encryption and ZNP (2016-10-26)]
 //
 . *Identity*: [[identity]] cookies, server side tracking, IP addresses v.
 identities, anonymity online, online v. human identities.
