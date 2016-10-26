@@ -33,7 +33,7 @@
   },
   {
     "id": "11e41572-82c5-4318-a2e8-474703856eaf",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/14_html5/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/11_interactivity/13_html5/lesson.adoc"
   },
   {
     "id": "132d7069-a754-4c2e-8b8b-fec345593116",
@@ -65,7 +65,7 @@
   },
   {
     "id": "1b3db992-54f8-4b7b-aa0f-525682ddc03e",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/16_browser_as_os/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/11_interactivity/15_browser_as_os/lesson.adoc"
   },
   {
     "id": "1cb48893-fe77-4a75-92a2-b9c64e6d2d86",
@@ -189,7 +189,7 @@
   },
   {
     "id": "3d345bc9-f008-4cf4-9050-6ab7f7d2a7ac",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/15_chrome_os/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/11_interactivity/14_chrome_os/lesson.adoc"
   },
   {
     "id": "3e733f9d-f108-4553-be58-b7625d79777d",
@@ -261,7 +261,7 @@
   },
   {
     "id": "4e634f46-ebbc-48a6-9dec-d4584610171b",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/13_xss_attack/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/11_interactivity/12_xss_attack/lesson.adoc"
   },
   {
     "id": "4e6ad334-e1cc-42c2-91dd-5034c3d9c373",
@@ -330,10 +330,6 @@
   {
     "id": "58adde9e-eb8b-4ffc-83f0-ce57bc536bad",
     "file": "lessons/challen@buffalo.edu/04_routing/01_introduction/lesson.adoc"
-  },
-  {
-    "id": "59af3980-dc1a-49c0-a039-798d4afe0e67",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/12_web_v_desktop/lesson.adoc"
   },
   {
     "id": "5a85a0c3-d0a4-4848-b697-fc6ccdf8c8d7",
@@ -577,7 +573,7 @@
   },
   {
     "id": "aa343e2a-16a9-4708-adb7-96257c1a848b",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/18_study_abroad/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/12_mobile/999_study_abroad/lesson.adoc"
   },
   {
     "id": "aa517a0f-b21e-4d0a-b562-25902d9132e2",
@@ -677,7 +673,7 @@
   },
   {
     "id": "c5dff9e5-518e-4f9e-8dcd-1241f6c6ed84",
-    "file": "lessons/challen@buffalo.edu/11_interactivity/17_eportfolio/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/11_interactivity/16_eportfolio/lesson.adoc"
   },
   {
     "id": "c62f69ef-9464-4828-8f31-462951b1b72e",
