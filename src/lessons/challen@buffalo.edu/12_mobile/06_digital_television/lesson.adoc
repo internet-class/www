@@ -1,3 +1,10 @@
 ---
 title: "Why did we move to digital television?"
 ---
+
+One of the more interesting wireless-related changes that we have recently
+lived through is the move from analog to digital television.
+//
+This was the most dramatic reallocation of spectrum in US history, and it was
+directly motivated by the growing importance of mobile devices and the
+internet.

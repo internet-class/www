@@ -1,3 +1,15 @@
 ---
 title: "What are some consequences of mobility?"
 ---
+
+Mobile devices differ from traditional desktop and even laptop computers in
+many important ways.
+//
+They are dependent on wireless connections, smaller and less powerful, and
+battery-powered and so energy-limited.
+//
+More importantly, mobile devices also experience sudden changes in
+_conditions_ caused by mobility.
+//
+Responding to these differences and changes is what makes mobile computing
+hard.

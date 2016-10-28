@@ -1,3 +1,9 @@
 ---
 title: "What are some problems caused by wireless communication?"
 ---
+
+Wireless communications have very different characteristics than their wired
+equivalents.
+//
+These differences have required the internet's architecture to evolve, and
+introduced changes in the algorithms that run at each end of the wire.
