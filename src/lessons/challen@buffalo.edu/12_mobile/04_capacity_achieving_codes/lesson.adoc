@@ -1,3 +1,18 @@
 ---
 title: "What are capacity achieving codes?"
 ---
+
+You can look at Shannon's capacity theorem as a constraint--or as a challenge.
+//
+One of the more exciting stories is how improvements to data encoding have
+repeatedly increased the data rates achievable by wireless devices.
+//
+This evolution represents a wonderful fusion of theory and practice.
+//
+And recently, researchers have begun to be able to formulate so-called
+_capacity achieiving codes_.
+//
+These encoding schemes approach the Shannon limit.
+//
+Unfortunately, they typically require extremely long inputs, making them not
+necessarily useful in practice.

@@ -1,3 +1,10 @@
 ---
 title: "What is the Shannon capacity theorem?"
 ---
+
+Long before wireless devices became ubiquitous, a brilliant mathematician
+named Claude Shannon had already determined one of the fundamental limits they
+would face.
+//
+The Shannon capacity theorem bounds the rate that information can be
+transmitted across a noisy channel.

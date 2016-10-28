@@ -1,3 +1,16 @@
 ---
 title: "Introduction to the mobile and pervasive internet."
 ---
+
+Probably the biggest transformation that the internet has had to adapt to is
+the rise of mobile devices.
+//
+Mobility and mobile devices create many challenges to the original internet
+architecture, and the evolution of the internet to support mobility is far
+from complete.
+//
+At the same time, the technologies that enabled the mobile internet are also
+driving the pervasive internet and the so-called Internet of Things.
+//
+It seems fairly likely that, sometime soon, the internet will not only be with
+us all the time but both everyone and _everything_ will be online.

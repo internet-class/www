@@ -1,3 +1,11 @@
 ---
 title: "How does wireless work?"
 ---
+
+Wireless digital communications enable both the mobile and pervasive web.
+//
+The story of how IP packets are converted to electromagnetic signals for
+transmission through free space is beautiful, fascinating, but also quite
+lengthy.
+//
+So let's just try to summarize the basics of the process.
