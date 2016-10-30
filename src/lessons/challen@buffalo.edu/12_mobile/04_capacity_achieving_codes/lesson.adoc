@@ -10,7 +10,7 @@ repeatedly increased the data rates achievable by wireless devices.
 This evolution represents a wonderful fusion of theory and practice.
 //
 And recently, researchers have begun to be able to formulate so-called
-_capacity achieiving codes_.
+_capacity achieving codes_.
 //
 These encoding schemes approach the Shannon limit.
 //

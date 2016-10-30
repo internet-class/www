@@ -1,0 +1,17 @@
+---
+title: "What happens when the internet is everywhere?"
+spelling_exceptions:
+  - Uber
+---
+
+Wireless and the mobile internet have really enabled a lot of the widespread
+disruption and innovation we've witnessed over the last few decades.
+//
+Without a smartphone and a mobile data connection you would never be able to
+get an Uber, or navigate a city, or browse online reviews for the product in
+front of you at the store, or have a video chat with someone from a bar half a
+world away.
+//
+But the internet everywhere has also brought new concerns and challenges for
+us, as that disruption extends to our ability to concentrate, engage with
+friends, and observe the world around us.

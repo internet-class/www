@@ -1,3 +1,19 @@
 ---
 title: "How is the internet evolving to support mobility?"
 ---
+
+Many of the modern changes to existing internet protocols are driven by
+mobility.
+//
+Multipath TCP (MPTCP) simplifies the process of roaming across multiple
+wireless networks.
+//
+QUIC and HTTP/2 reduce the number of connections mobile devices need to open
+to retrieve a single page.
+//
+Compression proxies now integrated into mobile browsers reduce the amount of
+data transfer needed to communicate with the many web sites that still do not
+properly compress HTTP content.
+//
+And so, in many ways the emerging modern internet and web are really designed
+around the needs and characteristics of mobile devices.

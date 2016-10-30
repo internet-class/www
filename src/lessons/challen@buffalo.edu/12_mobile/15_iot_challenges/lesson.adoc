@@ -1,0 +1,21 @@
+---
+title: "What are some challenges faced by IoT devices?"
+---
+
+Internet of Things (IoT) devices experience many of the same challenges faced
+by mobile devices but to an even greater degree.
+//
+Smartphones are battery powered but can rely on their owners to charge them
+regularly.
+//
+IoT devices may need to last for years on a coin cell battery or harvest
+energy from the environment.
+//
+Smartphones can rely on their owners to troubleshoot network problems.
+//
+IoT devices must maintain connectivity through changes to the network
+environment while also optimizing their communication patterns for extreme
+energy efficiency.
+//
+And smartphones only have to be small enough to fit in a pocket, while IoT
+devices are supposed to disappear into the environment around us.

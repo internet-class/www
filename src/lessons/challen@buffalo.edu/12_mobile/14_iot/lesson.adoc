@@ -1,0 +1,23 @@
+---
+title: "What is the Internet of Things (IoT)?"
+spelling_exceptions:
+  - Jetsons
+---
+
+First came the internet of people--a worldwide computer network connecting
+billions of people.
+//
+Then came the Internet of Things--a worldwide effort to connect billions or
+trillions of new things to the existing internet.
+//
+The Internet of Things will certainly change the way that we live, and makes
+it possible to imagine Jetsons-like scenarios.
+//
+Amazon already lets you put a smart button on your laundry machine so that you
+can trigger a shipment of detergent the moment you need it.
+//
+And at some point soon, milk may show up at your door because your
+refrigerator noticed that you were low and decided to order more.
+//
+But even as these conveniences become less far-fetched, the most interesting
+things on the internet will probably continue to be people.

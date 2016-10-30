@@ -1,0 +1,19 @@
+---
+title: "What is calm computing?"
+---
+
+Early in the rise of pervasive computing one of the pioneers of the
+field--Mark Weiser--outlined a vision for what he called _calm computing_.
+//
+In calm computing, pervasive devices fade into the background of our lives.
+//
+Even with computing surrounding us, and aiding us, we spend less time
+interacting with our devices and more time going out our lives.
+//
+Unfortunately, while Weiser's vision has earned a persistent place in the
+mindset of technologists work on pervasive computing, today it remains much
+more myth than reality.
+//
+Our interactions with our devices are frequently anything but calm, and we
+spent a growing amount of time fiddling with them to get them to do what we
+want. 

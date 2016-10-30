@@ -1,3 +1,17 @@
 ---
 title: "What is pervasive computing?"
 ---
+
+The combination of wireless technologies and ever-smaller and more powerful
+computers has led to the rise of so-called _pervasive_ computing.
+//
+Pervasive computing describes a world where computers are everywhere and
+embedded in most everyday objects.
+//
+In many ways, we are living through the dawn of this vision.
+//
+It can be a fun exercise to think about just how many everyday devices already
+have computing capability--or will soon.
+//
+Our buildings, vehicles, and even the external environment have begun to be
+filled with computers, and this trend is bound to continue.

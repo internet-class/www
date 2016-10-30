@@ -1,5 +1,9 @@
 [
   {
+    "id": "01068126-3ab9-480f-a4e1-0e4e647b77de",
+    "file": "lessons/challen@buffalo.edu/12_mobile/10_mobile_evolution/lesson.adoc"
+  },
+  {
     "id": "0221b24d-ebf2-49f4-85b7-aa3095d051a1",
     "file": "lessons/challen@buffalo.edu/05_transport/19_net_neutrality/lesson.adoc"
   },
@@ -40,12 +44,20 @@
     "file": "lessons/challen@buffalo.edu/09_security/19_zero_day_exploit/lesson.adoc"
   },
   {
+    "id": "1340628d-cdf3-44c3-9191-bd373c606deb",
+    "file": "lessons/challen@buffalo.edu/12_mobile/03_shannon_capacity/lesson.adoc"
+  },
+  {
     "id": "13937846-1541-462d-a326-0620cb6a9511",
     "file": "lessons/challen@buffalo.edu/02_connectivity/05_01_davis_hop/lesson.adoc"
   },
   {
     "id": "1523ea6e-46b0-41bb-9073-70eb9bd1a253",
     "file": "lessons/challen@buffalo.edu/11_interactivity/11_web_interface/lesson.adoc"
+  },
+  {
+    "id": "15bd95be-bc29-4f30-9119-5820e74e24ed",
+    "file": "lessons/challen@buffalo.edu/12_mobile/05_ism_bands/lesson.adoc"
   },
   {
     "id": "15c98f9a-4081-42e7-b12f-473f6768fe63",
@@ -146,6 +158,10 @@
   {
     "id": "2eb44686-4a7f-44d6-9783-ef8b3a4a957a",
     "file": "lessons/challen@buffalo.edu/09_security/14_certificate_authority/lesson.adoc"
+  },
+  {
+    "id": "3128fef1-49ef-425b-8116-349aaaddfd87",
+    "file": "lessons/challen@buffalo.edu/12_mobile/04_capacity_achieving_codes/lesson.adoc"
   },
   {
     "id": "31326ea9-682e-4cf9-98e6-8cbcdaa316b9",
@@ -280,6 +296,10 @@
     "file": "lessons/challen@buffalo.edu/07_web/07_http_responses/lesson.adoc"
   },
   {
+    "id": "50a24b6e-b4f4-40c0-849a-7bdc390ed931",
+    "file": "lessons/challen@buffalo.edu/12_mobile/02_wireless/lesson.adoc"
+  },
+  {
     "id": "50bdfbbe-b7fb-4561-be85-3509eb5f399c",
     "file": "lessons/challen@buffalo.edu/05_transport/10_packet_drops/lesson.adoc"
   },
@@ -302,6 +322,10 @@
   {
     "id": "5309999a-20c5-4a36-83e6-88acd5618dfe",
     "file": "lessons/challen@buffalo.edu/04_routing/19_drop_tail/lesson.adoc"
+  },
+  {
+    "id": "532e774d-3b3f-4ad3-ae65-6ba6e6f4896e",
+    "file": "lessons/challen@buffalo.edu/12_mobile/08_mobility_consequences/lesson.adoc"
   },
   {
     "id": "556ad932-66c9-4489-be40-873d4898760e",
@@ -330,6 +354,10 @@
   {
     "id": "58adde9e-eb8b-4ffc-83f0-ce57bc536bad",
     "file": "lessons/challen@buffalo.edu/04_routing/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "5a4d6809-4d8f-47e6-a730-a3769570c19e",
+    "file": "lessons/challen@buffalo.edu/12_mobile/18_internet_everywhere/lesson.adoc"
   },
   {
     "id": "5a85a0c3-d0a4-4848-b697-fc6ccdf8c8d7",
@@ -364,6 +392,14 @@
     "file": "lessons/challen@buffalo.edu/09_security/10_asymmetric_encryption/lesson.adoc"
   },
   {
+    "id": "638d4612-7a02-4c80-9b5c-267142fa219a",
+    "file": "lessons/challen@buffalo.edu/12_mobile/07_wireless_problems/lesson.adoc"
+  },
+  {
+    "id": "64fb903f-05f3-44f6-a447-0699e5e063c2",
+    "file": "lessons/challen@buffalo.edu/12_mobile/20_mobile_site_performance/lesson.adoc"
+  },
+  {
     "id": "67414fff-3f11-4542-b16f-8e04d84ebbea",
     "file": "lessons/challen@buffalo.edu/11_interactivity/09_jquery/lesson.adoc"
   },
@@ -390,6 +426,10 @@
   {
     "id": "6c82e833-7e70-4c33-b9e6-02b3224d1da3",
     "file": "lessons/challen@buffalo.edu/05_transport/03_tcp_reliability/lesson.adoc"
+  },
+  {
+    "id": "6fc4c4b2-b9fb-4943-960f-fd925d2efede",
+    "file": "lessons/challen@buffalo.edu/12_mobile/15_iot_challenges/lesson.adoc"
   },
   {
     "id": "71a766a1-e5bc-4eaf-afe0-ec229afd3bd1",
@@ -488,6 +528,14 @@
     "file": "lessons/challen@buffalo.edu/08_search/06_mapreduce/lesson.adoc"
   },
   {
+    "id": "95277972-e10a-484a-b0d7-8df53778ed23",
+    "file": "lessons/challen@buffalo.edu/12_mobile/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "981aaff3-57d3-46c7-a20a-6939cafe5b36",
+    "file": "lessons/challen@buffalo.edu/12_mobile/11_responsive_design/lesson.adoc"
+  },
+  {
     "id": "9a5030fa-2a03-4a99-8b51-e7366df355ab",
     "file": "lessons/challen@buffalo.edu/09_security/22_hbgary/lesson.adoc"
   },
@@ -502,6 +550,10 @@
   {
     "id": "9d359f2b-1189-4fc4-9b92-ad44e1f67e5a",
     "file": "lessons/challen@buffalo.edu/04_routing/09_512k_day/lesson.adoc"
+  },
+  {
+    "id": "9e09be35-cee8-4bdb-91ce-7895af8ccffc",
+    "file": "lessons/challen@buffalo.edu/12_mobile/14_iot/lesson.adoc"
   },
   {
     "id": "9e672f50-3a7c-41cf-891c-0e35bef9b886",
@@ -534,6 +586,10 @@
   {
     "id": "a22907d5-d643-47ef-9f4b-db1d19b10a49",
     "file": "lessons/challen@buffalo.edu/08_search/04_distributed_computing/lesson.adoc"
+  },
+  {
+    "id": "a2845332-e932-4bd1-9496-da4d234ea3e8",
+    "file": "lessons/challen@buffalo.edu/12_mobile/12_pervasive_computing/lesson.adoc"
   },
   {
     "id": "a3cbddbf-1b7b-4ba2-86bc-c3f4614c21b9",
@@ -573,7 +629,7 @@
   },
   {
     "id": "aa343e2a-16a9-4708-adb7-96257c1a848b",
-    "file": "lessons/challen@buffalo.edu/12_mobile/999_study_abroad/lesson.adoc"
+    "file": "lessons/challen@buffalo.edu/12_mobile/21_study_abroad/lesson.adoc"
   },
   {
     "id": "aa517a0f-b21e-4d0a-b562-25902d9132e2",
@@ -582,6 +638,10 @@
   {
     "id": "aa6cb348-7814-487c-b4e6-71706dcc176d",
     "file": "lessons/challen@buffalo.edu/11_interactivity/05_what_is_javascript/lesson.adoc"
+  },
+  {
+    "id": "aab2cf70-a997-430c-a960-7d1f53ce8a2f",
+    "file": "lessons/challen@buffalo.edu/12_mobile/09_mobility_architectural/lesson.adoc"
   },
   {
     "id": "aafc5a6c-c8d3-40c5-afba-1be43bbb776f",
@@ -608,8 +668,16 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/02_what_is_a_protocol/lesson.adoc"
   },
   {
+    "id": "b40f4ccd-9d80-4439-94f6-8f9ff9eecac4",
+    "file": "lessons/challen@buffalo.edu/12_mobile/13_calm_computing/lesson.adoc"
+  },
+  {
     "id": "b424beec-9c35-42ff-9174-dc79c70ab847",
     "file": "lessons/challen@buffalo.edu/10_identity/02_online_identity/lesson.adoc"
+  },
+  {
+    "id": "b54d0fe1-0a57-4731-9585-ba246190a4ce",
+    "file": "lessons/challen@buffalo.edu/12_mobile/16_physical_web/lesson.adoc"
   },
   {
     "id": "ba830c8b-1e0a-48c3-bfeb-68c329e6055d",
@@ -710,6 +778,10 @@
   {
     "id": "cb507fc5-e827-4519-b6d5-b78f375966a3",
     "file": "lessons/challen@buffalo.edu/08_search/13_distributed_index/lesson.adoc"
+  },
+  {
+    "id": "cb5c45a9-0e3a-43f0-b0b1-3c8d64fdaa38",
+    "file": "lessons/challen@buffalo.edu/12_mobile/19_talk_to_aliens/lesson.adoc"
   },
   {
     "id": "cc58b860-56d1-425e-b724-4262c9329149",
@@ -860,8 +932,16 @@
     "file": "lessons/challen@buffalo.edu/05_transport/17_bittorrent/lesson.adoc"
   },
   {
+    "id": "feaf3a04-a450-4e52-a600-31715ff82181",
+    "file": "lessons/challen@buffalo.edu/12_mobile/06_digital_television/lesson.adoc"
+  },
+  {
     "id": "fee23bb2-3b7b-4793-836a-a3202fa21606",
     "file": "lessons/challen@buffalo.edu/10_identity/17_tor/lesson.adoc"
+  },
+  {
+    "id": "ff2034f1-0d9a-4c5a-abce-f9b1bf2af9df",
+    "file": "lessons/challen@buffalo.edu/12_mobile/17_iot_security/lesson.adoc"
   },
   {
     "id": "ffbc00bb-f3d1-460b-8b2d-d1efa47eb26b",

@@ -1,0 +1,13 @@
+---
+title: "What are some security problems caused by the IoT?"
+---
+
+Bringing trillions of new devices online enables exciting new interaction
+patterns.
+//
+But it also exposes those devices to many new security threats.
+//
+What could it mean if my toaster--or home security system, or wireless dog
+collar--was hacked?
+//
+What new security risks come along with the brave new world of the IoT?

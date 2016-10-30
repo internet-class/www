@@ -1,3 +1,21 @@
 ---
 title: "What internet architecture challenges does mobility cause?"
 ---
+
+Various parts of the original internet architecture were not well-designed to
+support mobility.
+//
+This was not intention, but simply a reflection of the limited number of
+mobile devices that existed at that time.
+//
+But as mobile devices have grown to become the dominant way that we connect to
+the internet, the architecture of the internet has begun to evolve.
+//
+Connections that used to be tied to unstable identifiers like IP addresses can
+now be preserved even as the underlying addresses change.
+//
+Mobile devices can now make better use of multiple wireless radios and
+different ways of connecting to the internet.
+//
+And higher-layer protocols like HTTP have also begun to respond to the unique
+performance characteristics of mobile devices.

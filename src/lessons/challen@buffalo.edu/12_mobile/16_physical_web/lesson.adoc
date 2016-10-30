@@ -1,0 +1,21 @@
+---
+title: "What is the physical web?"
+---
+
+The internet and the world wide web have been driven by and benefited from
+open and widely-accepted standards.
+//
+Every web site servers documents using HTML, CSS, and JavaScript, allowing a
+single web browser to explore the entire web.
+//
+Unfortunately, the nascent Internet of Things is not as open or
+well-standardized.
+//
+Vendors sell competing IoT technologies with no cross-device standardization.
+//
+This leaves consumers with the equivalent of multiple remote controls: one app
+to control my home security system, another to control my music player, and so
+on.
+//
+Google's vision of the _physical web_ is trying to encourage IoT devices to
+leverage existing web standards.

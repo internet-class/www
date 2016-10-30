@@ -8,7 +8,7 @@ are heavily regulated.
 Only small frequency bands are set aside for general use, referred to as the
 industrial, scientific, and medical (ISM) bands.
 //
-If you have noticed that WiFi devices operate in the 2.4GHz band, or the 5GHz
+If you have noticed that Wifi devices operate in the 2.4GHz band, or the 5GHz
 band, this is why.
 //
 And as a result of the regulation, a huge amount of highly-important

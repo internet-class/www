@@ -1,3 +1,9 @@
 ---
 title: "What is responsive web design?"
 ---
+
+One defining characteristic of mobile devices are their small displays.
+//
+Responsive web design aims to address this by allowing developers to build web
+pages that adapt (or respond) their contents to suit both mobile and desktop
+screen sizes.

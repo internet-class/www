@@ -1,3 +1,0 @@
----
-title: "How can you check your site's performance on mobile?"
----
