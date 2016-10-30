@@ -1,3 +1,17 @@
 ---
 title: "Introduction to your brain on the internet."
 ---
+
+The earliest computer scientists envisioned computers as a way to supplement
+our own limited human intelligence.
+//
+They did not necessarily realize that a global computer network was required
+to realize that dream.
+//
+But as computers and the internet have become integral to our lives, it is
+important to understand how they both complicate and challenge our human
+capabilities.
+//
+Computers can complement us--or they can control us.
+//
+The choice is ours.

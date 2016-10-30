@@ -1,3 +1,17 @@
 ---
 title: "Why are computers so distracting?"
 ---
+
+Computers can be highly distracting.
+//
+The reasons are related to the design of our two different human attention
+systems.
+//
+Humans are hard-wired to both be able to immerse ourselves, and to be able to
+respond quickly to surprises.
+//
+Computers--and particularly our mobile devices--provide us with both kinds of
+stimuli.
+//
+And this combination can cause us to lose focus of other things that we should
+be doing, whether it is driving a vehicle or listening to a good friend.

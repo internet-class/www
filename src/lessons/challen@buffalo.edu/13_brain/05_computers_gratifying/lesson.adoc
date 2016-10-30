@@ -1,3 +1,20 @@
 ---
 title: "Why are computers so gratifying?"
+spelling_exceptions:
+  - microinteractions
 ---
+
+Another reason that we can become so immersed in computers and the internet is
+that computers provide us with a great deal of positive reinforcement.
+//
+We type, and see our words appear.
+//
+We click on a link, and a new page appears or a video starts to play.
+//
+We run a command, and a program is compiled.
+//
+Unlike the rest of the world, which can be messy and full of surprises,
+computers provide a series of positive and satisfying microinteractions.
+//
+Unfortunately, this can create unrealistic expectations for the rest of our
+lives.

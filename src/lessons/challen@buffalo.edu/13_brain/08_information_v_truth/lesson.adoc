@@ -1,3 +1,16 @@
 ---
 title: "Given all the information online, why are we still confused?"
 ---
+
+One of the early hopes about the internet is that access to large amounts of
+information would help us make better decisions.
+//
+And yet, even with more data at our fingertips than ever before, we continue
+to be confused.
+//
+We even hold beliefs that are at odds with widely-available information.
+//
+Unfortunately, additional information has been accompanied with additional
+misinformation.
+//
+And, it turns out that it is harder to change our minds than we think.

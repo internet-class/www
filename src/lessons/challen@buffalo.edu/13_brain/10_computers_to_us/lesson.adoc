@@ -1,3 +1,18 @@
 ---
 title: "What are computers doing to us?"
 ---
+
+As computers enrich our lives, there is growing evidence that they are also
+altering the way that we behave--sometimes in negative ways.
+//
+Our attention span may be dropping as we become more easily distracted.
+//
+Our ability to store and synthesize data may be decreasing as we rely more on
+the internet to remember things.
+//
+Online, algorithms and our own choices may be dividing us into mutually
+suspicious camps separately by beliefs supported by questionable or
+selectively-interpreted evidence.
+//
+Part of our success in taking control over our computer creations is
+understanding and resisting these transformations.

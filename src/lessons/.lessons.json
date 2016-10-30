@@ -20,6 +20,14 @@
     "file": "lessons/challen@buffalo.edu/03_protocols/07_ip_suite/lesson.adoc"
   },
   {
+    "id": "08a06218-61d8-4ff5-98c8-04e107a337d0",
+    "file": "lessons/challen@buffalo.edu/13_brain/05_computers_gratifying/lesson.adoc"
+  },
+  {
+    "id": "09254c67-a726-415e-9aff-8735848c0f43",
+    "file": "lessons/challen@buffalo.edu/13_brain/04_computers_distracting/lesson.adoc"
+  },
+  {
     "id": "09a5b03a-456d-492d-a544-d4fb2bba4097",
     "file": "lessons/challen@buffalo.edu/08_search/15_pagerank/lesson.adoc"
   },
@@ -228,6 +236,10 @@
     "file": "lessons/challen@buffalo.edu/06_naming/16_url_similarity_phishing/lesson.adoc"
   },
   {
+    "id": "40e361f2-980e-4f0a-817d-329ae7e3558d",
+    "file": "lessons/challen@buffalo.edu/13_brain/03_humans_good_at/lesson.adoc"
+  },
+  {
     "id": "4271ecbc-ef2e-439f-93a6-e66e318aa537",
     "file": "lessons/challen@buffalo.edu/01_era/04_what_is/lesson.adoc"
   },
@@ -380,6 +392,10 @@
     "file": "lessons/challen@buffalo.edu/05_transport/08_bandwidth/lesson.adoc"
   },
   {
+    "id": "5f232d4b-94d3-4703-95c5-297c87a7f873",
+    "file": "lessons/challen@buffalo.edu/13_brain/09_computers_for_us/lesson.adoc"
+  },
+  {
     "id": "60923178-5d4f-4859-9b99-9a68b0344f57",
     "file": "lessons/challen@buffalo.edu/11_interactivity/06_web_application/lesson.adoc"
   },
@@ -508,8 +524,16 @@
     "file": "lessons/challen@buffalo.edu/06_naming/17_email_limitations/lesson.adoc"
   },
   {
+    "id": "8ab0724e-7b76-4ff5-ab39-14e90c71d498",
+    "file": "lessons/challen@buffalo.edu/13_brain/02_computers_good_at/lesson.adoc"
+  },
+  {
     "id": "8cb7cd22-9c5d-49a3-83b2-168be9e443ea",
     "file": "lessons/challen@buffalo.edu/06_naming/15_names_matter/lesson.adoc"
+  },
+  {
+    "id": "8f6821ae-2a3d-462b-9499-bac6f83090a0",
+    "file": "lessons/challen@buffalo.edu/13_brain/06_internet_addiction/lesson.adoc"
   },
   {
     "id": "8fe7612f-5614-4ce9-ad42-afddd82aa3c4",
@@ -530,6 +554,10 @@
   {
     "id": "95277972-e10a-484a-b0d7-8df53778ed23",
     "file": "lessons/challen@buffalo.edu/12_mobile/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "97cbaa05-d8e4-47c2-b359-66b73c36ed4c",
+    "file": "lessons/challen@buffalo.edu/13_brain/10_computers_to_us/lesson.adoc"
   },
   {
     "id": "981aaff3-57d3-46c7-a20a-6939cafe5b36",
@@ -602,6 +630,10 @@
   {
     "id": "a43f78fc-295c-49df-89f0-06b62df8da2f",
     "file": "lessons/challen@buffalo.edu/10_identity/20_facebook_ad_prefs/lesson.adoc"
+  },
+  {
+    "id": "a5cbde6d-8772-4c15-a345-0f60d36edf35",
+    "file": "lessons/challen@buffalo.edu/13_brain/08_information_v_truth/lesson.adoc"
   },
   {
     "id": "a60b8aa0-ca01-4949-b62c-0d44b9032fe3",
@@ -808,6 +840,10 @@
     "file": "lessons/challen@buffalo.edu/07_web/13_content_v_presentation/lesson.adoc"
   },
   {
+    "id": "d1bc42cb-95c7-4501-9a84-2c940cadaa1d",
+    "file": "lessons/challen@buffalo.edu/13_brain/07_video_identification/lesson.adoc"
+  },
+  {
     "id": "d23935d9-567e-4985-8b15-08b901c8542c",
     "file": "lessons/challen@buffalo.edu/08_search/19_search_fairness/lesson.adoc"
   },
@@ -884,6 +920,10 @@
     "file": "lessons/challen@buffalo.edu/09_security/15_brute_force_attack/lesson.adoc"
   },
   {
+    "id": "e6faa537-9786-44ae-81fd-ea93ccd0f7f8",
+    "file": "lessons/challen@buffalo.edu/13_brain/01_introduction/lesson.adoc"
+  },
+  {
     "id": "e9a98e82-55cb-4df8-b31e-38eb0a1042d9",
     "file": "lessons/challen@buffalo.edu/03_protocols/06_ip_address/lesson.adoc"
   },
@@ -908,6 +948,10 @@
     "file": "lessons/challen@buffalo.edu/07_web/02_chrome_developer_tools/lesson.adoc"
   },
   {
+    "id": "f0a990f9-ae59-43d5-b48d-2a186f593610",
+    "file": "lessons/challen@buffalo.edu/13_brain/11_laptops_in_class/lesson.adoc"
+  },
+  {
     "id": "f0b3bc20-f4ad-4eec-905b-106eb1bfb902",
     "file": "lessons/challen@buffalo.edu/01_era/07_invented/lesson.adoc"
   },
@@ -922,6 +966,10 @@
   {
     "id": "f797c87b-09f0-491a-b5e1-471df2c35fb8",
     "file": "lessons/challen@buffalo.edu/06_naming/14_dns/lesson.adoc"
+  },
+  {
+    "id": "fbcb5a5a-3c34-44da-97e3-698053a87362",
+    "file": "lessons/challen@buffalo.edu/13_brain/12_texting_and_driving/lesson.adoc"
   },
   {
     "id": "fdab2123-34e4-41c5-9775-db4d2f516688",

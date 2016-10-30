@@ -1,3 +1,16 @@
 ---
 title: "What are computers good at that humans are not?"
 ---
+
+To understand how computers complement us, it's important to compare our
+capabilities with theirs.
+//
+Computers are great at certain things, particularly storing and processing
+information.
+//
+Their memories are far better than ours, as is their ability to perform simple
+mathematical operations.
+//
+Their speed combined with their storage abilities makes them far better than
+us at dealing with large amounts of information, and at making split-second
+decisions.
