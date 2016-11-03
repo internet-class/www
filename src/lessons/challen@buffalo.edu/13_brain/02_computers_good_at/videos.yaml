@@ -10,3 +10,14 @@
     -
       name: 'Greg Bunyea'
       credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
+  creditsFile: dancing.mp4
+  prerollFile: slowglow.mp4
+  postrollFile: turnon.mp4
+  prerollLength: 7
+  creditsLength: 11
+  postrollLength: 2
+  durationSec: 310.907
+  inputHash: f100d10778182d8560ca87249830bbc1
+  output: 15cb55a96bd1d51d4bbe86a40bd7632b.mp4
+  transcode: false
+  upload: false
