@@ -321,33 +321,47 @@ networking terminology, difference between the internet and the World Wide
 Web, internet ownership, internet standardization, finding out more about the
 internet, "Eternal September".
 ** *Activities*: https://goo.gl/84pxLp[Internet Avoidance (2016-08-31)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvZZdQHM91vx-eHTJJOmQOEK[Internet Era playlist]
 //
 . *Connectivity*: [[connectivity]] cables, connected at work and at home, the
 last mile problem, the core internet, packets, circuit v. packet switching.
 ** *Activities*: https://goo.gl/XIgNXO[Connection Detection (2016-09-07)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvYJqvvQkhHdMZ8_vgde_rVH[Connectivity playlist]
 //
 . *Protocols*: [[protocols]] what is a protocol, clients and servers, the
 internet protocol (IP), IP addresses, the end-to-end principle, protocol
 stacks, encapsulation, other internet protocols, peer-to-peer systems.
 ** *Activities*: https://goo.gl/7KKbhJ[DIY RFC (2016-09-12)],
 https://goo.gl/NJmcUG[Human-Computer Interaction (2016-09-14)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvayBmPKnaIdgdYIKpuhpJoe[Protocols playlist]
 //
 . *Routing*: [[routing]] routers and end hosts, autonomous systems, the border gateway
 protocol, meet-me rooms, IP address structure, 512K day, traceroute, routing
 stability, public v. private addresses, onion routing.
 ** *Activities*: https://goo.gl/Wf1cvD[S'More Routing (2016-09-19)],
 https://goo.gl/7gddaN[Tracking with `traceroute` (2016-09-21)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvZJs7DyfPgiUDovil2K7axM[Routing playlist]
 //
 . *Transport*: [[transport]] the TCP protocol, TCP connections, ports, well-known port
 numbers, NAT, problems with TCP, QUIC, TCP influence on overall network
 design, buffer bloat, the UDP protocol and unreliable connections, multipath
 TCP.
-** *Activities*: https://goo.gl/YZ68jb[Video Review Session (2016-09-26)], https://goo.gl/QWFGSY[Great White `wireshark` (2016-09-28)]
+** *Activities*: https://goo.gl/YZ68jb[Video Review Session (2016-09-26)],
+https://goo.gl/QWFGSY[Great White `wireshark` (2016-09-28)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvZdbYzA6om36xT-D-Tuew3F[Transport playlist]
 //
 . *Naming*: [[naming]] the domain name service (DNS) and DNS protocol, machine- and
 human-readable names, name translation, top-level domains, IPv4 and routing,
 name assignment, IPv4 address exhaustion, IPv6 and adoption problems.
-** *Activities*: https://goo.gl/sG4YGV[All Kinds of Names (2016-10-03)], https://goo.gl/QJ79Hv[Name Tools (2016-10-05)]
+** *Activities*: https://goo.gl/sG4YGV[All Kinds of Names (2016-10-03)],
+https://goo.gl/QJ79Hv[Name Tools (2016-10-05)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvZgvqcZWzGHmqlcwr_1a3QK[Naming playlist]
 //
 . *Web*: [[queries]] the HTTP protocol, HTML and CSS,
 separation of content and presentation, links, the DOM data structure,
@@ -358,6 +372,8 @@ POST.
 (2016-10-10)] (https://youtu.be/8x6InF3s8eM[Video Walkthrough]),
 https://goo.gl/FHxeqf[`git` a Personal Website II (2016-10-12)]
 (https://youtu.be/8QaI18MyxGs[Video Walkthrough])
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvaAtrsVGbdeNtwf-moYNq-E[Web playlist]
 //
 . *Search*: [[search]] web crawling and processing, the
 internet archive, data center computing, distributed indexes, MapReduce, data
@@ -366,6 +382,8 @@ improving ranking using context, history, click tracking, website reputation.
 ** *Activities*: https://goo.gl/896Lc9[Personal Parallel Processing
 (2016-10-17)], https://goo.gl/mWpMD4[Search Games and `archive.org`
 (2016-10-19)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvYwbyXe-4FfJlcGbQPwMQKf[Search playlist]
 //
 . *Security*: [[security]] Alice and Bob, symmetric and asymmetric encryption,
 simple ciphers, trapdoor and one-way functions, zero-knowledge proofs,
@@ -374,9 +392,15 @@ zero-day exploits, social engineering, famous hacks, personal web security,
 denial of service attacks.
 ** *Activities*: https://goo.gl/Fq4VSV[Capture the Flag (2016-10-24)],
 https://goo.gl/oTzI1o[Encryption and ZNP (2016-10-26)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvZL-Zi9r6wxbEvI2J1jF-JK[Security playlist]
 //
 . *Identity*: [[identity]] cookies, server side tracking, IP addresses v.
 identities, anonymity online, online v. human identities.
+** *Activities*: https://goo.gl/YZ68jb[Video Review Session (2016-10-31)],
+https://goo.gl/U8FPYa[Second Life (2016-11-02)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvaBrobQf5IsjobG27Wzdfkc[Identity playlist]
 //
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
 requests, modifying the DOM.
