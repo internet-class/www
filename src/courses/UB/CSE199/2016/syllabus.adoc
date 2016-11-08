@@ -404,6 +404,11 @@ https://www.youtube.com/playlist?list=PLk97mPCd8nvaBrobQf5IsjobG27Wzdfkc[Identit
 //
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
 requests, modifying the DOM.
+** *Activities*: https://goo.gl/MRV3oZ[JavaScript Part I: CodeCombat and
+Codecamedy]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvYD3ZxVZin43SghUCH5DP6u[Interactive
+playlist]
 //
 . *The Mobile and Pervasive Web*: internet architecture problems created by
 mobility, limitations of mobile devices, mobile web performance problems and
