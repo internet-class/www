@@ -405,7 +405,8 @@ https://www.youtube.com/playlist?list=PLk97mPCd8nvaBrobQf5IsjobG27Wzdfkc[Identit
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
 requests, modifying the DOM.
 ** *Activities*: https://goo.gl/MRV3oZ[JavaScript Part I: CodeCombat and
-Codecamedy]
+Codecamedy (2016-11-07)], https://goo.gl/MRV3oZ[JavaScript Part II: jquery and
+Bootstrap (2016-11-09)]
 ** *Videos*:
 https://www.youtube.com/playlist?list=PLk97mPCd8nvYD3ZxVZin43SghUCH5DP6u[Interactive
 playlist]
@@ -415,9 +416,17 @@ mobility, limitations of mobile devices, mobile web performance problems and
 solutions, MPTCP and multihoming, the IoT, pervasive computing, energy and
 physical constraints on tiny devices, IPv6 and network growth, the physical
 web.
+** *Activities*: https://goo.gl/eb2Wp8[The Mobile Web (2016-11-14)],
+https://goo.gl/lcw4cR[Your Mobile Site (2016-11-16)]
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvacSuRzHvZDx7stAf-HtULR[Mobility
+playlist]
 //
 . *Your Brain on the Internet*: attention, concentration, distraction, deadly
 accidents, search v. knowledge, controlling our internet usage.
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvbIDe0ol__bk5jNJLJlSDto[Brain
+playlist]
 //
 . *Internet Content and Economics*: early proposals for early payments via
 link counting, Bitcoin as an online currency, DRM and other efforts to prevent
