@@ -44,8 +44,16 @@
     "file": "lessons/test@internet-class.org/01_cats/03_adorable/lesson.adoc"
   },
   {
+    "id": "10e89ad5-00a4-49a1-b05c-629de2b9ac6a",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/09_maybe_overview/lesson.adoc"
+  },
+  {
     "id": "11e41572-82c5-4318-a2e8-474703856eaf",
     "file": "lessons/challen@buffalo.edu/11_interactivity/13_html5/lesson.adoc"
+  },
+  {
+    "id": "12613c2b-d7c0-48fb-bd5e-e5caba4328d2",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/07_verifi_performance/lesson.adoc"
   },
   {
     "id": "132d7069-a754-4c2e-8b8b-fec345593116",
@@ -252,6 +260,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/04_01_router/lesson.adoc"
   },
   {
+    "id": "43c78dcd-2fdc-40d6-8c6c-2aef804e7536",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/100_phonelab/lesson.adoc"
+  },
+  {
     "id": "45e0d6a8-7ea4-4734-9640-3b60d4f92e1b",
     "file": "lessons/challen@buffalo.edu/03_protocols/10_protocol_stack/lesson.adoc"
   },
@@ -376,6 +388,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/17_onion_routing/lesson.adoc"
   },
   {
+    "id": "5c8d6123-9122-4fa4-9504-305759d6ba69",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/04_pocketparker_evaluation/lesson.adoc"
+  },
+  {
     "id": "5df2ecb2-778c-40c3-8897-4bea901ee77d",
     "file": "lessons/challen@buffalo.edu/03_protocols/14_quic/lesson.adoc"
   },
@@ -398,6 +414,10 @@
   {
     "id": "60923178-5d4f-4859-9b99-9a68b0344f57",
     "file": "lessons/challen@buffalo.edu/11_interactivity/06_web_application/lesson.adoc"
+  },
+  {
+    "id": "61cb936c-5276-4d7b-a68f-549f75caa5a4",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/03_hidden_drivers/lesson.adoc"
   },
   {
     "id": "62fb9a27-1777-4437-a98d-a50d6a4565fa",
@@ -440,6 +460,10 @@
     "file": "lessons/challen@buffalo.edu/06_naming/18_command_line/lesson.adoc"
   },
   {
+    "id": "6babff1b-5e52-455e-b495-3cf389306dea",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/06_sniffer_uncertainty/lesson.adoc"
+  },
+  {
     "id": "6c82e833-7e70-4c33-b9e6-02b3224d1da3",
     "file": "lessons/challen@buffalo.edu/05_transport/03_tcp_reliability/lesson.adoc"
   },
@@ -476,6 +500,10 @@
     "file": "lessons/challen@buffalo.edu/09_security/03_end_to_end/lesson.adoc"
   },
   {
+    "id": "7c81c0f5-8dab-4c60-a4af-cc9fa92c53c8",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/02_what_is_pocketparker/lesson.adoc"
+  },
+  {
     "id": "7c944d1c-c774-495d-8ab6-0b2b2e127fa3",
     "file": "lessons/challen@buffalo.edu/05_transport/01_introduction/lesson.adoc"
   },
@@ -486,6 +514,10 @@
   {
     "id": "82b31493-5ee3-4038-9477-942cb4f1d812",
     "file": "lessons/challen@buffalo.edu/08_search/07_environmental_impact/lesson.adoc"
+  },
+  {
+    "id": "83b0d05b-5330-4268-9d6f-f2334f7da380",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/05_wireless_validation/lesson.adoc"
   },
   {
     "id": "857f35da-ddb2-4bfc-a9cc-4577ff619e4c",
@@ -604,6 +636,10 @@
     "file": "lessons/challen@buffalo.edu/10_identity/12_golden_shield/lesson.adoc"
   },
   {
+    "id": "a1a88c0f-4393-4161-a9cf-96290a5c070d",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/10_adapting_online_courses/lesson.adoc"
+  },
+  {
     "id": "a1ab5146-6053-4679-a5b9-690bda0bc5e2",
     "file": "lessons/challen@buffalo.edu/02_connectivity/17_eternal_september/lesson.adoc"
   },
@@ -646,6 +682,10 @@
   {
     "id": "a8408c67-69ca-49db-a891-5323d92929ec",
     "file": "lessons/challen@buffalo.edu/07_web/22_page_differences/lesson.adoc"
+  },
+  {
+    "id": "a852da17-64a9-499a-91f7-0b83c4c6b332",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/101_ops_class/lesson.adoc"
   },
   {
     "id": "a8994bf3-897a-47d8-9d84-d93cafc0cbfb",
@@ -710,6 +750,10 @@
   {
     "id": "b54d0fe1-0a57-4731-9585-ba246190a4ce",
     "file": "lessons/challen@buffalo.edu/12_mobile/16_physical_web/lesson.adoc"
+  },
+  {
+    "id": "b7f3feda-51b3-4ffe-8126-42c3d7adc726",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/102_internet_class/lesson.adoc"
   },
   {
     "id": "ba830c8b-1e0a-48c3-bfeb-68c329e6055d",
@@ -970,6 +1014,10 @@
   {
     "id": "fbcb5a5a-3c34-44da-97e3-698053a87362",
     "file": "lessons/challen@buffalo.edu/13_brain/12_texting_and_driving/lesson.adoc"
+  },
+  {
+    "id": "fd2b08c9-d5c7-4e08-a0f9-1ed2ee95a096",
+    "file": "lessons/challen@buffalo.edu/99_jobtalk/08_maybe_introduction/lesson.adoc"
   },
   {
     "id": "fdab2123-34e4-41c5-9775-db4d2f516688",
