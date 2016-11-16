@@ -696,6 +696,13 @@ networking activities _will not_ earn you credit for this activity.
 You'll discuss this assignment in more detail with your activity section
 leader and course staff later in the semester.
 
+The due date for this assignment will be *Friday 12/16/2016 at 11:59PM EDT.*
+//
+We will distribute a Google Form for you to to submit your URL and project
+description.
+//
+*Note that you cannot work with a partner on this assignment.*
+
 === Grade Mapping
 
 Scores from all four CSE 199 sections will be combined and, if needed,
