@@ -14,3 +14,11 @@
   creditsFile: false
   postrollFile: false
   banner: www.bluegroup.systems
+  prerollLength: 0
+  creditsLength: 0
+  postrollLength: 0
+  durationSec: 375.414
+  inputHash: 8ddbadfcde18b4f286c4529015597e2d
+  output: d023500988c62a9281fab1535098fb5e.mp4
+  transcode: false
+  upload: false
