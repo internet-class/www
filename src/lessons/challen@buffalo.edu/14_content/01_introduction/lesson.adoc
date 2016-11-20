@@ -1,0 +1,28 @@
+---
+title: "Introduction to internet content and economics."
+---
+
+Where does all the stuff online come from?
+//
+And who pays for it?
+//
+The internet has brought huge changes to decades old models of how things
+were created and paid for.
+//
+Important to these changes is the idea of digital representation and copies.
+//
+Prior to the internet, stealing something meant taking it away from someone
+else.
+//
+Now that we can make perfect copies, that is no longer the case.
+//
+Easy distribution of perfect digital copies has had important positive
+impacts, including open-source software, creative remixing, self-publishing,
+and making the overall publishing system much more efficient.
+//
+Simultaneously, easy distribution of perfect digital copies has created
+financial problems for creators, disrupted important sources of information,
+and filled the internet with fake or illegal content.
+//
+This may be the ultimate Pandora's box opened by the internet, and we are
+still far from determining how it will turn out.
