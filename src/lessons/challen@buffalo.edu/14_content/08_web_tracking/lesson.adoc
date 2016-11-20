@@ -1,3 +1,15 @@
 ---
 title: "What is web tracking?"
 ---
+
+Individual sites have always been able to track your internet usage.
+//
+However, given that ads frequently appear on sites that do not have enough
+information to personalize them appropriately, advertisers frequently try to
+track users activity across multiple sites to better personalize ad content.
+//
+You may not like this web tracking, and there are ways to ask advertisers to
+stop doing it.
+//
+On the other hand, you may appreciate seeing more relevant ads on the sites
+you visit.
