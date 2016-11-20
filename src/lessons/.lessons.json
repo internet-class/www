@@ -488,6 +488,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/07_meet_me_room/lesson.adoc"
   },
   {
+    "id": "755ad8e2-c118-4834-a210-a1ab84500699",
+    "file": "lessons/challen@buffalo.edu/14_content/05_ads/lesson.adoc"
+  },
+  {
     "id": "7853889b-0cf4-413e-baf8-2e2de3823b7d",
     "file": "lessons/challen@buffalo.edu/10_identity/04_authentication/lesson.adoc"
   },
@@ -630,6 +634,10 @@
   {
     "id": "9e672f50-3a7c-41cf-891c-0e35bef9b886",
     "file": "lessons/challen@buffalo.edu/10_identity/22_ddos/lesson.adoc"
+  },
+  {
+    "id": "9ee6889e-bc77-471b-ab07-3f17b6a1784d",
+    "file": "lessons/challen@buffalo.edu/14_content/06_ad_targeting/lesson.adoc"
   },
   {
     "id": "9f939a05-b8c8-46cf-876e-34e0498358a8",

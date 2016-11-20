@@ -1,0 +1,13 @@
+---
+title: "What is ad targeting?"
+---
+
+Online ads have a significant advantage compared with print and other forms
+of traditional advertising--they can customize themselves to the viewer.
+//
+As your browser loads many web pages, ad engines are working to personalize
+ad content to you.
+//
+They use your location, your preferences, products that you may have browsed
+recently, and any other information about you that an advertisers thinks will
+increase your tendency to click on the ad.
