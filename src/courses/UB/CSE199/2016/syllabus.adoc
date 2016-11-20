@@ -9,6 +9,8 @@ spelling_exceptions:
   - S'More
   - renormalized
   - Werner Herzog
+  - Codecademy
+  - CodeCombat
 description: >
   Syllabus for CSE 199: How the Internet Works
 priority: 0.8
@@ -405,7 +407,7 @@ https://www.youtube.com/playlist?list=PLk97mPCd8nvaBrobQf5IsjobG27Wzdfkc[Identit
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
 requests, modifying the DOM.
 ** *Activities*: https://goo.gl/MRV3oZ[JavaScript Part I: CodeCombat and
-Codecamedy (2016-11-07)], https://goo.gl/MRV3oZ[JavaScript Part II: jquery and
+Codecamedy (2016-11-07)], https://goo.gl/MRV3oZ[JavaScript Part II: jQuery and
 Bootstrap (2016-11-09)]
 ** *Videos*:
 https://www.youtube.com/playlist?list=PLk97mPCd8nvYD3ZxVZin43SghUCH5DP6u[Interactive

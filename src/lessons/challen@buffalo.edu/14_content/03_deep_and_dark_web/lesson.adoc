@@ -1,5 +1,7 @@
 ---
 title: "What is the deep web? What is the dark web?"
+spelling_exceptions:
+  - whistleblowers
 ---
 
 When we talk about online content two terms that come up are the _deep_ and
