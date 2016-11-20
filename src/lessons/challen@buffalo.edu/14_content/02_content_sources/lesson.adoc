@@ -1,0 +1,17 @@
+---
+title: "Where does stuff online come from?"
+---
+
+Broadly, we can divide stuff online into two categories: free and non-free.
+//
+And we can divide content creators into two categories: paid and unpaid.
+//
+Today, a lot (but not all) of the free content comes from unpaid sources--and
+a lot (but not all) of the non-free content comes from paid sources.
+//
+Of course, it's the exceptions to this rule that are interesting and
+disruptive.
+//
+It's also interesting to explore the degree to which crowdsourced content is
+replacing content created by professionals, and the implications of this
+shift.
