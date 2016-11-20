@@ -1,3 +1,20 @@
 ---
 title: "What are ad blockers?"
 ---
+
+Wherever there is offense, there is also defense.
+//
+To fight back against sites full of ads, most modern web browsers allow users
+to install ad blocking extensions.
+//
+These extensions try to detect and block content from sites known to serve
+advertising content.
+//
+Ad blockers can make browsing the web a much more enjoyable experience.
+//
+But as more users have installed ad blockers, sites have begun to fight back
+by either refusing service to or complaining about users with ad blocking
+software installed.
+//
+This reflects an economic reality of the modern internet--ads are important
+source of revenue for many sites that provide free content.
