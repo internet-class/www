@@ -1,0 +1,20 @@
+---
+title: "What is the deep web? What is the dark web?"
+---
+
+When we talk about online content two terms that come up are the _deep_ and
+_dark_ web.
+//
+The _deep web_ is all of the content not found by search engines.
+//
+This content is frequently invisible because it is behind some kind of
+authorization system (your email) or trapped in a specialized online
+ecosystem (large parts of Facebook).
+//
+But you can access this content using a normal web browser.
+//
+In contrast, content on the _dark web_ requires special software to access.
+//
+The dark web contains a lot of content that would be illegal or dangerous to
+distribute on the public web: drugs, malicious hacking tools, or content
+released by government whistleblowers.
