@@ -1,3 +1,25 @@
 ---
-title: "What is the Digital Millenium Copyright Act (DMCA)?"
+title: "What is the Digital Millennium Copyright Act (DMCA)?"
 ---
+
+As the internet has matured, legislation has played an increasingly important
+role in determining what ends up online.
+//
+An important piece of early internet copyright legislation is the Digital
+Millennium Copyright Act (DMCA), passed in 1998.
+//
+The DMCA is known for several provisions.
+//
+One criminalizes attempts to circumvent digital rights management (DRM) access
+control measures.
+//
+Another provides a mechanism&mdash;known as a _takedown notice_&mdash;allowing
+copyright owners to request that copyrighted content made available illegally
+online be removed.
+//
+The DMCA also provides safe harbor provisions exempting websites and internet
+service providers from liability if their users post copyrighted material.
+//
+The DMCA has been criticized repeatedly since its inception, mainly by groups
+concerned with its chilling effects on consumer freedoms, competition, and
+free speech.

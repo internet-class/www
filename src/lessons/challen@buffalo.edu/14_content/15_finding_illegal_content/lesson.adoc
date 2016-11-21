@@ -1,3 +1,13 @@
 ---
 title: "How is illegal or copyrighted content discovered online?"
 ---
+
+There's a constant cat and mouse game going on online.
+//
+On one hand, people are constantly posting things online that they should not.
+//
+On the other, other people and search engines are constantly looking for
+copyrighted content and trying to remove it from websites, blogs, and search
+results.
+//
+The process goes on continuously, with no real end in sight.

@@ -1,3 +1,22 @@
 ---
 title: "What was the Stop Online Piracy Act (SOPA)?"
 ---
+
+In 2011 the US government tried to enact more sweeping online copyright
+protections.
+//
+The Stop Online Piracy Act (SOPA) would have provided copyright holders with
+new and more powerful mechanism for restricting access to websites that posted
+copyrighted content.
+//
+Ad networks could be prevented from working with infringing sites, search
+engines could have been forced to remove them from search results, and
+internet service providers could have been forced to block their users from
+accessing them.
+//
+Opponents, however, found many aspects of the bill to criticize, particularly
+its limits on free speech and the way that it would enable and even require
+internet censorship.
+//
+Despite bipartisan support, after online protests led by many prominent
+websites, the bill was shelved.

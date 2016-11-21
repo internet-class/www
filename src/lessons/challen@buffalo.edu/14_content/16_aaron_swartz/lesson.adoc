@@ -1,3 +1,19 @@
 ---
 title: "Who was Aaron Swartz?"
+spelling_exceptions:
+  - hacktivism
 ---
+
+Aaron Swartz was an internet pioneer.
+//
+He co-founded Reddit, was active in the open-source software community,
+co-authored the original RSS specification, and helped lead the protests that
+stopped the Stop Online Piracy Act (SOPA).
+//
+Unfortunately, Aaron's hacktivism took a tragic turn.
+//
+He was arrested for illegally distributing academic journal articles that he
+gained access to while at MIT.
+//
+Facing serious criminal charges and in the face of what has been generally
+considered to be over-zealous prosecution, Aaron chose to end his own life.

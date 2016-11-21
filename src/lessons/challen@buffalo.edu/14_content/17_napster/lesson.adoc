@@ -1,3 +1,25 @@
 ---
 title: "How did Napster change the music industry?"
 ---
+
+An early but important example of the tensions created by freely-available
+online content was Napster.
+//
+Napster was a peer-to-peer music-sharing service that enabled the widespread
+dissemination of copyrighted content.
+//
+It's popularity set off an early debate about the relationship between the
+internet and the traditional music industry.
+//
+Critics pointed out that Napster was clearly violating copyright.
+//
+Supporters, however, pointed out that it was unclear whether this was hurting
+or helping music sales by allowing users to find music online that was not
+being played on the radio.
+//
+While Napster was eventually shut down, its effect on the music industry
+continues to be felt.
+//
+Albums are distributed differently, all-you-can-eat music subscriptions have
+become more powerful, and touring has become more financially important to
+many artists.
