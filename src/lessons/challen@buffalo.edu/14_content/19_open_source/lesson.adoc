@@ -1,3 +1,16 @@
 ---
 title: "What is open-source software?"
 ---
+
+One of the more interesting models for content creation that accompanied the
+birth of the internet is open-source software.
+//
+In the open-source community, software artifacts are given away for
+free--although licensing terms vary.
+//
+The open-source model provides vibrant proof that there are many different
+ways to incentivize people to build and create things--and that money is just
+one of them.
+//
+Even without direct payment, many contributors to the open-source community
+are well-compensated, both in fame and fortune.
