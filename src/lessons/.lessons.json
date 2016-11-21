@@ -224,6 +224,10 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/07_last_mile_problem/lesson.adoc"
   },
   {
+    "id": "3aa7bea0-10f3-47ae-9085-9da31993f124",
+    "file": "lessons/challen@buffalo.edu/14_content/14_sopa/lesson.adoc"
+  },
+  {
     "id": "3b6f1ad2-634f-423e-9eb3-8789a20a1ee9",
     "file": "lessons/challen@buffalo.edu/09_security/12_zero_knowledge_proof/lesson.adoc"
   },
@@ -310,6 +314,10 @@
   {
     "id": "4bb89534-7fc2-4de2-a61c-a1ab89e71ff7",
     "file": "lessons/challen@buffalo.edu/06_naming/19_you_should_vote/lesson.adoc"
+  },
+  {
+    "id": "4bf56b4a-8243-4e04-9289-2150d3e8f035",
+    "file": "lessons/challen@buffalo.edu/14_content/15_finding_illegal_content/lesson.adoc"
   },
   {
     "id": "4c386840-7c77-4057-9d82-6897aefe7f3c",
@@ -542,6 +550,10 @@
   {
     "id": "7c944d1c-c774-495d-8ab6-0b2b2e127fa3",
     "file": "lessons/challen@buffalo.edu/05_transport/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "7c9cbfe6-2991-46f1-b047-221ee2555cc5",
+    "file": "lessons/challen@buffalo.edu/14_content/16_aaron_swartz/lesson.adoc"
   },
   {
     "id": "80f7720c-2050-4308-93ee-474d13ad4099",
@@ -970,6 +982,10 @@
   {
     "id": "d784b86e-c85a-4303-a76f-381528889669",
     "file": "lessons/challen@buffalo.edu/02_connectivity/01_introduction/lesson.adoc"
+  },
+  {
+    "id": "d814b286-8ee7-4a22-ab78-e42875df7340",
+    "file": "lessons/challen@buffalo.edu/14_content/13_dmca/lesson.adoc"
   },
   {
     "id": "d97424aa-1b33-4d6a-b8f6-11d1f36acac8",
