@@ -1,3 +1,18 @@
 ---
 title: "What is digital rights management (DRM)?"
 ---
+
+Digital rights management (DRM) is some combination of hardware and software
+intended to restrict how digital media can be used.
+//
+The goal is to protect the rights of the copyright holder.
+//
+For example, DRM might prevent a user from playing a song on a device other
+than the one it was purchased on--or from sharing that song with a friend.
+//
+Unfortunately, many attempts at DRM were easily circumvented, and had a
+tendency to inconvenience consumers.
+//
+And it has been difficult to create digital protection approaches that align
+well with our usual expectations about how we can use content that we have
+purchased.

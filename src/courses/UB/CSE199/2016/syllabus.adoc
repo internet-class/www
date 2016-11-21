@@ -407,7 +407,7 @@ https://www.youtube.com/playlist?list=PLk97mPCd8nvaBrobQf5IsjobG27Wzdfkc[Identit
 . *The Interactive Web*: JavaScript, web applications, asynchronous web
 requests, modifying the DOM.
 ** *Activities*: https://goo.gl/MRV3oZ[JavaScript Part I: CodeCombat and
-Codecamedy (2016-11-07)], https://goo.gl/MRV3oZ[JavaScript Part II: jQuery and
+Codecademy (2016-11-07)], https://goo.gl/MRV3oZ[JavaScript Part II: jQuery and
 Bootstrap (2016-11-09)]
 ** *Videos*:
 https://www.youtube.com/playlist?list=PLk97mPCd8nvYD3ZxVZin43SghUCH5DP6u[Interactive

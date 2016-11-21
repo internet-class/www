@@ -1,3 +1,16 @@
 ---
 title: "What is a remix?"
 ---
+
+As a distribution system for digital media, the internet has supported the
+rise of remix culture--sometimes known as read-write culture.
+//
+In contrast to read-only culture, where users are passive consumers of
+content, read-write culture encourages users to engage with content by
+creating derivative works.
+//
+Remixes can take many forms, but a familiar one in the idea of sampling
+snippets from other songs or creating music mashups.
+//
+Whether these derivations constitute fair use has been the subject of a great
+deal of debate.

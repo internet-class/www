@@ -1,3 +1,19 @@
 ---
 title: "What are micropayments?"
 ---
+
+The revenue model for many online content providers is currently based on
+advertising.
+//
+But it doesn't have to be that way.
+//
+One alternative is for users to either sign up for subscriptions, but that
+may only be suitable for frequent--not casual--visitors.
+//
+Another interesting alternative relies on _micropayments_.
+//
+Each time you visit a site, your browser could automatically pay the owner
+some small amount of money--either with or without prompting the user.
+//
+Content creators would get paid by users, without having to litter their
+sites with obtrusive advertising.

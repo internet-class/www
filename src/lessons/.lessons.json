@@ -180,6 +180,10 @@
     "file": "lessons/challen@buffalo.edu/09_security/14_certificate_authority/lesson.adoc"
   },
   {
+    "id": "2f0137e0-7c4e-443d-918d-f297d7cfdd80",
+    "file": "lessons/challen@buffalo.edu/14_content/12_drm/lesson.adoc"
+  },
+  {
     "id": "3128fef1-49ef-425b-8116-349aaaddfd87",
     "file": "lessons/challen@buffalo.edu/12_mobile/04_capacity_achieving_codes/lesson.adoc"
   },
@@ -264,6 +268,10 @@
     "file": "lessons/challen@buffalo.edu/08_search/17_seo/lesson.adoc"
   },
   {
+    "id": "43724e4e-3e30-4ea2-8a52-89506e1acaf2",
+    "file": "lessons/challen@buffalo.edu/14_content/11_remixes/lesson.adoc"
+  },
+  {
     "id": "43c1ab0f-f149-4351-8a3c-dfcb14baa085",
     "file": "lessons/challen@buffalo.edu/04_routing/04_01_router/lesson.adoc"
   },
@@ -286,6 +294,10 @@
   {
     "id": "4729aae8-60f6-476c-83f7-8646e13be2fb",
     "file": "lessons/challen@buffalo.edu/08_search/09_things_crawlers_miss/lesson.adoc"
+  },
+  {
+    "id": "48bb675b-45da-4e91-896c-8504be1cd837",
+    "file": "lessons/challen@buffalo.edu/14_content/10_fair_use/lesson.adoc"
   },
   {
     "id": "4a94f809-5cda-4a9d-8366-1c10991f0542",
@@ -422,6 +434,10 @@
   {
     "id": "5f232d4b-94d3-4703-95c5-297c87a7f873",
     "file": "lessons/challen@buffalo.edu/13_brain/09_computers_for_us/lesson.adoc"
+  },
+  {
+    "id": "5f5191d7-1065-4268-9b2d-0543ab8a4d53",
+    "file": "lessons/challen@buffalo.edu/14_content/09_micropayments/lesson.adoc"
   },
   {
     "id": "5f663eb0-b9c0-43a7-9074-9a953d987c16",

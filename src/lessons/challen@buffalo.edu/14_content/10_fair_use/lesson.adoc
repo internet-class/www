@@ -1,3 +1,16 @@
 ---
 title: "What is fair use?"
 ---
+
+The internet has raised many questions about what it is permissible to do
+with copyrighted content.
+//
+A way to anchor these conversations is through the existing legal doctrine of
+_fair use_.
+//
+Fair use provides a way to use limited amounts of copyrighted material for
+certain purposes without acquiring the rights from the copyright owner.
+//
+Fair use was designed to provide a counterbalance to the significant rights
+of copyright holders, and to allow important kinds of scholarship and reuse
+to occur outside of the bounds of copyright law.
