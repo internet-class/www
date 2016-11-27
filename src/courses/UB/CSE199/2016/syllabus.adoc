@@ -426,6 +426,7 @@ playlist]
 //
 . *Your Brain on the Internet*: attention, concentration, distraction, deadly
 accidents, search v. knowledge, controlling our internet usage.
+** *Activities*: https://goo.gl/9DfyQK[Driven to Distraction (2016-11-21)]
 ** *Videos*:
 https://www.youtube.com/playlist?list=PLk97mPCd8nvbIDe0ol__bk5jNJLJlSDto[Brain
 playlist]
@@ -433,6 +434,9 @@ playlist]
 . *Internet Content and Economics*: early proposals for early payments via
 link counting, Bitcoin as an online currency, DRM and other efforts to prevent
 digital copying, ongoing efforts to find and block online content.
+** *Videos*:
+https://www.youtube.com/playlist?list=PLk97mPCd8nvYG2BzAodJLWZLI991llk83[Content
+playlist]
 //
 . *Lost and Future Visions of the Internet*: Berners-Lee’s original vision for
 collaborative content and arguments with Netscape, early internet communities
@@ -704,8 +708,8 @@ open source software project perhaps on https://www.github.com[GitHub], etc.
 We are open to many different ideas here, but just to note: normal social
 networking activities _will not_ earn you credit for this activity.
 //
-You'll discuss this assignment in more detail with your activity section
-leader and course staff later in the semester.
+You are free and encouraged to submit the personal website that you have been
+working on this semester, assuming it meets the guidelines below.
 
 The due date for this assignment will be *Friday 12/16/2016 at 11:59PM EDT.*
 //
@@ -713,6 +717,24 @@ We will distribute a Google Form for you to to submit your URL and project
 description.
 //
 *Note that you cannot work with a partner on this assignment.*
+
+Final project submissions will be graded on the following criteria:
+
+. Does the URL work? (2 points)
+//
+. Does the submission meet the basic guidelines? (2 points)
+//
+.. It's not a Facebook page, LinkedIn profile, Instagram feed, etc.
+//
+. Is the submission informative, usable, and attractive? (2 points)
+//
+. Is the submission mobile responsive? (2 points)
+//
+. Overall rate the submission:
+//
+.. The minimum: 0 points
+.. OK: 1 point
+.. Great: 2 points
 
 === Grade Mapping
 
