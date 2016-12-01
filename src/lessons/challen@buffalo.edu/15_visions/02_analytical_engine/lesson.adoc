@@ -1,3 +1,22 @@
 ---
 title: "What was the analytical engine?"
 ---
+
+One of the first visions of what would become the computer was Charles
+Babbage's analytical engine.
+//
+While the design for his mechanical computer was never realized, he is still
+considered the father of the modern computer.
+//
+And his designs were furthered through a long-running correspondence with
+Countess Ada Lovelace, who is widely considered the first computer
+programmer.
+//
+She not only helped explain Babbage's creation, but also described what is
+considered the first computer algorithm that could have run on the analytical
+engine.
+//
+Although they operate very differently, Babbage's vision found realization in
+the computers we use today.
+
+// vim: ts=2:et:ft=asciidoc

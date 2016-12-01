@@ -1,3 +1,22 @@
 ---
 title: "What is man-machine symbiosis?"
+spelling_exceptions:
+  - Bloomberg
 ---
+
+In 1960, J.C.R. Licklider extended Bush's vision further in describing
+systems that would enable man-machine symbiosis.
+//
+Licklider described man-machine symbiosis as enabling "men and computers to
+cooperate in making decisions and controlling complex situations".
+//
+Much of the early interest in such systems came out of the military, which
+encountered many complex situations that they needed help controlling.
+//
+The internet has enabled many such systems.
+//
+Bloomberg terminals and car navigation systems are just two examples of
+systems allowing humans and computers to work together to control complex
+situations.
+//
+Even self-driving cars still need a human to tell them where to go.

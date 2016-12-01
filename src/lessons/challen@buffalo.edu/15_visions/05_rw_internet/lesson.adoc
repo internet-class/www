@@ -1,3 +1,25 @@
 ---
 title: "What is the read-write internet?"
 ---
+
+Sir Tim Berners-Lee imagined the web as a place where people would both
+encounter and share content.
+//
+But at some point internet content became very one-directional: a read-only
+internet that resembled a somewhat more interactive form of existing
+broadcast media like television.
+//
+However, the vision of a read-write internet lives on in certain ways.
+//
+YouTube, Facebook, Instagram, and other sites that allow users to share
+content have resulted in an explosion of sharing and creating, despite the
+limitations inherent to these platforms.
+//
+And of course Wikipedia probably represents the ultimate realization of the
+read-write internet, as millions of users collaborate to create an online
+encyclopedia.
+//
+But you can expect selling and sharing to continue to duel it out online for
+the foreseeable future.
+
+// vim: ts=2:et:ft=asciidoc

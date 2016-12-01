@@ -1,19 +1,15 @@
 ---
 title: "CSE 199 Syllabus"
 spelling_exceptions:
-  - DIY
   - eportfolio
   - Capen
   - Silverman
   - 4chan
   - S'More
   - renormalized
-  - Werner Herzog
   - Codecademy
   - CodeCombat
   - Faux
-  - Instagram
-  - LinkedIn
 description: >
   Syllabus for CSE 199: How the Internet Works
 priority: 0.8

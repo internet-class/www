@@ -1,3 +1,23 @@
 ---
 title: "What was the memex?"
 ---
+
+In 1945 Vannevar Bush described a computer system very similar to today's
+modern internet in a seminal article in the Atlantic Monthly entitled "As We
+May Think".
+//
+He called his creation the _memex_.
+//
+Bush imagined the memex as a device that would function as a supplement to
+our own faulty and limited memory.
+//
+We would use it to store all of our books and communications, and it would
+allow us to summon them at will.
+//
+Although the internet evolved features that Bush did not anticipate, his
+vision found realization in the web we use today.
+//
+Particularly in the search engines which allow us to retrieve information so
+quickly and easily.
+
+// vim: ts=2:et:ft=asciidoc
