@@ -18,3 +18,5 @@ objects and propagate much more similarly to visible light.
 //
 So building practical networks that can deliver signals to mobile devices
 presents many engineering challenges.
+
+// vim: ts=2:et:ft=asciidoc

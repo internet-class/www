@@ -19,3 +19,5 @@ located in data centers.
 //
 All we'll be carrying around will be just glorified monitors and input
 devices.
+
+// vim: ts=2:et:ft=asciidoc

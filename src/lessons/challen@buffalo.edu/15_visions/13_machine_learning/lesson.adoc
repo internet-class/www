@@ -1,3 +1,17 @@
 ---
 title: "What is machine learning?"
 ---
+
+The expansion of the semantic web along with more powerful artificial
+intelligence techniques may have a unique effect on so-called machine
+learning.
+//
+Machine learning is a subset of AI that focuses on allowing computers to more
+effectively learn and generalized from data.
+//
+As the amount of data online increases, and becomes more structured, this
+should improve the power of existing and new machine learning techniques.
+//
+Tomorrow's robots may not need to be display artificial intelligence,
+assuming that they can learn enough from all the data we'll be able to
+provide them.

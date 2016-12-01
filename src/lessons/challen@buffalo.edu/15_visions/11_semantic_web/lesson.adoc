@@ -1,3 +1,23 @@
 ---
 title: "What is the semantic web?"
 ---
+
+Today web content exists largely for human consumption, and as a result in a
+semi-structured form.
+//
+Tomorrow, we may see the emergence of even more structured web content that
+makes the web easier for machines to understand and more like a distributed
+database.
+//
+Take, for example, the sentence: "Geoffrey Challen started working at UB in
+2011."
+//
+To a human, this sentence represents a relationship between two entities
+(Geoffrey Challen and UB) and a fact about that relationship (started in
+2011).
+//
+However, a computer might find this description hard to parse without
+sophisticated natural language processing.
+//
+In the future, next-generation semantic web technologies may help structure
+this relationship more clearly using additional markup.

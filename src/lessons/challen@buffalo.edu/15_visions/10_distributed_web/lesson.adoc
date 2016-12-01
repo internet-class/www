@@ -19,3 +19,5 @@ But there are serious efforts underway to bring such a fully-distributed web
 to fruition.
 //
 Perhaps tomorrow we will all be part of the cloud?
+
+// vim: ts=2:et:ft=asciidoc

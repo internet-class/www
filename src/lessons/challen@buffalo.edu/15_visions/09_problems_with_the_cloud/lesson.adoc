@@ -17,3 +17,5 @@ And the cloud still struggles at times to provide reliability guarantees.
 At times, the cloud should still remind us of Leslie Lamport's definition of
 a distributed system: "a system where I can't get my work done because a
 computer has failed that I've never even heard of."
+
+// vim: ts=2:et:ft=asciidoc

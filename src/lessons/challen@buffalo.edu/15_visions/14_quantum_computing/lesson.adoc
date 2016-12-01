@@ -1,3 +1,25 @@
 ---
 title: "What is quantum computing?"
+spelling_exceptions:
+  - 0s
+  - 1s
+  - qubit
 ---
+
+Today computers represent and manipulate data in binary bits: 1s and 0s.
+//
+Tomorrow, they may be able to directly represent uncertainty by manipulating
+quantum-mechanical states.
+//
+In a quantum computer, a qubit can represent any one of many possible states
+with fluctuating probability.
+//
+While quantum computing is still in its infancy, if realized quantum
+computers may be able to solve certain problems _much_ more quickly than
+today's computers.
+//
+For example, algorithms exists allowing quantum computers to quickly perform
+integer factorization, which could challenge the basis for most modern
+cryptosystems.
+
+// vim: ts=2:et:ft=asciidoc

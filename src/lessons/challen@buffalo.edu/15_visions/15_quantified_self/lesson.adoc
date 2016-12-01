@@ -1,3 +1,23 @@
 ---
 title: "What is the quantified self?"
 ---
+
+Today most of what the internet knows about us is limited to what we tell it.
+//
+Tomorrow, an increase in the number of sensors that we attach to ourselves
+and surround ourselves with may provide rich new data streams for internet
+services to consume.
+//
+One term for this movement is the _quantified self_.
+//
+At its best, it represents an earlier ideal that what can be measured can be
+understood and potentially improved.
+//
+However, at least today the links between more data and better outcomes
+remain tenuous.
+//
+But in the future data collected from sensors mounted on and inside of us may
+allow the internet to care for us when we are sick, recommend what to eat,
+and generally help us take better care of our fragile human selves.
+
+// vim: ts=2:et:ft=asciidoc
