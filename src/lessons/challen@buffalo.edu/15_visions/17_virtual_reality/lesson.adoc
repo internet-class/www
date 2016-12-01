@@ -1,3 +1,18 @@
 ---
 title: "What is virtual reality?"
 ---
+
+Today cyberspace exists on our screens.
+//
+Tomorrow it may be plastered right on our eyeballs.
+//
+Virtual reality technologies attempt to immerse us in a virtual world that
+today coexists with the actual physical world.
+//
+Rather than seeing a representation of a virtual world on a screen, virtual
+reality headsets allow us to see it first hand.
+//
+In the future it is clear that technology will provide ever more immersive
+ways to get lost in cyberspace.
+
+// vim: ts=2:et:ft=asciidoc

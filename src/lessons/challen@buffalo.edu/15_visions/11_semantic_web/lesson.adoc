@@ -21,3 +21,5 @@ sophisticated natural language processing.
 //
 In the future, next-generation semantic web technologies may help structure
 this relationship more clearly using additional markup.
+
+// vim: ts=2:et:ft=asciidoc

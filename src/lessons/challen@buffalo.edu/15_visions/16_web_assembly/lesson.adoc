@@ -1,3 +1,21 @@
 ---
 title: "What is web assembly?"
 ---
+
+Today web programming is limited to JavaScript.
+//
+Tomorrow we'll probably see something different.
+//
+Web assembly aims to break JavaScript's monopoly on the browser using an
+old-fashioned approach.
+//
+Rather than using a single interpreted language (JavaScript), web programs
+could be written in any language and then compiled down into (web) assembly
+code that would run in the browser.
+//
+In the future, it's unlikely that JavaScript will maintain its hold on
+frontend web development.
+//
+But it had a great run.
+
+// vim: ts=2:et:ft=asciidoc

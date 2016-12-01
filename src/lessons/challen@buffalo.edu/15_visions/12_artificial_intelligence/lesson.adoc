@@ -15,3 +15,5 @@ Alan Turing designed his Turing Test to determine whether computers had
 achieved a level of intelligence allowing them to impersonate a human.
 //
 In the future, we might just find machines passing it.
+
+// vim: ts=2:et:ft=asciidoc

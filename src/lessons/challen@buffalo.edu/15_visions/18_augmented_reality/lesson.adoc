@@ -1,3 +1,22 @@
 ---
 title: "What is augmented reality?"
 ---
+
+Today our virtual and physical world must coexist loosely side-by-side.
+//
+But tomorrow they may be intermingle right in front of our eyes.
+//
+For example, if I want to learn how to install a door, today I watch a video
+and then try to project the advice into the space I am working in.
+//
+Tomorrow, with the aid of augmented reality technologies, I may be able to
+see advice, tips, and useful information projected right on the materials I
+am working with.
+//
+This will usher in a powerful shift in the ways that the information online
+and our physical experience of reality coexist.
+//
+In the future, it is clear that the internet will become even more directly a
+part of our real world.
+
+// vim: ts=2:et:ft=asciidoc

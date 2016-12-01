@@ -15,3 +15,5 @@ should improve the power of existing and new machine learning techniques.
 Tomorrow's robots may not need to be display artificial intelligence,
 assuming that they can learn enough from all the data we'll be able to
 provide them.
+
+// vim: ts=2:et:ft=asciidoc
