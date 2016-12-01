@@ -1,3 +1,23 @@
 ---
-title: "What should the web become?"
+title: "What should the internet become?"
 ---
+
+The internet is a set of technologies.
+//
+It is not trying to become anything--rather, it reflects a mixture of the
+many visions of those that created and continue to use it.
+//
+So what the internet _should_ become is ultimately a very personal question.
+//
+What do you think it should become?
+//
+Fifty years from now, how would you like the internet--and computing
+generally--to be different?
+//
+What do you think is wrong with the internet we have today, and how should we
+fix it?
+//
+The answers to these questions matter because you are one of the people that
+will shape the internet's destiny.
+
+// vim: ts=2:et:ft=asciidoc

@@ -1,3 +1,20 @@
 ---
 title: "What is Bitcoin?"
 ---
+
+Today, the value of currencies is based on national power.
+//
+Tomorrow, cryptocurrencies that are based on cryptography may provide an
+alternate source of wealth and exchange that can operate independently of a
+central bank or authority.
+//
+The most well-known cryptocurrency is Bitcoin, which is already used as a
+medium of exchange by many online--particularly on the dark web.
+//
+Cryptocurrencies such as Bitcoin are undoubtedly the precursor to major
+changes in the banking and finance industries brought about by the internet.
+//
+In the future banking will be different, although it's not clear how just
+yet.
+
+// vim: ts=2:et:ft=asciidoc

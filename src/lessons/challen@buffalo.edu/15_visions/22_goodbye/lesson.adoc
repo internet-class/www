@@ -1,3 +1,20 @@
 ---
 title: "Goodbye, and good luck."
 ---
+
+It's been a great pleasure teaching you this term.
+//
+I hope a bit of the excitement and joy I feel about the internet has rubbed
+off on you.
+//
+I'll use this opportunity to thank the course staff, including the fantastic
+undergraduate teaching assistants.
+//
+None of this would have been possible without them.
+//
+And I want to say a special word of thanks to Greg Bunyea, the head
+undergraduate teaching assistant.
+//
+This would _definitely_ not have been possible with him.
+
+// vim: ts=2:et:ft=asciidoc

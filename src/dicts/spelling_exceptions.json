@@ -23,6 +23,8 @@
 	"/cryptosystems?/": true,
 	"crowdsourced": true,
 	"crowdsourcing": true,
+	"cryptocurrencies": true,
+	"cryptocurrency": true,
 	"cybersecurity": true,
 	"cyberwarfare": true,
 	"cyberweapon": true,

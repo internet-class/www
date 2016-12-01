@@ -1,3 +1,11 @@
 ---
 title: "How does this website's video tracker work?"
 ---
+
+You asked, so now we'll explain how the video tracker built into this website
+works.
+//
+It's actually a nice example of what you can do with JavaScript and simple
+external interfaces.
+
+// vim: ts=2:et:ft=asciidoc
