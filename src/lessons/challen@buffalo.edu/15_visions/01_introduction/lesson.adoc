@@ -1,3 +1,24 @@
 ---
 title: "Introduction to lost and future visions of the internet."
+spelling_exceptions:
+  - Frank Bidart
+  - pre
 ---
+
+Now we know what the internet is.
+//
+But what will it become?
+//
+To approach this question, we'll start by revisiting past visions of what the
+internet could become and see how they have been (or have not been) realized.
+//
+Then we'll look at the future of various parts of the internet, from
+connectivity to protocols to security to identity.
+//
+At the end, we'll come back to the question of what the web is becoming and
+how we are involved.
+//
+As Frank Bidart very beautifully put it, "We fill pre-existing forms and when
+we fill them change them and are changed."
+
+// vim: ts=2:et:ft=asciidoc

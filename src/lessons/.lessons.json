@@ -56,6 +56,10 @@
     "file": "lessons/challen@buffalo.edu/99_jobtalk/07_verifi_performance/lesson.adoc"
   },
   {
+    "id": "12f90971-2eee-465a-b012-ff7364b43702",
+    "file": "lessons/challen@buffalo.edu/15_visions/19_bitcoin/lesson.adoc"
+  },
+  {
     "id": "132d7069-a754-4c2e-8b8b-fec345593116",
     "file": "lessons/challen@buffalo.edu/09_security/19_zero_day_exploit/lesson.adoc"
   },
@@ -96,6 +100,10 @@
     "file": "lessons/challen@buffalo.edu/11_interactivity/15_browser_as_os/lesson.adoc"
   },
   {
+    "id": "1c2f2e8d-e6f7-4298-9248-b877f4625603",
+    "file": "lessons/challen@buffalo.edu/15_visions/21_website_tracker/lesson.adoc"
+  },
+  {
     "id": "1cb48893-fe77-4a75-92a2-b9c64e6d2d86",
     "file": "lessons/challen@buffalo.edu/06_naming/01_introduction/lesson.adoc"
   },
@@ -118,6 +126,10 @@
   {
     "id": "1fa89e8c-005c-458f-ac8c-662940f11afc",
     "file": "lessons/challen@buffalo.edu/01_era/100_welcome/lesson.adoc"
+  },
+  {
+    "id": "226da0d3-5e60-471f-af52-1203ea366bab",
+    "file": "lessons/challen@buffalo.edu/15_visions/04_man_machine_symbiosis/lesson.adoc"
   },
   {
     "id": "230d6cbf-7f34-447b-85f7-162d835067a8",
@@ -196,6 +208,10 @@
     "file": "lessons/challen@buffalo.edu/11_interactivity/08_javascript_web_app/lesson.adoc"
   },
   {
+    "id": "32a898b5-936a-45ce-a5a4-8ef077829164",
+    "file": "lessons/challen@buffalo.edu/15_visions/14_quantum_computing/lesson.adoc"
+  },
+  {
     "id": "32e5a379-9118-4907-bad0-abef4759683e",
     "file": "lessons/challen@buffalo.edu/14_content/07_ad_blockers/lesson.adoc"
   },
@@ -222,6 +238,10 @@
   {
     "id": "37d9e36f-fe59-43b6-922b-8934103f5aa8",
     "file": "lessons/challen@buffalo.edu/05_transport/20_typing/lesson.adoc"
+  },
+  {
+    "id": "395ea2ca-04b6-4722-ac97-71e4ca371808",
+    "file": "lessons/challen@buffalo.edu/15_visions/13_machine_learning/lesson.adoc"
   },
   {
     "id": "39d98c4e-badf-4fba-8036-3e2788149693",
@@ -288,6 +308,10 @@
     "file": "lessons/challen@buffalo.edu/99_jobtalk/100_phonelab/lesson.adoc"
   },
   {
+    "id": "4400df7f-4067-442a-a1f9-5bd1ddd69e96",
+    "file": "lessons/challen@buffalo.edu/15_visions/10_distributed_web/lesson.adoc"
+  },
+  {
     "id": "45e0d6a8-7ea4-4734-9640-3b60d4f92e1b",
     "file": "lessons/challen@buffalo.edu/03_protocols/10_protocol_stack/lesson.adoc"
   },
@@ -302,6 +326,10 @@
   {
     "id": "4729aae8-60f6-476c-83f7-8646e13be2fb",
     "file": "lessons/challen@buffalo.edu/08_search/09_things_crawlers_miss/lesson.adoc"
+  },
+  {
+    "id": "48ad8836-f38d-47d0-8d2e-ab26c85b515c",
+    "file": "lessons/challen@buffalo.edu/15_visions/17_virtual_reality/lesson.adoc"
   },
   {
     "id": "48bb675b-45da-4e91-896c-8504be1cd837",
@@ -428,6 +456,14 @@
     "file": "lessons/challen@buffalo.edu/99_jobtalk/04_pocketparker_evaluation/lesson.adoc"
   },
   {
+    "id": "5ce4f0ca-dfd2-4afd-95f0-d52db16bb13d",
+    "file": "lessons/challen@buffalo.edu/15_visions/12_artificial_intelligence/lesson.adoc"
+  },
+  {
+    "id": "5d765a04-1f6e-41ab-9aa4-da334a889a27",
+    "file": "lessons/challen@buffalo.edu/15_visions/15_quantified_self/lesson.adoc"
+  },
+  {
     "id": "5df2ecb2-778c-40c3-8897-4bea901ee77d",
     "file": "lessons/challen@buffalo.edu/03_protocols/14_quic/lesson.adoc"
   },
@@ -464,8 +500,16 @@
     "file": "lessons/challen@buffalo.edu/99_jobtalk/03_hidden_drivers/lesson.adoc"
   },
   {
+    "id": "6212acdd-d5c1-4bf3-9692-d17832906a33",
+    "file": "lessons/challen@buffalo.edu/15_visions/08_cloud_computing/lesson.adoc"
+  },
+  {
     "id": "62fb9a27-1777-4437-a98d-a50d6a4565fa",
     "file": "lessons/challen@buffalo.edu/07_web/08_request_path/lesson.adoc"
+  },
+  {
+    "id": "63024275-f53a-4085-8e80-4f2205743630",
+    "file": "lessons/challen@buffalo.edu/15_visions/16_web_assembly/lesson.adoc"
   },
   {
     "id": "63614d41-170a-4c83-9b14-a190eb08dc04",
@@ -474,6 +518,10 @@
   {
     "id": "638d4612-7a02-4c80-9b5c-267142fa219a",
     "file": "lessons/challen@buffalo.edu/12_mobile/07_wireless_problems/lesson.adoc"
+  },
+  {
+    "id": "64b97a59-52b3-4ba1-ad49-c4694f07b79f",
+    "file": "lessons/challen@buffalo.edu/15_visions/11_semantic_web/lesson.adoc"
   },
   {
     "id": "64bc1951-5a74-4a77-9a28-543507832ee9",
@@ -568,12 +616,20 @@
     "file": "lessons/challen@buffalo.edu/14_content/16_aaron_swartz/lesson.adoc"
   },
   {
+    "id": "7e792de3-ff5d-408b-b5da-5d0a7bc67773",
+    "file": "lessons/challen@buffalo.edu/15_visions/18_augmented_reality/lesson.adoc"
+  },
+  {
     "id": "80f7720c-2050-4308-93ee-474d13ad4099",
     "file": "lessons/challen@buffalo.edu/08_search/18_other_ranking_factors/lesson.adoc"
   },
   {
     "id": "82b31493-5ee3-4038-9477-942cb4f1d812",
     "file": "lessons/challen@buffalo.edu/08_search/07_environmental_impact/lesson.adoc"
+  },
+  {
+    "id": "83b0712d-ef93-4b50-9fa8-547664a41b74",
+    "file": "lessons/challen@buffalo.edu/15_visions/03_memex/lesson.adoc"
   },
   {
     "id": "83b0d05b-5330-4268-9d6f-f2334f7da380",
@@ -640,6 +696,10 @@
     "file": "lessons/challen@buffalo.edu/08_search/21_being_forgotten/lesson.adoc"
   },
   {
+    "id": "90f759e9-1761-44fb-a4ba-7f16f24bb0d4",
+    "file": "lessons/challen@buffalo.edu/15_visions/09_problems_with_the_cloud/lesson.adoc"
+  },
+  {
     "id": "91422487-6b52-441c-ab2b-edaac5e77df3",
     "file": "lessons/challen@buffalo.edu/06_naming/09_uri_organization/lesson.adoc"
   },
@@ -658,6 +718,10 @@
   {
     "id": "981aaff3-57d3-46c7-a20a-6939cafe5b36",
     "file": "lessons/challen@buffalo.edu/12_mobile/11_responsive_design/lesson.adoc"
+  },
+  {
+    "id": "998be17c-611a-40ab-83a7-3031882cfde8",
+    "file": "lessons/challen@buffalo.edu/15_visions/22_goodbye/lesson.adoc"
   },
   {
     "id": "9a5030fa-2a03-4a99-8b51-e7366df355ab",
@@ -788,6 +852,10 @@
     "file": "lessons/challen@buffalo.edu/08_search/22_how_to_search/lesson.adoc"
   },
   {
+    "id": "ae083edd-033d-4e29-b019-5379ff419a40",
+    "file": "lessons/challen@buffalo.edu/15_visions/07_millimeter_wave/lesson.adoc"
+  },
+  {
     "id": "ae38a120-f481-4ee9-bfa6-5429c36d5af5",
     "file": "lessons/challen@buffalo.edu/11_interactivity/04_flash_plugin/lesson.adoc"
   },
@@ -798,6 +866,10 @@
   {
     "id": "aeb90f1f-8ff2-4da0-ac2c-7fd98a1f91f6",
     "file": "lessons/challen@buffalo.edu/09_security/06_substitution_cipher/lesson.adoc"
+  },
+  {
+    "id": "afc80bd7-51d2-45c4-bb54-dccd6743de60",
+    "file": "lessons/challen@buffalo.edu/15_visions/01_introduction/lesson.adoc"
   },
   {
     "id": "b1f15ef7-b18c-4339-b43b-4b0997e9b586",
@@ -874,6 +946,10 @@
   {
     "id": "c363a91f-87ae-4a5c-a8b0-6ad51e5f310d",
     "file": "lessons/challen@buffalo.edu/08_search/11_page_contents/lesson.adoc"
+  },
+  {
+    "id": "c48e13d7-740e-4036-859a-6b031369e4f9",
+    "file": "lessons/challen@buffalo.edu/15_visions/06_project_loon/lesson.adoc"
   },
   {
     "id": "c51ab6a5-a109-442b-b22a-54a4bfdeb4cb",
@@ -1016,6 +1092,10 @@
     "file": "lessons/challen@buffalo.edu/02_connectivity/05_02_ub_hop/lesson.adoc"
   },
   {
+    "id": "dc5b3beb-4c4a-4df1-b49f-b31e88b762eb",
+    "file": "lessons/challen@buffalo.edu/15_visions/02_analytical_engine/lesson.adoc"
+  },
+  {
     "id": "dc7129d7-1046-476c-9d6e-18599fc8d772",
     "file": "lessons/challen@buffalo.edu/06_naming/04_how_to_get_an_ip/lesson.adoc"
   },
@@ -1068,6 +1148,10 @@
     "file": "lessons/challen@buffalo.edu/04_routing/18_morris_worm/lesson.adoc"
   },
   {
+    "id": "f032a25b-0e2a-49a2-b39e-c247abc9f178",
+    "file": "lessons/challen@buffalo.edu/15_visions/05_rw_internet/lesson.adoc"
+  },
+  {
     "id": "f035456b-a09d-4715-a1d4-d757a5786af4",
     "file": "lessons/challen@buffalo.edu/07_web/02_chrome_developer_tools/lesson.adoc"
   },
@@ -1102,6 +1186,10 @@
   {
     "id": "fdab2123-34e4-41c5-9775-db4d2f516688",
     "file": "lessons/challen@buffalo.edu/03_protocols/04_client_server/lesson.adoc"
+  },
+  {
+    "id": "fe622503-3279-4ad1-b842-abc99888427a",
+    "file": "lessons/challen@buffalo.edu/15_visions/20_what_should_the_web_become/lesson.adoc"
   },
   {
     "id": "fe708194-7959-4e53-8863-a3a343264697",
