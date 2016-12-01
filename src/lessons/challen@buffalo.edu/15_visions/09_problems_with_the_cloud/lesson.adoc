@@ -1,3 +1,19 @@
 ---
 title: "What are some problems with cloud computing?"
 ---
+
+We are living through the dawn of cloud computing.
+//
+But some of the clouds are dark ones.
+//
+Latency to cloud infrastructure remains a problem for many interactive apps
+and services.
+//
+The security of data in the cloud requires an intentionally amorphous set of
+entities and infrastructure.
+//
+And the cloud still struggles at times to provide reliability guarantees.
+//
+At times, the cloud should still remind us of Leslie Lamport's definition of
+a distributed system: "a system where I can't get my work done because a
+computer has failed that I've never even heard of."

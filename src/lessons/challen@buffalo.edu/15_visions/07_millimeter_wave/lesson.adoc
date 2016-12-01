@@ -1,3 +1,20 @@
 ---
 title: "What is millimeter-wave networking?"
 ---
+
+Today our wireless internet connections are fast.
+//
+But tomorrow they could be even faster.
+//
+In a search for ever more bandwidth, today researchers are experimenting with
+wireless technologies that use much higher frequencies than today's Wifi and
+cellular networks.
+//
+So-called millimeter-wave networks promise dramatic improvements in wireless
+performance.
+//
+There's only one catch--millimeter-wave signals are highly-attenuated by many
+objects and propagate much more similarly to visible light.
+//
+So building practical networks that can deliver signals to mobile devices
+presents many engineering challenges.

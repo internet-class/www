@@ -1,3 +1,21 @@
 ---
 title: "What is cloud computing?"
 ---
+
+Today we are already witnessing cloud computing changing the role of
+user-facing devices.
+//
+End-user devices--from laptops to embedded device--can easily tap into
+seemingly limitless computational and storage resources in the internet
+cloud.
+//
+While the cloud seems new, in a way it speaks to a past vision of thin-client
+computing in which "dumb terminals" would get their smarts by connecting to
+all-powerful backend infrastructure.
+//
+The rise of powerful personal computers delayed this vision by a few decades,
+but it's possible that in the future most of the computing power will be
+located in data centers.
+//
+All we'll be carrying around will be just glorified monitors and input
+devices.

@@ -1,3 +1,18 @@
 ---
 title: "What is Project Loon?"
 ---
+
+Today, around half the world still lacks internet access.
+//
+Tomorrow, everyone will be connected.
+//
+One interesting effort to provide wide area but slow internet access is
+Project Loon at Google.
+//
+Like many similar efforts, it avoids thorny and expensive infrastructure
+problems by beaming internet down from the sky.
+//
+Whether from balloons or lazily-orbiting planes, billions of people might
+receive their first internet access as a literal gift from above.
+
+// vim: ts=2:et:ft=asciidoc

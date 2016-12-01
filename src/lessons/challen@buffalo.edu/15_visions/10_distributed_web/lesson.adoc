@@ -1,3 +1,21 @@
 ---
 title: "What is the fully-distributed web?"
 ---
+
+Today, almost all of our online interactions follow the client-server model,
+with the cloud emerging as the ultimate and all-powerful server.
+//
+But a new generation of internet and web technologies are challenging this
+architecture.
+//
+It has always been possible to build a fully-distributed web and internet, in
+which all currently centralized functions would be delegated to a shifting
+set of machines.
+//
+To some degree, the cloud is already accomplishing this, as did earlier
+generations of peer-to-peer systems.
+//
+But there are serious efforts underway to bring such a fully-distributed web
+to fruition.
+//
+Perhaps tomorrow we will all be part of the cloud?
