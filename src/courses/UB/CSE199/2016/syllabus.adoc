@@ -434,6 +434,8 @@ playlist]
 . *Internet Content and Economics*: early proposals for early payments via
 link counting, Bitcoin as an online currency, DRM and other efforts to prevent
 digital copying, ongoing efforts to find and block online content.
+** *Activities*: https://goo.gl/Ii0ymk[Project Review Session (2016-11-28)],
+https://goo.gl/8DvvEY[Bad Ads and Faux News (2016-11-30)]
 ** *Videos*:
 https://www.youtube.com/playlist?list=PLk97mPCd8nvYG2BzAodJLWZLI991llk83[Content
 playlist]
