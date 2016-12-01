@@ -2,4 +2,21 @@
   files:
     - e90f67fd497732e45016e5823bded1c4.MTS
   created: 'Thu Dec 01 2016 08:13:46 GMT-0500'
+  authors:
+    -
+      name: 'Geoffrey Challen'
+      credits: 'Assistant Professor, Computer Science and Engineering, University at Buffalo'
+  producers:
+    -
+      name: 'Greg Bunyea'
+      credits: 'Undergraduate, Computer Science and Engineering, University at Buffalo'
+  creditsFile: dancing.mp4
+  prerollFile: slowglow.mp4
+  postrollFile: turnon.mp4
+  prerollLength: 7
+  creditsLength: 11
+  postrollLength: 2
+  durationSec: 216.795
+  inputHash: e90f67fd497732e45016e5823bded1c4
+  output: d84a4827468d8c69b449b65bf5fdef2c.mp4
   transcode: false
