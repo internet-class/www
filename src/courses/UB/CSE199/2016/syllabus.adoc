@@ -150,122 +150,6 @@ we've mostly moved the homework _inside_ of the classroom.
 //
 That's one of the advantages of the flipped classroom model.
 
-[[calendar]]
-== Calendar
-
-We suggest that you add our http://goo.gl/5D6g2E[global CSE 199 calendar] and
-the appropriate calendar for your <<sections,activity section>> to your
-calendaring program.
-//
-If you are not using a calendaring program, we suggest that you begin using a
-calendaring program.
-
-Note that the calendar below only has things applicable to all CSE 199
-students.
-//
-These include weekly activities, staff office hours, open shooting sessions,
-movie nights, and <<dates,important dates>>.
-//
-This calendar does _not_ include activity section meeting or recitation
-meeting times and locations.
-//
-Activity sections are on section-specific calendars shown <<sections,below>>.
-//
-Please add recitations to your own personal calendar as needed.
-
-++++
-<div class="video-container">
-  <div class="show-on-small hide-on-med-and-up">
-    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=buffalo.edu_f47q0orjhk0a5vjrngcjs0jrt8%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
-  </div>
-  <div class="hide-on-small-only show-on-med-and-up">
-    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=buffalo.edu_f47q0orjhk0a5vjrngcjs0jrt8%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
-  </div>
-</div>
-++++
-
-[[dates]]
-=== Other Important Dates
-
-Also on the <<calendar,calendar>>.
-//
-The registrar's office has their own semi-useful calendar
-link:++http://calendar.registrar.buffalo.edu/calendar/?ai1ec=action~month++[here].
-
-* *Last day to drop or add courses*: Tuesday 9/6/2016
-* *Midterm grade deadline*: Friday 11/4/2016
-* *Last day to resign*: Friday 11/11/2016
-* *Last day of class*: Friday 12/9/2016
-* *Final grade deadline*: Monday 12/26/2016
-
-== Information
-
-=== Course Staff
-
-link:https://blue.cse.buffalo.edu[Geoffrey Challen] is providing most of the
-content for the class in the form of short videos.
-//
-But you will notice contributions from others--including other course staff,
-other UB CSE faculty members, and hopefully eventually alumni and external
-experts footnote:[You will also have a chance to contribute your own videos
-as a course assignment.].
-//
-The four fantastic faculty leading activity sections are
-http://www.cse.buffalo.edu/~hartloff/index.html[Jesse Hartloff],
-http://www.cse.buffalo.edu/people/?u=mhertz[Matthew Hertz],
-http://www.cse.buffalo.edu/people/?u=ahughes6[Andrew Hughes], and
-http://www.cse.buffalo.edu/people/?u=jwinikus[Jennifer Winikus].
-
-We have a great group of undergraduate and graduate teaching assistants to
-help you learn about the internet.
-//
-https://blue.cse.buffalo.edu/people/gjbunyea/[Greg Bunyea] is serving as the
-head undergraduate teaching assistant.
-//
-https://blue.cse.buffalo.edu/people/carlnues[Carl Nuessle] is serving as the
-head (and only) graduate teaching assistant.
-//
-The 24 other teaching assistants are Aishani Bhalla, Mohit Bhatia, Isabelle
-Caneda, Wesley Csendom, Junjie Chen, Michael Drewitt, David Dobmeier, Lakshmi
-Ethiraj, Richard Hanulewicz, Liam Gensel, Harshita Girase, Patrick Jones,
-Heeba Kariapper, Valencia Kaplinsky, Lawreen Latif, Angus Lam, Ian Ngumi,
-Brijesh Rakholia, Rachel Roberts, Parth Shah, Kyle Schoener, Dan Starner,
-Evan Walley, and Grant Wrazen.
-//
-Phew!
-//
-That's quite a group.
-//
-Instructors and teaching assistants are broken down by activity section
-<<sections,below>>.
-
-=== Times and Locations
-
-Times and locations for <<sections,activity sections>> and
-<<recitations,recitations>> are listed below.
-//
-You can also find this information on the HUB.
-
-In addition to activity sections and recitations we are planning a number of
-other optional--but fun--activities.
-//
-First, we have several movie nights planned for the semester where we will
-watch some great internet-related films footnote:[Clearly Werner Herzog timed
-the release of http://www.loandbeholdfilm.com/[Lo and Behold] to coincide
-with our class...].
-//
-Second, we will hold open shooting sessions each week on Wednesday starting
-at 10AM.
-//
-We're still shooting footage for the later weeks in the class, so if you'd
-like to be part of the studio audience you are more than welcome--although I
-can't spring for any fancy prizes.
-//
-Details about both of these events will be on the <<calendar,course
-calendar>>.
-//
-The course calendar will also list office hours for all CSE 199 instructors.
-
 === Textbook
 
 There is no required textbook for this course.
@@ -668,13 +552,13 @@ http://libweb1.lib.buffalo.edu/openroom/[this online form].
 The three video assignments are space out evenly throughout the semester, but
 they differ slightly in their requirements.
 
-. *Friday, 9/30/2016*: record an alternate explanation for one of the videos
+. *Video 1*: record an alternate explanation for one of the videos
 from Weeks 2&ndash;5. These weeks cover <<connectivity, connectivity (Week
 2)>>, <<protocols, protocols (Week 3)>>, <<routing, routing (Week 4)>>, and
 <<transport,transport (Week 5)>> footnote:[The Week 1 videos are a bit too
 general...].
 
-. *Friday, 11/4/2016*: record an alternate explanation for one of the videos
+. *Video 2*: record an alternate explanation for one of the videos
 from Weeks 6&ndash;10. These weeks cover <<naming, naming (Week 6)>>;
 <<queries,web queries, documents, and markup (Week 7)>>; <<search, search
 (Week 8)>>; <<security,security and authority (Week 9)>>; and
@@ -687,7 +571,7 @@ of a single search", etc.
 "You should vote", "What are the Chrome developer tools?", "What should you
 not search for?", "How to search the web", etc.
 
-. *Friday, 12/9/2016*: record an explanation for a new lesson related to the
+. *Video 3*: record an explanation for a new lesson related to the
 course content not already covered.
 //
 Your topic can fit in to any of the material covered over the 15 weeks of the
@@ -832,17 +716,6 @@ to helping you learn.
 This website is the source for all information about the class: the syllabus
 (which you are reading) and the video series.
 
-=== Mailing List
-
-All enrolled students will be added to a mailing list which we will use for
-course communication.
-//
-*You are responsible for email messages sent to this list, and to your
-`@buffalo.edu` email address.*
-//
-If you are not enrolled and would like to be added to the list, you can sign
-up https://www.internet-class.org/mailman/listinfo/199[here].
-
 == Getting Help
 
 Here's how to--and how not to--get help.
@@ -871,86 +744,5 @@ So please don't hesitate to come by, even just to say hi.
 I instruct the staff to ignore these emails.
 //
 Use the <<forum,forum>> or talk to them during class.
-
-
-[[sections]]
-== Sections
-
-Information specific to each activity section follows.
-//
-https://blue.cse.buffalo.edu/people/gwa/[Geoffrey Challen] may drop in on any
-of these sections at any time.
-//
-And of course https://blue.cse.buffalo.edu/people/carlnues/[Carl Nuessle] has
-been known to show up anywhere at any time as well--so be ready.
-
-=== 199A, 199B, 199C
-
-The three 4PM sections will meet together in Bert's Cafeteria at 4PM on
-Mondays and Wednesdays.
-
-. *Instructors*: http://www.cse.buffalo.edu/~hartloff/index.html[Jesse
-Hartloff], http://www.cse.buffalo.edu/people/?u=mhertz[Matthew Hertz], and
-http://www.cse.buffalo.edu/people/?u=jwinikus[Jennifer Winikus]
-//
-. *Teaching Assistants*: Junjie Chen, David Dobmeier, Lakshmi Ethiraj, Liam
-Gensel Harshita Girase, Richard Hanulewicz, Patrick Jones, Valencia
-Kaplinsky, Heeba Kariapper Angus Lam, Lawreen Latif Ian Ngumi Brijesh
-Rakholia, Rachel Roberts, Kyle Schoener, Parth Shah Dan Starner Grant Wrazen
-and Evan Walley
-//
-. *Dates and Times*: MW at 4PM in Bert's Cafeteria
-
-==== Calendar
-
-http://goo.gl/RdyBBy[This calendar] shows events for the 4PM sections only.
-//
-You should also add the <<calendar,CSE 199 global calendar>> to your
-calendaring program.
-//
-You're using a calendaring program, right?
-
-++++
-<div class="video-container">
-  <div class="show-on-small hide-on-med-and-up">
-    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jkn2ubsvhjkugbmih1ii8k4q10%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
-  </div>
-  <div class="hide-on-small-only show-on-med-and-up">
-    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jkn2ubsvhjkugbmih1ii8k4q10%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
-  </div>
-</div>
-++++
-
-=== 199D
-
-. *Instructor*: http://www.cse.buffalo.edu/people/?u=ahughes6[Andrew Hughes]
-footnote:[Whose site is in serious need of an overhaul.]
-//
-. *Teaching Assistants*: Aishani Bhalla, Mohit Bhatia, Greg Bunyea, Isabelle
-Caneda, Wesley Csendom, Michael Drewitt, and occasionally Geoffrey Challen.
-//
-. *Dates and Times*: MW at 9AM in Alumni 97
-
-==== Calendar
-
-http://goo.gl/HkkXZi[This calendar] shows events for the 9AM section only.
-//
-You should also add the <<calendar,CSE 199 global calendar>> to your
-calendaring program.
-//
-What do you mean you aren't using a calendaring program?
-//
-Everyone uses one!
-
-++++
-<div class="video-container">
-  <div class="show-on-small hide-on-med-and-up">
-    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uk6or0id7tdictntjsifs6jnvo%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
-  </div>
-  <div class="hide-on-small-only show-on-med-and-up">
-    <div class="lazy-iframe" data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uk6or0id7tdictntjsifs6jnvo%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"></div>
-  </div>
-</div>
-++++
 
 // vim: ts=2:et:ft=asciidoc
