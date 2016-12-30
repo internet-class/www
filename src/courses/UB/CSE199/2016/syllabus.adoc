@@ -51,17 +51,6 @@ potential majors.
 Familiarity with the web and access to a personal computer are assumed, but
 no technical background is required.
 
-== Announcements
-
-We're trying announcements through video this semester. Here's the playlist:
-
-++++
-<div class="video-container">
-<div class="lazy-iframe"
-data-src="https://www.youtube.com/embed/videoseries?list=PLk97mPCd8nvb3LuRd9PKgSE9wgeoUjj08&amp;showinfo=1"></div>
-</div>
-++++
-
 [[forum]]
 == Forum
 
@@ -599,11 +588,6 @@ networking activities _will not_ earn you credit for this activity.
 //
 You are free and encouraged to submit the personal website that you have been
 working on this semester, assuming it meets the guidelines below.
-
-The due date for this assignment will be *Friday 12/16/2016 at 11:59PM EDT.*
-//
-We will distribute a Google Form for you to to submit your URL and project
-description.
 //
 *Note that you cannot work with a partner on this assignment.*
 
